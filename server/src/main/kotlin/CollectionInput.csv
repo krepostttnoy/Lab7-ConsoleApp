@@ -1,0 +1,7 @@
+name,coordinateX,coordinateY,enginePower,capacity,distanceTravelled,fuelType
+Car1,10,2,100.0,50.0,1000,Антиматерия
+Car2,30,4,150.0,60.0,2000,Дизель
+Car3,3,3,3.0,4.0,4,Дизель
+fa,3,4,4.0,4.0,4,Антиматерия
+fasdf,3,3,3.0,3.0,3,Дизель
+faf,3,3,3.0,3.0,3,Дизель

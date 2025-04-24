@@ -1,0 +1,11 @@
+info
+show
+add
+вф
+3
+3
+3
+3
+3
+диз
+remove_by_id 2

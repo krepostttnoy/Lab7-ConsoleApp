@@ -71,7 +71,7 @@ class ExecuteScriptCommand(
         TODO("Not yet implemented")
     }
 
-    override fun execute(fileName: String?) {
+    fun execute(fileName: String?) {
 
         val srcPath = fileName ?: run {
             outputManager.print("Введите путь к файлу: ")

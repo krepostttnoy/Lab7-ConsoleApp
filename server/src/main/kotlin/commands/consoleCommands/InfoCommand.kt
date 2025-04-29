@@ -39,7 +39,7 @@ class InfoCommand(
         connectionManager.send(response)
     }
 
-    override fun execute(args: String?) {
+    fun execute(args: String?) {
         cm.printCollectionInfo()
     }
 }

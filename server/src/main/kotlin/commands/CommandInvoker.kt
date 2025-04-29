@@ -48,14 +48,6 @@ class CommandInvoker(
             outputManager.surePrint("Unknown command. Available commands: ${commands.keys.joinToString(", ")}")
             return
         }
-
-        if(command.interactive && inputManager.isScriptMode()) {
-            inputManager.switchToInteractive()
-            command.execute(args)
-            inputManager.returnToScript()
-        }else{
-            command.execute(args)
-        }
     }
 
     fun getCommand(): Map<String, Command>{

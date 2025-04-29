@@ -1,6 +1,8 @@
 package org.example.commands.consoleCommands
 
+import baseClasses.Coordinates
 import baseClasses.Vehicle
+import baseClasses.withNewId
 import collection.CollectionManager
 import console.IVehicleManager
 import kotlinx.serialization.Serializable
@@ -53,27 +55,17 @@ class AddCommand(
         try{
             val jsonCreator = JsonCreator()
             val vehicleJson = args["vehicle"] ?: throw IllegalArgumentException("Vehicle data is missing")
-            val vehicle = jsonCreator.stringToObject<Vehicle>(vehicleJson)
+            val vehicle = jsonCreator.stringToObject<Vehicle>(vehicleJson).withNewId()
+
+            if (cm.getCollection().any { it.id == vehicle.id }) {
+                throw IllegalArgumentException("Vehicle with ID ${vehicle.id} already exists!, ${Vehicle.existingIds.toList()}")
+            }
             cm.addVehicle(vehicle)
             val response = ResponseWrapper(ResponseType.OK, "Vehicle added: ${vehicle.name}")
             connectionManager.send(response)
         }catch (e: Exception){
             val response = ResponseWrapper(ResponseType.ERROR, "Error: ${e.message}")
             connectionManager.send(response)
-        }
-    }
-
-    override fun execute(args: String?) {
-
-        try {
-            val newVehicle = vm.setVehicle()
-            cm.addVehicle(newVehicle)
-            outputManager.println("Object was added.")
-
-            val response = ResponseWrapper(ResponseType.OK, newVehicle.toString())
-            connectionManager.send(response)
-        } catch (e: Error) {
-            println("Object can't be added.")
         }
     }
 }

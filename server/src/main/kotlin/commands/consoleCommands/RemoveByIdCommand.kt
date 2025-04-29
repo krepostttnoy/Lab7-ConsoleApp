@@ -76,7 +76,7 @@ class RemoveByIdCommand(
         }
     }
 
-    override fun execute(idStr: String?) {
+    fun execute(idStr: String?) {
         val console = Validator(outputManager, inputManager)
 
         if (cm.baseCollection.isEmpty()) {

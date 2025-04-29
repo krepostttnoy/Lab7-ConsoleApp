@@ -6,8 +6,10 @@ import kotlinx.serialization.Serializable
 import kotlinx.serialization.Transient
 import org.example.serverUtils.ConnectionManager
 import utils.inputOutput.OutputManager
+import java.text.Collator
 import java.time.LocalDate
 import java.time.LocalDateTime
+import java.util.Collections
 
 
 /**
@@ -26,7 +28,7 @@ class CollectionManager {
      * Список транспортных средств, хранимых в коллекции.
      */
     val outputManager = OutputManager()
-    val baseCollection = ArrayList<Vehicle>()
+    val baseCollection = Collections.synchronizedList(ArrayList<Vehicle>())
     val connectionManager = ConnectionManager()
 
     private val initializationDate: LocalDate = LocalDate.now()
@@ -36,8 +38,8 @@ class CollectionManager {
      *
      * @return Список [ArrayList] с объектами типа [Vehicle].
      */
-    fun getCollection(): ArrayList<Vehicle> {
-        return baseCollection
+    fun getCollection(): List<Vehicle> {
+        return baseCollection.toList()
     }
 
     /**
@@ -64,7 +66,8 @@ class CollectionManager {
      * @param vehicle Объект [Vehicle], который нужно добавить в коллекцию.
      */
     fun addVehicle(vehicle: Vehicle) {
-        baseCollection.add(vehicle)
+            baseCollection.add(vehicle)
+
     }
 
     /**

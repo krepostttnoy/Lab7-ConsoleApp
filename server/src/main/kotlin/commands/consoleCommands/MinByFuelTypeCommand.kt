@@ -62,7 +62,7 @@ class MinByFuelTypeCommand(
         }
     }
 
-    override fun execute(args: String?) {
+    fun execute(args: String?) {
         if (cm.baseCollection.isEmpty()) {
             outputManager.println("Коллекция пуста. Нет элементов для поиска минимального fuelType.")
             return

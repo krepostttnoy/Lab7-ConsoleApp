@@ -62,7 +62,7 @@ class AvgOfEnginePowerCommand(
 
     }
 
-    override fun execute(args: String?) {
+    fun execute(args: String?) {
         if (cm.baseCollection.isEmpty()) {
             outputManager.println("Коллекция пуста.")
             return

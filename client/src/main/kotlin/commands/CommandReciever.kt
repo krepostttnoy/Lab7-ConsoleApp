@@ -3,6 +3,7 @@ package org.example.commands
 import baseClasses.Coordinates
 import baseClasses.FuelType
 import baseClasses.Vehicle
+import clientUtils.ConsoleVehicleManager
 import org.example.clientUtils.ConnectionManager
 import org.example.clientUtils.readers.Reader
 import org.example.clientUtils.readers.Validator
@@ -21,6 +22,7 @@ class CommandReceiver(
     private val jsonCreator = JsonCreator()
     private val reader = Reader(outputManager, inputManager)
     private val validator = Validator(outputManager, inputManager)
+    private val vm = ConsoleVehicleManager(reader)
 
     fun getHelp() {
         val commands = commandInvoker.getCommand()
@@ -113,16 +115,7 @@ class CommandReceiver(
                         jsonCreator.objectToString(fuelType)
                     }
                     "Vehicle" -> {
-                        val name = reader.readName()
-                        val coordinateX = reader.readCoordinateX()
-                        val coordinateY = reader.readCoordinateY()
-                        val enginePower = reader.readEnginePower()
-                        val capacity = reader.readCapacity()
-                        val distanceTravelled = reader.readDistanceTravelled()
-                        val fuelType = reader.readFuelType()
-
-                        val vehicle = Vehicle(name, Coordinates(coordinateX, coordinateY), enginePower, capacity, distanceTravelled, fuelType)
-
+                        val vehicle = vm.setVehicle()
                         jsonCreator.objectToString(vehicle)
                     }
                     "Float" -> {

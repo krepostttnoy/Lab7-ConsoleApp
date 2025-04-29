@@ -91,7 +91,7 @@ class RemoveGreaterCommand(
         }
     }
 
-    override fun execute(enginePowerStr: String?) {
+     fun execute(enginePowerStr: String?) {
         if (cm.baseCollection.isEmpty()) {
             outputManager.println("Коллекция пуста.")
             return

@@ -23,5 +23,6 @@ class ExitCommand(
         outputManager.disableOutput()
         outputManager.surePrint("Программа завершена.")
         ExitFlag.exitFlag = true
+
     }
 }

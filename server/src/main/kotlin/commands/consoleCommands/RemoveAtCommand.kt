@@ -68,7 +68,7 @@ class RemoveAtCommand(
         }
     }
 
-    override fun execute(indexStr: String?) {
+    fun execute(indexStr: String?) {
         if (cm.baseCollection.isEmpty()) {
             outputManager.println("Коллекция пуста.")
             return

@@ -14,7 +14,6 @@ sealed interface Command {
      * Реализация метода зависит от конкретной команды.
      */
     val interactive: Boolean
-    fun execute(args: String?)
     fun execute(args: Map<String, String>)
     fun getInfo(): String
     fun getArgsType(): Map<String, String>

@@ -3,7 +3,9 @@ package baseClasses
 import kotlinx.serialization.Contextual
 import kotlinx.serialization.Serializable
 import serializers.DateSerializer
+import java.util.Collections
 import java.util.Date
+import java.util.concurrent.atomic.AtomicInteger
 
 /**
  * Класс, представляющий транспортное средство.
@@ -33,6 +35,7 @@ data class Vehicle(
      * Уникальный идентификатор транспортного средства.
      * Генерируется автоматически с помощью метода [generateId].
      */
+
     val id: Int = generateId()
 
     /**
@@ -41,6 +44,9 @@ data class Vehicle(
      */
     @Serializable(with = DateSerializer::class)
     val creationDate: Date = Date()
+
+
+
 
     /**
      * Возвращает строковое представление объекта [Vehicle].
@@ -126,3 +132,12 @@ data class Vehicle(
         }
     }
 }
+
+fun Vehicle.withNewId(): Vehicle = Vehicle(
+    name = this.name,
+    coordinates = this.coordinates,
+    enginePower = this.enginePower,
+    capacity = this.capacity,
+    distanceTravelled = this.distanceTravelled,
+    fuelType = this.fuelType
+)

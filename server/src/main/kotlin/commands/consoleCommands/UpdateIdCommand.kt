@@ -153,7 +153,7 @@ class UpdateIdCommand(
         connectionManager.send(response)
     }
 
-    override fun execute(args: String?) {
+    fun execute(args: String?) {
         if (cm.baseCollection.isNotEmpty()) {
             cm.baseCollection.forEach { vehicle ->
                 outputManager.println("Список доступных ID: ${vehicle.id}, name - ${vehicle.name}")

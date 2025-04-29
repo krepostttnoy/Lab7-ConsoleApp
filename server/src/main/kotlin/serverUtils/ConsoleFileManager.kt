@@ -36,7 +36,7 @@ class ConsoleFileManager(
      */
     private val filePath: String = System.getenv("CSV_FILE_PATH") ?: run {
         println("Переменная окружения CSV_FILE_PATH не установлена. Используется значение по умолчанию 'CollectionInput.csv'")
-        "/Users/mark/Programming/languages/Kotlin/Lab6/server/src/main/kotlin/CollectionInput.csv"
+        "/Users/mark/Programming/languages/Kotlin/Lab6-ConsoleApp/server/src/main/kotlin/CollectionInput.csv"
     }
 
     /**
@@ -65,6 +65,7 @@ class ConsoleFileManager(
     override fun loadFromFile(filePath: String) {
         try {
             val file = File(filePath)
+            val loadedIds = mutableSetOf<Int>()
             if (file.exists()) {
                 inputManager.startScriptRead(filePath)
                 BufferedInputStream(FileInputStream(file)).use { inputStream ->
@@ -82,8 +83,9 @@ class ConsoleFileManager(
                             }
 
                             try {
+
                                 val name = params[0]
-                                if (name.isBlank()) {
+                                if (name.isBlank()){
                                     throw IllegalArgumentException("Имя не может быть пустым")
                                 }
 
@@ -137,7 +139,7 @@ class ConsoleFileManager(
                                     distanceTravelled = distanceTravelled,
                                     fuelType = fuelType
                                 )
-                                collectionManager.getCollection().add(vehicle)
+                                collectionManager.addVehicle(vehicle)
                             } catch (e: NumberFormatException) {
                                 outputManager.println("Warning: Line $lineNumber skipped - ${e.message}")
                             } catch (e: IllegalArgumentException) {
@@ -171,7 +173,7 @@ class ConsoleFileManager(
                 outputStream.write(title.toByteArray())
 
                 for (vehicle in collectionManager.getCollection()) {
-                    val line = "${vehicle.name},${vehicle.coordinates.x},${vehicle.coordinates.y}," +
+                    val line = "${vehicle.id},${vehicle.name},${vehicle.coordinates.x},${vehicle.coordinates.y}," +
                             "${vehicle.enginePower},${vehicle.capacity},${vehicle.distanceTravelled}," +
                             "${vehicle.fuelType?.description ?: ""}\n"
                     outputStream.write(line.toByteArray(Charsets.UTF_8))

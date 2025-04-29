@@ -42,7 +42,7 @@ class ShowCommand(
         connectionManager.send(response)
     }
 
-    override fun execute(args: String?) {
+    fun execute(args: String?) {
         outputManager.println(cm.printCollection())
     }
 }

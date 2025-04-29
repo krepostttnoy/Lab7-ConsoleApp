@@ -35,7 +35,7 @@ class ExitCommand(
         TODO("Not yet implemented")
     }
 
-    override fun execute(args: String?) {
+    fun execute(args: String?) {
         outputManager.disableOutput()
         outputManager.surePrint("Программа завершена.")
         ExitFlag.exitFlag = true

@@ -88,7 +88,7 @@ class AddIfMaxCommand(
         }
     }
 
-    override fun execute(args: String?) {
+    fun execute(args: String?) {
         if (cm.baseCollection.isEmpty()) {
             outputManager.println("Коллекция пуста.")
             val newVehicle = vm.setVehicle()

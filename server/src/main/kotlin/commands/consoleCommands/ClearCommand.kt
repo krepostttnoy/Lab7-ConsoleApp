@@ -37,15 +37,15 @@ class ClearCommand(
      * 4. Выводит сообщение об успешной очистке и текущий размер коллекции.
      */
     override fun execute(args: Map<String, String>) {
-        if (cm.baseCollection.isEmpty()) {
+        if (cm.getCollection().isEmpty()) {
             val response = ResponseWrapper(ResponseType.OK, "Collection is empty")
             connectionManager.send(response)
             return
         }
 
-        cm.baseCollection.clear()
+        cm.clear()
         Vehicle.Companion.existingIds.clear()
-        val response = ResponseWrapper(ResponseType.OK, "Collection is cleared. Size: ${cm.baseCollection.size}")
+        val response = ResponseWrapper(ResponseType.OK, "Collection is cleared. Size: ${cm.getCollection().size}")
         connectionManager.send(response)
     }
 
@@ -55,16 +55,5 @@ class ClearCommand(
 
     override fun getInfo(): String {
         return info
-    }
-
-    fun execute(args: String?) {
-        if (cm.baseCollection.isEmpty()) {
-            outputManager.println("Коллекция пуста.")
-            return
-        }
-
-        cm.baseCollection.clear()
-        Vehicle.Companion.existingIds.clear()
-            outputManager.println("Все элементы удалены. Размер коллекции: ${cm.baseCollection.size}")
     }
 }

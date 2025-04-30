@@ -31,8 +31,4 @@ class HelpCommand(private val ce: ICommandExecutor) : Command {
     override fun execute(args: Map<String, String>) {
         TODO("Not yet implemented")
     }
-
-    fun execute(args: String?) {
-        ce.getHelp()
-    }
 }

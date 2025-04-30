@@ -66,7 +66,7 @@ class UpdateIdCommand(
      * 7. Заменяет старый элемент в коллекции на обновлённый.
      */
     override fun execute(args: Map<String, String>) {
-        if (cm.baseCollection.isEmpty()) {
+        if (cm.getCollection().isEmpty()) {
             val response = ResponseWrapper(ResponseType.OK, "Collection is empty")
             connectionManager.send(response)
             return
@@ -96,14 +96,14 @@ class UpdateIdCommand(
             return
         }
 
-        val index = cm.baseCollection.indexOfFirst { it.id == id }
+        val index = cm.getCollection().indexOfFirst { it.id == id }
         if (index == -1) {
             val response = ResponseWrapper(ResponseType.ERROR, "Element with ID = $id does not exist")
             connectionManager.send(response)
             return
         }
 
-        val oldVehicle = cm.baseCollection[index]
+        val oldVehicle = cm.getCollection()[index]
         Vehicle.Companion.removeId(oldVehicle.id)
         val jsonCreator = JsonCreator()
 
@@ -148,65 +148,8 @@ class UpdateIdCommand(
             }
         }
 
-        cm.baseCollection[index] = newVehicle
+        cm.updateVehicleAt(index, newVehicle)
         val response = ResponseWrapper(ResponseType.OK, "Element with ID = $id updated successfully")
         connectionManager.send(response)
-    }
-
-    fun execute(args: String?) {
-        if (cm.baseCollection.isNotEmpty()) {
-            cm.baseCollection.forEach { vehicle ->
-                outputManager.println("Список доступных ID: ${vehicle.id}, name - ${vehicle.name}")
-            }
-            outputManager.println("Введите ID элемента для обновления: ")
-            val id = console.readInt() ?: return println("Неверный ID. Повторите попытку.")
-            val index = cm.baseCollection.indexOfFirst { it.id == id }
-            if (index == -1) {
-                outputManager.println("Элемента с ID = $id не существует.")
-                return
-            }
-
-            outputManager.print("Какое поле обновить? (name, coordinates, enginePower, capacity, distanceTravelled, fuelType): ")
-            val field = console.readLineTrimmed()
-            val oldVehicle = cm.baseCollection[index]
-            Vehicle.Companion.removeId(oldVehicle.id)
-            val rm = Reader(outputManager, inputManager)
-            val newVehicle = when (field) {
-                "name" -> {
-                    val newName = rm.readName()
-                    oldVehicle.copy(name = newName)
-                }
-                "coordinates", "coords" -> {
-                    val newCoordX = rm.readCoordinateX()
-                    val newCoordY = rm.readCoordinateY()
-                    val newCoordinates = Coordinates(newCoordX, newCoordY)
-                    oldVehicle.copy(coordinates = newCoordinates)
-                }
-                "enginePower", "ep" -> {
-                    val newEnginePower = rm.readEnginePower()
-                    oldVehicle.copy(enginePower = newEnginePower)
-                }
-                "capacity", "cap" -> {
-                    val newCapacity = rm.readCapacity()
-                    oldVehicle.copy(capacity = newCapacity)
-                }
-                "distanceTravelled", "dt" -> {
-                    val newDistanceTravelled = rm.readDistanceTravelled()
-                    oldVehicle.copy(distanceTravelled = newDistanceTravelled)
-                }
-                "fuelType", "ft" -> {
-                    val newFuelType = rm.readFuelType()
-                    oldVehicle.copy(fuelType = newFuelType)
-                }
-                else -> {
-                    outputManager.println("Неверное поле. Доступные поля: name, coordinates, enginePower, capacity, distanceTravelled, fuelType")
-                    oldVehicle
-                }
-            }
-
-            cm.baseCollection[index] = newVehicle
-        } else {
-            outputManager.println("Коллекция пуста.\nПеред вызовом этой функции заполните коллекцию.")
-        }
     }
 }

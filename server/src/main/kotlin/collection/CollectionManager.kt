@@ -5,11 +5,15 @@ import kotlinx.serialization.Contextual
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.Transient
 import org.example.serverUtils.ConnectionManager
+import org.example.serverUtils.ConsoleFileManager
+import utils.inputOutput.InputManager
 import utils.inputOutput.OutputManager
 import java.text.Collator
 import java.time.LocalDate
 import java.time.LocalDateTime
 import java.util.Collections
+import java.util.concurrent.Executors
+import java.util.concurrent.TimeUnit
 
 
 /**
@@ -27,11 +31,20 @@ class CollectionManager {
     /**
      * Список транспортных средств, хранимых в коллекции.
      */
-    val outputManager = OutputManager()
-    val baseCollection = Collections.synchronizedList(ArrayList<Vehicle>())
-    val connectionManager = ConnectionManager()
-
+    private val baseCollection = Collections.synchronizedList(ArrayList<Vehicle>())
     private val initializationDate: LocalDate = LocalDate.now()
+
+    fun clear(){
+        synchronized(baseCollection) {
+            baseCollection.clear()
+        }
+    }
+
+    fun updateVehicleAt(index: Int, newVehicle: Vehicle){
+        synchronized(baseCollection) {
+            baseCollection[index] = newVehicle
+        }
+    }
 
     /**
      * Возвращает коллекцию транспортных средств.
@@ -39,7 +52,9 @@ class CollectionManager {
      * @return Список [ArrayList] с объектами типа [Vehicle].
      */
     fun getCollection(): List<Vehicle> {
-        return baseCollection.toList()
+        synchronized(baseCollection) {
+            return baseCollection.toList()
+        }
     }
     /**
      * Возвращает строковое представление всей коллекции.

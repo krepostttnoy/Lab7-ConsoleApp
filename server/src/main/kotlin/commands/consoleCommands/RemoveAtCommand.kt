@@ -46,16 +46,16 @@ class RemoveAtCommand(
      * @param indexStr Строковое представление индекса элемента для удаления (может быть null).
      */
     override fun execute(args: Map<String, String>) {
-        if (!(cm.baseCollection.isEmpty())) {
+        if (!(cm.getCollection().isEmpty())) {
             val index = args["index"]?.toInt()
 
-            if (index == null || index < 0 || index >= cm.baseCollection.size) {
+            if (index == null || index < 0 || index >= cm.getCollection().size) {
                 val response = ResponseWrapper(ResponseType.OK, "Incorrect index")
                 connectionManager.send(response)
                 return
             }
 
-            val vehicleToRemove = cm.baseCollection[index]
+            val vehicleToRemove = cm.getCollection()[index]
             cm.removeVehicle("removeAt", index, null)
             Vehicle.Companion.existingIds.remove(vehicleToRemove.id)
 

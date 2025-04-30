@@ -46,33 +46,17 @@ class AvgOfEnginePowerCommand(
     }
 
     override fun execute(args: Map<String, String>) {
-        if (cm.baseCollection.isEmpty()) {
+        if (cm.getCollection().isEmpty()) {
             val response = ResponseWrapper(ResponseType.OK, "Коллекция пуста.")
             connectionManager.send(response)
             return
         }
 
-        val size = cm.baseCollection.size
-        val sum = cm.baseCollection.sumOf { vehicle ->
+        val size = cm.getCollection().size
+        val sum = cm.getCollection().sumOf { vehicle ->
             (vehicle.enginePower ?: 0.0f).toDouble()
         }
         val response = ResponseWrapper(ResponseType.OK, "Avg: ${sum/size}. Sum -> $sum, size -> $size")
         connectionManager.send(response)
-
-
-    }
-
-    fun execute(args: String?) {
-        if (cm.baseCollection.isEmpty()) {
-            outputManager.println("Коллекция пуста.")
-            return
-        }
-
-        val size = cm.baseCollection.size
-        val sum = cm.baseCollection.sumOf { vehicle ->
-            (vehicle.enginePower ?: 0.0f).toDouble()
-        }
-
-            outputManager.println("Avg: ${sum/size}. Sum -> $sum, size -> $size")
     }
 }

@@ -13,6 +13,8 @@ import java.io.File
 import java.io.FileInputStream
 import java.io.FileOutputStream
 import java.io.InputStreamReader
+import java.util.concurrent.Executors
+import java.util.concurrent.TimeUnit
 
 /**
  * Класс для управления чтением и записью коллекции транспортных средств в файл.
@@ -29,6 +31,7 @@ class ConsoleFileManager(
     private val outputManager: OutputManager,
     private val inputManager: InputManager
     ) : IFileManager {
+    private val scheduler = Executors.newSingleThreadScheduledExecutor()
 
     /**
      * Путь к файлу для чтения и записи данных.
@@ -65,7 +68,6 @@ class ConsoleFileManager(
     override fun loadFromFile(filePath: String) {
         try {
             val file = File(filePath)
-            val loadedIds = mutableSetOf<Int>()
             if (file.exists()) {
                 inputManager.startScriptRead(filePath)
                 BufferedInputStream(FileInputStream(file)).use { inputStream ->
@@ -171,17 +173,31 @@ class ConsoleFileManager(
             BufferedOutputStream(FileOutputStream(file)).use { outputStream ->
                 val title = "name,coordinateX,coordinateY,enginePower,capacity,distanceTravelled,fuelType\n"
                 outputStream.write(title.toByteArray())
-
-                for (vehicle in collectionManager.getCollection()) {
-                    val line = "${vehicle.id},${vehicle.name},${vehicle.coordinates.x},${vehicle.coordinates.y}," +
+                val vehicles = collectionManager.getCollection()
+                var line: String
+                for (vehicle in vehicles) {
+                    line = "${vehicle.name},${vehicle.coordinates.x},${vehicle.coordinates.y}," +
                             "${vehicle.enginePower},${vehicle.capacity},${vehicle.distanceTravelled}," +
                             "${vehicle.fuelType?.description ?: ""}\n"
                     outputStream.write(line.toByteArray(Charsets.UTF_8))
                 }
             }
-                outputManager.println("Коллекция успешно сохранена в файл: $filePath")
         } catch (e: Exception) {
             outputManager.println("Ошибка при сохранении. ${e.message}")
         }
+    }
+
+    fun startAutoSave(interval: Long){
+        scheduler.scheduleAtFixedRate({
+            synchronized(collectionManager.getCollection()) {
+                try {
+                    saveToFile()
+                    outputManager.println("Collection saved automatically")
+                }catch (e: Exception){
+                    outputManager.println("Error: $e")
+                }
+            }
+        }, interval, interval, TimeUnit.SECONDS)
+
     }
 }

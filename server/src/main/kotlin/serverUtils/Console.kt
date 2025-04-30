@@ -39,6 +39,10 @@ class Console {
     private val jsonCreator = JsonCreator()
     private val selector = Selector.open()
 
+    init {
+        fileManager.startAutoSave(60)
+    }
+
     fun start(actions: ConnectionManager.() -> Unit) {
         connectionManager.actions()
     }

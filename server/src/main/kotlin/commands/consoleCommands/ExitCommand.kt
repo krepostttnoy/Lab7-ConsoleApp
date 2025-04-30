@@ -34,10 +34,4 @@ class ExitCommand(
     override fun execute(args: Map<String, String>) {
         TODO("Not yet implemented")
     }
-
-    fun execute(args: String?) {
-        outputManager.disableOutput()
-        outputManager.surePrint("Программа завершена.")
-        ExitFlag.exitFlag = true
-    }
 }

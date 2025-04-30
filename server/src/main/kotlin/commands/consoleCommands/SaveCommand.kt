@@ -39,8 +39,4 @@ class SaveCommand(private val fm: IFileManager) : Command {
     override fun execute(args: Map<String, String>) {
         TODO("Not yet implemented")
     }
-
-     fun execute(args: String?) {
-        fm.saveToFile()
-    }
 }

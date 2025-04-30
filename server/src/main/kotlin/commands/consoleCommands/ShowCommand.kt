@@ -41,8 +41,4 @@ class ShowCommand(
         val response = ResponseWrapper(ResponseType.OK, cm.printCollection())
         connectionManager.send(response)
     }
-
-    fun execute(args: String?) {
-        outputManager.println(cm.printCollection())
-    }
 }

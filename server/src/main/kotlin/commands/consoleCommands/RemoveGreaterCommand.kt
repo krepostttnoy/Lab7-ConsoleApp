@@ -57,7 +57,7 @@ class RemoveGreaterCommand(
      */
     override fun execute(args: Map<String, String>) {
         var response: ResponseWrapper
-        if(!(cm.baseCollection.isEmpty())){
+        if(!(cm.getCollection().isEmpty())){
             val enginePower = args["engPw"]?.toFloatOrNull()
             var i = 0
             val element = Vehicle(
@@ -68,7 +68,7 @@ class RemoveGreaterCommand(
                 distanceTravelled = 0,
                 fuelType = null
             )
-            val toRemove = cm.baseCollection.filter { it > element }
+            val toRemove = cm.getCollection().filter { it > element }
 
             if (toRemove.isEmpty()) {
                 response = ResponseWrapper(ResponseType.OK, "goida can't delete anything")

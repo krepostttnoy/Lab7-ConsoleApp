@@ -56,7 +56,7 @@ class CountGrThanEngPwCommand(
     }
 
     override fun execute(args: Map<String, String>) {
-        if (cm.baseCollection.isEmpty()) {
+        if (cm.getCollection().isEmpty()) {
             val response = ResponseWrapper(ResponseType.OK, "hueta")
             connectionManager.send(response)
             return
@@ -72,40 +72,8 @@ class CountGrThanEngPwCommand(
             fuelType = null
         )
 
-        val count = cm.baseCollection.filter { it > element }.size
+        val count = cm.getCollection().filter { it > element }.size
         val response = ResponseWrapper(ResponseType.OK, "Кол-во объектов enginePower которых больше $engPower -> $count")
         connectionManager.send(response)
     }
-
-    fun execute(enginePowerStr: String?) {
-        if (cm.baseCollection.isEmpty()) {
-            outputManager.println("Коллекция пуста.")
-            return
-        }
-
-        val engPower = enginePowerStr?.toFloatOrNull() ?: run {
-            outputManager.print("Введите enginePower для сравнения: ")
-            rm.readFloat() ?: return
-        }
-
-        val element = Vehicle(
-            name = "ComparingModel",
-            coordinates = Coordinates(0, 0),
-            enginePower = engPower,
-            capacity = 0.0f,
-            distanceTravelled = 0,
-            fuelType = null
-        )
-
-        val count = cm.baseCollection.filter { it > element }.size
-
-            outputManager.println("Кол-во объектов enginePower которых больше $engPower -> $count")
-    }
-
-    /**
-     * Выполняет команду без аргументов.
-     * Вызывает [execute] с параметром [enginePowerStr] равным null,
-     * что приводит к запросу значения у пользователя.
-     */
-
 }

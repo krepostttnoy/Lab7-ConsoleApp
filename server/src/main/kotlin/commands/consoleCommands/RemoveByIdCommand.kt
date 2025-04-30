@@ -53,17 +53,17 @@ class RemoveByIdCommand(
      * @param idStr Строковое представление идентификатора элемента для удаления (может быть null).
      */
     override fun execute(args: Map<String, String>) {
-        if (!(cm.baseCollection.isEmpty())) {
+        if (!(cm.getCollection().isEmpty())) {
             val id = args["index"]?.toInt()
 
-            val index = cm.baseCollection.indexOfFirst { it.id == id }
+            val index = cm.getCollection().indexOfFirst { it.id == id }
             if (index == -1) {
                 val response = ResponseWrapper(ResponseType.OK, "Элемента с ID = $id не существует.")
                 connectionManager.send(response)
                 return
             }
 
-            val vehicleToRemove = cm.baseCollection[index]
+            val vehicleToRemove = cm.getCollection()[index]
             cm.removeVehicle("removeAt", index, null)
             Vehicle.Companion.existingIds.remove(vehicleToRemove.id)
 

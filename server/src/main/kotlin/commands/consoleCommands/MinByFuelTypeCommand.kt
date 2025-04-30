@@ -45,8 +45,8 @@ class MinByFuelTypeCommand(
      * 4. Если элемент не найден, выводит сообщение об ошибке.
      */
     override fun execute(args: Map<String, String>) {
-        if (!(cm.baseCollection.isEmpty())) {
-            val minVehicle = cm.baseCollection.minByOrNull { vehicle ->
+        if (!(cm.getCollection().isEmpty())) {
+            val minVehicle = cm.getCollection().minByOrNull { vehicle ->
                 vehicle.fuelType ?: FuelType.entries.toTypedArray().min()
             }
             if (minVehicle == null) {
@@ -60,23 +60,5 @@ class MinByFuelTypeCommand(
             connectionManager.send(response)
             return
         }
-    }
-
-    fun execute(args: String?) {
-        if (cm.baseCollection.isEmpty()) {
-            outputManager.println("Коллекция пуста. Нет элементов для поиска минимального fuelType.")
-            return
-        }
-
-        val minVehicle = cm.baseCollection.minByOrNull { vehicle ->
-            vehicle.fuelType ?: FuelType.entries.toTypedArray().min()
-        }
-
-        if (minVehicle == null) {
-            outputManager.println("Не удалось найти элемент с минимальным fuelType.")
-            return
-        }
-
-        outputManager.println("${minVehicle.name} -> ${minVehicle.fuelType}")
     }
 }

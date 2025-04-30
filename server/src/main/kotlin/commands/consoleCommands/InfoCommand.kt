@@ -38,8 +38,4 @@ class InfoCommand(
         val response = ResponseWrapper(ResponseType.OK, cm.printCollectionInfo())
         connectionManager.send(response)
     }
-
-    fun execute(args: String?) {
-        cm.printCollectionInfo()
-    }
 }

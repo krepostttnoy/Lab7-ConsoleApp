@@ -55,7 +55,7 @@ class AddIfMaxCommand(
     override fun execute(args: Map<String, String>) {
         try{
             val jsonCreator = JsonCreator()
-            if (cm.baseCollection.isEmpty()) {
+            if (cm.getCollection().isEmpty()) {
                 outputManager.println("Коллекция пуста.")
                 val vehicleJson = args["vehicle"] ?: throw IllegalArgumentException("Vehicle data is missing")
                 val vehicle = jsonCreator.stringToObject<Vehicle>(vehicleJson)
@@ -65,7 +65,7 @@ class AddIfMaxCommand(
                 return
             }
 
-            val maxVehicle = cm.baseCollection.maxWithOrNull(compareBy { it.enginePower })
+            val maxVehicle = cm.getCollection().maxWithOrNull(compareBy { it.enginePower })
             if (maxVehicle == null) {
                 outputManager.println("Ошибка: не удалось определить максимальный элемент.")
                 return

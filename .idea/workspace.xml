@@ -78,12 +78,25 @@
       <change beforePath="$PROJECT_DIR$/../Lab5/src/test/kotlin/CommandsTest.kt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Lab5/src/test/kotlin/VehicleManagerTest.kt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/kotlin/commands/CommandReciever.kt" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/kotlin/commands/CommandReciever.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/CollectionInput.csv" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/CollectionInput.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/collection/CollectionManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/collection/CollectionManager.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/AddIfMaxCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/AddIfMaxCommand.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/AvgOfEnginePowerCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/AvgOfEnginePowerCommand.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/ClearCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/ClearCommand.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/CountGrThanEngPwCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/CountGrThanEngPwCommand.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/ExecuteScriptCommand.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/ExitCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/ExitCommand.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/HelpCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/HelpCommand.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/InfoCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/InfoCommand.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/MinByFuelTypeCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/MinByFuelTypeCommand.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/RemoveAtCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/RemoveAtCommand.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/RemoveByIdCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/RemoveByIdCommand.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/RemoveGreaterCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/RemoveGreaterCommand.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/SaveCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/SaveCommand.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/ShowCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/ShowCommand.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/UpdateIdCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/UpdateIdCommand.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/serverUtils/Console.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/serverUtils/Console.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/serverUtils/ConsoleFileManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/serverUtils/ConsoleFileManager.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

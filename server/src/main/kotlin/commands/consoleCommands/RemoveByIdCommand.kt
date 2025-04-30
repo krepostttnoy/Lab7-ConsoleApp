@@ -64,7 +64,7 @@ class RemoveByIdCommand(
             }
 
             val vehicleToRemove = cm.baseCollection[index]
-            cm.baseCollection.removeAt(index)
+            cm.removeVehicle("removeAt", index, null)
             Vehicle.Companion.existingIds.remove(vehicleToRemove.id)
 
             val response = ResponseWrapper(ResponseType.OK, "")
@@ -75,46 +75,4 @@ class RemoveByIdCommand(
             return
         }
     }
-
-    fun execute(idStr: String?) {
-        val console = Validator(outputManager, inputManager)
-
-        if (cm.baseCollection.isEmpty()) {
-            outputManager.println("Коллекция пуста. Перед удалением добавьте элементы с помощью команды 'add'.")
-            return
-        }
-
-        if (idStr == null) {
-            outputManager.println("Текущие элементы:")
-            cm.baseCollection.forEach { vehicle ->
-                outputManager.println("ID: ${vehicle.id}")
-            }
-        }
-
-        val id: Int? = if (idStr == null) {
-            outputManager.print("Введите ID элемента, который хотите удалить: ")
-            console.readInt()
-        } else {
-            idStr.toIntOrNull()
-        }
-
-        val index = cm.baseCollection.indexOfFirst { it.id == id }
-        if (index == -1) {
-            outputManager.println("Элемента с ID = $id не существует.")
-            return
-        }
-
-        val vehicleToRemove = cm.baseCollection[index]
-        cm.baseCollection.removeAt(index)
-        Vehicle.Companion.removeId(vehicleToRemove.id)
-
-        outputManager.println("Элемент удален.")
-    }
-
-    /**
-     * Выполняет команду без аргументов.
-     * Вызывает [execute] с параметром [idStr] равным null,
-     * что приводит к запросу идентификатора у пользователя.
-     */
-
 }

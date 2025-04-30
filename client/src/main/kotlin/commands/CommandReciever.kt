@@ -120,6 +120,7 @@ class CommandReceiver(
                     }
                     "Float" -> {
                         argList.getOrNull(args.keys.indexOf(arg)) ?: run {
+                            outputManager.print("Enter a float number: ")
                             val result = validator.readFloat()
                             jsonCreator.objectToString(result)
                         }

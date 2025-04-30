@@ -56,6 +56,7 @@ class RemoveGreaterCommand(
      * @param enginePowerStr Строковое представление мощности двигателя для сравнения (может быть null).
      */
     override fun execute(args: Map<String, String>) {
+        var response: ResponseWrapper
         if(!(cm.baseCollection.isEmpty())){
             val enginePower = args["engPw"]?.toFloatOrNull()
             var i = 0
@@ -70,70 +71,24 @@ class RemoveGreaterCommand(
             val toRemove = cm.baseCollection.filter { it > element }
 
             if (toRemove.isEmpty()) {
-                outputManager.println("hueta")
-                return
+                response = ResponseWrapper(ResponseType.OK, "goida can't delete anything")
+                connectionManager.send(response)
             }
 
             toRemove.forEach { vehicle ->
-                cm.baseCollection.remove(vehicle)
+                cm.removeVehicle("remove", null, vehicle)
                 Vehicle.Companion.existingIds.remove(vehicle.id)
                 i++
             }
 
 
-            val result = ResponseWrapper(ResponseType.OK, "Deleted ${i} govno/(a)")
+            val result = ResponseWrapper(ResponseType.OK, "Deleted $i govno/(a)")
             connectionManager.send(result)
 
 
         }else{
-            val response = ResponseWrapper(ResponseType.OK, "hueta")
+            response = ResponseWrapper(ResponseType.OK, "goida")
             connectionManager.send(response)
         }
     }
-
-     fun execute(enginePowerStr: String?) {
-        if (cm.baseCollection.isEmpty()) {
-            outputManager.println("Коллекция пуста.")
-            return
-        }
-
-        val enginePower = enginePowerStr?.toFloatOrNull() ?: run {
-            outputManager.print("Введите enginePower для сравнения: ")
-            r.readFloat() ?: return
-        }
-
-        val element = Vehicle(
-            name = "ComparingModel",
-            coordinates = Coordinates(0, 0),
-            enginePower = enginePower,
-            capacity = 0.0f,
-            distanceTravelled = 0,
-            fuelType = null
-        )
-
-        val toRemove = cm.baseCollection.filter { it > element }
-
-        if (toRemove.isEmpty()) {
-            outputManager.println("Нет элементов, превышающих enginePower заданного.")
-            return
-        }
-
-        toRemove.forEach { vehicle ->
-            cm.baseCollection.remove(vehicle)
-            Vehicle.Companion.existingIds.remove(vehicle.id)
-        }
-
-        outputManager.println("Удалено ${toRemove.size} элементов.")
-
-        toRemove.forEach { vehicle ->
-            outputManager.println("Удалён объект с enginePower = ${vehicle.enginePower}")
-        }
-    }
-
-    /**
-     * Выполняет команду без аргументов.
-     * Вызывает [execute] с параметром [enginePowerStr] равным null,
-     * что приводит к запросу значения у пользователя.
-     */
-
 }

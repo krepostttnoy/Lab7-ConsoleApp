@@ -41,15 +41,6 @@ class CollectionManager {
     fun getCollection(): List<Vehicle> {
         return baseCollection.toList()
     }
-
-    /**
-     * Сортирует коллекцию по мощности двигателя транспортных средств.
-     * Использует метод [sort] из [ArrayList], который вызывает [Vehicle.compareTo].
-     */
-    fun sortCollectionByEnginePower() {
-        baseCollection.sort()
-    }
-
     /**
      * Возвращает строковое представление всей коллекции.
      * Каждый элемент коллекции представлен в виде строки, полученной через [Vehicle.toString].
@@ -57,7 +48,9 @@ class CollectionManager {
      * @return Строковое представление коллекции, где элементы разделены переносом строки.
      */
     fun printCollection(): String {
-        return baseCollection.joinToString("\n") { it.toString() }
+        synchronized(baseCollection) {
+            return baseCollection.joinToString("\n") { it.toString() }
+        }
     }
 
     /**
@@ -66,8 +59,27 @@ class CollectionManager {
      * @param vehicle Объект [Vehicle], который нужно добавить в коллекцию.
      */
     fun addVehicle(vehicle: Vehicle) {
+        synchronized(baseCollection) {
             baseCollection.add(vehicle)
+        }
+    }
 
+    fun removeVehicle(argsName: String, argsRaw: Int?, vehicle: Vehicle?){
+        synchronized(baseCollection) {
+            when(argsName){
+                "removeAt" -> {
+                    if (argsRaw != null){
+                        baseCollection.removeAt(argsRaw)
+                    }else{
+                        throw NullPointerException("Null argument for parameter argsRaw is not available.")
+                    }
+                }
+                "remove" -> {
+                    baseCollection.remove(vehicle)
+                }
+                else -> ""
+            }
+        }
     }
 
     /**
@@ -75,9 +87,11 @@ class CollectionManager {
      * Включает тип коллекции, дату инициализации и количество элементов.
      */
     fun printCollectionInfo(): String {
-        return "Информация о коллекции:\n" +
-                "Тип: ${baseCollection.javaClass.simpleName}<${Vehicle::class.simpleName}>\n" +
-                "Дата инициализации: $initializationDate\n" +
-                "Кол-во элементов: ${baseCollection.size}"
+        synchronized(baseCollection) {
+            return "Информация о коллекции:\n" +
+                    "Тип: ${baseCollection.javaClass.simpleName}<${Vehicle::class.simpleName}>\n" +
+                    "Дата инициализации: $initializationDate\n" +
+                    "Кол-во элементов: ${baseCollection.size}"
+        }
     }
 }

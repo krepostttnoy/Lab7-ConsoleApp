@@ -87,29 +87,4 @@ class AddIfMaxCommand(
             connectionManager.send(response)
         }
     }
-
-    fun execute(args: String?) {
-        if (cm.baseCollection.isEmpty()) {
-            outputManager.println("Коллекция пуста.")
-            val newVehicle = vm.setVehicle()
-            cm.addVehicle(newVehicle)
-            outputManager.println("Объект добавлен в коллекцию.")
-            return
-        }
-
-        val maxVehicle = cm.baseCollection.maxWithOrNull(compareBy { it.enginePower })
-        if (maxVehicle == null) {
-            outputManager.println("Ошибка: не удалось определить максимальный элемент.")
-            return
-        }
-
-        val newVehicle = vm.setVehicle()
-
-        if (newVehicle.compareTo(maxVehicle) > 0) {
-            cm.addVehicle(newVehicle)
-                outputManager.println("Объект добавлен в коллекцию.")
-        } else {
-            outputManager.println("Объект не может быть добавлен в коллекцию.")
-        }
-    }
 }

@@ -56,7 +56,7 @@ class RemoveAtCommand(
             }
 
             val vehicleToRemove = cm.baseCollection[index]
-            cm.baseCollection.removeAt(index)
+            cm.removeVehicle("removeAt", index, null)
             Vehicle.Companion.existingIds.remove(vehicleToRemove.id)
 
             val response = ResponseWrapper(ResponseType.OK, "")
@@ -67,35 +67,4 @@ class RemoveAtCommand(
             return
         }
     }
-
-    fun execute(indexStr: String?) {
-        if (cm.baseCollection.isEmpty()) {
-            outputManager.println("Коллекция пуста.")
-            return
-        }
-
-        val index: Int? = if (indexStr == null) {
-            outputManager.print("Введите индекс элемента для удаления (0-${cm.baseCollection.size - 1}): ")
-            rm.readInt()
-        } else {
-            indexStr.toIntOrNull()
-        }
-
-        if (index == null || index < 0 || index >= cm.baseCollection.size) {
-            outputManager.println("Неверный индекс")
-            return
-        }
-
-        val vehicleToRemove = cm.baseCollection[index]
-        cm.baseCollection.removeAt(index)
-        Vehicle.Companion.existingIds.remove(vehicleToRemove.id)
-        outputManager.println("Элемент удален.")
-    }
-
-    /**
-     * Выполняет команду без аргументов.
-     * Вызывает [execute] с параметром [indexStr] равным null,
-     * что приводит к запросу индекса у пользователя.
-     */
-
 }

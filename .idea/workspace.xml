@@ -78,25 +78,13 @@
       <change beforePath="$PROJECT_DIR$/../Lab5/src/test/kotlin/CommandsTest.kt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Lab5/src/test/kotlin/VehicleManagerTest.kt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/kotlin/clientUtils/ConnectonManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/kotlin/clientUtils/ConnectonManager.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/kotlin/clientUtils/Console.kt" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/kotlin/clientUtils/Console.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/kotlin/baseClasses/ExitFlag.kt" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/kotlin/baseClasses/ExitFlag.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/kotlin/utils/inputOutput/InputManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/kotlin/utils/inputOutput/InputManager.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/CollectionInput.csv" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/CollectionInput.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/collection/CollectionManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/collection/CollectionManager.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/AddIfMaxCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/AddIfMaxCommand.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/AvgOfEnginePowerCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/AvgOfEnginePowerCommand.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/ClearCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/ClearCommand.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/CountGrThanEngPwCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/CountGrThanEngPwCommand.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/ExecuteScriptCommand.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/ExitCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/ExitCommand.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/HelpCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/HelpCommand.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/InfoCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/InfoCommand.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/MinByFuelTypeCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/MinByFuelTypeCommand.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/RemoveAtCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/RemoveAtCommand.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/RemoveByIdCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/RemoveByIdCommand.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/RemoveGreaterCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/RemoveGreaterCommand.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/SaveCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/SaveCommand.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/ShowCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/ShowCommand.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/UpdateIdCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/UpdateIdCommand.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/Server.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/Server.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/serverUtils/Console.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/serverUtils/Console.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/serverUtils/ConsoleFileManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/serverUtils/ConsoleFileManager.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -281,6 +269,10 @@
       <workItem from="1745871776481" duration="1918000" />
       <workItem from="1745909418090" duration="159000" />
       <workItem from="1745943934801" duration="5588000" />
+      <workItem from="1746048746995" duration="565000" />
+      <workItem from="1746079947664" duration="2464000" />
+      <workItem from="1746168979010" duration="2524000" />
+      <workItem from="1746288452646" duration="8394000" />
     </task>
     <servers />
   </component>

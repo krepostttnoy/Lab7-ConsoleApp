@@ -1,6 +1,7 @@
 package baseClasses
 
 object ExitFlag {
+    @Volatile
     private var workStatus: Boolean = false
 
     var exitFlag: Boolean

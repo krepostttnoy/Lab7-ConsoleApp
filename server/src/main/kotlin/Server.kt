@@ -3,40 +3,30 @@ package org.example
 import org.example.serverUtils.Console
 import kotlin.concurrent.thread
 
-fun server(actions: Console.() -> Unit){
-    val console = Console()
-    console.actions()
-}
-
 
 fun main() {
+    val console = Console()
+    val port = 6789
+    val host = "localhost"
 
-    server {
-        val port = 6789
-        val host = "localhost"
+    console.initialize()
 
-        initialize()
-
-        val thread = thread{
-            while (true) {
-                when (readlnOrNull()) {
-                    "exit" -> {
-                        save()
-                        stop()
-                        break
-                    }
-                    "save" -> {
-                        save()
-                    }
+    val consoleThread = thread{
+        while(true){
+            when(readlnOrNull()){
+                "exit" -> {
+                    console.save()
+                    console.stop()
+                    break
+                }
+                "save" -> {
+                    console.save()
                 }
             }
         }
-
-        start {
-            startServer(host, port)
-            startInteractiveMode()
-        }
-
-        thread.join()
     }
+
+    console.startServer(host, port)
+    console.startInteractiveMode()
+    consoleThread.join()
 }

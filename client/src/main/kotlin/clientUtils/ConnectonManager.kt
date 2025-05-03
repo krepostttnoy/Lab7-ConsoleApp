@@ -30,7 +30,7 @@ class ConnectionManager(private var host: String, private var port: Int) {
             val start = System.nanoTime()
             send(request)
 
-            datagramSocket.soTimeout = 5000
+            datagramSocket.soTimeout = 7000
 
             receive()
             return (System.nanoTime() - start) / 1_000_000.0
@@ -64,12 +64,5 @@ class ConnectionManager(private var host: String, private var port: Int) {
             return ResponseWrapper(ResponseType.ERROR, e.message.toString())
         }
         return receive()
-    }
-
-    fun handleResponse(responseWrapper: ResponseWrapper){
-        when(responseWrapper.message) {
-            "Output disabled" -> outputManager.disableOutput()
-            "Output enabled" -> outputManager.enableOutput()
-        }
     }
 }

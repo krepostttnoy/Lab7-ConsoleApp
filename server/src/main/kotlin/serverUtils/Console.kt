@@ -25,6 +25,7 @@ import utils.wrappers.ResponseWrapper
 import java.nio.channels.DatagramChannel
 import java.nio.channels.SelectionKey
 import java.nio.channels.Selector
+import kotlin.system.exitProcess
 
 class Console {
     private val connectionManager = ConnectionManager()
@@ -43,9 +44,10 @@ class Console {
         fileManager.startAutoSave(60)
     }
 
-    fun start(actions: ConnectionManager.() -> Unit) {
-        connectionManager.actions()
+    fun startServer(host: String, port: Int){
+        connectionManager.startServer(host, port)
     }
+
 
     fun initialize() {
         commandInvoker.register("add", AddCommand(collectionManager, vehicleManager, outputManager, connectionManager))
@@ -84,49 +86,55 @@ class Console {
     fun startInteractiveMode() {
         connectionManager.datagramChannel.register(selector, SelectionKey.OP_READ)
 
-        while (!exitFlag) {
-            selector.select()
-            val selectedKeys = selector.selectedKeys()
-            val iter = selectedKeys.iterator()
-            while (iter.hasNext()) {
-                val key = iter.next()
-                if (key.isReadable) {
-                    val client = key.channel() as DatagramChannel
-                    try {
-                        connectionManager.datagramChannel = client
-                        val request = connectionManager.receive()
+        try {
+            while (!exitFlag) {
+                selector.select()
 
-                        when (request.requestType) {
-                            RequestType.COMMAND_EXEC -> {
-                                val commandName = request.message
-                                val args = request.args
-                                val response = ResponseWrapper(ResponseType.OK,
-                                    commandInvoker.executeCommand(commandName, args).toString()
-                                )
+                val selectedKeys = selector.selectedKeys()
+                val iter = selectedKeys.iterator()
+                while (iter.hasNext()) {
+                    val key = iter.next()
+                    if (key.isReadable) {
+                        val client = key.channel() as DatagramChannel
+                        try {
+                            connectionManager.datagramChannel = client
+                            val request = connectionManager.receive()
 
+                            when (request.requestType) {
+                                RequestType.COMMAND_EXEC -> {
+                                    val commandName = request.message
+                                    val args = request.args
+                                    val response = ResponseWrapper(ResponseType.OK,
+                                        commandInvoker.executeCommand(commandName, args).toString()
+                                    )
+
+                                }
+
+                                RequestType.INITIALIZATION -> {
+                                    onConnect()
+                                }
+
+                                RequestType.PING -> {
+                                    val response = ResponseWrapper(ResponseType.SYSTEM, "Pong")
+                                    connectionManager.send(response)
+                                }
                             }
-
-                            RequestType.INITIALIZATION -> {
-                                onConnect()
-                            }
-
-                            RequestType.PING -> {
-                                val response = ResponseWrapper(ResponseType.SYSTEM, "Pong")
-                                connectionManager.send(response)
-                            }
+                        } catch (e: Exception) {
+                            val response = ResponseWrapper(ResponseType.ERROR, e.message.toString())
+                            connectionManager.send(response)
                         }
-                    } catch (e: Exception) {
-                        val response = ResponseWrapper(ResponseType.ERROR, e.message.toString())
-                        connectionManager.send(response)
                     }
                 }
             }
+        }finally {
+            outputManager.println("Server stopped the work.")
+            connectionManager.datagramChannel.close()  // Закрытие канала
+            selector.close()
         }
-        connectionManager.datagramChannel.close()
-        selector.close()
     }
 
     fun stop(){
+        println("DEBUG: Stop called")
         exitFlag = true
         selector.wakeup()
     }

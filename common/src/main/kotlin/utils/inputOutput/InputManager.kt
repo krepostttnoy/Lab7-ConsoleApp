@@ -43,7 +43,7 @@ class InputManager(private val outputManager: OutputManager) {
                 outputManager.surePrint("File already going.")
                 throw IllegalStateException("Рекурсия обнаружена: файл ${file.name} уже выполняется.")
             }else{
-                outputManager.println("Start executing script from file ${file.name}")
+                outputManager.println("Start executing data from file ${file.name}")
                 scanners.push(Scanner(FileReader(file)))
                 files.push(file)
                 outputManager.disableOutput()
@@ -56,7 +56,7 @@ class InputManager(private val outputManager: OutputManager) {
         scriptMode = false
         scanners.pop()
         outputManager.enableOutput()
-        outputManager.println("Script from file was executed")
+        outputManager.println("Data from file was executed")
         files.pop()
     }
 

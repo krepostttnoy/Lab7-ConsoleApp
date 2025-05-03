@@ -77,21 +77,20 @@ class Console{
     fun startInteractiveMode(){
         try {
             while (!exitFlag) {
-                print("$ ")
+                outputManager.print("$ ")
                 val input = readLine()?.trim()
                 if(input == null){
                     return
                 }
                 if(input.isBlank()) continue
                 commandInvoker.executeCommand(input.lowercase())
-
             }
         } catch (e: IllegalArgumentException) {
-            println("${e.message}")
+            outputManager.println("${e.message}")
         } catch (e: StackOverflowError) {
-            println("${e.message}")
+            outputManager.println("${e.message}")
         } catch (e: Exception){
-            println("Unknown error: ${e.message}")
+            outputManager.println("Unknown error: ${e.message}")
         }
     }
 }

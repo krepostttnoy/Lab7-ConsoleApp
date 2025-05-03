@@ -200,4 +200,15 @@ class ConsoleFileManager(
         }, interval, interval, TimeUnit.SECONDS)
 
     }
+
+    fun stopAutoSave() {
+        scheduler.shutdown()
+        try {
+            if (!scheduler.awaitTermination(5, TimeUnit.SECONDS)) {
+                scheduler.shutdownNow()
+            }
+        } catch (e: InterruptedException) {
+            scheduler.shutdownNow()
+        }
+    }
 }

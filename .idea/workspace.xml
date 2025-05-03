@@ -77,14 +77,6 @@
       <change beforePath="$PROJECT_DIR$/../Lab5/src/test/kotlin/CollectionManagerTest.kt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Lab5/src/test/kotlin/CommandsTest.kt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Lab5/src/test/kotlin/VehicleManagerTest.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/kotlin/clientUtils/ConnectonManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/kotlin/clientUtils/ConnectonManager.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/kotlin/clientUtils/Console.kt" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/kotlin/clientUtils/Console.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/kotlin/baseClasses/ExitFlag.kt" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/kotlin/baseClasses/ExitFlag.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/kotlin/utils/inputOutput/InputManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/kotlin/utils/inputOutput/InputManager.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/CollectionInput.csv" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/CollectionInput.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/Server.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/Server.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/serverUtils/Console.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/serverUtils/Console.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -89,7 +89,7 @@ class Console {
         try {
             while (!exitFlag) {
                 selector.select()
-
+                if(exitFlag) break
                 val selectedKeys = selector.selectedKeys()
                 val iter = selectedKeys.iterator()
                 while (iter.hasNext()) {
@@ -137,6 +137,7 @@ class Console {
         println("DEBUG: Stop called")
         exitFlag = true
         selector.wakeup()
+        fileManager.stopAutoSave()
     }
 
     fun save(){

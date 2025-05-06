@@ -9,6 +9,8 @@ import utils.wrappers.ResponseWrapper
 import java.net.DatagramPacket
 import java.net.DatagramSocket
 import java.net.InetAddress
+import org.apache.logging.log4j.LogManager
+import org.apache.logging.log4j.Logger
 
 class ConnectionManager(private var host: String, private var port: Int) {
     private val timeout = 5000
@@ -16,6 +18,7 @@ class ConnectionManager(private var host: String, private var port: Int) {
     val outputManager = IOThread.outputManager
     private var hostInetAddress = InetAddress.getByName(host)
     private var datagramPacket = DatagramPacket(ByteArray(4096), 4096, hostInetAddress, port)
+    private val logger: Logger = LogManager.getLogger(ConnectionManager::class.java)
 
 
 
@@ -30,12 +33,14 @@ class ConnectionManager(private var host: String, private var port: Int) {
             val start = System.nanoTime()
             send(request)
 
-            datagramSocket.soTimeout = 7000
+            datagramSocket.soTimeout = 5000
 
             receive()
-            return (System.nanoTime() - start) / 1_000_000.0
+            var ping = (System.nanoTime() - start) / 1_000_000.0
+            return ping
+            logger.info(ping)
         } catch (e: Exception) {
-            println("❌ Ping failed: ${e.message}")
+            logger.error("Ping failed - `{}`: ${e.message}", timeout.toDouble())
             return timeout.toDouble()
         }
     }
@@ -44,7 +49,7 @@ class ConnectionManager(private var host: String, private var port: Int) {
         val json = Json.encodeToString(RequestWrapper.serializer(), request)
         val buf = json.toByteArray()
         val packet = DatagramPacket(buf, buf.size, InetAddress.getByName(host), port)
-        outputManager.println("🚀 Sending to $host:$port: $json")
+        logger.info("Sending to $host:$port: $json")
         datagramSocket.send(packet)
     }
 
@@ -53,7 +58,7 @@ class ConnectionManager(private var host: String, private var port: Int) {
         val packet = DatagramPacket(buf, buf.size)
         datagramSocket.receive(packet)
         val json = String(packet.data, 0, packet.length).trim()
-        outputManager.println("🔽 Received from ${packet.address}:${packet.port}: $json")
+        logger.info("Received from ${packet.address}:${packet.port}: $json")
         return Json.decodeFromString(json)
     }
 

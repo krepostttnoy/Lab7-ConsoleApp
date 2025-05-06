@@ -1,6 +1,7 @@
 package org.example.commands.consoleCommands
 
 import baseClasses.Vehicle
+import baseClasses.withNewId
 import collection.CollectionManager
 import org.example.commands.consoleCommands.Command
 import console.IVehicleManager
@@ -58,7 +59,10 @@ class AddIfMaxCommand(
             if (cm.getCollection().isEmpty()) {
                 outputManager.println("Коллекция пуста.")
                 val vehicleJson = args["vehicle"] ?: throw IllegalArgumentException("Vehicle data is missing")
-                val vehicle = jsonCreator.stringToObject<Vehicle>(vehicleJson)
+                val vehicle = jsonCreator.stringToObject<Vehicle>(vehicleJson).withNewId()
+                if (cm.getCollection().any { it.id == vehicle.id }) {
+                    throw IllegalArgumentException("Vehicle with ID ${vehicle.id} already exists!, ${Vehicle.existingIds.toList()}")
+                }
                 cm.addVehicle(vehicle)
                 val response = ResponseWrapper(ResponseType.OK, "Vehicle added: ${vehicle.name}")
                 connectionManager.send(response)
@@ -71,7 +75,10 @@ class AddIfMaxCommand(
                 return
             }
             val vehicleJson = args["vehicle"] ?: throw IllegalArgumentException("Vehicle data is missing")
-            val newVehicle = jsonCreator.stringToObject<Vehicle>(vehicleJson)
+            val newVehicle = jsonCreator.stringToObject<Vehicle>(vehicleJson).withNewId()
+            if (cm.getCollection().any { it.id == newVehicle.id }) {
+                throw IllegalArgumentException("Vehicle with ID ${newVehicle.id} already exists!, ${Vehicle.existingIds.toList()}")
+            }
 
             if (newVehicle.compareTo(maxVehicle) > 0) {
                 cm.addVehicle(newVehicle)

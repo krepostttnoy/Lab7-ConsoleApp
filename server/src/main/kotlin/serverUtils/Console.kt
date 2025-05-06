@@ -27,7 +27,6 @@ import java.nio.channels.SelectionKey
 import java.nio.channels.Selector
 import org.apache.logging.log4j.LogManager
 import org.apache.logging.log4j.Logger
-import kotlin.math.log
 
 class Console {
     private val connectionManager = ConnectionManager()
@@ -38,7 +37,7 @@ class Console {
     private val validator = Validator(outputManager, inputManager)
     private val vehicleManager = ConsoleVehicleManager(reader)
     private val fileManager = ConsoleFileManager(collectionManager, outputManager, inputManager)
-    private val commandInvoker = CommandInvoker(outputManager, inputManager)
+    private val commandInvoker = CommandInvoker(inputManager)
     private val jsonCreator = JsonCreator()
     private val selector = Selector.open()
     private val logger: Logger = LogManager.getLogger(Console::class.java)

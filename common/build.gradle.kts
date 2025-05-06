@@ -1,6 +1,7 @@
 plugins {
     kotlin("jvm")
     kotlin("plugin.serialization") version "1.9.10"
+    id("com.github.johnrengelman.shadow") version "8.1.1"
 }
 
 group = "org.example"
@@ -36,6 +37,18 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.5.0")
 }
 
-tasks.test {
-    useJUnitPlatform()
+tasks {
+    shadowJar {
+        archiveBaseName.set("common")
+        archiveClassifier.set("all")
+
+
+        manifest {
+            attributes(mapOf("Implementation-Title" to "Common Module"))
+        }
+    }
+
+    test{
+        useJUnitPlatform()
+    }
 }

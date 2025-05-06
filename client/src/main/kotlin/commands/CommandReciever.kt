@@ -35,12 +35,10 @@ class CommandReceiver(
         val argList = inputArgs?.trim()?.split("\\s+".toRegex()) ?: emptyList()
 
         if (name == "update_id") {
-            // Выводим список доступных ID
             val listRequest = RequestWrapper(RequestType.COMMAND_EXEC, "show", emptyMap())
             val listResponse = connectionManager.checkSendReceive(listRequest)
             outputManager.println(listResponse.message)
 
-            // Запрашиваем ID
             outputManager.println("Введите ID элемента для обновления: ")
             val id = if (inputManager.isScriptMode()) {
                 val idStr = inputManager.read().trim()
@@ -56,7 +54,6 @@ class CommandReceiver(
             }
             sending["id"] = jsonCreator.objectToString(id)
 
-            // Запрашиваем поле
             outputManager.print("Какое поле обновить? (name, coordinates, enginePower, capacity, distanceTravelled, fuelType): ")
             val field = if (inputManager.isScriptMode()) {
                 inputManager.read().trim()
@@ -69,7 +66,6 @@ class CommandReceiver(
             }
             sending["field"] = field
 
-            // Запрашиваем значение в зависимости от поля
             val value = when (field.lowercase()) {
                 "name" -> {
                     if (inputManager.isScriptMode()) inputManager.read().trim() else reader.readName()

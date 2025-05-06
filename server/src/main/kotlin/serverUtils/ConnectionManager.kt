@@ -11,7 +11,7 @@ import org.apache.logging.log4j.LogManager
 import org.apache.logging.log4j.Logger
 
 class ConnectionManager() {
-    private var host = "localhost"
+    private var host = "0.0.0.0"
     private var port = 6789
     private var address = InetSocketAddress(host, port)
     var datagramChannel = DatagramChannel.open()

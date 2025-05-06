@@ -2,7 +2,7 @@ plugins {
     kotlin("jvm")
     id("application")
     kotlin("plugin.serialization") version "1.9.10"
-
+    id("com.github.johnrengelman.shadow") version "8.1.1"
 }
 
 
@@ -49,4 +49,20 @@ dependencies {
 
 tasks.test {
     useJUnitPlatform()
+}
+
+tasks {
+    shadowJar {
+        archiveBaseName.set("server")
+        archiveClassifier.set("all")
+
+        manifest {
+            attributes["Main-Class"] = "org.example.ServerKt" // обязательно: entry point
+        }
+    }
+
+    // При сборке `jar`, собирать сразу shadow
+    build {
+        dependsOn(shadowJar)
+    }
 }

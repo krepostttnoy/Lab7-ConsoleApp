@@ -15,6 +15,8 @@ import java.io.FileOutputStream
 import java.io.InputStreamReader
 import java.util.concurrent.Executors
 import java.util.concurrent.TimeUnit
+import org.apache.logging.log4j.LogManager
+import org.apache.logging.log4j.Logger
 
 /**
  * Класс для управления чтением и записью коллекции транспортных средств в файл.
@@ -32,13 +34,14 @@ class ConsoleFileManager(
     private val inputManager: InputManager
     ) : IFileManager {
     private val scheduler = Executors.newSingleThreadScheduledExecutor()
+    private val logger: Logger = LogManager.getLogger(ConsoleFileManager::class.java)
 
     /**
      * Путь к файлу для чтения и записи данных.
      * По умолчанию берётся из переменной окружения CSV_FILE_PATH, иначе используется "collection/CollectionInput.csv".
      */
     private val filePath: String = System.getenv("CSV_FILE_PATH") ?: run {
-        println("Переменная окружения CSV_FILE_PATH не установлена. Используется значение по умолчанию 'CollectionInput.csv'")
+        logger.warn("Переменная окружения CSV_FILE_PATH не установлена. Используется значение по умолчанию 'CollectionInput.csv'")
         "/Users/mark/Programming/languages/Kotlin/Lab6-ConsoleApp/server/src/main/kotlin/CollectionInput.csv"
     }
 
@@ -80,7 +83,7 @@ class ConsoleFileManager(
 
                             val params = line!!.split(",").map { it.trim() }
                             if (params.size != 7) {
-                                outputManager.println("Строка $lineNumber пропущена. Кол-во элементов ${params.size} вместо 7")
+                                logger.warn("Строка $lineNumber пропущена. Кол-во элементов ${params.size} вместо 7")
                                 continue
                             }
 
@@ -88,38 +91,44 @@ class ConsoleFileManager(
 
                                 val name = params[0]
                                 if (name.isBlank()){
-                                    throw IllegalArgumentException("Имя не может быть пустым")
+                                    logger.error("Name can't be empty")
+                                    throw IllegalArgumentException("Name can't be empty")
                                 }
 
                                 val coordinateX = params[1].toLongOrNull()
                                     ?: throw NumberFormatException("coordinateX '${params[1]}' is not a Long")
                                 if (coordinateX <= -818) {
-                                    throw IllegalArgumentException("X должен быть > -818")
+                                    logger.error("X must be > -818")
+                                    throw IllegalArgumentException("X must be > -818")
                                 }
 
                                 val coordinateY = params[2].toLongOrNull()
                                     ?: throw NumberFormatException("coordinateY '${params[2]}' is not a Long")
                                 if (coordinateY > 730) {
-                                    throw IllegalArgumentException("Y должен быть <= 730")
+                                    logger.error("Y must be <= 730")
+                                    throw IllegalArgumentException("Y must be <= 730")
                                 }
 
                                 val enginePowerRaw = params[3].toFloatOrNull()
                                     ?: throw NumberFormatException("enginePower '${params[3]}' is not a Float")
                                 if (enginePowerRaw <= 0) {
-                                    throw IllegalArgumentException("Мощность должна быть > 0")
+                                    logger.error("EngPower must be > 0")
+                                    throw IllegalArgumentException("EngPower must be > 0")
                                 }
                                 val enginePower = enginePowerRaw
 
                                 val capacity = params[4].toFloatOrNull()
                                     ?: throw NumberFormatException("capacity '${params[4]}' is not a Float")
                                 if (capacity <= 0) {
-                                    throw IllegalArgumentException("Емкость должна быть > 0")
+                                    logger.error("Capacity must be > 0")
+                                    throw IllegalArgumentException("Capacity must be > 0")
                                 }
 
                                 val distanceTravelled = params[5].toIntOrNull()
                                     ?: throw NumberFormatException("distanceTravelled '${params[5]}' is not an Int")
                                 if (distanceTravelled < 0) {
-                                    throw IllegalArgumentException("Пробег должен быть >= 0")
+                                    logger.error("DistTravelled must be >= 0")
+                                    throw IllegalArgumentException("DistTravelled must be >= 0")
                                 }
 
                                 val fuelTypeString = params[6]
@@ -143,20 +152,21 @@ class ConsoleFileManager(
                                 )
                                 collectionManager.addVehicle(vehicle)
                             } catch (e: NumberFormatException) {
-                                outputManager.println("Warning: Line $lineNumber skipped - ${e.message}")
+                                logger.warn("Warning: Line $lineNumber skipped - ${e.message}")
                             } catch (e: IllegalArgumentException) {
-                                outputManager.println("Warning: Line $lineNumber skipped - ${e.message}")
+                                logger.warn("Warning: Line $lineNumber skipped - ${e.message}")
                             } catch (e: Exception) {
-                                outputManager.println("Warning: Line $lineNumber skipped - invalid data: ${e.message}")
+                                logger.warn("Warning: Line $lineNumber skipped - invalid data: ${e.message}")
                             }
                         }
                     }
                 }
                 inputManager.finishScriptRead()
             } else {
-                outputManager.println("File $filePath not found. Starting with empty collection.")
+                logger.info("File $filePath not found. Starting with empty collection.")
             }
         } catch (e: Exception) {
+            logger.error("Error reading CSV file: ${e.message}")
             throw IllegalArgumentException("Error reading CSV file: ${e.message}")
         }
     }
@@ -183,7 +193,7 @@ class ConsoleFileManager(
                 }
             }
         } catch (e: Exception) {
-            outputManager.println("Ошибка при сохранении. ${e.message}")
+            logger.error("Error occurred when tried to save the collection. ${e.message}")
         }
     }
 
@@ -192,9 +202,9 @@ class ConsoleFileManager(
             synchronized(collectionManager.getCollection()) {
                 try {
                     saveToFile()
-                    outputManager.println("Collection saved automatically")
+                    logger.info("Collection saved automatically")
                 }catch (e: Exception){
-                    outputManager.println("Error: $e")
+                    logger.error("${e.message}")
                 }
             }
         }, interval, interval, TimeUnit.SECONDS)

@@ -11,6 +11,8 @@ import utils.JsonCreator
 import utils.wrappers.RequestType
 import utils.wrappers.RequestWrapper
 import utils.wrappers.ResponseType
+import org.apache.logging.log4j.LogManager
+import org.apache.logging.log4j.Logger
 
 class Console{
     private val connectionManager = ConnectionManager("localhost", 6789)
@@ -19,12 +21,15 @@ class Console{
     private val commandInvoker = CommandInvoker(outputManager, inputManager)
     private val commandReceiver = CommandReceiver(outputManager, inputManager, commandInvoker, connectionManager)
     private val jsonCreator = JsonCreator()
+    private val logger: Logger = LogManager.getLogger(Console::class.java)
 
     fun getConnection(){
+        logger.info("Trying to connect...")
         val connected = connectionManager.connect()
         if(connected){
             initialize()
             registerBasicCommands()
+            logger.info("Connected successfully")
         }else{
             outputManager.println("No server connection.")
             outputManager.println("Retry connection? [y/n]")
@@ -45,6 +50,7 @@ class Console{
     }
 
     fun initialize(){
+        logger.info("Initializing console commands")
         val request = RequestWrapper(RequestType.INITIALIZATION, "", mapOf())
         val response = connectionManager.checkSendReceive(request)
 
@@ -69,6 +75,7 @@ class Console{
     }
 
     fun registerBasicCommands(){
+        logger.info("Registering basic commands")
         commandInvoker.register("help", HelpCommand(commandReceiver))
         commandInvoker.register("exit", ExitCommand(outputManager))
         commandInvoker.register("execute_script", ExecuteScriptCommand(commandInvoker, outputManager, inputManager))
@@ -76,6 +83,7 @@ class Console{
 
     fun startInteractiveMode(){
         try {
+            logger.info("Starting interactive mode")
             while (!exitFlag) {
                 outputManager.print("$ ")
                 val input = readLine()?.trim()
@@ -86,11 +94,11 @@ class Console{
                 commandInvoker.executeCommand(input.lowercase())
             }
         } catch (e: IllegalArgumentException) {
-            outputManager.println("${e.message}")
+            logger.error("${e.message}")
         } catch (e: StackOverflowError) {
-            outputManager.println("${e.message}")
+            logger.error("${e.message}")
         } catch (e: Exception){
-            outputManager.println("Unknown error: ${e.message}")
+            logger.error("Unknown error: ${e.message}")
         }
     }
 }

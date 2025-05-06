@@ -1,11 +1,12 @@
 info
-show
 add
-вф
+name
 3
-3
-3
-3
-3
-диз
+4
+4.0
+4.0
+4
+Антиматерия
 remove_by_id 2
+remove_at 0
+show

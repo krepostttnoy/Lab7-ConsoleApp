@@ -2,7 +2,10 @@ plugins {
     kotlin("jvm")
     id("application")
     kotlin("plugin.serialization") version "1.9.10"
+
 }
+
+
 
 group = "org.example"
 version = "1.0-SNAPSHOT"
@@ -40,6 +43,8 @@ dependencies {
     testImplementation(kotlin("test"))
     implementation(project(":common"))
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.0")
+    implementation("org.apache.logging.log4j:log4j-api:2.20.0")
+    implementation("org.apache.logging.log4j:log4j-core:2.20.0")
 }
 
 tasks.test {

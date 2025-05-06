@@ -73,6 +73,7 @@ class RemoveGreaterCommand(
             if (toRemove.isEmpty()) {
                 response = ResponseWrapper(ResponseType.OK, "goida can't delete anything")
                 connectionManager.send(response)
+                return
             }
 
             toRemove.forEach { vehicle ->

@@ -1,0 +1,136 @@
+2025-05-06 08:37:25.897 [main] INFO  org.example.serverUtils.ConnectionManager - ✅ Server bound to: /127.0.0.1:6789
+2025-05-06 08:37:25.898 [main] DEBUG org.example.serverUtils.Console - Starting interactive mode
+2025-05-06 08:38:00.920 [main] INFO  org.example.serverUtils.ConnectionManager - ✅ Server bound to: /127.0.0.1:6789
+2025-05-06 08:38:00.922 [main] DEBUG org.example.serverUtils.Console - Starting interactive mode
+2025-05-06 08:46:04.868 [main] INFO  org.example.serverUtils.ConnectionManager - ✅ Server bound to: /127.0.0.1:6789
+2025-05-06 08:46:04.869 [main] DEBUG org.example.serverUtils.Console - Starting interactive mode
+2025-05-06 08:52:33.101 [main] INFO  org.example.serverUtils.Console - Initializing console commands
+2025-05-06 08:52:50.380 [main] INFO  org.example.serverUtils.Console - Initializing console commands
+2025-05-06 08:52:50.383 [main] INFO  org.example.serverUtils.Console - Registering AddCommand
+2025-05-06 08:52:50.387 [main] INFO  org.example.serverUtils.ConnectionManager - Server bound to: /127.0.0.1:6789
+2025-05-06 08:52:50.387 [main] DEBUG org.example.serverUtils.Console - Starting interactive mode
+2025-05-06 08:56:29.157 [main] INFO  org.example.serverUtils.Console - Initializing console commands
+2025-05-06 08:56:29.160 [main] INFO  org.example.serverUtils.Console - Registering Add Command
+2025-05-06 08:56:29.160 [main] INFO  org.example.serverUtils.Console - Registering AddIfMax Command
+2025-05-06 08:56:29.161 [main] INFO  org.example.serverUtils.Console - Registering AvgOfEnginePower Command
+2025-05-06 08:56:29.161 [main] INFO  org.example.serverUtils.Console - Registering Clear Command
+2025-05-06 08:56:29.162 [main] INFO  org.example.serverUtils.Console - Registering CountGreaterThanEnginePower Command
+2025-05-06 08:56:29.162 [main] INFO  org.example.serverUtils.Console - Registering Info Command
+2025-05-06 08:56:29.163 [main] INFO  org.example.serverUtils.Console - Registering MinByFuelType Command
+2025-05-06 08:56:29.163 [main] INFO  org.example.serverUtils.Console - Registering RemoveAt Command
+2025-05-06 08:56:29.164 [main] INFO  org.example.serverUtils.Console - Registering RemoveById Command
+2025-05-06 08:56:29.164 [main] INFO  org.example.serverUtils.Console - Registering RemoveGreater Command
+2025-05-06 08:56:29.164 [main] INFO  org.example.serverUtils.Console - Registering Show Command
+2025-05-06 08:56:29.165 [main] INFO  org.example.serverUtils.Console - Registering UpdateId Command
+2025-05-06 08:56:29.167 [main] INFO  org.example.serverUtils.ConnectionManager - Server bound to: /127.0.0.1:6789
+2025-05-06 08:56:29.167 [main] DEBUG org.example.serverUtils.Console - Starting interactive mode
+2025-05-06 08:57:18.865 [main] INFO  org.example.serverUtils.Console - Initializing console commands
+2025-05-06 08:57:18.867 [main] INFO  org.example.serverUtils.Console - Registering Add Command
+2025-05-06 08:57:18.868 [main] INFO  org.example.serverUtils.Console - Registering AddIfMax Command
+2025-05-06 08:57:18.868 [main] INFO  org.example.serverUtils.Console - Registering AvgOfEnginePower Command
+2025-05-06 08:57:18.869 [main] INFO  org.example.serverUtils.Console - Registering Clear Command
+2025-05-06 08:57:18.869 [main] INFO  org.example.serverUtils.Console - Registering CountGreaterThanEnginePower Command
+2025-05-06 08:57:18.869 [main] INFO  org.example.serverUtils.Console - Registering Info Command
+2025-05-06 08:57:18.870 [main] INFO  org.example.serverUtils.Console - Registering MinByFuelType Command
+2025-05-06 08:57:18.870 [main] INFO  org.example.serverUtils.Console - Registering RemoveAt Command
+2025-05-06 08:57:18.871 [main] INFO  org.example.serverUtils.Console - Registering RemoveById Command
+2025-05-06 08:57:18.871 [main] INFO  org.example.serverUtils.Console - Registering RemoveGreater Command
+2025-05-06 08:57:18.871 [main] INFO  org.example.serverUtils.Console - Registering Show Command
+2025-05-06 08:57:18.872 [main] INFO  org.example.serverUtils.Console - Registering UpdateId Command
+2025-05-06 08:57:18.873 [main] INFO  org.example.serverUtils.ConnectionManager - Server bound to: /127.0.0.1:6789
+2025-05-06 08:57:18.873 [main] DEBUG org.example.serverUtils.Console - Starting interactive mode
+2025-05-06 08:57:27.733 [main] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:57798:
+{"responseType":"SYSTEM","message":"Pong"}
+2025-05-06 08:57:27.752 [main] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:57798:
+{"responseType":"SYSTEM","message":"{\"commands\":{\"add\":\"Adds a new vehicle to the collection\",\"add_if_max\":\"Adds a new vehicle to collection if it's max\",\"avg_of_eng_pw\":\"Returns average engine power of the all collection\",\"clear\":\"Clears the collection\",\"count_gr_than_eng_pw\":\"Return a quantity of objects, which have engPw greater than given\",\"info\":\"Returns info about collection\",\"min_by_fuel\":\"Returns object that is min by fuel type\",\"remove_at\":\"Removes an object from collection with given index\",\"remove_by_id\":\"Removes an object from the collection with given id\",\"remove_greater\":\"Removes all items from collection that have greater engPW than given\",\"show\":\"Returns info about all items from the collection\",\"update_id\":\"Updates a field from item with given id\"},\"arguments\":{\"add\":\"{\\\"vehicle\\\":\\\"Vehicle\\\"}\",\"add_if_max\":\"{\\\"vehicle\\\":\\\"Vehicle\\\"}\",\"avg_of_eng_pw\":\"{}\",\"clear\":\"{}\",\"count_gr_than_eng_pw\":\"{\\\"engPw\\\":\\\"Float\\\"}\",\"info\":\"{}\",\"min_by_fuel\":\"{}\",\"remove_at\":\"{\\\"index\\\":\\\"Int\\\"}\",\"remove_by_id\":\"{\\\"index\\\":\\\"Int\\\"}\",\"remove_greater\":\"{\\\"engPw\\\":\\\"Float\\\"}\",\"show\":\"{}\",\"update_id\":\"{\\\"id\\\":\\\"Int\\\",\\\"field\\\":\\\"String\\\",\\\"value\\\":\\\"String\\\"}\"}}"}
+2025-05-06 08:57:27.754 [main] INFO  org.example.serverUtils.Console - Sending `{commands={add=Adds a new vehicle to the collection, add_if_max=Adds a new vehicle to collection if it's max, avg_of_eng_pw=Returns average engine power of the all collection, clear=Clears the collection, count_gr_than_eng_pw=Return a quantity of objects, which have engPw greater than given, info=Returns info about collection, min_by_fuel=Returns object that is min by fuel type, remove_at=Removes an object from collection with given index, remove_by_id=Removes an object from the collection with given id, remove_greater=Removes all items from collection that have greater engPW than given, show=Returns info about all items from the collection, update_id=Updates a field from item with given id}, arguments={add={"vehicle":"Vehicle"}, add_if_max={"vehicle":"Vehicle"}, avg_of_eng_pw={}, clear={}, count_gr_than_eng_pw={"engPw":"Float"}, info={}, min_by_fuel={}, remove_at={"index":"Int"}, remove_by_id={"index":"Int"}, remove_greater={"engPw":"Float"}, show={}, update_id={"id":"Int","field":"String","value":"String"}}}`
+2025-05-06 09:00:44.379 [main] INFO  org.example.serverUtils.Console - Initializing console commands
+2025-05-06 09:00:44.382 [main] INFO  org.example.serverUtils.Console - Registering Add Command
+2025-05-06 09:00:44.382 [main] INFO  org.example.serverUtils.Console - Registering AddIfMax Command
+2025-05-06 09:00:44.383 [main] INFO  org.example.serverUtils.Console - Registering AvgOfEnginePower Command
+2025-05-06 09:00:44.383 [main] INFO  org.example.serverUtils.Console - Registering Clear Command
+2025-05-06 09:00:44.383 [main] INFO  org.example.serverUtils.Console - Registering CountGreaterThanEnginePower Command
+2025-05-06 09:00:44.384 [main] INFO  org.example.serverUtils.Console - Registering Info Command
+2025-05-06 09:00:44.384 [main] INFO  org.example.serverUtils.Console - Registering MinByFuelType Command
+2025-05-06 09:00:44.384 [main] INFO  org.example.serverUtils.Console - Registering RemoveAt Command
+2025-05-06 09:00:44.385 [main] INFO  org.example.serverUtils.Console - Registering RemoveById Command
+2025-05-06 09:00:44.385 [main] INFO  org.example.serverUtils.Console - Registering RemoveGreater Command
+2025-05-06 09:00:44.385 [main] INFO  org.example.serverUtils.Console - Registering Show Command
+2025-05-06 09:00:44.386 [main] INFO  org.example.serverUtils.Console - Registering UpdateId Command
+2025-05-06 09:00:44.387 [main] INFO  org.example.serverUtils.ConnectionManager - Server bound to: /127.0.0.1:6789
+2025-05-06 09:00:44.387 [main] DEBUG org.example.serverUtils.Console - Starting an interactive mode.
+2025-05-06 09:00:46.010 [main] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:54947:
+{"responseType":"SYSTEM","message":"Pong"}
+2025-05-06 09:00:46.027 [main] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:54947:
+{"responseType":"SYSTEM","message":"{\"commands\":{\"add\":\"Adds a new vehicle to the collection\",\"add_if_max\":\"Adds a new vehicle to collection if it's max\",\"avg_of_eng_pw\":\"Returns average engine power of the all collection\",\"clear\":\"Clears the collection\",\"count_gr_than_eng_pw\":\"Return a quantity of objects, which have engPw greater than given\",\"info\":\"Returns info about collection\",\"min_by_fuel\":\"Returns object that is min by fuel type\",\"remove_at\":\"Removes an object from collection with given index\",\"remove_by_id\":\"Removes an object from the collection with given id\",\"remove_greater\":\"Removes all items from collection that have greater engPW than given\",\"show\":\"Returns info about all items from the collection\",\"update_id\":\"Updates a field from item with given id\"},\"arguments\":{\"add\":\"{\\\"vehicle\\\":\\\"Vehicle\\\"}\",\"add_if_max\":\"{\\\"vehicle\\\":\\\"Vehicle\\\"}\",\"avg_of_eng_pw\":\"{}\",\"clear\":\"{}\",\"count_gr_than_eng_pw\":\"{\\\"engPw\\\":\\\"Float\\\"}\",\"info\":\"{}\",\"min_by_fuel\":\"{}\",\"remove_at\":\"{\\\"index\\\":\\\"Int\\\"}\",\"remove_by_id\":\"{\\\"index\\\":\\\"Int\\\"}\",\"remove_greater\":\"{\\\"engPw\\\":\\\"Float\\\"}\",\"show\":\"{}\",\"update_id\":\"{\\\"id\\\":\\\"Int\\\",\\\"field\\\":\\\"String\\\",\\\"value\\\":\\\"String\\\"}\"}}"}
+2025-05-06 09:00:46.027 [main] INFO  org.example.serverUtils.Console - Sending map of commands.
+2025-05-06 09:00:48.243 [main] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:54947:
+{"responseType":"OK","message":"Информация о коллекции:\nТип: SynchronizedRandomAccessList<Vehicle>\nДата инициализации: 2025-05-06\nКол-во элементов: 7"}
+2025-05-06 09:00:48.244 [main] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:54947:
+{"responseType":"OK","message":"utils.wrappers.ResponseWrapper@65f8f5ae"}
+2025-05-06 09:01:42.671 [main] INFO  org.example.serverUtils.Console - Initializing console commands
+2025-05-06 09:01:42.674 [main] INFO  org.example.serverUtils.Console - Registering Add Command
+2025-05-06 09:01:42.674 [main] INFO  org.example.serverUtils.Console - Registering AddIfMax Command
+2025-05-06 09:01:42.674 [main] INFO  org.example.serverUtils.Console - Registering AvgOfEnginePower Command
+2025-05-06 09:01:42.675 [main] INFO  org.example.serverUtils.Console - Registering Clear Command
+2025-05-06 09:01:42.675 [main] INFO  org.example.serverUtils.Console - Registering CountGreaterThanEnginePower Command
+2025-05-06 09:01:42.675 [main] INFO  org.example.serverUtils.Console - Registering Info Command
+2025-05-06 09:01:42.676 [main] INFO  org.example.serverUtils.Console - Registering MinByFuelType Command
+2025-05-06 09:01:42.676 [main] INFO  org.example.serverUtils.Console - Registering RemoveAt Command
+2025-05-06 09:01:42.676 [main] INFO  org.example.serverUtils.Console - Registering RemoveById Command
+2025-05-06 09:01:42.677 [main] INFO  org.example.serverUtils.Console - Registering RemoveGreater Command
+2025-05-06 09:01:42.677 [main] INFO  org.example.serverUtils.Console - Registering Show Command
+2025-05-06 09:01:42.678 [main] INFO  org.example.serverUtils.Console - Registering UpdateId Command
+2025-05-06 09:01:42.678 [main] INFO  org.example.serverUtils.ConnectionManager - Server bound to: /127.0.0.1:6789
+2025-05-06 09:01:42.678 [main] DEBUG org.example.serverUtils.Console - Starting an interactive mode.
+2025-05-06 09:01:43.864 [main] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:60621:
+{"responseType":"SYSTEM","message":"Pong"}
+2025-05-06 09:01:43.877 [main] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:60621:
+{"responseType":"SYSTEM","message":"{\"commands\":{\"add\":\"Adds a new vehicle to the collection\",\"add_if_max\":\"Adds a new vehicle to collection if it's max\",\"avg_of_eng_pw\":\"Returns average engine power of the all collection\",\"clear\":\"Clears the collection\",\"count_gr_than_eng_pw\":\"Return a quantity of objects, which have engPw greater than given\",\"info\":\"Returns info about collection\",\"min_by_fuel\":\"Returns object that is min by fuel type\",\"remove_at\":\"Removes an object from collection with given index\",\"remove_by_id\":\"Removes an object from the collection with given id\",\"remove_greater\":\"Removes all items from collection that have greater engPW than given\",\"show\":\"Returns info about all items from the collection\",\"update_id\":\"Updates a field from item with given id\"},\"arguments\":{\"add\":\"{\\\"vehicle\\\":\\\"Vehicle\\\"}\",\"add_if_max\":\"{\\\"vehicle\\\":\\\"Vehicle\\\"}\",\"avg_of_eng_pw\":\"{}\",\"clear\":\"{}\",\"count_gr_than_eng_pw\":\"{\\\"engPw\\\":\\\"Float\\\"}\",\"info\":\"{}\",\"min_by_fuel\":\"{}\",\"remove_at\":\"{\\\"index\\\":\\\"Int\\\"}\",\"remove_by_id\":\"{\\\"index\\\":\\\"Int\\\"}\",\"remove_greater\":\"{\\\"engPw\\\":\\\"Float\\\"}\",\"show\":\"{}\",\"update_id\":\"{\\\"id\\\":\\\"Int\\\",\\\"field\\\":\\\"String\\\",\\\"value\\\":\\\"String\\\"}\"}}"}
+2025-05-06 09:01:43.878 [main] INFO  org.example.serverUtils.Console - Sending map of commands.
+2025-05-06 09:02:25.397 [main] INFO  org.example.serverUtils.Console - Initializing console commands
+2025-05-06 09:02:25.400 [main] INFO  org.example.serverUtils.Console - Registering Add Command
+2025-05-06 09:02:25.401 [main] INFO  org.example.serverUtils.Console - Registering AddIfMax Command
+2025-05-06 09:02:25.401 [main] INFO  org.example.serverUtils.Console - Registering AvgOfEnginePower Command
+2025-05-06 09:02:25.401 [main] INFO  org.example.serverUtils.Console - Registering Clear Command
+2025-05-06 09:02:25.402 [main] INFO  org.example.serverUtils.Console - Registering CountGreaterThanEnginePower Command
+2025-05-06 09:02:25.402 [main] INFO  org.example.serverUtils.Console - Registering Info Command
+2025-05-06 09:02:25.402 [main] INFO  org.example.serverUtils.Console - Registering MinByFuelType Command
+2025-05-06 09:02:25.402 [main] INFO  org.example.serverUtils.Console - Registering RemoveAt Command
+2025-05-06 09:02:25.403 [main] INFO  org.example.serverUtils.Console - Registering RemoveById Command
+2025-05-06 09:02:25.403 [main] INFO  org.example.serverUtils.Console - Registering RemoveGreater Command
+2025-05-06 09:02:25.403 [main] INFO  org.example.serverUtils.Console - Registering Show Command
+2025-05-06 09:02:25.404 [main] INFO  org.example.serverUtils.Console - Registering UpdateId Command
+2025-05-06 09:02:25.405 [main] INFO  org.example.serverUtils.ConnectionManager - Server bound to: /127.0.0.1:6789
+2025-05-06 09:02:25.405 [main] DEBUG org.example.serverUtils.Console - Starting an interactive mode.
+2025-05-06 09:02:26.616 [main] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:52616:
+{"responseType":"SYSTEM","message":"Pong"}
+2025-05-06 09:02:26.631 [main] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:52616:
+{"responseType":"SYSTEM","message":"{\"commands\":{\"add\":\"Adds a new vehicle to the collection\",\"add_if_max\":\"Adds a new vehicle to collection if it's max\",\"avg_of_eng_pw\":\"Returns average engine power of the all collection\",\"clear\":\"Clears the collection\",\"count_gr_than_eng_pw\":\"Return a quantity of objects, which have engPw greater than given\",\"info\":\"Returns info about collection\",\"min_by_fuel\":\"Returns object that is min by fuel type\",\"remove_at\":\"Removes an object from collection with given index\",\"remove_by_id\":\"Removes an object from the collection with given id\",\"remove_greater\":\"Removes all items from collection that have greater engPW than given\",\"show\":\"Returns info about all items from the collection\",\"update_id\":\"Updates a field from item with given id\"},\"arguments\":{\"add\":\"{\\\"vehicle\\\":\\\"Vehicle\\\"}\",\"add_if_max\":\"{\\\"vehicle\\\":\\\"Vehicle\\\"}\",\"avg_of_eng_pw\":\"{}\",\"clear\":\"{}\",\"count_gr_than_eng_pw\":\"{\\\"engPw\\\":\\\"Float\\\"}\",\"info\":\"{}\",\"min_by_fuel\":\"{}\",\"remove_at\":\"{\\\"index\\\":\\\"Int\\\"}\",\"remove_by_id\":\"{\\\"index\\\":\\\"Int\\\"}\",\"remove_greater\":\"{\\\"engPw\\\":\\\"Float\\\"}\",\"show\":\"{}\",\"update_id\":\"{\\\"id\\\":\\\"Int\\\",\\\"field\\\":\\\"String\\\",\\\"value\\\":\\\"String\\\"}\"}}"}
+2025-05-06 09:02:26.631 [main] INFO  org.example.serverUtils.Console - Sending map of commands.
+2025-05-06 09:02:29.462 [main] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:52616:
+{"responseType":"OK","message":"Информация о коллекции:\nТип: SynchronizedRandomAccessList<Vehicle>\nДата инициализации: 2025-05-06\nКол-во элементов: 7"}
+2025-05-06 09:04:37.417 [main] INFO  org.example.serverUtils.Console - Initializing console commands
+2025-05-06 09:04:37.419 [main] INFO  org.example.serverUtils.Console - Registering Add Command
+2025-05-06 09:04:37.420 [main] INFO  org.example.serverUtils.Console - Registering AddIfMax Command
+2025-05-06 09:04:37.420 [main] INFO  org.example.serverUtils.Console - Registering AvgOfEnginePower Command
+2025-05-06 09:04:37.420 [main] INFO  org.example.serverUtils.Console - Registering Clear Command
+2025-05-06 09:04:37.421 [main] INFO  org.example.serverUtils.Console - Registering CountGreaterThanEnginePower Command
+2025-05-06 09:04:37.421 [main] INFO  org.example.serverUtils.Console - Registering Info Command
+2025-05-06 09:04:37.421 [main] INFO  org.example.serverUtils.Console - Registering MinByFuelType Command
+2025-05-06 09:04:37.422 [main] INFO  org.example.serverUtils.Console - Registering RemoveAt Command
+2025-05-06 09:04:37.422 [main] INFO  org.example.serverUtils.Console - Registering RemoveById Command
+2025-05-06 09:04:37.422 [main] INFO  org.example.serverUtils.Console - Registering RemoveGreater Command
+2025-05-06 09:04:37.422 [main] INFO  org.example.serverUtils.Console - Registering Show Command
+2025-05-06 09:04:37.423 [main] INFO  org.example.serverUtils.Console - Registering UpdateId Command
+2025-05-06 09:04:37.424 [main] INFO  org.example.serverUtils.ConnectionManager - Server bound to: /127.0.0.1:6789
+2025-05-06 09:04:37.424 [main] DEBUG org.example.serverUtils.Console - Starting an interactive mode.
+2025-05-06 09:04:38.142 [main] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:57459:
+{"responseType":"SYSTEM","message":"Pong"}
+2025-05-06 09:04:38.156 [main] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:57459:
+{"responseType":"SYSTEM","message":"{\"commands\":{\"add\":\"Adds a new vehicle to the collection\",\"add_if_max\":\"Adds a new vehicle to collection if it's max\",\"avg_of_eng_pw\":\"Returns average engine power of the all collection\",\"clear\":\"Clears the collection\",\"count_gr_than_eng_pw\":\"Return a quantity of objects, which have engPw greater than given\",\"info\":\"Returns info about collection\",\"min_by_fuel\":\"Returns object that is min by fuel type\",\"remove_at\":\"Removes an object from collection with given index\",\"remove_by_id\":\"Removes an object from the collection with given id\",\"remove_greater\":\"Removes all items from collection that have greater engPW than given\",\"show\":\"Returns info about all items from the collection\",\"update_id\":\"Updates a field from item with given id\"},\"arguments\":{\"add\":\"{\\\"vehicle\\\":\\\"Vehicle\\\"}\",\"add_if_max\":\"{\\\"vehicle\\\":\\\"Vehicle\\\"}\",\"avg_of_eng_pw\":\"{}\",\"clear\":\"{}\",\"count_gr_than_eng_pw\":\"{\\\"engPw\\\":\\\"Float\\\"}\",\"info\":\"{}\",\"min_by_fuel\":\"{}\",\"remove_at\":\"{\\\"index\\\":\\\"Int\\\"}\",\"remove_by_id\":\"{\\\"index\\\":\\\"Int\\\"}\",\"remove_greater\":\"{\\\"engPw\\\":\\\"Float\\\"}\",\"show\":\"{}\",\"update_id\":\"{\\\"id\\\":\\\"Int\\\",\\\"field\\\":\\\"String\\\",\\\"value\\\":\\\"String\\\"}\"}}"}
+2025-05-06 09:04:38.157 [main] INFO  org.example.serverUtils.Console - Sending map of commands.
+2025-05-06 09:04:41.774 [Thread-0] INFO  org.example.serverUtils.Console - Collection was saved.
+2025-05-06 09:04:41.774 [Thread-0] DEBUG org.example.serverUtils.Console - Stop called
+2025-05-06 09:04:41.775 [Thread-0] DEBUG org.example.serverUtils.Console - ExitFlag: `true`
+2025-05-06 09:04:41.776 [main] INFO  org.example.serverUtils.Console - Server stopped the work.

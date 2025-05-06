@@ -25,7 +25,9 @@ import utils.wrappers.ResponseWrapper
 import java.nio.channels.DatagramChannel
 import java.nio.channels.SelectionKey
 import java.nio.channels.Selector
-import kotlin.system.exitProcess
+import org.apache.logging.log4j.LogManager
+import org.apache.logging.log4j.Logger
+import kotlin.math.log
 
 class Console {
     private val connectionManager = ConnectionManager()
@@ -39,6 +41,7 @@ class Console {
     private val commandInvoker = CommandInvoker(outputManager, inputManager)
     private val jsonCreator = JsonCreator()
     private val selector = Selector.open()
+    private val logger: Logger = LogManager.getLogger(Console::class.java)
 
     init {
         fileManager.startAutoSave(60)
@@ -50,21 +53,34 @@ class Console {
 
 
     fun initialize() {
+        logger.info("Initializing console commands")
         commandInvoker.register("add", AddCommand(collectionManager, vehicleManager, outputManager, connectionManager))
+        logger.info("Registering Add Command")
         commandInvoker.register("add_if_max", AddIfMaxCommand(collectionManager, vehicleManager, outputManager, connectionManager))
+        logger.info("Registering AddIfMax Command")
         commandInvoker.register("avg_of_eng_pw", AvgOfEnginePowerCommand(collectionManager, outputManager, connectionManager))
+        logger.info("Registering AvgOfEnginePower Command")
         commandInvoker.register("clear", ClearCommand(collectionManager, outputManager, connectionManager))
+        logger.info("Registering Clear Command")
         commandInvoker.register(
             "count_gr_than_eng_pw",
             CountGrThanEngPwCommand(collectionManager, validator, outputManager, connectionManager)
         )
+        logger.info("Registering CountGreaterThanEnginePower Command")
         commandInvoker.register("info", InfoCommand(collectionManager, connectionManager))
+        logger.info("Registering Info Command")
         commandInvoker.register("min_by_fuel", MinByFuelTypeCommand(collectionManager, outputManager, connectionManager))
+        logger.info("Registering MinByFuelType Command")
         commandInvoker.register("remove_at", RemoveAtCommand(collectionManager, validator, outputManager, connectionManager))
+        logger.info("Registering RemoveAt Command")
         commandInvoker.register("remove_by_id", RemoveByIdCommand(collectionManager, outputManager, inputManager, connectionManager))
+        logger.info("Registering RemoveById Command")
         commandInvoker.register("remove_greater", RemoveGreaterCommand(collectionManager, validator, outputManager, connectionManager))
+        logger.info("Registering RemoveGreater Command")
         commandInvoker.register("show", ShowCommand(collectionManager, outputManager, connectionManager))
+        logger.info("Registering Show Command")
         commandInvoker.register("update_id", UpdateIdCommand(collectionManager, outputManager, inputManager, connectionManager))
+        logger.info("Registering UpdateId Command")
     }
 
     fun onConnect() {
@@ -81,9 +97,11 @@ class Console {
 
         val response = ResponseWrapper(ResponseType.SYSTEM, jsonCreator.objectToString(sendingData))
         connectionManager.send(response)
+        logger.info("Sending map of commands.")
     }
 
     fun startInteractiveMode() {
+        logger.debug("Starting an interactive mode.")
         connectionManager.datagramChannel.register(selector, SelectionKey.OP_READ)
 
         try {
@@ -104,10 +122,7 @@ class Console {
                                 RequestType.COMMAND_EXEC -> {
                                     val commandName = request.message
                                     val args = request.args
-                                    val response = ResponseWrapper(ResponseType.OK,
-                                        commandInvoker.executeCommand(commandName, args).toString()
-                                    )
-
+                                    commandInvoker.executeCommand(commandName, args)
                                 }
 
                                 RequestType.INITIALIZATION -> {
@@ -121,21 +136,23 @@ class Console {
                             }
                         } catch (e: Exception) {
                             val response = ResponseWrapper(ResponseType.ERROR, e.message.toString())
+                            logger.error("Error: `{}`", e.message)
                             connectionManager.send(response)
                         }
                     }
                 }
             }
         }finally {
-            outputManager.println("Server stopped the work.")
+            logger.info("Server stopped the work.")
             connectionManager.datagramChannel.close()  // Закрытие канала
             selector.close()
         }
     }
 
     fun stop(){
-        println("DEBUG: Stop called")
+        logger.debug("Stop called")
         exitFlag = true
+        logger.debug("ExitFlag: `{}`", exitFlag)
         selector.wakeup()
         fileManager.stopAutoSave()
     }
@@ -143,7 +160,7 @@ class Console {
     fun save(){
         try {
             fileManager.saveToFile()
-            outputManager.println("Collection was saved.")
+            logger.info("Collection was saved.")
         }catch (e: Exception){}
     }
 

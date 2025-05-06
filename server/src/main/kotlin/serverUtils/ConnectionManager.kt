@@ -4,10 +4,11 @@ import utils.IOThread
 import utils.JsonCreator
 import utils.wrappers.RequestWrapper
 import utils.wrappers.ResponseWrapper
-import java.lang.Exception
 import java.net.InetSocketAddress
 import java.nio.ByteBuffer
 import java.nio.channels.DatagramChannel
+import org.apache.logging.log4j.LogManager
+import org.apache.logging.log4j.Logger
 
 class ConnectionManager() {
     private var host = "localhost"
@@ -18,6 +19,7 @@ class ConnectionManager() {
     private var remoteAddress = InetSocketAddress(port)
     private val jsonCreator = JsonCreator()
     private val outputManager = IOThread.outputManager
+    private val logger: Logger = LogManager.getLogger(ConnectionManager::class.java)
 
     fun startServer(host: String, port: Int){
         this.host = host
@@ -26,8 +28,7 @@ class ConnectionManager() {
             bind(InetSocketAddress(host, port))
             configureBlocking(false)
         }
-
-        outputManager.println("✅ Server bound to: ${datagramChannel.localAddress}")
+        logger.info("Server bound to: ${datagramChannel.localAddress}")
     }
 
     fun receive(): RequestWrapper{
@@ -36,12 +37,12 @@ class ConnectionManager() {
         buffer.flip()
         val json = String(buffer.array(), 0, buffer.limit()).trim()
         return jsonCreator.stringToObject(json)
-        outputManager.println("📥 Received from $remoteAddress:\n$json")
+        logger.info("Received from $remoteAddress:\n$json")
     }
 
     fun send(response: ResponseWrapper){
         val json = jsonCreator.objectToString(response)
-        outputManager.println("📤 Sending to $remoteAddress:\n$json")
+        logger.info("Sending to $remoteAddress:\n$json")
         buffer.clear()
         buffer.put(json.toByteArray())
         buffer.flip()

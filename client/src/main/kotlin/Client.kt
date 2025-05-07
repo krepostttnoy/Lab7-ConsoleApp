@@ -6,5 +6,4 @@ fun main() {
     val console = Console()
 
     console.getConnection()
-    console.startInteractiveMode()
 }

@@ -5,8 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="157965ef-9953-4521-9f87-67c7da75408d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/log4j2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/kotlin/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../DataBases/Lab1/README.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../DataBases/Lab1/Screenshot 2025-02-18 at 10.18.49.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../DataBases/Lab1/Screenshot 2025-02-19 at 11.03.17.png" beforeDir="false" />
@@ -79,22 +77,18 @@
       <change beforePath="$PROJECT_DIR$/../Lab5/src/test/kotlin/CollectionManagerTest.kt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Lab5/src/test/kotlin/CommandsTest.kt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Lab5/src/test/kotlin/VehicleManagerTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/client/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/kotlin/Client.kt" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/kotlin/Client.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/main/kotlin/clientUtils/ConnectonManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/kotlin/clientUtils/ConnectonManager.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/main/kotlin/clientUtils/Console.kt" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/kotlin/clientUtils/Console.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/main/kotlin/commands/CommandInvoker.kt" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/kotlin/commands/CommandInvoker.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/main/kotlin/commands/CommandReciever.kt" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/kotlin/commands/CommandReciever.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/common/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/resources/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/log4j2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/client.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/client.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/server.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/server.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/server/build.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/CollectionInput.csv" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/CollectionInput.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/collection/CollectionManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/collection/CollectionManager.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/commands/CommandInvoker.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/commands/CommandInvoker.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/AddIfMaxCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/AddIfMaxCommand.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/serverUtils/ConnectionManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/serverUtils/ConnectionManager.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/serverUtils/Console.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/serverUtils/Console.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/serverUtils/ConsoleFileManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/serverUtils/ConsoleFileManager.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/resources/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/resources/log4j2.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -290,7 +284,17 @@
       <workItem from="1746474808589" duration="2510000" />
       <workItem from="1746477336039" duration="274000" />
       <workItem from="1746507887930" duration="4875000" />
-      <workItem from="1746512804112" duration="6025000" />
+      <workItem from="1746512804112" duration="6440000" />
+      <workItem from="1746524294474" duration="30000" />
+      <workItem from="1746547075934" duration="154000" />
+      <workItem from="1746547271732" duration="2512000" />
+      <workItem from="1746607861039" duration="260000" />
+      <workItem from="1746608283319" duration="2005000" />
+      <workItem from="1746620691112" duration="1282000" />
+      <workItem from="1746622073078" duration="9700000" />
+      <workItem from="1746644449460" duration="947000" />
+      <workItem from="1746645407327" duration="432000" />
+      <workItem from="1746645905684" duration="356000" />
     </task>
     <servers />
   </component>

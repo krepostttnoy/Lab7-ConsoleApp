@@ -1,5 +1,6 @@
 import baseClasses.ExitFlag.exitFlag
 import commands.ExecuteScriptCommand
+import commands.ICommandExecutor
 import org.example.clientUtils.ConnectionManager
 import org.example.commands.CommandInvoker
 import org.example.commands.CommandReceiver
@@ -26,10 +27,13 @@ class Console{
     fun getConnection(){
         logger.info("Trying to connect...")
         val connected = connectionManager.connect()
+
         if(connected){
             initialize()
             registerBasicCommands()
             logger.info("Connected successfully")
+            sendAllRequests()
+            startInteractiveMode()
         }else{
             outputManager.println("No server connection.")
             outputManager.println("Retry connection? [y/n]")
@@ -44,6 +48,7 @@ class Console{
                 getConnection()
             }else{
                 registerBasicCommands()
+                startInteractiveMode()
             }
         }
 
@@ -74,6 +79,26 @@ class Console{
         }
     }
 
+    fun sendAllRequests(){
+        val buf = commandReceiver.buffer
+        if (buf.isNotEmpty()) {
+            val lastElement = buf.last()
+            buf.clear()
+            buf.add(lastElement)
+
+            println("Sending buffered requests: ${buf.size}")
+            val iterator = buf.iterator()
+            while (iterator.hasNext()) {
+                val request = iterator.next()
+                val response = connectionManager.checkSendReceive(request)
+                outputManager.println(response.message)
+                iterator.remove()
+            }
+        }
+    }
+
+
+
     fun registerBasicCommands(){
         logger.info("Registering basic commands")
         commandInvoker.register("help", HelpCommand(commandReceiver))
@@ -83,7 +108,7 @@ class Console{
 
     fun startInteractiveMode(){
         try {
-            logger.info("Starting interactive mode")
+            logger.info("Starting an interactive mode")
             while (!exitFlag) {
                 outputManager.print("$ ")
                 val input = readLine()?.trim()
@@ -99,6 +124,7 @@ class Console{
             logger.error("${e.message}")
         } catch (e: Exception){
             logger.error("Unknown error: ${e.message}")
+            getConnection()
         }
     }
 }

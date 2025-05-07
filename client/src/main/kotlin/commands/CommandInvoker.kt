@@ -3,17 +3,12 @@ package org.example.commands
 import org.example.commands.consoleCommands.Command
 import utils.inputOutput.InputManager
 import utils.inputOutput.OutputManager
-import utils.wrappers.ResponseType
-import utils.wrappers.ResponseWrapper
-import org.apache.logging.log4j.LogManager
-import org.apache.logging.log4j.Logger
 
 class CommandInvoker(
     private val outputManager: OutputManager,
     private val inputManager: InputManager
     ) {
     private var commands:Map<String, Command> = mapOf()
-    private val logger: Logger = LogManager.getLogger(CommandInvoker::class.java)
 
 
     fun clearCommandMap(){

@@ -11,16 +11,21 @@ import java.net.DatagramSocket
 import java.net.InetAddress
 import org.apache.logging.log4j.LogManager
 import org.apache.logging.log4j.Logger
+import org.example.commands.CommandInvoker
+import org.example.commands.CommandReceiver
+import utils.inputOutput.InputManager
+import java.nio.ByteBuffer
 
 class ConnectionManager(private var host: String, private var port: Int) {
     private val timeout = 5000
     private var datagramSocket = DatagramSocket()
     val outputManager = IOThread.outputManager
+    val inputManager = InputManager(outputManager)
+    private val commandInvoker = CommandInvoker(outputManager, inputManager)
     private var hostInetAddress = InetAddress.getByName(host)
     private var datagramPacket = DatagramPacket(ByteArray(4096), 4096, hostInetAddress, port)
     private val logger: Logger = LogManager.getLogger(ConnectionManager::class.java)
-
-
+    private val commandReceiver = CommandReceiver(outputManager, inputManager, commandInvoker, this)
 
     fun connect(): Boolean{
         datagramSocket.soTimeout = timeout
@@ -49,6 +54,7 @@ class ConnectionManager(private var host: String, private var port: Int) {
         val json = Json.encodeToString(RequestWrapper.serializer(), request)
         val buf = json.toByteArray()
         val packet = DatagramPacket(buf, buf.size, InetAddress.getByName(host), port)
+
         logger.info("Sending to $host:$port: $json")
         datagramSocket.send(packet)
     }

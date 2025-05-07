@@ -23,6 +23,7 @@ class CommandReceiver(
     private val reader = Reader(outputManager, inputManager)
     private val validator = Validator(outputManager, inputManager)
     private val vm = ConsoleVehicleManager(reader)
+    var buffer = mutableSetOf<RequestWrapper>()
 
     fun getHelp() {
         val commands = commandInvoker.getCommand()
@@ -133,6 +134,7 @@ class CommandReceiver(
         }
 
         val request = RequestWrapper(RequestType.COMMAND_EXEC, name, sending)
+        buffer.add(request)
         val response = connectionManager.checkSendReceive(request)
         outputManager.println(response.message)
     }

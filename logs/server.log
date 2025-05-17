@@ -25,3 +25,488 @@
 2025-05-07 22:13:25.283 [Thread-0] DEBUG org.example.serverUtils.Console - Stop called
 2025-05-07 22:13:25.285 [Thread-0] DEBUG org.example.serverUtils.Console - ExitFlag: `true`
 2025-05-07 22:13:25.286 [main] INFO  org.example.serverUtils.Console - Server stopped the work.
+2025-05-08 23:28:47.731 [main] WARN  org.example.serverUtils.ConsoleFileManager - Переменная окружения CSV_FILE_PATH не установлена. Используется значение по умолчанию 'CollectionInput.csv'
+2025-05-08 23:28:47.768 [main] INFO  org.example.serverUtils.Console - Initializing console commands
+2025-05-08 23:28:47.769 [main] INFO  org.example.serverUtils.Console - Registering Add Command
+2025-05-08 23:28:47.769 [main] INFO  org.example.serverUtils.Console - Registering AddIfMax Command
+2025-05-08 23:28:47.770 [main] INFO  org.example.serverUtils.Console - Registering AvgOfEnginePower Command
+2025-05-08 23:28:47.770 [main] INFO  org.example.serverUtils.Console - Registering Clear Command
+2025-05-08 23:28:47.771 [main] INFO  org.example.serverUtils.Console - Registering CountGreaterThanEnginePower Command
+2025-05-08 23:28:47.771 [main] INFO  org.example.serverUtils.Console - Registering Info Command
+2025-05-08 23:28:47.771 [main] INFO  org.example.serverUtils.Console - Registering MinByFuelType Command
+2025-05-08 23:28:47.771 [main] INFO  org.example.serverUtils.Console - Registering RemoveAt Command
+2025-05-08 23:28:47.772 [main] INFO  org.example.serverUtils.Console - Registering RemoveById Command
+2025-05-08 23:28:47.772 [main] INFO  org.example.serverUtils.Console - Registering RemoveGreater Command
+2025-05-08 23:28:47.772 [main] INFO  org.example.serverUtils.Console - Registering Show Command
+2025-05-08 23:28:47.773 [main] INFO  org.example.serverUtils.Console - Registering UpdateId Command
+2025-05-08 23:28:47.774 [main] INFO  org.example.serverUtils.ConnectionManager - Server bound to: /127.0.0.1:6789
+2025-05-08 23:28:47.774 [main] DEBUG org.example.serverUtils.Console - Starting an interactive mode.
+2025-05-08 23:29:47.789 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-08 23:30:47.768 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-08 23:31:05.561 [main] WARN  org.example.serverUtils.ConsoleFileManager - Переменная окружения CSV_FILE_PATH не установлена. Используется значение по умолчанию 'CollectionInput.csv'
+2025-05-08 23:31:05.588 [main] INFO  org.example.serverUtils.Console - Initializing console commands
+2025-05-08 23:31:05.589 [main] INFO  org.example.serverUtils.Console - Registering Add Command
+2025-05-08 23:31:05.589 [main] INFO  org.example.serverUtils.Console - Registering AddIfMax Command
+2025-05-08 23:31:05.590 [main] INFO  org.example.serverUtils.Console - Registering AvgOfEnginePower Command
+2025-05-08 23:31:05.590 [main] INFO  org.example.serverUtils.Console - Registering Clear Command
+2025-05-08 23:31:05.590 [main] INFO  org.example.serverUtils.Console - Registering CountGreaterThanEnginePower Command
+2025-05-08 23:31:05.590 [main] INFO  org.example.serverUtils.Console - Registering Info Command
+2025-05-08 23:31:05.590 [main] INFO  org.example.serverUtils.Console - Registering MinByFuelType Command
+2025-05-08 23:31:05.591 [main] INFO  org.example.serverUtils.Console - Registering RemoveAt Command
+2025-05-08 23:31:05.591 [main] INFO  org.example.serverUtils.Console - Registering RemoveById Command
+2025-05-08 23:31:05.591 [main] INFO  org.example.serverUtils.Console - Registering RemoveGreater Command
+2025-05-08 23:31:05.591 [main] INFO  org.example.serverUtils.Console - Registering Show Command
+2025-05-08 23:31:05.592 [main] INFO  org.example.serverUtils.Console - Registering UpdateId Command
+2025-05-08 23:31:05.592 [main] INFO  org.example.serverUtils.ConnectionManager - Server bound to: /127.0.0.1:6789
+2025-05-08 23:31:05.592 [main] DEBUG org.example.serverUtils.Console - Starting an interactive mode.
+2025-05-08 23:32:05.612 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-08 23:33:05.594 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-14 14:54:20.215 [main] WARN  org.example.serverUtils.ConsoleFileManager - Переменная окружения CSV_FILE_PATH не установлена. Используется значение по умолчанию 'CollectionInput.csv'
+2025-05-14 14:54:20.261 [main] INFO  org.example.serverUtils.Console - Initializing console commands
+2025-05-14 14:54:20.263 [main] INFO  org.example.serverUtils.Console - Registering Add Command
+2025-05-14 14:54:20.263 [main] INFO  org.example.serverUtils.Console - Registering AddIfMax Command
+2025-05-14 14:54:20.263 [main] INFO  org.example.serverUtils.Console - Registering AvgOfEnginePower Command
+2025-05-14 14:54:20.264 [main] INFO  org.example.serverUtils.Console - Registering Clear Command
+2025-05-14 14:54:20.264 [main] INFO  org.example.serverUtils.Console - Registering CountGreaterThanEnginePower Command
+2025-05-14 14:54:20.265 [main] INFO  org.example.serverUtils.Console - Registering Info Command
+2025-05-14 14:54:20.265 [main] INFO  org.example.serverUtils.Console - Registering MinByFuelType Command
+2025-05-14 14:54:20.265 [main] INFO  org.example.serverUtils.Console - Registering RemoveAt Command
+2025-05-14 14:54:20.266 [main] INFO  org.example.serverUtils.Console - Registering RemoveById Command
+2025-05-14 14:54:20.266 [main] INFO  org.example.serverUtils.Console - Registering RemoveGreater Command
+2025-05-14 14:54:20.267 [main] INFO  org.example.serverUtils.Console - Registering Show Command
+2025-05-14 14:54:20.267 [main] INFO  org.example.serverUtils.Console - Registering UpdateId Command
+2025-05-14 14:54:20.268 [main] INFO  org.example.serverUtils.ConnectionManager - Server bound to: /127.0.0.1:6789
+2025-05-14 14:54:20.268 [main] DEBUG org.example.serverUtils.Console - Starting an interactive mode.
+2025-05-14 14:55:20.284 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-14 14:56:20.261 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-14 14:57:20.256 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-14 15:06:21.308 [main] WARN  org.example.serverUtils.ConsoleFileManager - Переменная окружения CSV_FILE_PATH не установлена. Используется значение по умолчанию 'CollectionInput.csv'
+2025-05-14 15:06:21.362 [main] INFO  org.example.serverUtils.Console - Initializing console commands
+2025-05-14 15:06:21.363 [main] INFO  org.example.serverUtils.Console - Registering Add Command
+2025-05-14 15:06:21.364 [main] INFO  org.example.serverUtils.Console - Registering AddIfMax Command
+2025-05-14 15:06:21.364 [main] INFO  org.example.serverUtils.Console - Registering AvgOfEnginePower Command
+2025-05-14 15:06:21.365 [main] INFO  org.example.serverUtils.Console - Registering Clear Command
+2025-05-14 15:06:21.365 [main] INFO  org.example.serverUtils.Console - Registering CountGreaterThanEnginePower Command
+2025-05-14 15:06:21.365 [main] INFO  org.example.serverUtils.Console - Registering Info Command
+2025-05-14 15:06:21.366 [main] INFO  org.example.serverUtils.Console - Registering MinByFuelType Command
+2025-05-14 15:06:21.366 [main] INFO  org.example.serverUtils.Console - Registering RemoveAt Command
+2025-05-14 15:06:21.366 [main] INFO  org.example.serverUtils.Console - Registering RemoveById Command
+2025-05-14 15:06:21.367 [main] INFO  org.example.serverUtils.Console - Registering RemoveGreater Command
+2025-05-14 15:06:21.367 [main] INFO  org.example.serverUtils.Console - Registering Show Command
+2025-05-14 15:06:21.368 [main] INFO  org.example.serverUtils.Console - Registering UpdateId Command
+2025-05-14 15:06:21.369 [main] INFO  org.example.serverUtils.ConnectionManager - Server bound to: /127.0.0.1:6789
+2025-05-14 15:06:21.369 [main] INFO  org.example.dbConnect.DbConnect - DB connecting
+2025-05-14 15:06:21.371 [main] DEBUG org.example.serverUtils.Console - Starting an interactive mode.
+2025-05-14 15:07:21.378 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-14 15:08:21.361 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-14 15:12:01.056 [main] WARN  org.example.serverUtils.ConsoleFileManager - Переменная окружения CSV_FILE_PATH не установлена. Используется значение по умолчанию 'CollectionInput.csv'
+2025-05-14 15:12:01.102 [main] INFO  org.example.serverUtils.Console - Initializing console commands
+2025-05-14 15:12:01.103 [main] INFO  org.example.serverUtils.Console - Registering Add Command
+2025-05-14 15:12:01.104 [main] INFO  org.example.serverUtils.Console - Registering AddIfMax Command
+2025-05-14 15:12:01.104 [main] INFO  org.example.serverUtils.Console - Registering AvgOfEnginePower Command
+2025-05-14 15:12:01.105 [main] INFO  org.example.serverUtils.Console - Registering Clear Command
+2025-05-14 15:12:01.105 [main] INFO  org.example.serverUtils.Console - Registering CountGreaterThanEnginePower Command
+2025-05-14 15:12:01.105 [main] INFO  org.example.serverUtils.Console - Registering Info Command
+2025-05-14 15:12:01.106 [main] INFO  org.example.serverUtils.Console - Registering MinByFuelType Command
+2025-05-14 15:12:01.106 [main] INFO  org.example.serverUtils.Console - Registering RemoveAt Command
+2025-05-14 15:12:01.107 [main] INFO  org.example.serverUtils.Console - Registering RemoveById Command
+2025-05-14 15:12:01.107 [main] INFO  org.example.serverUtils.Console - Registering RemoveGreater Command
+2025-05-14 15:12:01.107 [main] INFO  org.example.serverUtils.Console - Registering Show Command
+2025-05-14 15:12:01.108 [main] INFO  org.example.serverUtils.Console - Registering UpdateId Command
+2025-05-14 15:12:01.109 [main] INFO  org.example.serverUtils.ConnectionManager - Server bound to: /127.0.0.1:6789
+2025-05-14 15:12:01.109 [main] INFO  org.example.dbConnect.DbConnect - DB connecting
+2025-05-14 15:12:01.158 [main] DEBUG org.example.serverUtils.Console - Starting an interactive mode.
+2025-05-14 15:13:01.118 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-14 15:13:06.524 [main] WARN  org.example.serverUtils.ConsoleFileManager - Переменная окружения CSV_FILE_PATH не установлена. Используется значение по умолчанию 'CollectionInput.csv'
+2025-05-14 15:13:06.566 [main] INFO  org.example.serverUtils.Console - Initializing console commands
+2025-05-14 15:13:06.569 [main] INFO  org.example.serverUtils.Console - Registering Add Command
+2025-05-14 15:13:06.570 [main] INFO  org.example.serverUtils.Console - Registering AddIfMax Command
+2025-05-14 15:13:06.570 [main] INFO  org.example.serverUtils.Console - Registering AvgOfEnginePower Command
+2025-05-14 15:13:06.571 [main] INFO  org.example.serverUtils.Console - Registering Clear Command
+2025-05-14 15:13:06.572 [main] INFO  org.example.serverUtils.Console - Registering CountGreaterThanEnginePower Command
+2025-05-14 15:13:06.572 [main] INFO  org.example.serverUtils.Console - Registering Info Command
+2025-05-14 15:13:06.573 [main] INFO  org.example.serverUtils.Console - Registering MinByFuelType Command
+2025-05-14 15:13:06.573 [main] INFO  org.example.serverUtils.Console - Registering RemoveAt Command
+2025-05-14 15:13:06.574 [main] INFO  org.example.serverUtils.Console - Registering RemoveById Command
+2025-05-14 15:13:06.574 [main] INFO  org.example.serverUtils.Console - Registering RemoveGreater Command
+2025-05-14 15:13:06.575 [main] INFO  org.example.serverUtils.Console - Registering Show Command
+2025-05-14 15:13:06.575 [main] INFO  org.example.serverUtils.Console - Registering UpdateId Command
+2025-05-14 15:13:06.576 [main] INFO  org.example.serverUtils.ConnectionManager - Server bound to: /127.0.0.1:6789
+2025-05-14 15:13:06.576 [main] INFO  org.example.dbConnect.DbConnect - DB connecting
+2025-05-14 15:13:06.613 [main] DEBUG org.example.serverUtils.Console - Starting an interactive mode.
+2025-05-14 15:14:06.583 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-14 15:15:06.562 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-14 15:16:06.558 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-14 15:17:06.555 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-14 15:17:26.585 [main] WARN  org.example.serverUtils.ConsoleFileManager - Переменная окружения CSV_FILE_PATH не установлена. Используется значение по умолчанию 'CollectionInput.csv'
+2025-05-14 15:17:26.626 [main] INFO  org.example.serverUtils.Console - Initializing console commands
+2025-05-14 15:17:26.627 [main] INFO  org.example.serverUtils.Console - Registering Add Command
+2025-05-14 15:17:26.628 [main] INFO  org.example.serverUtils.Console - Registering AddIfMax Command
+2025-05-14 15:17:26.628 [main] INFO  org.example.serverUtils.Console - Registering AvgOfEnginePower Command
+2025-05-14 15:17:26.629 [main] INFO  org.example.serverUtils.Console - Registering Clear Command
+2025-05-14 15:17:26.629 [main] INFO  org.example.serverUtils.Console - Registering CountGreaterThanEnginePower Command
+2025-05-14 15:17:26.629 [main] INFO  org.example.serverUtils.Console - Registering Info Command
+2025-05-14 15:17:26.630 [main] INFO  org.example.serverUtils.Console - Registering MinByFuelType Command
+2025-05-14 15:17:26.630 [main] INFO  org.example.serverUtils.Console - Registering RemoveAt Command
+2025-05-14 15:17:26.630 [main] INFO  org.example.serverUtils.Console - Registering RemoveById Command
+2025-05-14 15:17:26.631 [main] INFO  org.example.serverUtils.Console - Registering RemoveGreater Command
+2025-05-14 15:17:26.631 [main] INFO  org.example.serverUtils.Console - Registering Show Command
+2025-05-14 15:17:26.631 [main] INFO  org.example.serverUtils.Console - Registering UpdateId Command
+2025-05-14 15:17:26.632 [main] INFO  org.example.serverUtils.ConnectionManager - Server bound to: /127.0.0.1:6789
+2025-05-14 15:17:26.632 [main] INFO  org.example.dbConnect.DbConnect - DB connecting
+2025-05-14 15:17:26.680 [main] DEBUG org.example.serverUtils.Console - Starting an interactive mode.
+2025-05-14 15:17:40.861 [main] WARN  org.example.serverUtils.ConsoleFileManager - Переменная окружения CSV_FILE_PATH не установлена. Используется значение по умолчанию 'CollectionInput.csv'
+2025-05-14 15:17:40.904 [main] INFO  org.example.serverUtils.Console - Initializing console commands
+2025-05-14 15:17:40.905 [main] INFO  org.example.serverUtils.Console - Registering Add Command
+2025-05-14 15:17:40.906 [main] INFO  org.example.serverUtils.Console - Registering AddIfMax Command
+2025-05-14 15:17:40.906 [main] INFO  org.example.serverUtils.Console - Registering AvgOfEnginePower Command
+2025-05-14 15:17:40.906 [main] INFO  org.example.serverUtils.Console - Registering Clear Command
+2025-05-14 15:17:40.907 [main] INFO  org.example.serverUtils.Console - Registering CountGreaterThanEnginePower Command
+2025-05-14 15:17:40.907 [main] INFO  org.example.serverUtils.Console - Registering Info Command
+2025-05-14 15:17:40.907 [main] INFO  org.example.serverUtils.Console - Registering MinByFuelType Command
+2025-05-14 15:17:40.908 [main] INFO  org.example.serverUtils.Console - Registering RemoveAt Command
+2025-05-14 15:17:40.908 [main] INFO  org.example.serverUtils.Console - Registering RemoveById Command
+2025-05-14 15:17:40.909 [main] INFO  org.example.serverUtils.Console - Registering RemoveGreater Command
+2025-05-14 15:17:40.909 [main] INFO  org.example.serverUtils.Console - Registering Show Command
+2025-05-14 15:17:40.909 [main] INFO  org.example.serverUtils.Console - Registering UpdateId Command
+2025-05-14 15:17:40.910 [main] INFO  org.example.serverUtils.ConnectionManager - Server bound to: /127.0.0.1:6789
+2025-05-14 15:17:40.910 [main] INFO  org.example.dbConnect.DbConnect - DB connecting
+2025-05-14 15:17:40.944 [main] DEBUG org.example.serverUtils.Console - Starting an interactive mode.
+2025-05-14 15:18:40.925 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-14 15:19:40.903 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-14 15:20:40.902 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-14 15:21:40.896 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-14 15:22:40.889 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-14 15:23:40.889 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-14 15:24:40.886 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-14 15:25:40.882 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-14 15:26:40.876 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-14 15:27:40.870 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-14 15:27:46.568 [main] WARN  org.example.serverUtils.ConsoleFileManager - Переменная окружения CSV_FILE_PATH не установлена. Используется значение по умолчанию 'CollectionInput.csv'
+2025-05-14 15:27:46.610 [main] INFO  org.example.serverUtils.Console - Initializing console commands
+2025-05-14 15:27:46.611 [main] INFO  org.example.serverUtils.Console - Registering Add Command
+2025-05-14 15:27:46.611 [main] INFO  org.example.serverUtils.Console - Registering AddIfMax Command
+2025-05-14 15:27:46.612 [main] INFO  org.example.serverUtils.Console - Registering AvgOfEnginePower Command
+2025-05-14 15:27:46.613 [main] INFO  org.example.serverUtils.Console - Registering Clear Command
+2025-05-14 15:27:46.613 [main] INFO  org.example.serverUtils.Console - Registering CountGreaterThanEnginePower Command
+2025-05-14 15:27:46.613 [main] INFO  org.example.serverUtils.Console - Registering Info Command
+2025-05-14 15:27:46.614 [main] INFO  org.example.serverUtils.Console - Registering MinByFuelType Command
+2025-05-14 15:27:46.614 [main] INFO  org.example.serverUtils.Console - Registering RemoveAt Command
+2025-05-14 15:27:46.614 [main] INFO  org.example.serverUtils.Console - Registering RemoveById Command
+2025-05-14 15:27:46.615 [main] INFO  org.example.serverUtils.Console - Registering RemoveGreater Command
+2025-05-14 15:27:46.615 [main] INFO  org.example.serverUtils.Console - Registering Show Command
+2025-05-14 15:27:46.616 [main] INFO  org.example.serverUtils.Console - Registering UpdateId Command
+2025-05-14 15:27:46.616 [main] INFO  org.example.serverUtils.ConnectionManager - Server bound to: /127.0.0.1:6789
+2025-05-14 15:27:46.617 [main] INFO  org.example.dbConnect.DbConnect - DB connecting
+2025-05-14 15:27:46.651 [main] DEBUG org.example.serverUtils.Console - Starting an interactive mode.
+2025-05-14 15:31:05.881 [main] WARN  org.example.serverUtils.ConsoleFileManager - Переменная окружения CSV_FILE_PATH не установлена. Используется значение по умолчанию 'CollectionInput.csv'
+2025-05-14 15:31:05.929 [main] INFO  org.example.serverUtils.Console - Initializing console commands
+2025-05-14 15:31:05.930 [main] INFO  org.example.serverUtils.Console - Registering Add Command
+2025-05-14 15:31:05.931 [main] INFO  org.example.serverUtils.Console - Registering AddIfMax Command
+2025-05-14 15:31:05.932 [main] INFO  org.example.serverUtils.Console - Registering AvgOfEnginePower Command
+2025-05-14 15:31:05.932 [main] INFO  org.example.serverUtils.Console - Registering Clear Command
+2025-05-14 15:31:05.933 [main] INFO  org.example.serverUtils.Console - Registering CountGreaterThanEnginePower Command
+2025-05-14 15:31:05.933 [main] INFO  org.example.serverUtils.Console - Registering Info Command
+2025-05-14 15:31:05.933 [main] INFO  org.example.serverUtils.Console - Registering MinByFuelType Command
+2025-05-14 15:31:05.934 [main] INFO  org.example.serverUtils.Console - Registering RemoveAt Command
+2025-05-14 15:31:05.934 [main] INFO  org.example.serverUtils.Console - Registering RemoveById Command
+2025-05-14 15:31:05.935 [main] INFO  org.example.serverUtils.Console - Registering RemoveGreater Command
+2025-05-14 15:31:05.935 [main] INFO  org.example.serverUtils.Console - Registering Show Command
+2025-05-14 15:31:05.936 [main] INFO  org.example.serverUtils.Console - Registering UpdateId Command
+2025-05-14 15:31:05.937 [main] INFO  org.example.serverUtils.ConnectionManager - Server bound to: /127.0.0.1:6789
+2025-05-14 15:31:05.937 [main] INFO  org.example.dbConnect.DbConnect - DB connecting
+2025-05-14 15:31:05.966 [main] DEBUG org.example.serverUtils.Console - Starting an interactive mode.
+2025-05-14 15:32:12.532 [main] WARN  org.example.serverUtils.ConsoleFileManager - Переменная окружения CSV_FILE_PATH не установлена. Используется значение по умолчанию 'CollectionInput.csv'
+2025-05-14 15:32:12.573 [main] INFO  org.example.serverUtils.Console - Initializing console commands
+2025-05-14 15:32:12.574 [main] INFO  org.example.serverUtils.Console - Registering Add Command
+2025-05-14 15:32:12.575 [main] INFO  org.example.serverUtils.Console - Registering AddIfMax Command
+2025-05-14 15:32:12.575 [main] INFO  org.example.serverUtils.Console - Registering AvgOfEnginePower Command
+2025-05-14 15:32:12.576 [main] INFO  org.example.serverUtils.Console - Registering Clear Command
+2025-05-14 15:32:12.576 [main] INFO  org.example.serverUtils.Console - Registering CountGreaterThanEnginePower Command
+2025-05-14 15:32:12.576 [main] INFO  org.example.serverUtils.Console - Registering Info Command
+2025-05-14 15:32:12.577 [main] INFO  org.example.serverUtils.Console - Registering MinByFuelType Command
+2025-05-14 15:32:12.577 [main] INFO  org.example.serverUtils.Console - Registering RemoveAt Command
+2025-05-14 15:32:12.577 [main] INFO  org.example.serverUtils.Console - Registering RemoveById Command
+2025-05-14 15:32:12.578 [main] INFO  org.example.serverUtils.Console - Registering RemoveGreater Command
+2025-05-14 15:32:12.578 [main] INFO  org.example.serverUtils.Console - Registering Show Command
+2025-05-14 15:32:12.578 [main] INFO  org.example.serverUtils.Console - Registering UpdateId Command
+2025-05-14 15:32:12.579 [main] INFO  org.example.serverUtils.ConnectionManager - Server bound to: /127.0.0.1:6789
+2025-05-14 15:32:12.579 [main] INFO  org.example.dbConnect.DbConnect - DB connecting
+2025-05-14 15:32:12.607 [main] DEBUG org.example.serverUtils.Console - Starting an interactive mode.
+2025-05-14 15:53:29.422 [main] WARN  org.example.serverUtils.ConsoleFileManager - Переменная окружения CSV_FILE_PATH не установлена. Используется значение по умолчанию 'CollectionInput.csv'
+2025-05-14 15:53:29.465 [main] INFO  org.example.serverUtils.Console - Initializing console commands
+2025-05-14 15:53:29.467 [main] INFO  org.example.serverUtils.Console - Registering Add Command
+2025-05-14 15:53:29.467 [main] INFO  org.example.serverUtils.Console - Registering AddIfMax Command
+2025-05-14 15:53:29.468 [main] INFO  org.example.serverUtils.Console - Registering AvgOfEnginePower Command
+2025-05-14 15:53:29.468 [main] INFO  org.example.serverUtils.Console - Registering Clear Command
+2025-05-14 15:53:29.468 [main] INFO  org.example.serverUtils.Console - Registering CountGreaterThanEnginePower Command
+2025-05-14 15:53:29.469 [main] INFO  org.example.serverUtils.Console - Registering Info Command
+2025-05-14 15:53:29.469 [main] INFO  org.example.serverUtils.Console - Registering MinByFuelType Command
+2025-05-14 15:53:29.469 [main] INFO  org.example.serverUtils.Console - Registering RemoveAt Command
+2025-05-14 15:53:29.470 [main] INFO  org.example.serverUtils.Console - Registering RemoveById Command
+2025-05-14 15:53:29.470 [main] INFO  org.example.serverUtils.Console - Registering RemoveGreater Command
+2025-05-14 15:53:29.470 [main] INFO  org.example.serverUtils.Console - Registering Show Command
+2025-05-14 15:53:29.471 [main] INFO  org.example.serverUtils.Console - Registering UpdateId Command
+2025-05-14 15:53:29.472 [main] INFO  org.example.serverUtils.ConnectionManager - Server bound to: /127.0.0.1:6789
+2025-05-14 15:53:29.472 [main] INFO  org.example.dbConnect.DbConnect - DB connecting
+2025-05-14 15:53:31.469 [main] DEBUG org.example.serverUtils.Console - Starting an interactive mode.
+2025-05-14 23:07:25.749 [main] WARN  org.example.serverUtils.ConsoleFileManager - Переменная окружения CSV_FILE_PATH не установлена. Используется значение по умолчанию 'CollectionInput.csv'
+2025-05-14 23:07:25.829 [main] INFO  org.example.serverUtils.Console - Initializing console commands
+2025-05-14 23:07:25.832 [main] INFO  org.example.serverUtils.Console - Registering Add Command
+2025-05-14 23:07:25.832 [main] INFO  org.example.serverUtils.Console - Registering AddIfMax Command
+2025-05-14 23:07:25.833 [main] INFO  org.example.serverUtils.Console - Registering AvgOfEnginePower Command
+2025-05-14 23:07:25.833 [main] INFO  org.example.serverUtils.Console - Registering Clear Command
+2025-05-14 23:07:25.834 [main] INFO  org.example.serverUtils.Console - Registering CountGreaterThanEnginePower Command
+2025-05-14 23:07:25.834 [main] INFO  org.example.serverUtils.Console - Registering Info Command
+2025-05-14 23:07:25.835 [main] INFO  org.example.serverUtils.Console - Registering MinByFuelType Command
+2025-05-14 23:07:25.835 [main] INFO  org.example.serverUtils.Console - Registering RemoveAt Command
+2025-05-14 23:07:25.836 [main] INFO  org.example.serverUtils.Console - Registering RemoveById Command
+2025-05-14 23:07:25.836 [main] INFO  org.example.serverUtils.Console - Registering RemoveGreater Command
+2025-05-14 23:07:25.837 [main] INFO  org.example.serverUtils.Console - Registering Show Command
+2025-05-14 23:07:25.837 [main] INFO  org.example.serverUtils.Console - Registering UpdateId Command
+2025-05-14 23:07:25.838 [main] INFO  org.example.serverUtils.ConnectionManager - Server bound to: /127.0.0.1:6789
+2025-05-14 23:07:25.838 [main] INFO  org.example.dbConnect.DbManager - Connecting to DB
+2025-05-14 23:07:59.069 [main] INFO  org.example.dbConnect.DbManager - Connecting to DB
+2025-05-14 23:07:59.074 [main] INFO  org.example.dbConnect.DbManager - Lost connection to DB
+2025-05-14 23:07:59.074 [main] DEBUG org.example.serverUtils.Console - Starting an interactive mode.
+2025-05-14 23:09:00.382 [main] WARN  org.example.serverUtils.ConsoleFileManager - Переменная окружения CSV_FILE_PATH не установлена. Используется значение по умолчанию 'CollectionInput.csv'
+2025-05-14 23:09:00.425 [main] INFO  org.example.serverUtils.Console - Initializing console commands
+2025-05-14 23:09:00.426 [main] INFO  org.example.serverUtils.Console - Registering Add Command
+2025-05-14 23:09:00.426 [main] INFO  org.example.serverUtils.Console - Registering AddIfMax Command
+2025-05-14 23:09:00.427 [main] INFO  org.example.serverUtils.Console - Registering AvgOfEnginePower Command
+2025-05-14 23:09:00.427 [main] INFO  org.example.serverUtils.Console - Registering Clear Command
+2025-05-14 23:09:00.427 [main] INFO  org.example.serverUtils.Console - Registering CountGreaterThanEnginePower Command
+2025-05-14 23:09:00.428 [main] INFO  org.example.serverUtils.Console - Registering Info Command
+2025-05-14 23:09:00.428 [main] INFO  org.example.serverUtils.Console - Registering MinByFuelType Command
+2025-05-14 23:09:00.428 [main] INFO  org.example.serverUtils.Console - Registering RemoveAt Command
+2025-05-14 23:09:00.429 [main] INFO  org.example.serverUtils.Console - Registering RemoveById Command
+2025-05-14 23:09:00.429 [main] INFO  org.example.serverUtils.Console - Registering RemoveGreater Command
+2025-05-14 23:09:00.430 [main] INFO  org.example.serverUtils.Console - Registering Show Command
+2025-05-14 23:09:00.430 [main] INFO  org.example.serverUtils.Console - Registering UpdateId Command
+2025-05-14 23:09:00.431 [main] INFO  org.example.serverUtils.ConnectionManager - Server bound to: /127.0.0.1:6789
+2025-05-14 23:09:00.431 [main] INFO  org.example.dbConnect.DbManager - Connecting to DB
+2025-05-14 23:09:00.449 [main] INFO  org.example.dbConnect.DbManager - Connection error: `Connection to localhost:15432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.`
+2025-05-14 23:09:00.450 [main] INFO  org.example.dbConnect.DbManager - Connecting to DB
+2025-05-14 23:09:00.450 [main] INFO  org.example.dbConnect.DbManager - Connection error: `Connection to localhost:15432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.`
+2025-05-14 23:09:00.451 [main] INFO  org.example.dbConnect.DbManager - Lost connection to DB
+2025-05-14 23:09:00.451 [main] DEBUG org.example.serverUtils.Console - Starting an interactive mode.
+2025-05-14 23:09:49.564 [main] WARN  org.example.serverUtils.ConsoleFileManager - Переменная окружения CSV_FILE_PATH не установлена. Используется значение по умолчанию 'CollectionInput.csv'
+2025-05-14 23:09:49.613 [main] INFO  org.example.serverUtils.Console - Initializing console commands
+2025-05-14 23:09:49.614 [main] INFO  org.example.serverUtils.Console - Registering Add Command
+2025-05-14 23:09:49.615 [main] INFO  org.example.serverUtils.Console - Registering AddIfMax Command
+2025-05-14 23:09:49.615 [main] INFO  org.example.serverUtils.Console - Registering AvgOfEnginePower Command
+2025-05-14 23:09:49.615 [main] INFO  org.example.serverUtils.Console - Registering Clear Command
+2025-05-14 23:09:49.616 [main] INFO  org.example.serverUtils.Console - Registering CountGreaterThanEnginePower Command
+2025-05-14 23:09:49.616 [main] INFO  org.example.serverUtils.Console - Registering Info Command
+2025-05-14 23:09:49.616 [main] INFO  org.example.serverUtils.Console - Registering MinByFuelType Command
+2025-05-14 23:09:49.617 [main] INFO  org.example.serverUtils.Console - Registering RemoveAt Command
+2025-05-14 23:09:49.617 [main] INFO  org.example.serverUtils.Console - Registering RemoveById Command
+2025-05-14 23:09:49.617 [main] INFO  org.example.serverUtils.Console - Registering RemoveGreater Command
+2025-05-14 23:09:49.618 [main] INFO  org.example.serverUtils.Console - Registering Show Command
+2025-05-14 23:09:49.618 [main] INFO  org.example.serverUtils.Console - Registering UpdateId Command
+2025-05-14 23:09:49.619 [main] INFO  org.example.serverUtils.ConnectionManager - Server bound to: /127.0.0.1:6789
+2025-05-14 23:09:49.638 [main] INFO  org.example.dbConnect.DbManager - Connection error: `Connection to localhost:15432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.`
+2025-05-14 23:09:49.640 [main] INFO  org.example.dbConnect.DbManager - Connection error: `Connection to localhost:15432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.`
+2025-05-14 23:09:49.640 [main] INFO  org.example.dbConnect.DbManager - Lost connection to DB
+2025-05-14 23:09:49.640 [main] DEBUG org.example.serverUtils.Console - Starting an interactive mode.
+2025-05-14 23:10:37.602 [main] WARN  org.example.serverUtils.ConsoleFileManager - Переменная окружения CSV_FILE_PATH не установлена. Используется значение по умолчанию 'CollectionInput.csv'
+2025-05-14 23:10:37.645 [main] INFO  org.example.serverUtils.Console - Initializing console commands
+2025-05-14 23:10:37.647 [main] INFO  org.example.serverUtils.Console - Registering Add Command
+2025-05-14 23:10:37.647 [main] INFO  org.example.serverUtils.Console - Registering AddIfMax Command
+2025-05-14 23:10:37.648 [main] INFO  org.example.serverUtils.Console - Registering AvgOfEnginePower Command
+2025-05-14 23:10:37.648 [main] INFO  org.example.serverUtils.Console - Registering Clear Command
+2025-05-14 23:10:37.648 [main] INFO  org.example.serverUtils.Console - Registering CountGreaterThanEnginePower Command
+2025-05-14 23:10:37.649 [main] INFO  org.example.serverUtils.Console - Registering Info Command
+2025-05-14 23:10:37.649 [main] INFO  org.example.serverUtils.Console - Registering MinByFuelType Command
+2025-05-14 23:10:37.649 [main] INFO  org.example.serverUtils.Console - Registering RemoveAt Command
+2025-05-14 23:10:37.650 [main] INFO  org.example.serverUtils.Console - Registering RemoveById Command
+2025-05-14 23:10:37.650 [main] INFO  org.example.serverUtils.Console - Registering RemoveGreater Command
+2025-05-14 23:10:37.650 [main] INFO  org.example.serverUtils.Console - Registering Show Command
+2025-05-14 23:10:37.651 [main] INFO  org.example.serverUtils.Console - Registering UpdateId Command
+2025-05-14 23:10:37.652 [main] INFO  org.example.serverUtils.ConnectionManager - Server bound to: /127.0.0.1:6789
+2025-05-14 23:10:37.670 [main] INFO  org.example.dbConnect.DbManager - Connection error: `Connection to localhost:15432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.`
+2025-05-14 23:10:37.670 [main] INFO  org.example.dbConnect.DbManager - Lost connection to DB
+2025-05-14 23:10:37.670 [main] DEBUG org.example.serverUtils.Console - Starting an interactive mode.
+2025-05-14 23:11:49.285 [main] WARN  org.example.serverUtils.ConsoleFileManager - Переменная окружения CSV_FILE_PATH не установлена. Используется значение по умолчанию 'CollectionInput.csv'
+2025-05-14 23:11:49.330 [main] INFO  org.example.serverUtils.Console - Initializing console commands
+2025-05-14 23:11:49.332 [main] INFO  org.example.serverUtils.Console - Registering Add Command
+2025-05-14 23:11:49.333 [main] INFO  org.example.serverUtils.Console - Registering AddIfMax Command
+2025-05-14 23:11:49.334 [main] INFO  org.example.serverUtils.Console - Registering AvgOfEnginePower Command
+2025-05-14 23:11:49.334 [main] INFO  org.example.serverUtils.Console - Registering Clear Command
+2025-05-14 23:11:49.335 [main] INFO  org.example.serverUtils.Console - Registering CountGreaterThanEnginePower Command
+2025-05-14 23:11:49.335 [main] INFO  org.example.serverUtils.Console - Registering Info Command
+2025-05-14 23:11:49.336 [main] INFO  org.example.serverUtils.Console - Registering MinByFuelType Command
+2025-05-14 23:11:49.336 [main] INFO  org.example.serverUtils.Console - Registering RemoveAt Command
+2025-05-14 23:11:49.337 [main] INFO  org.example.serverUtils.Console - Registering RemoveById Command
+2025-05-14 23:11:49.338 [main] INFO  org.example.serverUtils.Console - Registering RemoveGreater Command
+2025-05-14 23:11:49.338 [main] INFO  org.example.serverUtils.Console - Registering Show Command
+2025-05-14 23:11:49.339 [main] INFO  org.example.serverUtils.Console - Registering UpdateId Command
+2025-05-14 23:11:49.340 [main] INFO  org.example.serverUtils.ConnectionManager - Server bound to: /127.0.0.1:6789
+2025-05-14 23:11:53.495 [main] INFO  org.example.dbConnect.DbManager - Connected successfully
+2025-05-14 23:11:53.495 [main] INFO  org.example.dbConnect.DbManager - Receiving the collection from DB
+2025-05-14 23:11:56.655 [main] DEBUG org.example.serverUtils.Console - Starting an interactive mode.
+2025-05-14 23:21:52.694 [main] WARN  org.example.serverUtils.ConsoleFileManager - Переменная окружения CSV_FILE_PATH не установлена. Используется значение по умолчанию 'CollectionInput.csv'
+2025-05-14 23:21:52.736 [main] INFO  org.example.serverUtils.Console - Initializing console commands
+2025-05-14 23:21:52.737 [main] INFO  org.example.serverUtils.Console - Registering Add Command
+2025-05-14 23:21:52.738 [main] INFO  org.example.serverUtils.Console - Registering AddIfMax Command
+2025-05-14 23:21:52.739 [main] INFO  org.example.serverUtils.Console - Registering AvgOfEnginePower Command
+2025-05-14 23:21:52.739 [main] INFO  org.example.serverUtils.Console - Registering Clear Command
+2025-05-14 23:21:52.740 [main] INFO  org.example.serverUtils.Console - Registering CountGreaterThanEnginePower Command
+2025-05-14 23:21:52.741 [main] INFO  org.example.serverUtils.Console - Registering Info Command
+2025-05-14 23:21:52.741 [main] INFO  org.example.serverUtils.Console - Registering MinByFuelType Command
+2025-05-14 23:21:52.742 [main] INFO  org.example.serverUtils.Console - Registering RemoveAt Command
+2025-05-14 23:21:52.742 [main] INFO  org.example.serverUtils.Console - Registering RemoveById Command
+2025-05-14 23:21:52.743 [main] INFO  org.example.serverUtils.Console - Registering RemoveGreater Command
+2025-05-14 23:21:52.744 [main] INFO  org.example.serverUtils.Console - Registering Show Command
+2025-05-14 23:21:52.744 [main] INFO  org.example.serverUtils.Console - Registering UpdateId Command
+2025-05-14 23:21:52.745 [main] INFO  org.example.serverUtils.ConnectionManager - Server bound to: /127.0.0.1:6789
+2025-05-14 23:21:56.972 [main] INFO  org.example.dbConnect.DbManager - Connected successfully
+2025-05-14 23:21:56.973 [main] INFO  org.example.dbConnect.DbManager - Receiving the collection from DB
+2025-05-14 23:21:59.776 [main] DEBUG org.example.serverUtils.Console - Starting an interactive mode.
+2025-05-14 23:22:52.753 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-14 23:26:13.191 [main] WARN  org.example.serverUtils.ConsoleFileManager - Переменная окружения CSV_FILE_PATH не установлена. Используется значение по умолчанию 'CollectionInput.csv'
+2025-05-14 23:26:13.239 [main] INFO  org.example.serverUtils.Console - Initializing console commands
+2025-05-14 23:26:13.241 [main] INFO  org.example.serverUtils.Console - Registering Add Command
+2025-05-14 23:26:13.241 [main] INFO  org.example.serverUtils.Console - Registering AddIfMax Command
+2025-05-14 23:26:13.242 [main] INFO  org.example.serverUtils.Console - Registering AvgOfEnginePower Command
+2025-05-14 23:26:13.242 [main] INFO  org.example.serverUtils.Console - Registering Clear Command
+2025-05-14 23:26:13.243 [main] INFO  org.example.serverUtils.Console - Registering CountGreaterThanEnginePower Command
+2025-05-14 23:26:13.243 [main] INFO  org.example.serverUtils.Console - Registering Info Command
+2025-05-14 23:26:13.243 [main] INFO  org.example.serverUtils.Console - Registering MinByFuelType Command
+2025-05-14 23:26:13.244 [main] INFO  org.example.serverUtils.Console - Registering RemoveAt Command
+2025-05-14 23:26:13.245 [main] INFO  org.example.serverUtils.Console - Registering RemoveById Command
+2025-05-14 23:26:13.246 [main] INFO  org.example.serverUtils.Console - Registering RemoveGreater Command
+2025-05-14 23:26:13.246 [main] INFO  org.example.serverUtils.Console - Registering Show Command
+2025-05-14 23:26:13.247 [main] INFO  org.example.serverUtils.Console - Registering UpdateId Command
+2025-05-14 23:26:13.248 [main] INFO  org.example.serverUtils.ConnectionManager - Server bound to: /127.0.0.1:6789
+2025-05-14 23:26:16.912 [main] INFO  org.example.dbConnect.DbManager - Connected successfully
+2025-05-14 23:26:16.912 [main] INFO  org.example.dbConnect.DbManager - Receiving the collection from DB
+2025-05-14 23:26:23.292 [main] INFO  org.example.serverUtils.ConnectionManager - Sending to 0.0.0.0/0.0.0.0:6789:
+{"responseType":"OK","message":"ID: 1, Name: pidor"}
+2025-05-14 23:26:23.293 [main] INFO  org.example.serverUtils.ConnectionManager - Sending to 0.0.0.0/0.0.0.0:6789:
+{"responseType":"OK","message":"ID: 2, Name: pidor"}
+2025-05-14 23:26:23.294 [main] DEBUG org.example.serverUtils.Console - Starting an interactive mode.
+2025-05-14 23:26:23.298 [main] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:61602:
+{"responseType":"SYSTEM","message":"Pong"}
+2025-05-14 23:26:23.302 [main] ERROR org.example.serverUtils.Console - Error: `Unexpected JSON token at offset 2: Encountered an unknown key 'responseType' at path: $
+Use 'ignoreUnknownKeys = true' in 'Json {}' builder to ignore unknown keys.
+JSON input: {"responseType":"OK","message":"ID: 1, Name: pidor"}`
+2025-05-14 23:26:23.302 [main] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:54212:
+{"responseType":"ERROR","message":"Unexpected JSON token at offset 2: Encountered an unknown key 'responseType' at path: $\nUse 'ignoreUnknownKeys = true' in 'Json {}' builder to ignore unknown keys.\nJSON input: {\"responseType\":\"OK\",\"message\":\"ID: 1, Name: pidor\"}"}
+2025-05-14 23:26:23.302 [main] ERROR org.example.serverUtils.Console - Error: `Unexpected JSON token at offset 2: Encountered an unknown key 'responseType' at path: $
+Use 'ignoreUnknownKeys = true' in 'Json {}' builder to ignore unknown keys.
+JSON input: {"responseType":"OK","message":"ID: 2, Name: pidor"}`
+2025-05-14 23:26:23.302 [main] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:54212:
+{"responseType":"ERROR","message":"Unexpected JSON token at offset 2: Encountered an unknown key 'responseType' at path: $\nUse 'ignoreUnknownKeys = true' in 'Json {}' builder to ignore unknown keys.\nJSON input: {\"responseType\":\"OK\",\"message\":\"ID: 2, Name: pidor\"}"}
+2025-05-14 23:26:23.719 [main] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:61602:
+{"responseType":"SYSTEM","message":"Pong"}
+2025-05-14 23:26:23.724 [main] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:61602:
+{"responseType":"SYSTEM","message":"{\"commands\":{\"add\":\"Adds a new vehicle to the collection\",\"add_if_max\":\"Adds a new vehicle to collection if it's max\",\"avg_of_eng_pw\":\"Returns average engine power of the all collection\",\"clear\":\"Clears the collection\",\"count_gr_than_eng_pw\":\"Return a quantity of objects, which have engPw greater than given\",\"info\":\"Returns info about collection\",\"min_by_fuel\":\"Returns object that is min by fuel type\",\"remove_at\":\"Removes an object from collection with given index\",\"remove_by_id\":\"Removes an object from the collection with given id\",\"remove_greater\":\"Removes all items from collection that have greater engPW than given\",\"show\":\"Returns info about all items from the collection\",\"update_id\":\"Updates a field from item with given id\"},\"arguments\":{\"add\":\"{\\\"vehicle\\\":\\\"Vehicle\\\"}\",\"add_if_max\":\"{\\\"vehicle\\\":\\\"Vehicle\\\"}\",\"avg_of_eng_pw\":\"{}\",\"clear\":\"{}\",\"count_gr_than_eng_pw\":\"{\\\"engPw\\\":\\\"Float\\\"}\",\"info\":\"{}\",\"min_by_fuel\":\"{}\",\"remove_at\":\"{\\\"index\\\":\\\"Int\\\"}\",\"remove_by_id\":\"{\\\"index\\\":\\\"Int\\\"}\",\"remove_greater\":\"{\\\"engPw\\\":\\\"Float\\\"}\",\"show\":\"{}\",\"update_id\":\"{\\\"id\\\":\\\"Int\\\",\\\"field\\\":\\\"String\\\",\\\"value\\\":\\\"String\\\"}\"}}"}
+2025-05-14 23:26:23.724 [main] INFO  org.example.serverUtils.Console - Sending map of commands.
+2025-05-14 23:27:03.586 [main] WARN  org.example.serverUtils.ConsoleFileManager - Переменная окружения CSV_FILE_PATH не установлена. Используется значение по умолчанию 'CollectionInput.csv'
+2025-05-14 23:27:03.631 [main] INFO  org.example.serverUtils.Console - Initializing console commands
+2025-05-14 23:27:03.632 [main] INFO  org.example.serverUtils.Console - Registering Add Command
+2025-05-14 23:27:03.633 [main] INFO  org.example.serverUtils.Console - Registering AddIfMax Command
+2025-05-14 23:27:03.634 [main] INFO  org.example.serverUtils.Console - Registering AvgOfEnginePower Command
+2025-05-14 23:27:03.634 [main] INFO  org.example.serverUtils.Console - Registering Clear Command
+2025-05-14 23:27:03.634 [main] INFO  org.example.serverUtils.Console - Registering CountGreaterThanEnginePower Command
+2025-05-14 23:27:03.635 [main] INFO  org.example.serverUtils.Console - Registering Info Command
+2025-05-14 23:27:03.635 [main] INFO  org.example.serverUtils.Console - Registering MinByFuelType Command
+2025-05-14 23:27:03.635 [main] INFO  org.example.serverUtils.Console - Registering RemoveAt Command
+2025-05-14 23:27:03.636 [main] INFO  org.example.serverUtils.Console - Registering RemoveById Command
+2025-05-14 23:27:03.636 [main] INFO  org.example.serverUtils.Console - Registering RemoveGreater Command
+2025-05-14 23:27:03.636 [main] INFO  org.example.serverUtils.Console - Registering Show Command
+2025-05-14 23:27:03.637 [main] INFO  org.example.serverUtils.Console - Registering UpdateId Command
+2025-05-14 23:27:03.638 [main] INFO  org.example.serverUtils.ConnectionManager - Server bound to: /127.0.0.1:6789
+2025-05-14 23:27:03.638 [main] DEBUG org.example.serverUtils.Console - Starting an interactive mode.
+2025-05-14 23:27:09.006 [main] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:57463:
+{"responseType":"SYSTEM","message":"Pong"}
+2025-05-14 23:27:09.012 [main] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:57463:
+{"responseType":"SYSTEM","message":"{\"commands\":{\"add\":\"Adds a new vehicle to the collection\",\"add_if_max\":\"Adds a new vehicle to collection if it's max\",\"avg_of_eng_pw\":\"Returns average engine power of the all collection\",\"clear\":\"Clears the collection\",\"count_gr_than_eng_pw\":\"Return a quantity of objects, which have engPw greater than given\",\"info\":\"Returns info about collection\",\"min_by_fuel\":\"Returns object that is min by fuel type\",\"remove_at\":\"Removes an object from collection with given index\",\"remove_by_id\":\"Removes an object from the collection with given id\",\"remove_greater\":\"Removes all items from collection that have greater engPW than given\",\"show\":\"Returns info about all items from the collection\",\"update_id\":\"Updates a field from item with given id\"},\"arguments\":{\"add\":\"{\\\"vehicle\\\":\\\"Vehicle\\\"}\",\"add_if_max\":\"{\\\"vehicle\\\":\\\"Vehicle\\\"}\",\"avg_of_eng_pw\":\"{}\",\"clear\":\"{}\",\"count_gr_than_eng_pw\":\"{\\\"engPw\\\":\\\"Float\\\"}\",\"info\":\"{}\",\"min_by_fuel\":\"{}\",\"remove_at\":\"{\\\"index\\\":\\\"Int\\\"}\",\"remove_by_id\":\"{\\\"index\\\":\\\"Int\\\"}\",\"remove_greater\":\"{\\\"engPw\\\":\\\"Float\\\"}\",\"show\":\"{}\",\"update_id\":\"{\\\"id\\\":\\\"Int\\\",\\\"field\\\":\\\"String\\\",\\\"value\\\":\\\"String\\\"}\"}}"}
+2025-05-14 23:27:09.012 [main] INFO  org.example.serverUtils.Console - Sending map of commands.
+2025-05-14 23:27:11.573 [main] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:57463:
+{"responseType":"OK","message":"Информация о коллекции:\nТип: SynchronizedRandomAccessList<Vehicle>\nДата инициализации: 2025-05-14\nКол-во элементов: 10"}
+2025-05-14 23:27:18.041 [Thread-0] INFO  org.example.serverUtils.Console - Collection was saved.
+2025-05-14 23:27:18.042 [Thread-0] DEBUG org.example.serverUtils.Console - Stop called
+2025-05-14 23:27:18.044 [Thread-0] DEBUG org.example.serverUtils.Console - ExitFlag: `true`
+2025-05-14 23:27:18.044 [main] INFO  org.example.serverUtils.Console - Server stopped the work.
+2025-05-14 23:33:29.043 [main] WARN  org.example.serverUtils.ConsoleFileManager - Переменная окружения CSV_FILE_PATH не установлена. Используется значение по умолчанию 'CollectionInput.csv'
+2025-05-14 23:33:29.085 [main] INFO  org.example.serverUtils.Console - Initializing console commands
+2025-05-14 23:33:29.086 [main] INFO  org.example.serverUtils.Console - Registering Add Command
+2025-05-14 23:33:29.087 [main] INFO  org.example.serverUtils.Console - Registering AddIfMax Command
+2025-05-14 23:33:29.087 [main] INFO  org.example.serverUtils.Console - Registering AvgOfEnginePower Command
+2025-05-14 23:33:29.087 [main] INFO  org.example.serverUtils.Console - Registering Clear Command
+2025-05-14 23:33:29.088 [main] INFO  org.example.serverUtils.Console - Registering CountGreaterThanEnginePower Command
+2025-05-14 23:33:29.088 [main] INFO  org.example.serverUtils.Console - Registering Info Command
+2025-05-14 23:33:29.089 [main] INFO  org.example.serverUtils.Console - Registering MinByFuelType Command
+2025-05-14 23:33:29.089 [main] INFO  org.example.serverUtils.Console - Registering RemoveAt Command
+2025-05-14 23:33:29.089 [main] INFO  org.example.serverUtils.Console - Registering RemoveById Command
+2025-05-14 23:33:29.090 [main] INFO  org.example.serverUtils.Console - Registering RemoveGreater Command
+2025-05-14 23:33:29.090 [main] INFO  org.example.serverUtils.Console - Registering Show Command
+2025-05-14 23:33:29.090 [main] INFO  org.example.serverUtils.Console - Registering UpdateId Command
+2025-05-14 23:33:29.091 [main] INFO  org.example.serverUtils.ConnectionManager - Server bound to: /127.0.0.1:6789
+2025-05-14 23:33:29.091 [main] DEBUG org.example.serverUtils.Console - Starting an interactive mode.
+2025-05-17 21:41:19.515 [main] WARN  org.example.serverUtils.ConsoleFileManager - Переменная окружения CSV_FILE_PATH не установлена. Используется значение по умолчанию 'CollectionInput.csv'
+2025-05-17 21:41:28.331 [main] INFO  org.example.serverUtils.Console - Initializing console commands
+2025-05-17 21:41:28.336 [main] INFO  org.example.serverUtils.Console - Registering Add Command
+2025-05-17 21:41:28.338 [main] INFO  org.example.serverUtils.Console - Registering AddIfMax Command
+2025-05-17 21:41:28.339 [main] INFO  org.example.serverUtils.Console - Registering AvgOfEnginePower Command
+2025-05-17 21:41:28.340 [main] INFO  org.example.serverUtils.Console - Registering Clear Command
+2025-05-17 21:41:28.341 [main] INFO  org.example.serverUtils.Console - Registering CountGreaterThanEnginePower Command
+2025-05-17 21:41:28.342 [main] INFO  org.example.serverUtils.Console - Registering Info Command
+2025-05-17 21:41:28.342 [main] INFO  org.example.serverUtils.Console - Registering MinByFuelType Command
+2025-05-17 21:41:28.343 [main] INFO  org.example.serverUtils.Console - Registering RemoveAt Command
+2025-05-17 21:41:28.344 [main] INFO  org.example.serverUtils.Console - Registering RemoveById Command
+2025-05-17 21:41:28.345 [main] INFO  org.example.serverUtils.Console - Registering RemoveGreater Command
+2025-05-17 21:41:28.346 [main] INFO  org.example.serverUtils.Console - Registering Show Command
+2025-05-17 21:41:28.346 [main] INFO  org.example.serverUtils.Console - Registering UpdateId Command
+2025-05-17 21:41:28.350 [main] INFO  org.example.serverUtils.ConnectionManager - Server bound to: /127.0.0.1:6789
+2025-05-17 21:41:28.350 [main] DEBUG org.example.serverUtils.Console - Starting an interactive mode.
+2025-05-17 21:42:16.976 [main] WARN  org.example.serverUtils.ConsoleFileManager - Переменная окружения CSV_FILE_PATH не установлена. Используется значение по умолчанию 'CollectionInput.csv'
+2025-05-17 21:42:26.540 [main] INFO  org.example.serverUtils.Console - Initializing console commands
+2025-05-17 21:42:26.547 [main] INFO  org.example.serverUtils.Console - Registering Add Command
+2025-05-17 21:42:26.548 [main] INFO  org.example.serverUtils.Console - Registering AddIfMax Command
+2025-05-17 21:42:26.550 [main] INFO  org.example.serverUtils.Console - Registering AvgOfEnginePower Command
+2025-05-17 21:42:26.552 [main] INFO  org.example.serverUtils.Console - Registering Clear Command
+2025-05-17 21:42:26.553 [main] INFO  org.example.serverUtils.Console - Registering CountGreaterThanEnginePower Command
+2025-05-17 21:42:26.554 [main] INFO  org.example.serverUtils.Console - Registering Info Command
+2025-05-17 21:42:26.555 [main] INFO  org.example.serverUtils.Console - Registering MinByFuelType Command
+2025-05-17 21:42:26.556 [main] INFO  org.example.serverUtils.Console - Registering RemoveAt Command
+2025-05-17 21:42:26.557 [main] INFO  org.example.serverUtils.Console - Registering RemoveById Command
+2025-05-17 21:42:26.558 [main] INFO  org.example.serverUtils.Console - Registering RemoveGreater Command
+2025-05-17 21:42:26.559 [main] INFO  org.example.serverUtils.Console - Registering Show Command
+2025-05-17 21:42:26.560 [main] INFO  org.example.serverUtils.Console - Registering UpdateId Command
+2025-05-17 21:42:26.561 [main] INFO  org.example.serverUtils.ConnectionManager - Server bound to: /127.0.0.1:6789
+2025-05-17 21:42:26.562 [main] DEBUG org.example.serverUtils.Console - Starting an interactive mode.
+2025-05-17 21:43:12.453 [main] WARN  org.example.serverUtils.ConsoleFileManager - Переменная окружения CSV_FILE_PATH не установлена. Используется значение по умолчанию 'CollectionInput.csv'
+2025-05-17 21:43:24.155 [main] INFO  org.example.serverUtils.Console - Initializing console commands
+2025-05-17 21:43:24.160 [main] INFO  org.example.serverUtils.Console - Registering Add Command
+2025-05-17 21:43:24.162 [main] INFO  org.example.serverUtils.Console - Registering AddIfMax Command
+2025-05-17 21:43:24.163 [main] INFO  org.example.serverUtils.Console - Registering AvgOfEnginePower Command
+2025-05-17 21:43:24.163 [main] INFO  org.example.serverUtils.Console - Registering Clear Command
+2025-05-17 21:43:24.164 [main] INFO  org.example.serverUtils.Console - Registering CountGreaterThanEnginePower Command
+2025-05-17 21:43:24.165 [main] INFO  org.example.serverUtils.Console - Registering Info Command
+2025-05-17 21:43:24.166 [main] INFO  org.example.serverUtils.Console - Registering MinByFuelType Command
+2025-05-17 21:43:24.166 [main] INFO  org.example.serverUtils.Console - Registering RemoveAt Command
+2025-05-17 21:43:24.167 [main] INFO  org.example.serverUtils.Console - Registering RemoveById Command
+2025-05-17 21:43:24.168 [main] INFO  org.example.serverUtils.Console - Registering RemoveGreater Command
+2025-05-17 21:43:24.168 [main] INFO  org.example.serverUtils.Console - Registering Show Command
+2025-05-17 21:43:24.169 [main] INFO  org.example.serverUtils.Console - Registering UpdateId Command
+2025-05-17 21:43:24.170 [main] INFO  org.example.serverUtils.ConnectionManager - Server bound to: /127.0.0.1:6789
+2025-05-17 21:43:24.170 [main] DEBUG org.example.serverUtils.Console - Starting an interactive mode.
+2025-05-17 21:51:32.065 [main] WARN  org.example.serverUtils.ConsoleFileManager - Переменная окружения CSV_FILE_PATH не установлена. Используется значение по умолчанию 'CollectionInput.csv'
+2025-05-17 21:51:49.003 [main] INFO  org.example.serverUtils.Console - Initializing console commands
+2025-05-17 21:51:49.010 [main] INFO  org.example.serverUtils.Console - Registering Add Command
+2025-05-17 21:51:49.011 [main] INFO  org.example.serverUtils.Console - Registering AddIfMax Command
+2025-05-17 21:51:49.013 [main] INFO  org.example.serverUtils.Console - Registering AvgOfEnginePower Command
+2025-05-17 21:51:49.014 [main] INFO  org.example.serverUtils.Console - Registering Clear Command
+2025-05-17 21:51:49.016 [main] INFO  org.example.serverUtils.Console - Registering CountGreaterThanEnginePower Command
+2025-05-17 21:51:49.017 [main] INFO  org.example.serverUtils.Console - Registering Info Command
+2025-05-17 21:51:49.019 [main] INFO  org.example.serverUtils.Console - Registering MinByFuelType Command
+2025-05-17 21:51:49.020 [main] INFO  org.example.serverUtils.Console - Registering RemoveAt Command
+2025-05-17 21:51:49.021 [main] INFO  org.example.serverUtils.Console - Registering RemoveById Command
+2025-05-17 21:51:49.022 [main] INFO  org.example.serverUtils.Console - Registering RemoveGreater Command
+2025-05-17 21:51:49.023 [main] INFO  org.example.serverUtils.Console - Registering Show Command
+2025-05-17 21:51:49.024 [main] INFO  org.example.serverUtils.Console - Registering UpdateId Command
+2025-05-17 21:51:49.025 [main] INFO  org.example.serverUtils.ConnectionManager - Server bound to: /127.0.0.1:6789
+2025-05-17 21:51:49.026 [main] DEBUG org.example.serverUtils.Console - Starting an interactive mode.

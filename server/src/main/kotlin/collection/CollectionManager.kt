@@ -1,6 +1,7 @@
 package collection
 
 import baseClasses.Vehicle
+import org.example.dbConnect.DbManager
 import java.time.LocalDate
 import java.util.Collections
 
@@ -22,6 +23,7 @@ class CollectionManager {
      */
     private val baseCollection = Collections.synchronizedList(ArrayList<Vehicle>())
     private val initializationDate: LocalDate = LocalDate.now()
+    private val dbManager = DbManager("jdbc:postgresql://localhost:15432/studs", "s474305", "yWizzR0CBOadnGlk")
 
     fun clear(){
         synchronized(baseCollection) {

@@ -38,6 +38,10 @@ data class Vehicle(
 
     val id: Int = generateId()
 
+    fun getId(): Int{
+        return id
+    }
+
     /**
      * Дата создания транспортного средства.
      * Устанавливается автоматически при создании объекта.
@@ -121,6 +125,8 @@ data class Vehicle(
             existingIds.add(newId)
             return newId
         }
+
+
 
         /**
          * Удаляет идентификатор из множества использованных идентификаторов.

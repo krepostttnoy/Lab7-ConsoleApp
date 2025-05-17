@@ -27,6 +27,7 @@ import java.nio.channels.SelectionKey
 import java.nio.channels.Selector
 import org.apache.logging.log4j.LogManager
 import org.apache.logging.log4j.Logger
+import org.example.dbConnect.DbManager
 
 class Console {
     private val connectionManager = ConnectionManager()
@@ -41,6 +42,7 @@ class Console {
     private val jsonCreator = JsonCreator()
     private val selector = Selector.open()
     private val logger: Logger = LogManager.getLogger(Console::class.java)
+    private val dbManager = DbManager("jdbc:postgresql://localhost:15432/studs", "s474305", "yWizzR0CBOadnGlk")
 
     init {
         fileManager.startAutoSave(60)
@@ -52,6 +54,11 @@ class Console {
 
 
     fun initialize() {
+        dbManager.initDB()
+        dbManager.registerUser("goida", "sex", "111")
+        dbManager.registerUser("eblan", "sexy", "222")
+        dbManager.registerUser("dolboeb", "sexual", "667")
+        dbManager.getUsers()
         logger.info("Initializing console commands")
         commandInvoker.register("add", AddCommand(collectionManager, vehicleManager, outputManager, connectionManager))
         logger.info("Registering Add Command")

@@ -9,3 +9,26 @@
 2025-05-07 22:13:08.818 [main] INFO  Console - Starting an interactive mode
 2025-05-07 22:13:13.525 [main] INFO  org.example.clientUtils.ConnectionManager - Sending to localhost:6789: {"requestType":"COMMAND_EXEC","message":"info","args":{}}
 2025-05-07 22:13:13.534 [main] INFO  org.example.clientUtils.ConnectionManager - Received from /127.0.0.1:6789: {"responseType":"OK","message":"Информация о коллекции:\nТип: SynchronizedRandomAccessList<Vehicle>\nДата инициализации: 2025-05-07\nКол-во элементов: 10"}
+2025-05-14 23:26:16.474 [main] INFO  Console - Trying to connect...
+2025-05-14 23:26:16.513 [main] INFO  org.example.clientUtils.ConnectionManager - Sending to localhost:6789: {"requestType":"PING","message":"Ping","args":{}}
+2025-05-14 23:26:21.528 [main] ERROR org.example.clientUtils.ConnectionManager - Ping failed - `5000.0`: Receive timed out
+2025-05-14 23:26:23.717 [main] INFO  Console - Trying to connect...
+2025-05-14 23:26:23.718 [main] INFO  org.example.clientUtils.ConnectionManager - Sending to localhost:6789: {"requestType":"PING","message":"Ping","args":{}}
+2025-05-14 23:26:23.719 [main] INFO  org.example.clientUtils.ConnectionManager - Received from /127.0.0.1:6789: {"responseType":"SYSTEM","message":"Pong"}
+2025-05-14 23:26:23.722 [main] INFO  Console - Initializing console commands
+2025-05-14 23:26:23.723 [main] INFO  org.example.clientUtils.ConnectionManager - Sending to localhost:6789: {"requestType":"INITIALIZATION","message":"","args":{}}
+2025-05-14 23:26:23.723 [main] INFO  org.example.clientUtils.ConnectionManager - Received from /127.0.0.1:6789: {"responseType":"SYSTEM","message":"Pong"}
+2025-05-14 23:27:02.103 [main] INFO  Console - Trying to connect...
+2025-05-14 23:27:02.130 [main] INFO  org.example.clientUtils.ConnectionManager - Sending to localhost:6789: {"requestType":"PING","message":"Ping","args":{}}
+2025-05-14 23:27:07.144 [main] ERROR org.example.clientUtils.ConnectionManager - Ping failed - `5000.0`: Receive timed out
+2025-05-14 23:27:08.987 [main] INFO  Console - Trying to connect...
+2025-05-14 23:27:08.988 [main] INFO  org.example.clientUtils.ConnectionManager - Sending to localhost:6789: {"requestType":"PING","message":"Ping","args":{}}
+2025-05-14 23:27:09.007 [main] INFO  org.example.clientUtils.ConnectionManager - Received from /127.0.0.1:6789: {"responseType":"SYSTEM","message":"Pong"}
+2025-05-14 23:27:09.010 [main] INFO  Console - Initializing console commands
+2025-05-14 23:27:09.010 [main] INFO  org.example.clientUtils.ConnectionManager - Sending to localhost:6789: {"requestType":"INITIALIZATION","message":"","args":{}}
+2025-05-14 23:27:09.012 [main] INFO  org.example.clientUtils.ConnectionManager - Received from /127.0.0.1:6789: {"responseType":"SYSTEM","message":"{\"commands\":{\"add\":\"Adds a new vehicle to the collection\",\"add_if_max\":\"Adds a new vehicle to collection if it's max\",\"avg_of_eng_pw\":\"Returns average engine power of the all collection\",\"clear\":\"Clears the collection\",\"count_gr_than_eng_pw\":\"Return a quantity of objects, which have engPw greater than given\",\"info\":\"Returns info about collection\",\"min_by_fuel\":\"Returns object that is min by fuel type\",\"remove_at\":\"Removes an object from collection with given index\",\"remove_by_id\":\"Removes an object from the collection with given id\",\"remove_greater\":\"Removes all items from collection that have greater engPW than given\",\"show\":\"Returns info about all items from the collection\",\"update_id\":\"Updates a field from item with given id\"},\"arguments\":{\"add\":\"{\\\"vehicle\\\":\\\"Vehicle\\\"}\",\"add_if_max\":\"{\\\"vehicle\\\":\\\"Vehicle\\\"}\",\"avg_of_eng_pw\":\"{}\",\"clear\":\"{}\",\"count_gr_than_eng_pw\":\"{\\\"engPw\\\":\\\"Float\\\"}\",\"info\":\"{}\",\"min_by_fuel\":\"{}\",\"remove_at\":\"{\\\"index\\\":\\\"Int\\\"}\",\"remove_by_id\":\"{\\\"index\\\":\\\"Int\\\"}\",\"remove_greater\":\"{\\\"engPw\\\":\\\"Float\\\"}\",\"show\":\"{}\",\"update_id\":\"{\\\"id\\\":\\\"Int\\\",\\\"field\\\":\\\"String\\\",\\\"value\\\":\\\"String\\\"}\"}}"}
+2025-05-14 23:27:09.014 [main] INFO  Console - Registering basic commands
+2025-05-14 23:27:09.014 [main] INFO  Console - Connected successfully
+2025-05-14 23:27:09.014 [main] INFO  Console - Starting an interactive mode
+2025-05-14 23:27:11.566 [main] INFO  org.example.clientUtils.ConnectionManager - Sending to localhost:6789: {"requestType":"COMMAND_EXEC","message":"info","args":{}}
+2025-05-14 23:27:11.574 [main] INFO  org.example.clientUtils.ConnectionManager - Received from /127.0.0.1:6789: {"responseType":"OK","message":"Информация о коллекции:\nТип: SynchronizedRandomAccessList<Vehicle>\nДата инициализации: 2025-05-14\nКол-во элементов: 10"}

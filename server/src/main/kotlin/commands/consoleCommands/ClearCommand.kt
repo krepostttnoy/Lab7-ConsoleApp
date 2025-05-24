@@ -36,16 +36,16 @@ class ClearCommand(
      * 3. Очищает список использованных идентификаторов в [baseClasses.Vehicle.Companion.existingIds].
      * 4. Выводит сообщение об успешной очистке и текущий размер коллекции.
      */
-    override fun execute(args: Map<String, String>) {
+    override fun execute(args: Map<String, String>, username: String) {
         if (cm.getCollection().isEmpty()) {
-            val response = ResponseWrapper(ResponseType.OK, "Collection is empty")
+            val response = ResponseWrapper(ResponseType.OK, "Collection is empty", receiver = args["sender"]!!)
             connectionManager.send(response)
             return
         }
 
-        cm.clear()
+        cm.clear(username)
         Vehicle.Companion.existingIds.clear()
-        val response = ResponseWrapper(ResponseType.OK, "Collection is cleared. Size: ${cm.getCollection().size}")
+        val response = ResponseWrapper(ResponseType.OK, "Collection is cleared. Size: ${cm.getCollection().size}", receiver = args["sender"]!!)
         connectionManager.send(response)
     }
 

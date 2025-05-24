@@ -1,5 +1,6 @@
 package org.example.serverUtils
 
+import kotlinx.serialization.json.Json
 import utils.IOThread
 import utils.JsonCreator
 import utils.wrappers.RequestWrapper
@@ -9,6 +10,7 @@ import java.nio.ByteBuffer
 import java.nio.channels.DatagramChannel
 import org.apache.logging.log4j.LogManager
 import org.apache.logging.log4j.Logger
+import utils.wrappers.ResponseType
 
 class ConnectionManager() {
     private var host = "0.0.0.0"
@@ -47,5 +49,14 @@ class ConnectionManager() {
         buffer.put(json.toByteArray())
         buffer.flip()
         datagramChannel.send(buffer, remoteAddress)
+    }
+
+    fun registrationRequest(host: String, port: Int, message: String) {
+        val request = ResponseWrapper(ResponseType.REG_REQUEST, message, receiver = "")
+        buffer = ByteBuffer.allocate(8192)
+        val jsonAnswer = Json.encodeToString(ResponseWrapper.serializer(), request).toByteArray()
+        val data = ByteBuffer.wrap(jsonAnswer)
+        val receiver = InetSocketAddress(host, port)
+        datagramChannel.send(data, receiver)
     }
 }

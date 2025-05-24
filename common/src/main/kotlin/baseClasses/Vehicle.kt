@@ -36,10 +36,14 @@ data class Vehicle(
      * Генерируется автоматически с помощью метода [generateId].
      */
 
-    val id: Int = generateId()
+    private var id: Int = generateId()
 
     fun getId(): Int{
-        return id
+        return this.id
+    }
+
+    fun setId(id: Int) {
+        this.id = id
     }
 
     /**

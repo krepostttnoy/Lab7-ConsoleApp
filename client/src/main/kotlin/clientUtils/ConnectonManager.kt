@@ -12,12 +12,10 @@ import java.net.InetAddress
 import org.apache.logging.log4j.LogManager
 import org.apache.logging.log4j.Logger
 import org.example.commands.CommandInvoker
-import org.example.commands.CommandReceiver
 import utils.inputOutput.InputManager
-import java.nio.ByteBuffer
 
 class ConnectionManager(private var host: String, private var port: Int) {
-    private val timeout = 5000
+    private val timeout = 10000
     private var datagramSocket = DatagramSocket()
     val outputManager = IOThread.outputManager
     val inputManager = InputManager(outputManager)
@@ -25,7 +23,6 @@ class ConnectionManager(private var host: String, private var port: Int) {
     private var hostInetAddress = InetAddress.getByName(host)
     private var datagramPacket = DatagramPacket(ByteArray(4096), 4096, hostInetAddress, port)
     private val logger: Logger = LogManager.getLogger(ConnectionManager::class.java)
-    private val commandReceiver = CommandReceiver(outputManager, inputManager, commandInvoker, this)
 
     fun connect(): Boolean{
         datagramSocket.soTimeout = timeout
@@ -33,7 +30,7 @@ class ConnectionManager(private var host: String, private var port: Int) {
     }
 
     fun ping(): Double {
-        val request = RequestWrapper(RequestType.PING, "Ping", emptyMap())
+        val request = RequestWrapper(RequestType.PING, "Ping", mapOf("sender" to host))
         try {
             val start = System.nanoTime()
             send(request)
@@ -72,7 +69,7 @@ class ConnectionManager(private var host: String, private var port: Int) {
         try {
             send(request)
         }catch (e: Exception){
-            return ResponseWrapper(ResponseType.ERROR, e.message.toString())
+            return ResponseWrapper(ResponseType.ERROR, e.message.toString(), receiver = "")
         }
         return receive()
     }

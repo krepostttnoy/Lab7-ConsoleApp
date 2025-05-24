@@ -27,7 +27,6 @@ class DbManager(
     private val logger: Logger = LogManager.getLogger(DbManager::class.java)
     private val connectionManager = ConnectionManager()
     private val jsonCreator = JsonCreator()
-    private val connection = DriverManager.getConnection(url, user, password)
 
     private fun getConnection(): Connection{
         return DriverManager.getConnection(url, user, password)
@@ -48,7 +47,7 @@ class DbManager(
     }
 
     fun initDB(){
-        println("goida")
+        println("goida inits DB")
         initUsers()
         initCollection()
     }
@@ -152,11 +151,13 @@ class DbManager(
         }
     }
 
-    fun deleteVehicle(id: Int){
+    fun deleteVehicle(id: Int?){
         getConnection().use{connection ->
-            val statement = connection.prepareStatement("delete from collection where id = ?")
-            statement.setInt(1, id)
-            statement.executeUpdate()
+            if (id != null){
+                val statement = connection.prepareStatement("delete from collection where id = ?")
+                statement.setInt(1, id)
+                statement.executeUpdate()
+            }
         }
     }
 

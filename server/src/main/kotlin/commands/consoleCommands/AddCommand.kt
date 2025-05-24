@@ -29,6 +29,25 @@ class AddCommand(
     @Transient private val connectionManager: ConnectionManager = null!!
 ) : Command {
     override val interactive = true
+
+    override fun execute(args: Map<String, String>, username: String) {
+        try{
+            val jsonCreator = JsonCreator()
+            val vehicleJson = args["vehicle"] ?: throw IllegalArgumentException("Vehicle data is missing")
+            val vehicle = jsonCreator.stringToObject<Vehicle>(vehicleJson).withNewId()
+
+            if (cm.getCollection().any { it.getId() == vehicle.getId() }) {
+                throw IllegalArgumentException("Vehicle with ID ${vehicle.getId()} already exists!, ${Vehicle.existingIds.toList()}")
+            }
+            cm.addVehicle(vehicle, username)
+            val response = ResponseWrapper(ResponseType.OK, "Vehicle added: ${vehicle.name}", receiver = args["sender"]!!)
+            connectionManager.send(response)
+        }catch (e: Exception){
+            val response = ResponseWrapper(ResponseType.ERROR, "Error: ${e.message}", receiver = args["sender"]!!)
+            connectionManager.send(response)
+        }
+    }
+
     private val argsType = mapOf(
         "vehicle" to "Vehicle"
     )
@@ -49,23 +68,5 @@ class AddCommand(
 
     override fun getInfo(): String {
         return info
-    }
-
-    override fun execute(args: Map<String, String>){
-        try{
-            val jsonCreator = JsonCreator()
-            val vehicleJson = args["vehicle"] ?: throw IllegalArgumentException("Vehicle data is missing")
-            val vehicle = jsonCreator.stringToObject<Vehicle>(vehicleJson).withNewId()
-
-            if (cm.getCollection().any { it.id == vehicle.id }) {
-                throw IllegalArgumentException("Vehicle with ID ${vehicle.id} already exists!, ${Vehicle.existingIds.toList()}")
-            }
-            cm.addVehicle(vehicle)
-            val response = ResponseWrapper(ResponseType.OK, "Vehicle added: ${vehicle.name}")
-            connectionManager.send(response)
-        }catch (e: Exception){
-            val response = ResponseWrapper(ResponseType.ERROR, "Error: ${e.message}")
-            connectionManager.send(response)
-        }
     }
 }

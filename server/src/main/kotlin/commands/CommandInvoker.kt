@@ -3,6 +3,7 @@ package org.example.commands
 import org.example.commands.consoleCommands.Command
 import utils.inputOutput.InputManager
 import utils.inputOutput.OutputManager
+import utils.wrappers.RequestWrapper
 import utils.wrappers.ResponseType
 import utils.wrappers.ResponseWrapper
 
@@ -20,20 +21,20 @@ class CommandInvoker(
         commands += name to command
     }
 
-    fun executeCommand(commandName: String, args: Map<String, String>): ResponseWrapper{
-        val command = commands[commandName] ?: return ResponseWrapper(ResponseType.ERROR, "Unknown command: $commandName")
+    fun executeCommand(request: RequestWrapper, username: String): ResponseWrapper{
+        val command = commands[request.message] ?: return ResponseWrapper(ResponseType.ERROR, "", receiver = request.args["sender"]!!)
         return try {
             if(command.interactive && inputManager.isScriptMode()) {
                 inputManager.switchToInteractive()
-                command.execute(args)
+                command.execute(request.args, username)
                 inputManager.returnToScript()
-                ResponseWrapper(ResponseType.OK, "Command executed successfully")
+                ResponseWrapper(ResponseType.OK, "Command executed successfully", receiver = request.args["sender"]!!)
             }else{
-                command.execute(args)
-                ResponseWrapper(ResponseType.OK, "Command executed successfully")
+                command.execute(request.args, username)
+                ResponseWrapper(ResponseType.OK, "Command executed successfully", receiver = request.args["sender"]!!)
             }
         }catch (e: Exception){
-            ResponseWrapper(ResponseType.ERROR, e.message ?: "Execution failed")
+            ResponseWrapper(ResponseType.ERROR, e.message ?: "Execution failed", receiver = request.args["sender"]!!)
         }
     }
 

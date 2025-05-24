@@ -55,7 +55,7 @@ class RemoveGreaterCommand(
      *
      * @param enginePowerStr Строковое представление мощности двигателя для сравнения (может быть null).
      */
-    override fun execute(args: Map<String, String>) {
+    override fun execute(args: Map<String, String>, username: String) {
         var response: ResponseWrapper
         if(!(cm.getCollection().isEmpty())){
             val enginePower = args["engPw"]?.toFloatOrNull()
@@ -71,24 +71,24 @@ class RemoveGreaterCommand(
             val toRemove = cm.getCollection().filter { it > element }
 
             if (toRemove.isEmpty()) {
-                response = ResponseWrapper(ResponseType.OK, "goida can't delete anything")
+                response = ResponseWrapper(ResponseType.OK, "goida can't delete anything", receiver = args["sender"]!!)
                 connectionManager.send(response)
                 return
             }
 
             toRemove.forEach { vehicle ->
-                cm.removeVehicle("remove", null, vehicle)
-                Vehicle.Companion.existingIds.remove(vehicle.id)
+                cm.removeVehicle("remove", null, vehicle, username)
+                Vehicle.Companion.existingIds.remove(vehicle.getId())
                 i++
             }
 
 
-            val result = ResponseWrapper(ResponseType.OK, "Deleted $i govno/(a)")
+            val result = ResponseWrapper(ResponseType.OK, "Deleted $i govno/(a)", receiver = args["sender"]!!)
             connectionManager.send(result)
 
 
         }else{
-            response = ResponseWrapper(ResponseType.OK, "goida")
+            response = ResponseWrapper(ResponseType.OK, "goida", receiver = args["sender"]!!)
             connectionManager.send(response)
         }
     }

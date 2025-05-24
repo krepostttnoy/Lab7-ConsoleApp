@@ -28,6 +28,15 @@ import java.nio.channels.Selector
 import org.apache.logging.log4j.LogManager
 import org.apache.logging.log4j.Logger
 import org.example.dbConnect.DbManager
+import org.example.mutlithread.ReceiverThread
+import org.example.mutlithread.SenderThread
+import org.example.token.JWTManager
+import org.example.users.UserManager
+import java.util.concurrent.ForkJoinPool
+import java.util.concurrent.LinkedBlockingQueue
+import utils.wrappers.Sending
+import java.util.concurrent.Executors
+import java.util.concurrent.TimeUnit
 
 class Console {
     private val connectionManager = ConnectionManager()
@@ -37,15 +46,25 @@ class Console {
     private val reader = Reader(outputManager, inputManager)
     private val validator = Validator(outputManager, inputManager)
     private val vehicleManager = ConsoleVehicleManager(reader)
-    private val fileManager = ConsoleFileManager(collectionManager, outputManager, inputManager)
     private val commandInvoker = CommandInvoker(inputManager)
     private val jsonCreator = JsonCreator()
     private val selector = Selector.open()
     private val logger: Logger = LogManager.getLogger(Console::class.java)
     private val dbManager = DbManager("jdbc:postgresql://localhost:15432/studs", "s474305", "yWizzR0CBOadnGlk")
+    private val userManager = UserManager(dbManager)
+    private val fileManager = ConsoleFileManager(collectionManager, dbManager)
+    private val jwtManager = JWTManager()
+
+    //multithread
+    private val cachedPool = Executors.newCachedThreadPool()
+    private val forkJoinPool = ForkJoinPool.commonPool()
+    private val taskQueue = LinkedBlockingQueue<Sending>(10)
+    private val answerQueue = LinkedBlockingQueue<Sending>(10)
+    private val threadReceiver = ReceiverThread(taskQueue, fileManager, jwtManager, commandInvoker, userManager, jsonCreator, answerQueue)
+    private val threadSender = SenderThread(answerQueue, connectionManager)
 
     init {
-        fileManager.startAutoSave(60)
+        fileManager.startAutoSave(60, userManager)
     }
 
     fun startServer(host: String, port: Int){
@@ -89,69 +108,55 @@ class Console {
         logger.info("Registering UpdateId Command")
     }
 
-    fun onConnect() {
-        val sendingData = mutableMapOf<String, MutableMap<String, String>>(
-            "commands" to mutableMapOf(),
-            "arguments" to mutableMapOf()
-        )
-        val commands = commandInvoker.getCommand()
-
-        for (command in commands.keys) {
-            sendingData["commands"]!! += (command to commands[command]!!.getInfo())
-            sendingData["arguments"]!! += (command to jsonCreator.objectToString(commands[command]!!.getArgsType()))
-        }
-
-        val response = ResponseWrapper(ResponseType.SYSTEM, jsonCreator.objectToString(sendingData))
-        connectionManager.send(response)
-        logger.info("Sending map of commands.")
-    }
+//    fun onConnect() {
+//        val sendingData = mutableMapOf<String, MutableMap<String, String>>(
+//            "commands" to mutableMapOf(),
+//            "arguments" to mutableMapOf()
+//        )
+//        val commands = commandInvoker.getCommand()
+//
+//        for (command in commands.keys) {
+//            sendingData["commands"]!! += (command to commands[command]!!.getInfo())
+//            sendingData["arguments"]!! += (command to jsonCreator.objectToString(commands[command]!!.getArgsType()))
+//        }
+//
+//        val response = ResponseWrapper(ResponseType.SYSTEM, jsonCreator.objectToString(sendingData))
+//        connectionManager.send(response)
+//        logger.info("Sending map of commands.")
+//    }
 
     fun startInteractiveMode() {
-        logger.debug("Starting an interactive mode.")
+        logger.info("The server is ready to receive commands")
         connectionManager.datagramChannel.register(selector, SelectionKey.OP_READ)
 
-        try {
-            while (!exitFlag) {
-                selector.select()
-                if(exitFlag) break
-                val selectedKeys = selector.selectedKeys()
-                val iter = selectedKeys.iterator()
-                while (iter.hasNext()) {
-                    val key = iter.next()
-                    if (key.isReadable) {
-                        val client = key.channel() as DatagramChannel
-                        try {
-                            connectionManager.datagramChannel = client
-                            val request = connectionManager.receive()
+        while (!exitFlag) {
+            selector.select()
+            val selectedKeys = selector.selectedKeys()
 
-                            when (request.requestType) {
-                                RequestType.COMMAND_EXEC -> {
-                                    val commandName = request.message
-                                    val args = request.args
-                                    commandInvoker.executeCommand(commandName, args)
-                                }
+            if (selectedKeys.isEmpty()) continue
 
-                                RequestType.INITIALIZATION -> {
-                                    onConnect()
-                                }
+            val iter = selectedKeys.iterator()
 
-                                RequestType.PING -> {
-                                    val response = ResponseWrapper(ResponseType.SYSTEM, "Pong")
-                                    connectionManager.send(response)
-                                }
-                            }
-                        } catch (e: Exception) {
-                            val response = ResponseWrapper(ResponseType.ERROR, e.message.toString())
-                            logger.error("Error: `{}`", e.message)
-                            connectionManager.send(response)
-                        }
+            while (iter.hasNext()) {
+                val key = iter.next()
+                iter.remove()
+                if (key.isReadable) {
+                    val client = key.channel() as DatagramChannel
+                    connectionManager.datagramChannel = client
+
+                    val query = connectionManager.receive()
+                    taskQueue.put(query)
+
+                    cachedPool.execute {
+                        threadReceiver.run()
                     }
+
+                    forkJoinPool.execute {
+                        threadSender.run()
+                    }
+
                 }
             }
-        }finally {
-            logger.info("Server stopped the work.")
-            connectionManager.datagramChannel.close()  // Закрытие канала
-            selector.close()
         }
     }
 
@@ -159,15 +164,20 @@ class Console {
         logger.debug("Stop called")
         exitFlag = true
         logger.debug("ExitFlag: `{}`", exitFlag)
+        cachedPool.awaitTermination(5000, TimeUnit.MILLISECONDS)
+        forkJoinPool.awaitTermination(5000, TimeUnit.MILLISECONDS)
+        connectionManager.datagramChannel.close()
         selector.wakeup()
         fileManager.stopAutoSave()
     }
 
     fun save(){
         try {
-            fileManager.saveToFile()
+            fileManager.saveCollection(userManager)
             logger.info("Collection was saved.")
-        }catch (e: Exception){}
+        }catch (e: Exception){
+            logger.warn("Collection was not saved: ${e.message}")
+        }
     }
 
 }

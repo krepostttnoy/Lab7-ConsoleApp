@@ -36,7 +36,7 @@ class CommandReceiver(
         val argList = inputArgs?.trim()?.split("\\s+".toRegex()) ?: emptyList()
 
         if (name == "update_id") {
-            val listRequest = RequestWrapper(RequestType.COMMAND_EXEC, "show", emptyMap())
+            val listRequest = RequestWrapper(RequestType.COMMAND_EXEC, "show", emptyMap(), sender = "")
             val listResponse = connectionManager.checkSendReceive(listRequest)
             outputManager.println(listResponse.message)
 
@@ -133,7 +133,7 @@ class CommandReceiver(
             }
         }
 
-        val request = RequestWrapper(RequestType.COMMAND_EXEC, name, sending)
+        val request = RequestWrapper(RequestType.COMMAND_EXEC, name, sending, sender = "")
         buffer.add(request)
         val response = connectionManager.checkSendReceive(request)
         outputManager.println(response.message)

@@ -37,8 +37,8 @@ class ShowCommand(
      * Выполняет команду отображения элементов коллекции.
      * Вызывает [CollectionManager.printCollection] и выводит результат в консоль.
      */
-    override fun execute(args: Map<String, String>) {
-        val response = ResponseWrapper(ResponseType.OK, cm.printCollection())
+    override fun execute(args: Map<String, String>, username: String) {
+        val response = ResponseWrapper(ResponseType.OK, cm.printCollection(), receiver = args["sender"]!!)
         connectionManager.send(response)
     }
 }

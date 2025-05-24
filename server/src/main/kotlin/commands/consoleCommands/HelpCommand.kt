@@ -28,7 +28,7 @@ class HelpCommand(private val ce: ICommandExecutor) : Command {
      * Выполняет команду вывода списка доступных команд.
      * Вызывает метод [ICommandExecutor.getHelp] для отображения списка.
      */
-    override fun execute(args: Map<String, String>) {
+    override fun execute(args: Map<String, String>, username: String) {
         TODO("Not yet implemented")
     }
 }

@@ -34,8 +34,8 @@ class InfoCommand(
      * Выполняет команду вывода информации о коллекции.
      * Вызывает метод [CollectionManager.printCollectionInfo] для отображения информации.
      */
-    override fun execute(args: Map<String, String>) {
-        val response = ResponseWrapper(ResponseType.OK, cm.printCollectionInfo())
+    override fun execute(args: Map<String, String>, username: String) {
+        val response = ResponseWrapper(ResponseType.OK, cm.printCollectionInfo(), receiver = args["sender"]!!)
         connectionManager.send(response)
     }
 }

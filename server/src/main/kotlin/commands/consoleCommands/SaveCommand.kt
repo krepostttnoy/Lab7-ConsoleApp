@@ -36,7 +36,7 @@ class SaveCommand(private val fm: IFileManager) : Command {
      * Вызывает [execute] с параметром [filePath] равным null,
      * что приводит к использованию пути по умолчанию.
      */
-    override fun execute(args: Map<String, String>) {
+    override fun execute(args: Map<String, String>, username: String) {
         TODO("Not yet implemented")
     }
 }

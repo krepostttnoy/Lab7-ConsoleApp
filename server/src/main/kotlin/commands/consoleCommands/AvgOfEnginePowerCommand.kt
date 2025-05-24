@@ -45,9 +45,9 @@ class AvgOfEnginePowerCommand(
         return info
     }
 
-    override fun execute(args: Map<String, String>) {
+    override fun execute(args: Map<String, String>, username: String) {
         if (cm.getCollection().isEmpty()) {
-            val response = ResponseWrapper(ResponseType.OK, "Коллекция пуста.")
+            val response = ResponseWrapper(ResponseType.OK, "Коллекция пуста.", receiver = args["sender"]!!)
             connectionManager.send(response)
             return
         }
@@ -56,7 +56,7 @@ class AvgOfEnginePowerCommand(
         val sum = cm.getCollection().sumOf { vehicle ->
             (vehicle.enginePower ?: 0.0f).toDouble()
         }
-        val response = ResponseWrapper(ResponseType.OK, "Avg: ${sum/size}. Sum -> $sum, size -> $size")
+        val response = ResponseWrapper(ResponseType.OK, "Avg: ${sum/size}. Sum -> $sum, size -> $size", receiver = args["sender"]!!)
         connectionManager.send(response)
     }
 }

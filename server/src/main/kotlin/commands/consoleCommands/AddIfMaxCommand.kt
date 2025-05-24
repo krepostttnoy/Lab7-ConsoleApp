@@ -53,18 +53,18 @@ class AddIfMaxCommand(
         return info
     }
 
-    override fun execute(args: Map<String, String>) {
+    override fun execute(args: Map<String, String>, username: String) {
         try{
             val jsonCreator = JsonCreator()
             if (cm.getCollection().isEmpty()) {
                 outputManager.println("Коллекция пуста.")
                 val vehicleJson = args["vehicle"] ?: throw IllegalArgumentException("Vehicle data is missing")
                 val vehicle = jsonCreator.stringToObject<Vehicle>(vehicleJson).withNewId()
-                if (cm.getCollection().any { it.id == vehicle.id }) {
-                    throw IllegalArgumentException("Vehicle with ID ${vehicle.id} already exists!, ${Vehicle.existingIds.toList()}")
+                if (cm.getCollection().any { it.getId() == vehicle.getId()}) {
+                    throw IllegalArgumentException("Vehicle with ID ${vehicle.getId()} already exists!, ${Vehicle.existingIds.toList()}")
                 }
-                cm.addVehicle(vehicle)
-                val response = ResponseWrapper(ResponseType.OK, "Vehicle added: ${vehicle.name}")
+                cm.addVehicle(vehicle, "")
+                val response = ResponseWrapper(ResponseType.OK, "Vehicle added: ${vehicle.name}", receiver = args["sender"]!!)
                 connectionManager.send(response)
                 return
             }
@@ -76,21 +76,21 @@ class AddIfMaxCommand(
             }
             val vehicleJson = args["vehicle"] ?: throw IllegalArgumentException("Vehicle data is missing")
             val newVehicle = jsonCreator.stringToObject<Vehicle>(vehicleJson).withNewId()
-            if (cm.getCollection().any { it.id == newVehicle.id }) {
-                throw IllegalArgumentException("Vehicle with ID ${newVehicle.id} already exists!, ${Vehicle.existingIds.toList()}")
+            if (cm.getCollection().any { it.getId() == newVehicle.getId() }) {
+                throw IllegalArgumentException("Vehicle with ID ${newVehicle.getId()} already exists!, ${Vehicle.existingIds.toList()}")
             }
 
             if (newVehicle.compareTo(maxVehicle) > 0) {
-                cm.addVehicle(newVehicle)
-                val response = ResponseWrapper(ResponseType.OK, "Vehicle added: ${newVehicle.name}")
+                cm.addVehicle(newVehicle, "")
+                val response = ResponseWrapper(ResponseType.OK, "Vehicle added: ${newVehicle.name}", receiver = args["sender"]!!)
                 connectionManager.send(response)
             } else {
-                val response = ResponseWrapper(ResponseType.OK, "Vehicle can't be added: ${newVehicle.name}")
+                val response = ResponseWrapper(ResponseType.OK, "Vehicle can't be added: ${newVehicle.name}", receiver = args["sender"]!!)
                 connectionManager.send(response)
             }
 
         }catch (e: Exception){
-            val response = ResponseWrapper(ResponseType.ERROR, "Error: ${e.message}")
+            val response = ResponseWrapper(ResponseType.ERROR, "Error: ${e.message}", receiver = args["sender"]!!)
             connectionManager.send(response)
         }
     }

@@ -55,9 +55,9 @@ class CountGrThanEngPwCommand(
         return info
     }
 
-    override fun execute(args: Map<String, String>) {
+    override fun execute(args: Map<String, String>, username: String) {
         if (cm.getCollection().isEmpty()) {
-            val response = ResponseWrapper(ResponseType.OK, "hueta")
+            val response = ResponseWrapper(ResponseType.OK, "hueta", receiver = args["sender"]!!)
             connectionManager.send(response)
             return
         }
@@ -73,7 +73,7 @@ class CountGrThanEngPwCommand(
         )
 
         val count = cm.getCollection().filter { it > element }.size
-        val response = ResponseWrapper(ResponseType.OK, "Кол-во объектов enginePower которых больше $engPower -> $count")
+        val response = ResponseWrapper(ResponseType.OK, "Кол-во объектов enginePower которых больше $engPower -> $count", receiver = args["sender"]!!)
         connectionManager.send(response)
     }
 }

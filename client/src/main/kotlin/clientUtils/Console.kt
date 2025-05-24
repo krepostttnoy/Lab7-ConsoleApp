@@ -14,6 +14,8 @@ import utils.wrappers.RequestWrapper
 import utils.wrappers.ResponseType
 import org.apache.logging.log4j.LogManager
 import org.apache.logging.log4j.Logger
+import org.example.clientUtils.readers.Validator
+import java.io.StringReader
 
 class Console{
     private val connectionManager = ConnectionManager("localhost", 6789)
@@ -23,35 +25,64 @@ class Console{
     private val commandReceiver = CommandReceiver(outputManager, inputManager, commandInvoker, connectionManager)
     private val jsonCreator = JsonCreator()
     private val logger: Logger = LogManager.getLogger(Console::class.java)
+    private val validator: Validator by lazy {Validator(outputManager, inputManager)}
+
+    private var token = ""
+    var authorized: Boolean = false
 
     fun getConnection(){
         logger.info("Trying to connect...")
         val connected = connectionManager.connect()
 
-        if(connected){
-            initialize()
-            registerBasicCommands()
-            logger.info("Connected successfully")
-            sendAllRequests()
-            startInteractiveMode()
-        }else{
-            outputManager.println("No server connection.")
-            outputManager.println("Retry connection? [y/n]")
-            outputManager.print("$ ")
-            var input = inputManager.read().trim().lowercase().split(" ")
-            while ((input[0] != "y") and (input[0] != "n")){
-                outputManager.println("Wrong input. Try again [y/n]")
-                outputManager.print("$ ")
-                input = inputManager.read().trim().lowercase().split(" ")
-            }
-            if (input[0] == "y"){
-                getConnection()
-            }else{
+        try {
+            if(connected){
+                authorize()
+                initialize()
                 registerBasicCommands()
+                logger.info("Connected successfully")
+                sendAllRequests()
                 startInteractiveMode()
+            }else{
+                outputManager.println("No server connection.")
+                outputManager.println("Retry connection? [y/n]")
+                outputManager.print("$ ")
+                var input = inputManager.read().trim().lowercase().split(" ")
+                while ((input[0] != "y") and (input[0] != "n")){
+                    outputManager.println("Wrong input. Try again [y/n]")
+                    outputManager.print("$ ")
+                    input = inputManager.read().trim().lowercase().split(" ")
+                }
+                if (input[0] == "y"){
+                    getConnection()
+                }else{
+                    registerBasicCommands()
+                    startInteractiveMode()
+                }
             }
-        }
+        }catch (e: Exception){logger.error("${e.message}")}
 
+    }
+
+    fun authorize(){
+        outputManager.surePrint("Sign up/log in for using the collection.")
+        outputManager.print("Username: ")
+        val username = validator.readLineTrimmed()
+        outputManager.print("Password: ")
+        val password = validator.readLineTrimmed()
+
+        val req = RequestWrapper(RequestType.AUTHORIZATION, "", mutableMapOf("username" to username, "password" to password))
+
+        val response = connectionManager.checkSendReceive(req)
+        logger.debug("Sent request for authorization")
+        if (response.responseType == ResponseType.AUTH_ERROR || response.responseType == ResponseType.ERROR) {
+            outputManager.println(response.message)
+            authorize()
+        } else {
+            logger.debug("Authorized")
+            outputManager.surePrint("Goida bratan, "+ username)
+            authorized = true
+            token = response.token
+        }
     }
 
     fun initialize(){
@@ -79,21 +110,16 @@ class Console{
         }
     }
 
+    //Автор метода - гений. Все отправленные сообщения помещаются в буфер, сохраняется последний элемент и отправляется.
     fun sendAllRequests(){
         val buf = commandReceiver.buffer
         if (buf.isNotEmpty()) {
             val lastElement = buf.last()
             buf.clear()
-            buf.add(lastElement)
 
-            println("Sending buffered requests: ${buf.size}")
-            val iterator = buf.iterator()
-            while (iterator.hasNext()) {
-                val request = iterator.next()
-                val response = connectionManager.checkSendReceive(request)
-                outputManager.println(response.message)
-                iterator.remove()
-            }
+            println("Sending last request.")
+            val response = connectionManager.checkSendReceive(lastElement)
+            outputManager.println(response.message)
         }
     }
 

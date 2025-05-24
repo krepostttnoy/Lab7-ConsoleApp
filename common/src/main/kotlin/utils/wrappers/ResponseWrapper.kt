@@ -5,6 +5,8 @@ import kotlinx.serialization.Serializable
 @Serializable
 class ResponseWrapper(
     val responseType: ResponseType,
-    val message: String
-) {
+    override var message: String,
+    override var token: String = "",
+    var receiver: String
+) : Sending{
 }

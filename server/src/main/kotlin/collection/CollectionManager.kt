@@ -2,6 +2,7 @@ package collection
 
 import baseClasses.Vehicle
 import org.example.dbConnect.DbManager
+import utils.exceptions.UserIsNotAuthorizedException
 import java.time.LocalDate
 import java.util.Collections
 
@@ -22,12 +23,25 @@ class CollectionManager {
      * Список транспортных средств, хранимых в коллекции.
      */
     private val baseCollection = Collections.synchronizedList(ArrayList<Vehicle>())
+    private val relationship = Collections.synchronizedMap(mutableMapOf<Int, String>())
     private val initializationDate: LocalDate = LocalDate.now()
     private val dbManager = DbManager("jdbc:postgresql://localhost:15432/studs", "s474305", "yWizzR0CBOadnGlk")
 
-    fun clear(){
+    fun clear(username: String){
         synchronized(baseCollection) {
-            baseCollection.clear()
+            val toBeCleared = mutableListOf<Vehicle>()
+            for (product in baseCollection) {
+                if ((relationship[product.getId()] == username) or (username == "admin")) {
+                    toBeCleared.add(product)
+                }
+            }
+            for (vehicle in toBeCleared) {
+                try {
+                    removeVehicle("remove", null, vehicle, username)
+                } catch (_:Exception) {}
+
+            }
+
         }
     }
 
@@ -47,6 +61,11 @@ class CollectionManager {
             return baseCollection.toList()
         }
     }
+
+    fun getRelationship(): MutableMap<Int, String> {
+        return relationship
+    }
+
     /**
      * Возвращает строковое представление всей коллекции.
      * Каждый элемент коллекции представлен в виде строки, полученной через [Vehicle.toString].
@@ -64,24 +83,33 @@ class CollectionManager {
      *
      * @param vehicle Объект [Vehicle], который нужно добавить в коллекцию.
      */
-    fun addVehicle(vehicle: Vehicle) {
+    fun addVehicle(vehicle: Vehicle, username: String) {
         synchronized(baseCollection) {
-            baseCollection.add(vehicle)
+            dbManager.saveVehicle(vehicle, username)
+            val id = dbManager.getIdByVehicle(vehicle)
+            vehicle.setId(id)
+            baseCollection[vehicle.getId()] = vehicle
+            relationship[vehicle.getId()] = username
+            dbManager.saveVehicle(vehicle, username)
         }
     }
 
-    fun removeVehicle(argsName: String, argsRaw: Int?, vehicle: Vehicle?){
+    fun removeVehicle(argsName: String, argsRaw: Int?, vehicle: Vehicle?, username: String){
         synchronized(baseCollection) {
+            if ((relationship[vehicle?.getId()] != username) and (username != "admin")) throw UserIsNotAuthorizedException()
             when(argsName){
                 "removeAt" -> {
                     if (argsRaw != null){
                         baseCollection.removeAt(argsRaw)
+                        dbManager.deleteVehicle(vehicle?.getId())
+                        relationship.remove(vehicle?.getId())
                     }else{
                         throw NullPointerException("Null argument for parameter argsRaw is not available.")
                     }
                 }
                 "remove" -> {
                     baseCollection.remove(vehicle)
+                    dbManager.deleteVehicle(vehicle?.getId())
                 }
                 else -> ""
             }

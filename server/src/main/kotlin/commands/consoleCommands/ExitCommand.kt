@@ -31,7 +31,7 @@ class ExitCommand(
      * Выполняет команду завершения программы.
      * Выводит сообщение "Программа завершена." и завершает процесс с кодом 0.
      */
-    override fun execute(args: Map<String, String>) {
+    override fun execute(args: Map<String, String>, username: String) {
         TODO("Not yet implemented")
     }
 }

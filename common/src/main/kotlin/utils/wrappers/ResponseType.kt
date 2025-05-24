@@ -3,6 +3,7 @@ package utils.wrappers
 enum class ResponseType {
     ERROR,
     OK,
-    INIT,
-    SYSTEM
+    SYSTEM,
+    AUTH_ERROR,
+    REG_REQUEST
 }

@@ -2,7 +2,7 @@ package org.example.clientUtils
 
 class CircuitBreaker(
     private val failuresHold: Int = 3,
-    private val timeout: Long = 10000
+    private val timeout: Long = 20000
 ) {
     private var failureCount = 0
     private var lastFailureTime = 0L

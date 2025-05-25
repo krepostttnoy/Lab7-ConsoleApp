@@ -47,7 +47,7 @@ class Console {
     private val jsonCreator = JsonCreator()
     private val selector = Selector.open()
     private val logger: Logger = LogManager.getLogger(Console::class.java)
-    private val dbManager = DbManager("jdbc:postgresql://localhost:15432/studs", "s474305", "yWizzR0CBOadnGlk")
+    private val dbManager = DbManager("jdbc:postgresql://localhost:15432/studs", "s474305", System.getenv("DB_PASSWORD") ?: throw IllegalStateException("DB_PASSWORD must be set"))
     private val userManager = UserManager(dbManager)
     private val fileManager = ConsoleFileManager(collectionManager, dbManager)
     private val jwtManager = JWTManager()

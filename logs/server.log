@@ -2363,3 +2363,26 @@ JSON input: {"responseType":"OK","message":"ID: 2, Name: pidor"}`
 2025-05-25 21:40:28.933 [ForkJoinPool.commonPool-worker-11] DEBUG org.example.mutlithread.SenderThread - Sending: Authorized
 2025-05-25 21:40:28.933 [ForkJoinPool.commonPool-worker-11] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:65429:
 {"responseType":"OK","message":"Authorized","token":"eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJzZXJ2ZXIiLCJzdWIiOiJwaXpkYSIsImV4cCI6MTc0ODE5ODcyOH0.bgpypzpD5CEddQRuM2hvfURS9XVdre-WawSlj-qlMsc","receiver":"unknown"}
+2025-05-25 23:08:24.059 [main] DEBUG org.example.dbConnect.DbManager - Inits DB
+2025-05-25 23:08:25.327 [main] INFO  org.example.serverUtils.ConsoleFileManager - Loading from DB
+2025-05-25 23:08:25.663 [main] INFO  org.example.serverUtils.ConsoleFileManager - Loaded 0 elements successfully
+2025-05-25 23:08:25.663 [main] INFO  org.example.serverUtils.Console - Initializing console commands
+2025-05-25 23:08:25.666 [main] INFO  org.example.serverUtils.Console - Registering Add Command
+2025-05-25 23:08:25.666 [main] INFO  org.example.serverUtils.Console - Registering AddIfMax Command
+2025-05-25 23:08:25.666 [main] INFO  org.example.serverUtils.Console - Registering AvgOfEnginePower Command
+2025-05-25 23:08:25.666 [main] INFO  org.example.serverUtils.Console - Registering Clear Command
+2025-05-25 23:08:25.667 [main] INFO  org.example.serverUtils.Console - Registering CountGreaterThanEnginePower Command
+2025-05-25 23:08:25.667 [main] INFO  org.example.serverUtils.Console - Registering Info Command
+2025-05-25 23:08:25.667 [main] INFO  org.example.serverUtils.Console - Registering MinByFuelType Command
+2025-05-25 23:08:25.667 [main] INFO  org.example.serverUtils.Console - Registering RemoveAt Command
+2025-05-25 23:08:25.668 [main] INFO  org.example.serverUtils.Console - Registering RemoveById Command
+2025-05-25 23:08:25.668 [main] INFO  org.example.serverUtils.Console - Registering RemoveGreater Command
+2025-05-25 23:08:25.668 [main] INFO  org.example.serverUtils.Console - Registering Show Command
+2025-05-25 23:08:25.668 [main] INFO  org.example.serverUtils.Console - Registering UpdateId Command
+2025-05-25 23:08:25.669 [main] INFO  org.example.serverUtils.ConnectionManager - Server bound to: /127.0.0.1:6789
+2025-05-25 23:08:25.669 [main] INFO  org.example.serverUtils.Console - The server is ready to receive commands
+2025-05-25 23:08:35.584 [Thread-0] INFO  org.example.serverUtils.ConsoleFileManager - Сохранение в базу данных
+2025-05-25 23:08:35.587 [Thread-0] INFO  org.example.serverUtils.ConsoleFileManager - Сохранено 0 успешно элементов
+2025-05-25 23:08:35.587 [Thread-0] INFO  org.example.serverUtils.Console - Collection was saved.
+2025-05-25 23:08:35.587 [Thread-0] DEBUG org.example.serverUtils.Console - Stop called
+2025-05-25 23:08:35.589 [Thread-0] DEBUG org.example.serverUtils.Console - ExitFlag: `true`

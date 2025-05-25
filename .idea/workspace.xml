@@ -5,9 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="157965ef-9953-4521-9f87-67c7da75408d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/main/kotlin/clientUtils/CircuitBreaker.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/kotlin/clientUtils/State.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/kotlin/utils/exceptions/CircuitBreakerOpenException.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../DataBases/Lab1/README.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../DataBases/Lab1/Screenshot 2025-02-18 at 10.18.49.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../DataBases/Lab1/Screenshot 2025-02-19 at 11.03.17.png" beforeDir="false" />
@@ -80,22 +77,10 @@
       <change beforePath="$PROJECT_DIR$/../Lab5/src/test/kotlin/CollectionManagerTest.kt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Lab5/src/test/kotlin/CommandsTest.kt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Lab5/src/test/kotlin/VehicleManagerTest.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/kotlin/clientUtils/CircuitBreaker.kt" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/kotlin/clientUtils/CircuitBreaker.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/main/kotlin/clientUtils/ConnectonManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/kotlin/clientUtils/ConnectonManager.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/kotlin/clientUtils/Console.kt" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/kotlin/clientUtils/Console.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/kotlin/commands/CommandReciever.kt" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/kotlin/commands/CommandReciever.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/kotlin/utils/wrappers/RequestWrapper.kt" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/kotlin/utils/wrappers/RequestWrapper.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/client.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/client.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/server.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/server.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/dbConnect/DbManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/dbConnect/DbManager.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/mutlithread/ReceiverThread.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/mutlithread/ReceiverThread.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/mutlithread/SenderThread.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/mutlithread/SenderThread.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/serverUtils/ConnectionManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/serverUtils/ConnectionManager.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/serverUtils/Console.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/serverUtils/Console.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/serverUtils/ConsoleFileManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/serverUtils/ConsoleFileManager.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/token/JWTManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/token/JWTManager.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -212,7 +197,7 @@
       <recent name="utils.wrappers" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.ClientKt">
+  <component name="RunManager" selected="Kotlin.ServerKt">
     <configuration name="ClientKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <envs>
         <env name="CSV_FILE_PATH" value="$PROJECT_DIR$/server/src/main/kotlin/CollectionInput.csv" />
@@ -225,8 +210,12 @@
       </method>
     </configuration>
     <configuration name="ServerKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <envs>
+        <env name="DB_PASSWORD" value="yWizzR0CBOadnGlk" />
+      </envs>
       <option name="MAIN_CLASS_NAME" value="org.example.ServerKt" />
       <module name="Lab6.server.main" />
+      <shortenClasspath name="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -316,8 +305,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Kotlin.ClientKt" />
         <item itemvalue="Kotlin.ServerKt" />
+        <item itemvalue="Kotlin.ClientKt" />
       </list>
     </recent_temporary>
   </component>
@@ -406,7 +395,7 @@
       <workItem from="1748084665272" duration="7483000" />
       <workItem from="1748100199247" duration="9466000" />
       <workItem from="1748172966271" duration="4732000" />
-      <workItem from="1748185102468" duration="11064000" />
+      <workItem from="1748185102468" duration="13176000" />
     </task>
     <servers />
   </component>

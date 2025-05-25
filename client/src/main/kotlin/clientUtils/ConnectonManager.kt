@@ -77,6 +77,7 @@ class ConnectionManager(private var host: String, private var port: Int) {
             datagramSocket.receive(packet)
             val json = String(packet.data, 0, packet.length).trim()
             if (json.isEmpty()) {
+                circuitBreaker.recordFailure()
                 throw IOException("Empty response from server")
             }
             logger.info("Received from ${packet.address}:${packet.port}: $json")

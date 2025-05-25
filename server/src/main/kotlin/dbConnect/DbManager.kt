@@ -39,10 +39,8 @@ class DbManager(
         }
     }
 
-
-
     fun initDB(){
-        println("goida inits DB")
+        logger.debug("Inits DB")
         initUsers()
         initCollection()
     }
@@ -99,6 +97,7 @@ class DbManager(
             }
         }
     }
+
 
     fun changePassword(login: String, oldPw: String, newPw: String){
         getConnection().use{connection ->

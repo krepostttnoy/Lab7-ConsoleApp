@@ -19,9 +19,6 @@ import org.example.commands.consoleCommands.UpdateIdCommand
 import utils.JsonCreator
 import utils.inputOutput.InputManager
 import utils.inputOutput.OutputManager
-import utils.wrappers.RequestType
-import utils.wrappers.ResponseType
-import utils.wrappers.ResponseWrapper
 import java.nio.channels.DatagramChannel
 import java.nio.channels.SelectionKey
 import java.nio.channels.Selector
@@ -39,7 +36,7 @@ import java.util.concurrent.Executors
 import java.util.concurrent.TimeUnit
 
 class Console {
-    private val connectionManager = ConnectionManager()
+    val connectionManager = ConnectionManager()
     private val outputManager = OutputManager()
     private val inputManager = InputManager(outputManager)
     private val collectionManager = CollectionManager()
@@ -60,7 +57,7 @@ class Console {
     private val forkJoinPool = ForkJoinPool.commonPool()
     private val taskQueue = LinkedBlockingQueue<Sending>(10)
     private val answerQueue = LinkedBlockingQueue<Sending>(10)
-    private val threadReceiver = ReceiverThread(taskQueue, fileManager, jwtManager, commandInvoker, userManager, jsonCreator, answerQueue)
+    private val threadReceiver = ReceiverThread(taskQueue, fileManager, jwtManager, connectionManager, commandInvoker, userManager, jsonCreator, answerQueue)
     private val threadSender = SenderThread(answerQueue, connectionManager)
 
     init {
@@ -74,10 +71,8 @@ class Console {
 
     fun initialize() {
         dbManager.initDB()
-        dbManager.registerUser("goida", "sex", "111")
-        dbManager.registerUser("eblan", "sexy", "222")
-        dbManager.registerUser("dolboeb", "sexual", "667")
         dbManager.getUsers()
+        fileManager.loadCollection()
         logger.info("Initializing console commands")
         commandInvoker.register("add", AddCommand(collectionManager, vehicleManager, outputManager, connectionManager))
         logger.info("Registering Add Command")

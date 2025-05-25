@@ -1,5 +1,6 @@
 package org.example.commands
 
+import Console
 import baseClasses.Coordinates
 import baseClasses.FuelType
 import baseClasses.Vehicle
@@ -12,12 +13,14 @@ import utils.inputOutput.InputManager
 import utils.inputOutput.OutputManager
 import utils.wrappers.RequestType
 import utils.wrappers.RequestWrapper
+import utils.wrappers.ResponseType
 
 class CommandReceiver(
     private val outputManager: OutputManager,
     private val inputManager: InputManager,
     private val commandInvoker: CommandInvoker,
-    private val connectionManager: ConnectionManager
+    private val connectionManager: ConnectionManager,
+    private val console: Console
 ) {
     private val jsonCreator = JsonCreator()
     private val reader = Reader(outputManager, inputManager)
@@ -36,7 +39,7 @@ class CommandReceiver(
         val argList = inputArgs?.trim()?.split("\\s+".toRegex()) ?: emptyList()
 
         if (name == "update_id") {
-            val listRequest = RequestWrapper(RequestType.COMMAND_EXEC, "show", emptyMap(), sender = "")
+            val listRequest = RequestWrapper(RequestType.COMMAND_EXEC, "show", mutableMapOf(), token = console.getToken())
             val listResponse = connectionManager.checkSendReceive(listRequest)
             outputManager.println(listResponse.message)
 
@@ -133,10 +136,16 @@ class CommandReceiver(
             }
         }
 
-        val request = RequestWrapper(RequestType.COMMAND_EXEC, name, sending, sender = "")
+        val request = RequestWrapper(RequestType.COMMAND_EXEC, name, sending, token = console.getToken())
         buffer.add(request)
         val response = connectionManager.checkSendReceive(request)
-        outputManager.println(response.message)
+        when(response.responseType){
+            ResponseType.AUTH_ERROR -> {
+                outputManager.println(response.message)
+                console.authorize()
+            }
+            else -> outputManager.println(response.message)
+        }
     }
 
 }

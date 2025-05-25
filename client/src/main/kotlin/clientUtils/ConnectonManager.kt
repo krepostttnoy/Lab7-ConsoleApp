@@ -12,7 +12,9 @@ import java.net.InetAddress
 import org.apache.logging.log4j.LogManager
 import org.apache.logging.log4j.Logger
 import org.example.commands.CommandInvoker
+import utils.exceptions.CircuitBreakerOpenException
 import utils.inputOutput.InputManager
+import java.io.IOException
 
 class ConnectionManager(private var host: String, private var port: Int) {
     private val timeout = 10000
@@ -23,6 +25,7 @@ class ConnectionManager(private var host: String, private var port: Int) {
     private var hostInetAddress = InetAddress.getByName(host)
     private var datagramPacket = DatagramPacket(ByteArray(4096), 4096, hostInetAddress, port)
     private val logger: Logger = LogManager.getLogger(ConnectionManager::class.java)
+    private val circuitBreaker = CircuitBreaker()
 
     fun connect(): Boolean{
         datagramSocket.soTimeout = timeout
@@ -30,17 +33,17 @@ class ConnectionManager(private var host: String, private var port: Int) {
     }
 
     fun ping(): Double {
-        val request = RequestWrapper(RequestType.PING, "Ping", mapOf("sender" to host))
+        val request = RequestWrapper(RequestType.PING, "Ping", mutableMapOf("sender" to host))
         try {
             val start = System.nanoTime()
             send(request)
 
-            datagramSocket.soTimeout = 5000
+            datagramSocket.soTimeout = 7000
 
             receive()
             var ping = (System.nanoTime() - start) / 1_000_000.0
-            return ping
             logger.info(ping)
+            return ping
         } catch (e: Exception) {
             logger.error("Ping failed - `{}`: ${e.message}", timeout.toDouble())
             return timeout.toDouble()
@@ -48,29 +51,51 @@ class ConnectionManager(private var host: String, private var port: Int) {
     }
 
     fun send(request: RequestWrapper) {
-        val json = Json.encodeToString(RequestWrapper.serializer(), request)
-        val buf = json.toByteArray()
-        val packet = DatagramPacket(buf, buf.size, InetAddress.getByName(host), port)
+        if(circuitBreaker.allowRequest()){
+            try {
+                val json = Json.encodeToString(RequestWrapper.serializer(), request)
+                val buf = json.toByteArray()
+                val packet = DatagramPacket(buf, buf.size, InetAddress.getByName(host), port)
 
-        logger.info("Sending to $host:$port: $json")
-        datagramSocket.send(packet)
+                logger.info("Sending to $host:$port: $json")
+                datagramSocket.send(packet)
+                circuitBreaker.recordSuccess()
+            }catch (e: Exception){
+                circuitBreaker.recordFailure()
+                logger.error("Failed to send request: ${e.message}")
+            }
+        }else {
+            throw CircuitBreakerOpenException("Circuit breaker is open. Requests are blocked.")
+        }
+
     }
 
     fun receive(): ResponseWrapper {
-        val buf = ByteArray(4096)
-        val packet = DatagramPacket(buf, buf.size)
-        datagramSocket.receive(packet)
-        val json = String(packet.data, 0, packet.length).trim()
-        logger.info("Received from ${packet.address}:${packet.port}: $json")
-        return Json.decodeFromString(json)
+        try {
+            val buf = ByteArray(4096)
+            val packet = DatagramPacket(buf, buf.size)
+            datagramSocket.receive(packet)
+            val json = String(packet.data, 0, packet.length).trim()
+            if (json.isEmpty()) {
+                throw IOException("Empty response from server")
+            }
+            logger.info("Received from ${packet.address}:${packet.port}: $json")
+            circuitBreaker.recordSuccess()
+            return Json.decodeFromString(json)
+        } catch (e: Exception) {
+            circuitBreaker.recordFailure()
+            logger.error("Failed to receive response: ${e.message}")
+            throw e
+        }
     }
 
     fun checkSendReceive(request: RequestWrapper): ResponseWrapper{
+        datagramSocket.soTimeout = 20000
         try {
             send(request)
-        }catch (e: Exception){
+            return receive()
+        } catch (e: Exception) {
             return ResponseWrapper(ResponseType.ERROR, e.message.toString(), receiver = "")
         }
-        return receive()
     }
 }

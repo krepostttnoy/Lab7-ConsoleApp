@@ -18,11 +18,11 @@ import org.example.clientUtils.readers.Validator
 import java.io.StringReader
 
 class Console{
-    private val connectionManager = ConnectionManager("localhost", 6789)
+    private val connectionManager = ConnectionManager("127.0.0.1", 6789)
     private val outputManager = IOThread.outputManager
     private val inputManager = IOThread.inputManager
     private val commandInvoker = CommandInvoker(outputManager, inputManager)
-    private val commandReceiver = CommandReceiver(outputManager, inputManager, commandInvoker, connectionManager)
+    private val commandReceiver = CommandReceiver(outputManager, inputManager, commandInvoker, connectionManager, this)
     private val jsonCreator = JsonCreator()
     private val logger: Logger = LogManager.getLogger(Console::class.java)
     private val validator: Validator by lazy {Validator(outputManager, inputManager)}
@@ -59,8 +59,12 @@ class Console{
                     startInteractiveMode()
                 }
             }
-        }catch (e: Exception){logger.error("${e.message}")}
+        }catch (e: Exception){}
 
+    }
+
+    fun getToken(): String{
+        return token
     }
 
     fun authorize(){
@@ -72,22 +76,23 @@ class Console{
 
         val req = RequestWrapper(RequestType.AUTHORIZATION, "", mutableMapOf("username" to username, "password" to password))
 
+        logger.info("Sent request for authorization")
         val response = connectionManager.checkSendReceive(req)
-        logger.debug("Sent request for authorization")
+        logger.info("Response received: $response")
         if (response.responseType == ResponseType.AUTH_ERROR || response.responseType == ResponseType.ERROR) {
             outputManager.println(response.message)
             authorize()
         } else {
-            logger.debug("Authorized")
+            logger.info("Authorized")
+            token = response.token
             outputManager.surePrint("Goida bratan, "+ username)
             authorized = true
-            token = response.token
         }
     }
 
     fun initialize(){
         logger.info("Initializing console commands")
-        val request = RequestWrapper(RequestType.INITIALIZATION, "", mapOf())
+        val request = RequestWrapper(RequestType.INITIALIZATION, "", mutableMapOf())
         val response = connectionManager.checkSendReceive(request)
 
         if(response.responseType == ResponseType.ERROR){

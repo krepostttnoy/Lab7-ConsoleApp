@@ -15,7 +15,7 @@ class SenderThread(private val answerQueue: LinkedBlockingQueue<Sending>,
     private val logger: Logger = LogManager.getLogger(SenderThread::class.java)
     override fun run() {
         answer = answerQueue.take() as ResponseWrapper
-        logger.debug("Sending: {}", answer)
+        logger.debug("Sending: {}", answer.message)
         connectionManager.send(answer)
     }
 

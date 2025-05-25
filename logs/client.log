@@ -152,3 +152,264 @@
 2025-05-25 01:17:25.607 [main] INFO  org.example.clientUtils.ConnectionManager - Received from /127.0.0.1:6789: {"responseType":"SYSTEM","message":"Pong","receiver":"localhost"}
 2025-05-25 01:17:30.013 [main] INFO  org.example.clientUtils.ConnectionManager - Sending to localhost:6789: {"requestType":"AUTHORIZATION","message":"","args":{"username":"adfasf","password":"3232"},"sender":"adfasf"}
 2025-05-25 01:17:35.016 [main] ERROR Console - Receive timed out
+2025-05-25 18:19:42.683 [main] INFO  Console - Trying to connect...
+2025-05-25 18:19:42.709 [main] INFO  org.example.clientUtils.ConnectionManager - Sending to localhost:6789: {"requestType":"PING","message":"Ping","args":{"sender":"localhost"}}
+2025-05-25 18:19:42.736 [main] INFO  org.example.clientUtils.ConnectionManager - Received from /127.0.0.1:6789: {"responseType":"SYSTEM","message":"Pong","receiver":"localhost"}
+2025-05-25 18:19:51.240 [main] INFO  org.example.clientUtils.ConnectionManager - Sending to localhost:6789: {"requestType":"AUTHORIZATION","message":"","args":{"username":"matk","password":"fasdfasf"}}
+2025-05-25 18:19:56.241 [main] ERROR Console - Receive timed out
+2025-05-25 18:21:24.049 [main] INFO  Console - Trying to connect...
+2025-05-25 18:21:24.068 [main] INFO  org.example.clientUtils.ConnectionManager - Sending to localhost:6789: {"requestType":"PING","message":"Ping","args":{"sender":"localhost"}}
+2025-05-25 18:21:24.073 [main] INFO  org.example.clientUtils.ConnectionManager - Received from /127.0.0.1:6789: {"responseType":"SYSTEM","message":"Pong","receiver":"localhost"}
+2025-05-25 18:21:29.429 [main] INFO  org.example.clientUtils.ConnectionManager - Sending to localhost:6789: {"requestType":"AUTHORIZATION","message":"","args":{"username":"mars","password":"fsdafdasf"}}
+2025-05-25 18:21:34.431 [main] ERROR Console - Receive timed out
+2025-05-25 18:22:34.437 [main] INFO  Console - Trying to connect...
+2025-05-25 18:22:34.455 [main] INFO  org.example.clientUtils.ConnectionManager - Sending to localhost:6789: {"requestType":"PING","message":"Ping","args":{"sender":"localhost"}}
+2025-05-25 18:22:34.482 [main] INFO  org.example.clientUtils.ConnectionManager - Received from /127.0.0.1:6789: {"responseType":"SYSTEM","message":"Pong","receiver":"localhost"}
+2025-05-25 18:22:38.310 [main] INFO  org.example.clientUtils.ConnectionManager - Sending to localhost:6789: {"requestType":"AUTHORIZATION","message":"","args":{"username":"fafas","password":"3223"}}
+2025-05-25 18:22:43.312 [main] ERROR Console - Receive timed out
+2025-05-25 18:24:33.065 [main] INFO  Console - Trying to connect...
+2025-05-25 18:24:33.082 [main] INFO  org.example.clientUtils.ConnectionManager - Sending to localhost:6789: {"requestType":"PING","message":"Ping","args":{"sender":"localhost"}}
+2025-05-25 18:24:33.108 [main] INFO  org.example.clientUtils.ConnectionManager - Received from /127.0.0.1:6789: {"responseType":"SYSTEM","message":"Pong","receiver":"localhost"}
+2025-05-25 18:24:36.813 [main] INFO  org.example.clientUtils.ConnectionManager - Sending to localhost:6789: {"requestType":"AUTHORIZATION","message":"","args":{"username":"3242","password":"32423"}}
+2025-05-25 18:24:41.815 [main] ERROR Console - Receive timed out
+2025-05-25 18:27:05.012 [main] INFO  Console - Trying to connect...
+2025-05-25 18:27:05.031 [main] INFO  org.example.clientUtils.ConnectionManager - Sending to localhost:6789: {"requestType":"PING","message":"Ping","args":{"sender":"localhost"}}
+2025-05-25 18:27:05.037 [main] INFO  org.example.clientUtils.ConnectionManager - Received from /127.0.0.1:6789: {"responseType":"SYSTEM","message":"Pong","receiver":"localhost"}
+2025-05-25 18:27:07.685 [main] INFO  Console - Sent request for authorization
+2025-05-25 18:27:07.693 [main] INFO  org.example.clientUtils.ConnectionManager - Sending to localhost:6789: {"requestType":"AUTHORIZATION","message":"","args":{"username":"afdadsf","password":"3232"}}
+2025-05-25 18:27:12.694 [main] ERROR Console - Receive timed out
+2025-05-25 18:29:53.097 [main] INFO  Console - Trying to connect...
+2025-05-25 18:29:53.116 [main] INFO  org.example.clientUtils.ConnectionManager - Sending to localhost:6789: {"requestType":"PING","message":"Ping","args":{"sender":"localhost"}}
+2025-05-25 18:29:53.120 [main] INFO  org.example.clientUtils.ConnectionManager - Received from /127.0.0.1:6789: {"responseType":"SYSTEM","message":"Pong","receiver":"localhost"}
+2025-05-25 18:29:55.277 [main] INFO  Console - Sent request for authorization
+2025-05-25 18:29:55.285 [main] INFO  org.example.clientUtils.ConnectionManager - Sending to localhost:6789: {"requestType":"AUTHORIZATION","message":"","args":{"username":"fasfasf","password":"323"}}
+2025-05-25 18:30:00.287 [main] ERROR Console - Receive timed out
+2025-05-25 18:30:41.066 [main] INFO  Console - Trying to connect...
+2025-05-25 18:30:41.084 [main] INFO  org.example.clientUtils.ConnectionManager - Sending to localhost:6789: {"requestType":"PING","message":"Ping","args":{"sender":"localhost"}}
+2025-05-25 18:30:41.090 [main] INFO  org.example.clientUtils.ConnectionManager - Received from /127.0.0.1:6789: {"responseType":"SYSTEM","message":"Pong","receiver":"localhost"}
+2025-05-25 18:30:44.123 [main] INFO  Console - Sent request for authorization
+2025-05-25 18:30:44.130 [main] INFO  org.example.clientUtils.ConnectionManager - Sending to localhost:6789: {"requestType":"AUTHORIZATION","message":"","args":{"username":"hui","password":"3"}}
+2025-05-25 18:30:49.133 [main] ERROR Console - dolboeb
+2025-05-25 18:31:12.901 [main] INFO  Console - Trying to connect...
+2025-05-25 18:31:12.922 [main] INFO  org.example.clientUtils.ConnectionManager - Sending to localhost:6789: {"requestType":"PING","message":"Ping","args":{"sender":"localhost"}}
+2025-05-25 18:31:12.927 [main] INFO  org.example.clientUtils.ConnectionManager - Received from /127.0.0.1:6789: {"responseType":"SYSTEM","message":"Pong","receiver":"localhost"}
+2025-05-25 18:31:15.941 [main] INFO  Console - Sent request for authorization
+2025-05-25 18:31:15.949 [main] INFO  org.example.clientUtils.ConnectionManager - Sending to localhost:6789: {"requestType":"AUTHORIZATION","message":"","args":{"username":"fadsf","password":"332323"}}
+2025-05-25 18:34:27.849 [main] INFO  Console - Trying to connect...
+2025-05-25 18:34:27.866 [main] INFO  org.example.clientUtils.ConnectionManager - Sending to localhost:6789: {"requestType":"PING","message":"Ping","args":{"sender":"localhost"}}
+2025-05-25 18:34:27.870 [main] INFO  org.example.clientUtils.ConnectionManager - Received from /127.0.0.1:6789: {"responseType":"SYSTEM","message":"Pong","receiver":"localhost"}
+2025-05-25 18:34:31.437 [main] INFO  Console - Sent request for authorization
+2025-05-25 18:34:31.445 [main] INFO  org.example.clientUtils.ConnectionManager - Sending to localhost:6789: {"requestType":"AUTHORIZATION","message":"","args":{"username":"фывафыва23","password":"3"}}
+2025-05-25 18:34:36.447 [main] ERROR Console - Receive timed out
+2025-05-25 18:47:40.139 [main] INFO  Console - Trying to connect...
+2025-05-25 18:47:40.157 [main] INFO  org.example.clientUtils.ConnectionManager - Sending to localhost:6789: {"requestType":"PING","message":"Ping","args":{"sender":"localhost"}}
+2025-05-25 18:47:40.184 [main] INFO  org.example.clientUtils.ConnectionManager - Received from /127.0.0.1:6789: {"responseType":"SYSTEM","message":"Pong","receiver":"localhost"}
+2025-05-25 18:47:43.047 [main] INFO  Console - Sent request for authorization
+2025-05-25 18:47:43.055 [main] INFO  org.example.clientUtils.ConnectionManager - Sending to localhost:6789: {"requestType":"AUTHORIZATION","message":"","args":{"username":"fdasgasg","password":"3322"}}
+2025-05-25 18:47:48.057 [main] ERROR Console - Receive timed out
+2025-05-25 19:05:55.191 [main] INFO  Console - Trying to connect...
+2025-05-25 19:05:55.208 [main] INFO  org.example.clientUtils.ConnectionManager - Sending to 127.0.0.1:8061: {"requestType":"PING","message":"Ping","args":{"sender":"127.0.0.1"}}
+2025-05-25 19:06:00.223 [main] ERROR org.example.clientUtils.ConnectionManager - Ping failed - `10000.0`: Receive timed out
+2025-05-25 19:06:43.588 [main] INFO  Console - Trying to connect...
+2025-05-25 19:06:43.605 [main] INFO  org.example.clientUtils.ConnectionManager - Sending to 127.0.0.1:8061: {"requestType":"PING","message":"Ping","args":{"sender":"127.0.0.1"}}
+2025-05-25 19:06:48.620 [main] ERROR org.example.clientUtils.ConnectionManager - Ping failed - `10000.0`: Receive timed out
+2025-05-25 19:07:01.039 [main] INFO  Console - Trying to connect...
+2025-05-25 19:07:01.041 [main] INFO  org.example.clientUtils.ConnectionManager - Sending to 127.0.0.1:8061: {"requestType":"PING","message":"Ping","args":{"sender":"127.0.0.1"}}
+2025-05-25 19:07:06.042 [main] ERROR org.example.clientUtils.ConnectionManager - Ping failed - `10000.0`: Receive timed out
+2025-05-25 19:07:08.938 [main] INFO  Console - Registering basic commands
+2025-05-25 19:07:08.944 [main] INFO  Console - Starting an interactive mode
+2025-05-25 20:05:40.688 [main] INFO  Console - Trying to connect...
+2025-05-25 20:05:40.707 [main] INFO  org.example.clientUtils.ConnectionManager - Sending to 127.0.0.1:6789: {"requestType":"PING","message":"Ping","args":{"sender":"127.0.0.1"}}
+2025-05-25 20:05:40.736 [main] INFO  org.example.clientUtils.ConnectionManager - Received from /127.0.0.1:6789: {"responseType":"SYSTEM","message":"Pong","receiver":"127.0.0.1"}
+2025-05-25 20:05:46.612 [main] INFO  Console - Sent request for authorization
+2025-05-25 20:05:46.617 [main] INFO  org.example.clientUtils.ConnectionManager - Sending to 127.0.0.1:6789: {"requestType":"AUTHORIZATION","message":"","args":{"username":"mark","password":"3"}}
+2025-05-25 20:05:51.619 [main] ERROR Console - Receive timed out
+2025-05-25 20:41:29.967 [main] INFO  Console - Trying to connect...
+2025-05-25 20:41:29.985 [main] INFO  org.example.clientUtils.ConnectionManager - Sending to 127.0.0.1:6789: {"requestType":"PING","message":"Ping","args":{"sender":"127.0.0.1"}}
+2025-05-25 20:41:30.020 [main] INFO  org.example.clientUtils.ConnectionManager - Received from /127.0.0.1:6789: {"responseType":"SYSTEM","message":"Pong","receiver":"127.0.0.1"}
+2025-05-25 20:41:30.023 [main] INFO  org.example.clientUtils.ConnectionManager - 52.193416
+2025-05-25 20:41:34.786 [main] INFO  Console - Sent request for authorization
+2025-05-25 20:41:34.793 [main] INFO  org.example.clientUtils.ConnectionManager - Sending to 127.0.0.1:6789: {"requestType":"AUTHORIZATION","message":"","args":{"username":"r","password":"323"}}
+2025-05-25 20:41:39.795 [main] ERROR org.example.clientUtils.ConnectionManager - Failed to receive response: Receive timed out
+2025-05-25 20:41:39.797 [main] ERROR Console - Expected start of the object '{', but had 'EOF' instead at path: $
+JSON input: 
+2025-05-25 20:46:32.896 [main] INFO  Console - Trying to connect...
+2025-05-25 20:46:32.916 [main] INFO  org.example.clientUtils.ConnectionManager - Sending to 127.0.0.1:6789: {"requestType":"PING","message":"Ping","args":{"sender":"127.0.0.1"}}
+2025-05-25 20:46:32.942 [main] INFO  org.example.clientUtils.ConnectionManager - Received from /127.0.0.1:6789: {"responseType":"SYSTEM","message":"Pong","receiver":"127.0.0.1"}
+2025-05-25 20:46:32.944 [main] INFO  org.example.clientUtils.ConnectionManager - 43.757416
+2025-05-25 20:46:36.520 [main] INFO  Console - Sent request for authorization
+2025-05-25 20:46:36.527 [main] INFO  org.example.clientUtils.ConnectionManager - Sending to 127.0.0.1:6789: {"requestType":"AUTHORIZATION","message":"","args":{"username":"hui","password":"23212"}}
+2025-05-25 20:46:41.529 [main] ERROR org.example.clientUtils.ConnectionManager - Failed to receive response: Receive timed out
+2025-05-25 20:46:41.531 [main] ERROR Console - Expected start of the object '{', but had 'EOF' instead at path: $
+JSON input: 
+2025-05-25 20:50:08.111 [main] INFO  Console - Trying to connect...
+2025-05-25 20:50:08.132 [main] INFO  org.example.clientUtils.ConnectionManager - Sending to 127.0.0.1:6789: {"requestType":"PING","message":"Ping","args":{"sender":"127.0.0.1"}}
+2025-05-25 20:50:13.135 [main] ERROR org.example.clientUtils.ConnectionManager - Failed to receive response: Receive timed out
+2025-05-25 20:50:13.148 [main] ERROR org.example.clientUtils.ConnectionManager - Ping failed - `1.0E9`: Expected start of the object '{', but had 'EOF' instead at path: $
+JSON input: 
+2025-05-25 20:50:23.938 [main] INFO  Console - Trying to connect...
+2025-05-25 20:50:23.941 [main] INFO  org.example.clientUtils.ConnectionManager - Sending to 127.0.0.1:6789: {"requestType":"PING","message":"Ping","args":{"sender":"127.0.0.1"}}
+2025-05-25 20:50:23.982 [main] INFO  org.example.clientUtils.ConnectionManager - Received from /127.0.0.1:6789: {"responseType":"SYSTEM","message":"Pong","receiver":"127.0.0.1"}
+2025-05-25 20:50:23.982 [main] INFO  org.example.clientUtils.ConnectionManager - 42.857791
+2025-05-25 20:50:27.923 [main] INFO  Console - Sent request for authorization
+2025-05-25 20:50:27.925 [main] INFO  org.example.clientUtils.ConnectionManager - Sending to 127.0.0.1:6789: {"requestType":"AUTHORIZATION","message":"","args":{"username":"cfsadfdasfdgasg","password":"3"}}
+2025-05-25 20:50:32.927 [main] ERROR org.example.clientUtils.ConnectionManager - Failed to receive response: Receive timed out
+2025-05-25 20:50:32.928 [main] ERROR Console - Expected start of the object '{', but had 'EOF' instead at path: $
+JSON input: 
+2025-05-25 20:52:09.473 [main] INFO  Console - Trying to connect...
+2025-05-25 20:52:09.490 [main] INFO  org.example.clientUtils.ConnectionManager - Sending to 127.0.0.1:6789: {"requestType":"PING","message":"Ping","args":{"sender":"127.0.0.1"}}
+2025-05-25 20:52:14.493 [main] ERROR org.example.clientUtils.ConnectionManager - Failed to receive response: Receive timed out
+2025-05-25 20:52:14.507 [main] ERROR org.example.clientUtils.ConnectionManager - Ping failed - `10000.0`: Receive timed out
+2025-05-25 20:52:29.224 [main] INFO  Console - Trying to connect...
+2025-05-25 20:52:29.225 [main] INFO  org.example.clientUtils.ConnectionManager - Sending to 127.0.0.1:6789: {"requestType":"PING","message":"Ping","args":{"sender":"127.0.0.1"}}
+2025-05-25 20:52:29.258 [main] INFO  org.example.clientUtils.ConnectionManager - Received from /127.0.0.1:6789: {"responseType":"SYSTEM","message":"Pong","receiver":"127.0.0.1"}
+2025-05-25 20:52:29.261 [main] INFO  org.example.clientUtils.ConnectionManager - 36.169375
+2025-05-25 20:52:31.585 [main] INFO  Console - Sent request for authorization
+2025-05-25 20:52:31.586 [main] INFO  org.example.clientUtils.ConnectionManager - Sending to 127.0.0.1:6789: {"requestType":"AUTHORIZATION","message":"","args":{"username":"ffdsfsg","password":"33"}}
+2025-05-25 20:52:36.587 [main] ERROR org.example.clientUtils.ConnectionManager - Failed to receive response: Receive timed out
+2025-05-25 20:52:36.589 [main] ERROR Console - Receive timed out
+2025-05-25 20:53:54.667 [main] INFO  Console - Trying to connect...
+2025-05-25 20:53:54.685 [main] INFO  org.example.clientUtils.ConnectionManager - Sending to 127.0.0.1:6789: {"requestType":"PING","message":"Ping","args":{"sender":"127.0.0.1"}}
+2025-05-25 20:53:54.691 [main] INFO  org.example.clientUtils.ConnectionManager - Received from /127.0.0.1:6789: {"responseType":"SYSTEM","message":"Pong","receiver":"127.0.0.1"}
+2025-05-25 20:53:54.694 [main] INFO  org.example.clientUtils.ConnectionManager - 22.795125
+2025-05-25 20:53:57.333 [main] INFO  Console - Sent request for authorization
+2025-05-25 20:53:57.341 [main] INFO  org.example.clientUtils.ConnectionManager - Sending to 127.0.0.1:6789: {"requestType":"AUTHORIZATION","message":"","args":{"username":"fdsgs","password":"344"}}
+2025-05-25 20:54:02.344 [main] ERROR org.example.clientUtils.ConnectionManager - Failed to receive response: Receive timed out
+2025-05-25 20:55:23.845 [main] INFO  Console - Trying to connect...
+2025-05-25 20:55:23.864 [main] INFO  org.example.clientUtils.ConnectionManager - Sending to 127.0.0.1:6789: {"requestType":"PING","message":"Ping","args":{"sender":"127.0.0.1"}}
+2025-05-25 20:55:23.870 [main] INFO  org.example.clientUtils.ConnectionManager - Received from /127.0.0.1:6789: {"responseType":"SYSTEM","message":"Pong","receiver":"127.0.0.1"}
+2025-05-25 20:55:23.873 [main] INFO  org.example.clientUtils.ConnectionManager - 23.324375
+2025-05-25 20:55:27.603 [main] INFO  Console - Sent request for authorization
+2025-05-25 20:55:27.611 [main] INFO  org.example.clientUtils.ConnectionManager - Sending to 127.0.0.1:6789: {"requestType":"AUTHORIZATION","message":"","args":{"username":"sdfasdf","password":"333"}}
+2025-05-25 20:55:35.547 [main] INFO  org.example.clientUtils.ConnectionManager - Received from /127.0.0.1:6789: {"responseType":"OK","message":"Registered","token":"eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJzZXJ2ZXIiLCJzdWIiOiJzZGZhc2RmIiwiZXhwIjoxNzQ4MTk2MDM1fQ.BeS9uk1l9SZZ7MUvlJyCpeH3YhTS9IOK5n7dtMohuPg","receiver":"unknown"}
+2025-05-25 20:55:35.548 [main] INFO  Console - Response received: utils.wrappers.ResponseWrapper@1ed4ae0f
+2025-05-25 20:55:35.548 [main] INFO  Console - Authorized
+2025-05-25 20:55:35.549 [main] INFO  Console - Initializing console commands
+2025-05-25 20:55:35.549 [main] INFO  org.example.clientUtils.ConnectionManager - Sending to 127.0.0.1:6789: {"requestType":"INITIALIZATION","message":"","args":{}}
+2025-05-25 20:55:35.574 [main] INFO  org.example.clientUtils.ConnectionManager - Received from /127.0.0.1:6789: {"responseType":"SYSTEM","message":"{\"commands\":{\"add\":\"Adds a new vehicle to the collection\",\"add_if_max\":\"Adds a new vehicle to collection if it's max\",\"avg_of_eng_pw\":\"Returns average engine power of the all collection\",\"clear\":\"Clears the collection\",\"count_gr_than_eng_pw\":\"Return a quantity of objects, which have engPw greater than given\",\"info\":\"Returns info about collection\",\"min_by_fuel\":\"Returns object that is min by fuel type\",\"remove_at\":\"Removes an object from collection with given index\",\"remove_by_id\":\"Removes an object from the collection with given id\",\"remove_greater\":\"Removes all items from collection that have greater engPW than given\",\"show\":\"Returns info about all items from the collection\",\"update_id\":\"Updates a field from item with given id\"},\"arguments\":{\"add\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.AddCommand\\\"}\",\"add_if_max\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.AddIfMaxCommand\\\"}\",\"avg_of_eng_pw\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.AvgOfEnginePowerCommand\\\"}\",\"clear\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.ClearCommand\\\"}\",\"count_gr_than_eng_pw\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.CountGrThanEngPwCommand\\\"}\",\"info\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.InfoCommand\\\"}\",\"min_by_fuel\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.MinByFuelTypeCommand\\\"}\",\"remove_at\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.RemoveAtCommand\\\"}\",\"remove_by_id\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.RemoveByIdCommand\\\"}\",\"remove_greater\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.RemoveGreaterCommand\\\"}\",\"show\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.ShowCommand\\\"}\",\"update_id\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.UpdateIdCommand\\\"}\"}}","receiver":"unknown"}
+2025-05-25 20:55:35.575 [main] INFO  Console - Registering basic commands
+2025-05-25 20:55:35.576 [main] INFO  Console - Connected successfully
+2025-05-25 20:55:35.576 [main] INFO  Console - Starting an interactive mode
+2025-05-25 20:55:49.491 [main] INFO  org.example.clientUtils.ConnectionManager - Sending to 127.0.0.1:6789: {"requestType":"COMMAND_EXEC","message":"show","args":{"type":""}}
+2025-05-25 20:55:52.339 [main] INFO  org.example.clientUtils.ConnectionManager - Received from /127.0.0.1:6789: {"responseType":"ERROR","message":"JWT String argument cannot be null or empty.","receiver":"unknown"}
+2025-05-25 20:56:11.535 [main] INFO  org.example.clientUtils.ConnectionManager - Sending to 127.0.0.1:6789: {"requestType":"COMMAND_EXEC","message":"info","args":{"type":""}}
+2025-05-25 20:56:13.319 [main] INFO  org.example.clientUtils.ConnectionManager - Received from /127.0.0.1:6789: {"responseType":"ERROR","message":"JWT String argument cannot be null or empty.","receiver":"unknown"}
+2025-05-25 20:58:37.644 [main] INFO  org.example.clientUtils.ConnectionManager - Sending to 127.0.0.1:6789: {"requestType":"COMMAND_EXEC","message":"add","args":{"type":""}}
+2025-05-25 20:58:40.688 [main] INFO  org.example.clientUtils.ConnectionManager - Received from /127.0.0.1:6789: {"responseType":"ERROR","message":"JWT String argument cannot be null or empty.","receiver":"unknown"}
+2025-05-25 21:05:51.210 [main] INFO  org.example.clientUtils.ConnectionManager - Sending to 127.0.0.1:6789: {"requestType":"COMMAND_EXEC","message":"info","args":{"type":""}}
+2025-05-25 21:05:55.900 [main] INFO  org.example.clientUtils.ConnectionManager - Received from /127.0.0.1:6789: {"responseType":"ERROR","message":"JWT String argument cannot be null or empty.","receiver":"unknown"}
+2025-05-25 21:06:13.469 [main] INFO  Console - Trying to connect...
+2025-05-25 21:06:13.487 [main] INFO  org.example.clientUtils.ConnectionManager - Sending to 127.0.0.1:6789: {"requestType":"PING","message":"Ping","args":{"sender":"127.0.0.1"}}
+2025-05-25 21:06:18.489 [main] ERROR org.example.clientUtils.ConnectionManager - Failed to receive response: Receive timed out
+2025-05-25 21:06:18.500 [main] ERROR org.example.clientUtils.ConnectionManager - Ping failed - `10000.0`: Receive timed out
+2025-05-25 21:07:26.474 [main] INFO  Console - Trying to connect...
+2025-05-25 21:07:26.475 [main] INFO  org.example.clientUtils.ConnectionManager - Sending to 127.0.0.1:6789: {"requestType":"PING","message":"Ping","args":{"sender":"127.0.0.1"}}
+2025-05-25 21:07:26.510 [main] INFO  org.example.clientUtils.ConnectionManager - Received from /127.0.0.1:6789: {"responseType":"SYSTEM","message":"Pong","receiver":"127.0.0.1"}
+2025-05-25 21:07:26.513 [main] INFO  org.example.clientUtils.ConnectionManager - 37.735667
+2025-05-25 21:07:35.660 [main] INFO  Console - Sent request for authorization
+2025-05-25 21:07:35.661 [main] INFO  org.example.clientUtils.ConnectionManager - Sending to 127.0.0.1:6789: {"requestType":"AUTHORIZATION","message":"","args":{"username":"mark","password":"mark"}}
+2025-05-25 21:07:45.334 [main] INFO  org.example.clientUtils.ConnectionManager - Received from /127.0.0.1:6789: {"responseType":"AUTH_ERROR","message":"Wrong password","receiver":"unknown"}
+2025-05-25 21:07:45.336 [main] INFO  Console - Response received: utils.wrappers.ResponseWrapper@76b1e9b8
+2025-05-25 21:08:02.462 [main] INFO  Console - Sent request for authorization
+2025-05-25 21:08:02.463 [main] INFO  org.example.clientUtils.ConnectionManager - Sending to 127.0.0.1:6789: {"requestType":"AUTHORIZATION","message":"","args":{"username":"pizda","password":"pizda"}}
+2025-05-25 21:08:07.384 [main] INFO  org.example.clientUtils.ConnectionManager - Received from /127.0.0.1:6789: {"responseType":"OK","message":"Registered","token":"eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJzZXJ2ZXIiLCJzdWIiOiJwaXpkYSIsImV4cCI6MTc0ODE5Njc4N30.0XO16It5JZLJshjlh-EvOY3fLb7l-bVGs3VQpcHnc0o","receiver":"unknown"}
+2025-05-25 21:08:07.384 [main] INFO  Console - Response received: utils.wrappers.ResponseWrapper@27406a17
+2025-05-25 21:08:07.384 [main] INFO  Console - Authorized
+2025-05-25 21:08:07.384 [main] INFO  Console - Initializing console commands
+2025-05-25 21:08:07.384 [main] INFO  org.example.clientUtils.ConnectionManager - Sending to 127.0.0.1:6789: {"requestType":"INITIALIZATION","message":"","args":{}}
+2025-05-25 21:08:07.394 [main] INFO  org.example.clientUtils.ConnectionManager - Received from /127.0.0.1:6789: {"responseType":"SYSTEM","message":"{\"commands\":{\"add\":\"Adds a new vehicle to the collection\",\"add_if_max\":\"Adds a new vehicle to collection if it's max\",\"avg_of_eng_pw\":\"Returns average engine power of the all collection\",\"clear\":\"Clears the collection\",\"count_gr_than_eng_pw\":\"Return a quantity of objects, which have engPw greater than given\",\"info\":\"Returns info about collection\",\"min_by_fuel\":\"Returns object that is min by fuel type\",\"remove_at\":\"Removes an object from collection with given index\",\"remove_by_id\":\"Removes an object from the collection with given id\",\"remove_greater\":\"Removes all items from collection that have greater engPW than given\",\"show\":\"Returns info about all items from the collection\",\"update_id\":\"Updates a field from item with given id\"},\"arguments\":{\"add\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.AddCommand\\\"}\",\"add_if_max\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.AddIfMaxCommand\\\"}\",\"avg_of_eng_pw\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.AvgOfEnginePowerCommand\\\"}\",\"clear\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.ClearCommand\\\"}\",\"count_gr_than_eng_pw\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.CountGrThanEngPwCommand\\\"}\",\"info\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.InfoCommand\\\"}\",\"min_by_fuel\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.MinByFuelTypeCommand\\\"}\",\"remove_at\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.RemoveAtCommand\\\"}\",\"remove_by_id\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.RemoveByIdCommand\\\"}\",\"remove_greater\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.RemoveGreaterCommand\\\"}\",\"show\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.ShowCommand\\\"}\",\"update_id\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.UpdateIdCommand\\\"}\"}}","receiver":"unknown"}
+2025-05-25 21:08:07.395 [main] INFO  Console - Registering basic commands
+2025-05-25 21:08:07.397 [main] INFO  Console - Connected successfully
+2025-05-25 21:08:07.397 [main] INFO  Console - Starting an interactive mode
+2025-05-25 21:08:17.329 [main] INFO  Console - Trying to connect...
+2025-05-25 21:08:17.348 [main] INFO  org.example.clientUtils.ConnectionManager - Sending to 127.0.0.1:6789: {"requestType":"PING","message":"Ping","args":{"sender":"127.0.0.1"}}
+2025-05-25 21:08:17.352 [main] INFO  org.example.clientUtils.ConnectionManager - Received from /127.0.0.1:6789: {"responseType":"SYSTEM","message":"Pong","receiver":"127.0.0.1"}
+2025-05-25 21:08:17.355 [main] INFO  org.example.clientUtils.ConnectionManager - 21.606458
+2025-05-25 21:08:22.644 [main] INFO  Console - Sent request for authorization
+2025-05-25 21:08:22.651 [main] INFO  org.example.clientUtils.ConnectionManager - Sending to 127.0.0.1:6789: {"requestType":"AUTHORIZATION","message":"","args":{"username":"pizda","password":"pizda"}}
+2025-05-25 21:08:32.727 [main] INFO  org.example.clientUtils.ConnectionManager - Received from /127.0.0.1:6789: {"responseType":"OK","message":"Authorized","token":"eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJzZXJ2ZXIiLCJzdWIiOiJwaXpkYSIsImV4cCI6MTc0ODE5NjgxMn0.I_9BiHAjnbpy68oaZe4HQkCnhWNGuJFMhfpWoV0mub4","receiver":"unknown"}
+2025-05-25 21:08:32.729 [main] INFO  Console - Response received: utils.wrappers.ResponseWrapper@740cae06
+2025-05-25 21:08:32.729 [main] INFO  Console - Authorized
+2025-05-25 21:08:32.730 [main] INFO  Console - Initializing console commands
+2025-05-25 21:08:32.730 [main] INFO  org.example.clientUtils.ConnectionManager - Sending to 127.0.0.1:6789: {"requestType":"INITIALIZATION","message":"","args":{}}
+2025-05-25 21:08:32.734 [main] INFO  org.example.clientUtils.ConnectionManager - Received from /127.0.0.1:6789: {"responseType":"SYSTEM","message":"{\"commands\":{\"add\":\"Adds a new vehicle to the collection\",\"add_if_max\":\"Adds a new vehicle to collection if it's max\",\"avg_of_eng_pw\":\"Returns average engine power of the all collection\",\"clear\":\"Clears the collection\",\"count_gr_than_eng_pw\":\"Return a quantity of objects, which have engPw greater than given\",\"info\":\"Returns info about collection\",\"min_by_fuel\":\"Returns object that is min by fuel type\",\"remove_at\":\"Removes an object from collection with given index\",\"remove_by_id\":\"Removes an object from the collection with given id\",\"remove_greater\":\"Removes all items from collection that have greater engPW than given\",\"show\":\"Returns info about all items from the collection\",\"update_id\":\"Updates a field from item with given id\"},\"arguments\":{\"add\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.AddCommand\\\"}\",\"add_if_max\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.AddIfMaxCommand\\\"}\",\"avg_of_eng_pw\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.AvgOfEnginePowerCommand\\\"}\",\"clear\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.ClearCommand\\\"}\",\"count_gr_than_eng_pw\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.CountGrThanEngPwCommand\\\"}\",\"info\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.InfoCommand\\\"}\",\"min_by_fuel\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.MinByFuelTypeCommand\\\"}\",\"remove_at\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.RemoveAtCommand\\\"}\",\"remove_by_id\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.RemoveByIdCommand\\\"}\",\"remove_greater\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.RemoveGreaterCommand\\\"}\",\"show\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.ShowCommand\\\"}\",\"update_id\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.UpdateIdCommand\\\"}\"}}","receiver":"unknown"}
+2025-05-25 21:08:32.739 [main] INFO  Console - Registering basic commands
+2025-05-25 21:08:32.740 [main] INFO  Console - Connected successfully
+2025-05-25 21:08:32.741 [main] INFO  Console - Starting an interactive mode
+2025-05-25 21:19:57.997 [main] INFO  Console - Trying to connect...
+2025-05-25 21:19:58.022 [main] INFO  org.example.clientUtils.ConnectionManager - Sending to 127.0.0.1:6789: {"requestType":"PING","message":"Ping","args":{"sender":"127.0.0.1"}}
+2025-05-25 21:20:05.025 [main] ERROR org.example.clientUtils.ConnectionManager - Failed to receive response: Receive timed out
+2025-05-25 21:20:05.040 [main] ERROR org.example.clientUtils.ConnectionManager - Ping failed - `10000.0`: Receive timed out
+2025-05-25 21:20:07.250 [main] INFO  Console - Trying to connect...
+2025-05-25 21:20:07.252 [main] INFO  org.example.clientUtils.ConnectionManager - Sending to 127.0.0.1:6789: {"requestType":"PING","message":"Ping","args":{"sender":"127.0.0.1"}}
+2025-05-25 21:20:14.253 [main] ERROR org.example.clientUtils.ConnectionManager - Failed to receive response: Receive timed out
+2025-05-25 21:20:14.254 [main] ERROR org.example.clientUtils.ConnectionManager - Ping failed - `10000.0`: Receive timed out
+2025-05-25 21:20:18.756 [main] INFO  Console - Trying to connect...
+2025-05-25 21:20:18.757 [main] INFO  org.example.clientUtils.ConnectionManager - Sending to 127.0.0.1:6789: {"requestType":"PING","message":"Ping","args":{"sender":"127.0.0.1"}}
+2025-05-25 21:20:18.800 [main] INFO  org.example.clientUtils.ConnectionManager - Received from /127.0.0.1:6789: {"responseType":"SYSTEM","message":"Pong","receiver":"127.0.0.1"}
+2025-05-25 21:20:18.803 [main] INFO  org.example.clientUtils.ConnectionManager - 45.693
+2025-05-25 21:20:25.790 [main] INFO  Console - Sent request for authorization
+2025-05-25 21:20:25.792 [main] INFO  org.example.clientUtils.ConnectionManager - Sending to 127.0.0.1:6789: {"requestType":"AUTHORIZATION","message":"","args":{"username":"pizda","password":"pizda"}}
+2025-05-25 21:20:37.662 [main] INFO  org.example.clientUtils.ConnectionManager - Received from /127.0.0.1:6789: {"responseType":"OK","message":"Authorized","token":"eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJzZXJ2ZXIiLCJzdWIiOiJwaXpkYSIsImV4cCI6MTc0ODE5NzUzN30.HtWpiA_jDIF0bO6IQLDVNeWmakkDsEFoodozON79KNw","receiver":"unknown"}
+2025-05-25 21:20:37.663 [main] INFO  Console - Response received: utils.wrappers.ResponseWrapper@470734c3
+2025-05-25 21:20:37.663 [main] INFO  Console - Authorized
+2025-05-25 21:20:37.663 [main] INFO  Console - Initializing console commands
+2025-05-25 21:20:37.663 [main] INFO  org.example.clientUtils.ConnectionManager - Sending to 127.0.0.1:6789: {"requestType":"INITIALIZATION","message":"","args":{}}
+2025-05-25 21:20:37.673 [main] INFO  org.example.clientUtils.ConnectionManager - Received from /127.0.0.1:6789: {"responseType":"SYSTEM","message":"{\"commands\":{\"add\":\"Adds a new vehicle to the collection\",\"add_if_max\":\"Adds a new vehicle to collection if it's max\",\"avg_of_eng_pw\":\"Returns average engine power of the all collection\",\"clear\":\"Clears the collection\",\"count_gr_than_eng_pw\":\"Return a quantity of objects, which have engPw greater than given\",\"info\":\"Returns info about collection\",\"min_by_fuel\":\"Returns object that is min by fuel type\",\"remove_at\":\"Removes an object from collection with given index\",\"remove_by_id\":\"Removes an object from the collection with given id\",\"remove_greater\":\"Removes all items from collection that have greater engPW than given\",\"show\":\"Returns info about all items from the collection\",\"update_id\":\"Updates a field from item with given id\"},\"arguments\":{\"add\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.AddCommand\\\"}\",\"add_if_max\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.AddIfMaxCommand\\\"}\",\"avg_of_eng_pw\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.AvgOfEnginePowerCommand\\\"}\",\"clear\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.ClearCommand\\\"}\",\"count_gr_than_eng_pw\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.CountGrThanEngPwCommand\\\"}\",\"info\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.InfoCommand\\\"}\",\"min_by_fuel\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.MinByFuelTypeCommand\\\"}\",\"remove_at\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.RemoveAtCommand\\\"}\",\"remove_by_id\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.RemoveByIdCommand\\\"}\",\"remove_greater\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.RemoveGreaterCommand\\\"}\",\"show\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.ShowCommand\\\"}\",\"update_id\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.UpdateIdCommand\\\"}\"}}","receiver":"unknown"}
+2025-05-25 21:20:37.674 [main] INFO  Console - Registering basic commands
+2025-05-25 21:20:37.675 [main] INFO  Console - Connected successfully
+2025-05-25 21:20:37.675 [main] INFO  Console - Starting an interactive mode
+2025-05-25 21:20:47.191 [main] INFO  org.example.clientUtils.ConnectionManager - Sending to 127.0.0.1:6789: {"requestType":"COMMAND_EXEC","message":"info","args":{"type":""},"token":"eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJzZXJ2ZXIiLCJzdWIiOiJwaXpkYSIsImV4cCI6MTc0ODE5NzUzN30.HtWpiA_jDIF0bO6IQLDVNeWmakkDsEFoodozON79KNw"}
+2025-05-25 21:20:50.185 [main] INFO  org.example.clientUtils.ConnectionManager - Received from /127.0.0.1:6789: {"responseType":"ERROR","message":"null","receiver":"unknown"}
+2025-05-25 21:20:59.354 [main] INFO  org.example.clientUtils.ConnectionManager - Sending to 127.0.0.1:6789: {"requestType":"COMMAND_EXEC","message":"show","args":{"type":""},"token":"eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJzZXJ2ZXIiLCJzdWIiOiJwaXpkYSIsImV4cCI6MTc0ODE5NzUzN30.HtWpiA_jDIF0bO6IQLDVNeWmakkDsEFoodozON79KNw"}
+2025-05-25 21:21:04.629 [main] INFO  org.example.clientUtils.ConnectionManager - Received from /127.0.0.1:6789: {"responseType":"ERROR","message":"null","receiver":"unknown"}
+2025-05-25 21:21:07.091 [main] INFO  org.example.clientUtils.ConnectionManager - Sending to 127.0.0.1:6789: {"requestType":"COMMAND_EXEC","message":"add","args":{"type":""},"token":"eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJzZXJ2ZXIiLCJzdWIiOiJwaXpkYSIsImV4cCI6MTc0ODE5NzUzN30.HtWpiA_jDIF0bO6IQLDVNeWmakkDsEFoodozON79KNw"}
+2025-05-25 21:21:09.908 [main] INFO  org.example.clientUtils.ConnectionManager - Received from /127.0.0.1:6789: {"responseType":"ERROR","message":"null","receiver":"unknown"}
+2025-05-25 21:22:19.812 [main] INFO  org.example.clientUtils.ConnectionManager - Sending to 127.0.0.1:6789: {"requestType":"COMMAND_EXEC","message":"show","args":{}}
+2025-05-25 21:22:24.497 [main] INFO  org.example.clientUtils.ConnectionManager - Received from /127.0.0.1:6789: {"responseType":"ERROR","message":"JWT String argument cannot be null or empty.","receiver":"unknown"}
+2025-05-25 21:22:32.152 [main] INFO  org.example.clientUtils.ConnectionManager - Sending to 127.0.0.1:6789: {"requestType":"COMMAND_EXEC","message":"update_id","args":{"id":"4","field":"name","value":"fadsf"},"token":"eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJzZXJ2ZXIiLCJzdWIiOiJwaXpkYSIsImV4cCI6MTc0ODE5NzUzN30.HtWpiA_jDIF0bO6IQLDVNeWmakkDsEFoodozON79KNw"}
+2025-05-25 21:22:35.419 [main] INFO  org.example.clientUtils.ConnectionManager - Received from /127.0.0.1:6789: {"responseType":"ERROR","message":"null","receiver":"unknown"}
+2025-05-25 21:23:35.919 [main] INFO  org.example.clientUtils.ConnectionManager - Sending to 127.0.0.1:6789: {"requestType":"COMMAND_EXEC","message":"show","args":{"type":""},"token":"eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJzZXJ2ZXIiLCJzdWIiOiJwaXpkYSIsImV4cCI6MTc0ODE5NzUzN30.HtWpiA_jDIF0bO6IQLDVNeWmakkDsEFoodozON79KNw"}
+2025-05-25 21:23:40.805 [main] INFO  org.example.clientUtils.ConnectionManager - Received from /127.0.0.1:6789: {"responseType":"ERROR","message":"null","receiver":"unknown"}
+2025-05-25 21:23:51.095 [main] INFO  org.example.clientUtils.ConnectionManager - Sending to 127.0.0.1:6789: {"requestType":"COMMAND_EXEC","message":"remove_at","args":{"type":""},"token":"eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJzZXJ2ZXIiLCJzdWIiOiJwaXpkYSIsImV4cCI6MTc0ODE5NzUzN30.HtWpiA_jDIF0bO6IQLDVNeWmakkDsEFoodozON79KNw"}
+2025-05-25 21:23:54.145 [main] INFO  org.example.clientUtils.ConnectionManager - Received from /127.0.0.1:6789: {"responseType":"ERROR","message":"null","receiver":"unknown"}
+2025-05-25 21:24:00.437 [main] INFO  org.example.clientUtils.ConnectionManager - Sending to 127.0.0.1:6789: {"requestType":"COMMAND_EXEC","message":"remove_by_id","args":{"type":""},"token":"eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJzZXJ2ZXIiLCJzdWIiOiJwaXpkYSIsImV4cCI6MTc0ODE5NzUzN30.HtWpiA_jDIF0bO6IQLDVNeWmakkDsEFoodozON79KNw"}
+2025-05-25 21:24:07.790 [main] INFO  org.example.clientUtils.ConnectionManager - Received from /127.0.0.1:6789: {"responseType":"ERROR","message":"null","receiver":"unknown"}
+2025-05-25 21:24:12.285 [main] INFO  org.example.clientUtils.ConnectionManager - Sending to 127.0.0.1:6789: {"requestType":"COMMAND_EXEC","message":"show","args":{}}
+2025-05-25 21:24:18.806 [main] INFO  org.example.clientUtils.ConnectionManager - Received from /127.0.0.1:6789: {"responseType":"ERROR","message":"JWT String argument cannot be null or empty.","receiver":"unknown"}
+2025-05-25 21:24:46.400 [main] INFO  org.example.clientUtils.ConnectionManager - Sending to 127.0.0.1:6789: {"requestType":"COMMAND_EXEC","message":"update_id","args":{"id":"3","field":"name","value":"fadsf"},"token":"eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJzZXJ2ZXIiLCJzdWIiOiJwaXpkYSIsImV4cCI6MTc0ODE5NzUzN30.HtWpiA_jDIF0bO6IQLDVNeWmakkDsEFoodozON79KNw"}
+2025-05-25 21:24:52.318 [main] INFO  org.example.clientUtils.ConnectionManager - Received from /127.0.0.1:6789: {"responseType":"ERROR","message":"null","receiver":"unknown"}
+2025-05-25 21:25:55.929 [main] INFO  org.example.clientUtils.ConnectionManager - Sending to 127.0.0.1:6789: {"requestType":"COMMAND_EXEC","message":"info","args":{"type":""},"token":"eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJzZXJ2ZXIiLCJzdWIiOiJwaXpkYSIsImV4cCI6MTc0ODE5NzUzN30.HtWpiA_jDIF0bO6IQLDVNeWmakkDsEFoodozON79KNw"}
+2025-05-25 21:26:01.488 [main] INFO  org.example.clientUtils.ConnectionManager - Received from /127.0.0.1:6789: {"responseType":"AUTH_ERROR","message":"Unknown token. Authorize again.","receiver":"unknown"}
+2025-05-25 21:33:44.258 [main] INFO  Console - Trying to connect...
+2025-05-25 21:33:44.277 [main] INFO  org.example.clientUtils.ConnectionManager - Sending to 127.0.0.1:6789: {"requestType":"PING","message":"Ping","args":{"sender":"127.0.0.1"}}
+2025-05-25 21:33:44.283 [main] INFO  org.example.clientUtils.ConnectionManager - Received from /127.0.0.1:6789: {"responseType":"SYSTEM","message":"Pong","receiver":"127.0.0.1"}
+2025-05-25 21:33:44.286 [main] INFO  org.example.clientUtils.ConnectionManager - 23.279375
+2025-05-25 21:33:50.541 [main] INFO  Console - Sent request for authorization
+2025-05-25 21:33:50.548 [main] INFO  org.example.clientUtils.ConnectionManager - Sending to 127.0.0.1:6789: {"requestType":"AUTHORIZATION","message":"","args":{"username":"pizdfa","password":"a"}}
+2025-05-25 21:33:50.565 [main] INFO  org.example.clientUtils.ConnectionManager - Received from /127.0.0.1:6789: {"responseType":"ERROR","message":"Connection to localhost:15432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.","receiver":"unknown"}
+2025-05-25 21:33:50.565 [main] INFO  Console - Response received: utils.wrappers.ResponseWrapper@740cae06
+2025-05-25 21:34:38.951 [main] INFO  Console - Trying to connect...
+2025-05-25 21:34:38.970 [main] INFO  org.example.clientUtils.ConnectionManager - Sending to 127.0.0.1:6789: {"requestType":"PING","message":"Ping","args":{"sender":"127.0.0.1"}}
+2025-05-25 21:34:38.973 [main] INFO  org.example.clientUtils.ConnectionManager - Received from /127.0.0.1:6789: {"responseType":"SYSTEM","message":"Pong","receiver":"127.0.0.1"}
+2025-05-25 21:34:38.976 [main] INFO  org.example.clientUtils.ConnectionManager - 20.500458
+2025-05-25 21:34:43.385 [main] INFO  Console - Sent request for authorization
+2025-05-25 21:34:43.391 [main] INFO  org.example.clientUtils.ConnectionManager - Sending to 127.0.0.1:6789: {"requestType":"AUTHORIZATION","message":"","args":{"username":"pizda","password":"pizda"}}
+2025-05-25 21:34:51.796 [main] INFO  org.example.clientUtils.ConnectionManager - Received from /127.0.0.1:6789: {"responseType":"OK","message":"Authorized","token":"eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJzZXJ2ZXIiLCJzdWIiOiJwaXpkYSIsImV4cCI6MTc0ODE5ODM5MX0.SzB5u0KhMb_KdOtbeeuvCi6PwSCTZEvQW5cQ4gil25Y","receiver":"unknown"}
+2025-05-25 21:34:51.798 [main] INFO  Console - Response received: utils.wrappers.ResponseWrapper@f0c8a99
+2025-05-25 21:34:51.799 [main] INFO  Console - Authorized
+2025-05-25 21:34:51.799 [main] INFO  Console - Initializing console commands
+2025-05-25 21:34:51.799 [main] INFO  org.example.clientUtils.ConnectionManager - Sending to 127.0.0.1:6789: {"requestType":"INITIALIZATION","message":"","args":{}}
+2025-05-25 21:34:51.804 [main] INFO  org.example.clientUtils.ConnectionManager - Received from /127.0.0.1:6789: {"responseType":"SYSTEM","message":"{\"commands\":{\"add\":\"Adds a new vehicle to the collection\",\"add_if_max\":\"Adds a new vehicle to collection if it's max\",\"avg_of_eng_pw\":\"Returns average engine power of the all collection\",\"clear\":\"Clears the collection\",\"count_gr_than_eng_pw\":\"Return a quantity of objects, which have engPw greater than given\",\"info\":\"Returns info about collection\",\"min_by_fuel\":\"Returns object that is min by fuel type\",\"remove_at\":\"Removes an object from collection with given index\",\"remove_by_id\":\"Removes an object from the collection with given id\",\"remove_greater\":\"Removes all items from collection that have greater engPW than given\",\"show\":\"Returns info about all items from the collection\",\"update_id\":\"Updates a field from item with given id\"},\"arguments\":{\"add\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.AddCommand\\\"}\",\"add_if_max\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.AddIfMaxCommand\\\"}\",\"avg_of_eng_pw\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.AvgOfEnginePowerCommand\\\"}\",\"clear\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.ClearCommand\\\"}\",\"count_gr_than_eng_pw\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.CountGrThanEngPwCommand\\\"}\",\"info\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.InfoCommand\\\"}\",\"min_by_fuel\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.MinByFuelTypeCommand\\\"}\",\"remove_at\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.RemoveAtCommand\\\"}\",\"remove_by_id\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.RemoveByIdCommand\\\"}\",\"remove_greater\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.RemoveGreaterCommand\\\"}\",\"show\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.ShowCommand\\\"}\",\"update_id\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.UpdateIdCommand\\\"}\"}}","receiver":"unknown"}
+2025-05-25 21:34:51.809 [main] INFO  Console - Registering basic commands
+2025-05-25 21:34:51.811 [main] INFO  Console - Connected successfully
+2025-05-25 21:34:51.811 [main] INFO  Console - Starting an interactive mode
+2025-05-25 21:34:58.353 [main] INFO  org.example.clientUtils.ConnectionManager - Sending to 127.0.0.1:6789: {"requestType":"COMMAND_EXEC","message":"info","args":{"type":""},"token":"eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJzZXJ2ZXIiLCJzdWIiOiJwaXpkYSIsImV4cCI6MTc0ODE5ODM5MX0.SzB5u0KhMb_KdOtbeeuvCi6PwSCTZEvQW5cQ4gil25Y"}
+2025-05-25 21:35:02.279 [main] INFO  org.example.clientUtils.ConnectionManager - Received from /127.0.0.1:6789: {"responseType":"ERROR","message":"null","receiver":"unknown"}
+2025-05-25 21:40:06.409 [main] INFO  org.example.clientUtils.ConnectionManager - Sending to 127.0.0.1:6789: {"requestType":"COMMAND_EXEC","message":"info","args":{"type":""},"token":"eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJzZXJ2ZXIiLCJzdWIiOiJwaXpkYSIsImV4cCI6MTc0ODE5ODM5MX0.SzB5u0KhMb_KdOtbeeuvCi6PwSCTZEvQW5cQ4gil25Y"}
+2025-05-25 21:40:08.985 [main] INFO  org.example.clientUtils.ConnectionManager - Received from /127.0.0.1:6789: {"responseType":"AUTH_ERROR","message":"Unknown token. Authorize again.","receiver":"unknown"}
+2025-05-25 21:40:18.603 [main] INFO  Console - Sent request for authorization
+2025-05-25 21:40:18.604 [main] INFO  org.example.clientUtils.ConnectionManager - Sending to 127.0.0.1:6789: {"requestType":"AUTHORIZATION","message":"","args":{"username":"pizda","password":"pizda"}}
+2025-05-25 21:40:28.933 [main] INFO  org.example.clientUtils.ConnectionManager - Received from /127.0.0.1:6789: {"responseType":"OK","message":"Authorized","token":"eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJzZXJ2ZXIiLCJzdWIiOiJwaXpkYSIsImV4cCI6MTc0ODE5ODcyOH0.bgpypzpD5CEddQRuM2hvfURS9XVdre-WawSlj-qlMsc","receiver":"unknown"}
+2025-05-25 21:40:28.934 [main] INFO  Console - Response received: utils.wrappers.ResponseWrapper@663c9e7a
+2025-05-25 21:40:28.934 [main] INFO  Console - Authorized

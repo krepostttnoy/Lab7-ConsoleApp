@@ -39,12 +39,7 @@ class DbManager(
         }
     }
 
-    private fun initCollection(){
-        getConnection().use {connection ->
-            val statement = connection.createStatement()
-            statement.executeUpdate("create table if not exists collection(id serial primary key,info varchar(1000) not null, user_login varchar(50) references users (login) ON DELETE SET NULL ON UPDATE CASCADE);")
-        }
-    }
+
 
     fun initDB(){
         println("goida inits DB")
@@ -181,6 +176,25 @@ class DbManager(
                 resultSet.next()
                 return resultSet.getString("password")
             }
+        }
+    }
+
+    private fun initCollection(){
+        getConnection().use{connection ->
+            val statement = connection.createStatement()
+            statement.executeUpdate("CREATE TABLE IF NOT EXISTS collection (\n" +
+                    "    id SERIAL PRIMARY KEY,\n" +
+                    "    name VARCHAR(100) NOT NULL,\n" +
+                    "    coordinate_x INTEGER NOT NULL,\n" +
+                    "    coordinate_y DOUBLE PRECISION NOT NULL,\n" +
+                    "    creation_date DATE NOT NULL,\n" +
+                    "    price INTEGER CHECK (price > 0),\n" +
+                    "    unit_of_measure VARCHAR(20),\n" +
+                    "    manufacturer_name VARCHAR(100),\n" +
+                    "    manufacturer_employees_count INTEGER,\n" +
+                    "    manufacturer_type VARCHAR(30),\n" +
+                    "    user_login VARCHAR(50) REFERENCES users(login) ON DELETE SET NULL ON UPDATE CASCADE\n" +
+                    ");")
         }
     }
 

@@ -51,7 +51,7 @@ class ConsoleFileManager(
                     collectionManager.addVehicle(vehicle, parent)
                     logger.info("Loaded ${vehicle.name}")
                 } catch (e:Exception) {
-                    logger.warn(e.message.toString())
+                    logger.info(e.message.toString())
                 }
 
             }

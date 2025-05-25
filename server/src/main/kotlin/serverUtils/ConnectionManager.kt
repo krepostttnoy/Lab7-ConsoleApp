@@ -13,7 +13,7 @@ import org.apache.logging.log4j.Logger
 import utils.wrappers.ResponseType
 
 class ConnectionManager() {
-    private var host = "0.0.0.0"
+    private var host = "localhost"
     private var port = 6789
     private var address = InetSocketAddress(host, port)
     var datagramChannel = DatagramChannel.open()

@@ -1432,3 +1432,934 @@ JSON input: {"responseType":"OK","message":"ID: 2, Name: pidor"}`
 2025-05-25 01:25:07.179 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранение в базу данных
 2025-05-25 01:25:07.181 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранено 0 успешно элементов
 2025-05-25 01:25:07.181 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-25 18:10:41.001 [main] INFO  org.example.serverUtils.Console - Initializing console commands
+2025-05-25 18:10:41.007 [main] INFO  org.example.serverUtils.Console - Registering Add Command
+2025-05-25 18:10:41.008 [main] INFO  org.example.serverUtils.Console - Registering AddIfMax Command
+2025-05-25 18:10:41.014 [main] INFO  org.example.serverUtils.Console - Registering AvgOfEnginePower Command
+2025-05-25 18:10:41.015 [main] INFO  org.example.serverUtils.Console - Registering Clear Command
+2025-05-25 18:10:41.016 [main] INFO  org.example.serverUtils.Console - Registering CountGreaterThanEnginePower Command
+2025-05-25 18:10:41.016 [main] INFO  org.example.serverUtils.Console - Registering Info Command
+2025-05-25 18:10:41.017 [main] INFO  org.example.serverUtils.Console - Registering MinByFuelType Command
+2025-05-25 18:10:41.018 [main] INFO  org.example.serverUtils.Console - Registering RemoveAt Command
+2025-05-25 18:10:41.018 [main] INFO  org.example.serverUtils.Console - Registering RemoveById Command
+2025-05-25 18:10:41.019 [main] INFO  org.example.serverUtils.Console - Registering RemoveGreater Command
+2025-05-25 18:10:41.019 [main] INFO  org.example.serverUtils.Console - Registering Show Command
+2025-05-25 18:10:41.020 [main] INFO  org.example.serverUtils.Console - Registering UpdateId Command
+2025-05-25 18:10:41.021 [main] INFO  org.example.serverUtils.ConnectionManager - Server bound to: /127.0.0.1:6789
+2025-05-25 18:10:41.021 [main] INFO  org.example.serverUtils.Console - The server is ready to receive commands
+2025-05-25 18:11:31.125 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранение в базу данных
+2025-05-25 18:11:31.127 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранено 0 успешно элементов
+2025-05-25 18:11:31.127 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-25 18:12:31.116 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранение в базу данных
+2025-05-25 18:12:31.116 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранено 0 успешно элементов
+2025-05-25 18:12:31.116 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-25 18:13:31.113 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранение в базу данных
+2025-05-25 18:13:31.114 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранено 0 успешно элементов
+2025-05-25 18:13:31.114 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-25 18:14:31.115 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранение в базу данных
+2025-05-25 18:14:31.117 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранено 0 успешно элементов
+2025-05-25 18:14:31.117 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-25 18:16:51.658 [main] INFO  org.example.serverUtils.Console - Initializing console commands
+2025-05-25 18:16:51.666 [main] INFO  org.example.serverUtils.Console - Registering Add Command
+2025-05-25 18:16:51.668 [main] INFO  org.example.serverUtils.Console - Registering AddIfMax Command
+2025-05-25 18:16:51.669 [main] INFO  org.example.serverUtils.Console - Registering AvgOfEnginePower Command
+2025-05-25 18:16:51.670 [main] INFO  org.example.serverUtils.Console - Registering Clear Command
+2025-05-25 18:16:51.671 [main] INFO  org.example.serverUtils.Console - Registering CountGreaterThanEnginePower Command
+2025-05-25 18:16:51.672 [main] INFO  org.example.serverUtils.Console - Registering Info Command
+2025-05-25 18:16:51.673 [main] INFO  org.example.serverUtils.Console - Registering MinByFuelType Command
+2025-05-25 18:16:51.674 [main] INFO  org.example.serverUtils.Console - Registering RemoveAt Command
+2025-05-25 18:16:51.675 [main] INFO  org.example.serverUtils.Console - Registering RemoveById Command
+2025-05-25 18:16:51.676 [main] INFO  org.example.serverUtils.Console - Registering RemoveGreater Command
+2025-05-25 18:16:51.676 [main] INFO  org.example.serverUtils.Console - Registering Show Command
+2025-05-25 18:16:51.677 [main] INFO  org.example.serverUtils.Console - Registering UpdateId Command
+2025-05-25 18:16:51.679 [main] INFO  org.example.serverUtils.ConnectionManager - Server bound to: /127.0.0.1:6789
+2025-05-25 18:16:51.679 [main] INFO  org.example.serverUtils.Console - The server is ready to receive commands
+2025-05-25 18:17:35.968 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранение в базу данных
+2025-05-25 18:17:35.970 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранено 0 успешно элементов
+2025-05-25 18:17:35.970 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-25 18:18:15.647 [main] INFO  org.example.serverUtils.Console - Initializing console commands
+2025-05-25 18:18:15.662 [main] INFO  org.example.serverUtils.Console - Registering Add Command
+2025-05-25 18:18:15.663 [main] INFO  org.example.serverUtils.Console - Registering AddIfMax Command
+2025-05-25 18:18:15.664 [main] INFO  org.example.serverUtils.Console - Registering AvgOfEnginePower Command
+2025-05-25 18:18:15.665 [main] INFO  org.example.serverUtils.Console - Registering Clear Command
+2025-05-25 18:18:15.666 [main] INFO  org.example.serverUtils.Console - Registering CountGreaterThanEnginePower Command
+2025-05-25 18:18:15.666 [main] INFO  org.example.serverUtils.Console - Registering Info Command
+2025-05-25 18:18:15.667 [main] INFO  org.example.serverUtils.Console - Registering MinByFuelType Command
+2025-05-25 18:18:15.668 [main] INFO  org.example.serverUtils.Console - Registering RemoveAt Command
+2025-05-25 18:18:15.669 [main] INFO  org.example.serverUtils.Console - Registering RemoveById Command
+2025-05-25 18:18:15.669 [main] INFO  org.example.serverUtils.Console - Registering RemoveGreater Command
+2025-05-25 18:18:15.670 [main] INFO  org.example.serverUtils.Console - Registering Show Command
+2025-05-25 18:18:15.671 [main] INFO  org.example.serverUtils.Console - Registering UpdateId Command
+2025-05-25 18:18:15.672 [main] INFO  org.example.serverUtils.ConnectionManager - Server bound to: /127.0.0.1:6789
+2025-05-25 18:18:15.672 [main] INFO  org.example.serverUtils.Console - The server is ready to receive commands
+2025-05-25 18:18:58.898 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранение в базу данных
+2025-05-25 18:18:58.900 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранено 0 успешно элементов
+2025-05-25 18:18:58.900 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-25 18:19:42.722 [pool-3-thread-1] INFO  org.example.mutlithread.ReceiverThread - Received ping request from: localhost
+2025-05-25 18:19:42.723 [ForkJoinPool.commonPool-worker-1] DEBUG org.example.mutlithread.SenderThread - Sending: utils.wrappers.ResponseWrapper@6d2c2674
+2025-05-25 18:19:42.732 [ForkJoinPool.commonPool-worker-1] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:51456:
+{"responseType":"SYSTEM","message":"Pong","receiver":"localhost"}
+2025-05-25 18:19:51.241 [pool-3-thread-1] INFO  org.example.mutlithread.ReceiverThread - Received authorization request
+2025-05-25 18:19:51.242 [pool-3-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Loading from DB
+2025-05-25 18:19:52.546 [pool-3-thread-1] WARN  org.example.serverUtils.ConsoleFileManager - The column name info was not found in this ResultSet.
+2025-05-25 18:19:57.628 [pool-3-thread-1] DEBUG org.example.users.UserManager - User matk was registered
+2025-05-25 18:19:57.698 [ForkJoinPool.commonPool-worker-1] DEBUG org.example.mutlithread.SenderThread - Sending: utils.wrappers.ResponseWrapper@2d457d1b
+2025-05-25 18:19:57.698 [ForkJoinPool.commonPool-worker-1] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:51456:
+{"responseType":"OK","message":"Registered","token":"eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJzZXJ2ZXIiLCJzdWIiOiJtYXRrIiwiZXhwIjoxNzQ4MTg2Njk3fQ.pGBwXdmVQm_6KZZNnaQtK20JT02sAHUom0J539Edsfk","receiver":"unknown"}
+2025-05-25 18:19:58.888 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранение в базу данных
+2025-05-25 18:19:58.889 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранено 0 успешно элементов
+2025-05-25 18:19:58.890 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-25 18:20:58.887 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранение в базу данных
+2025-05-25 18:20:58.888 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранено 0 успешно элементов
+2025-05-25 18:20:58.888 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-25 18:21:24.069 [pool-3-thread-2] INFO  org.example.mutlithread.ReceiverThread - Received ping request from: localhost
+2025-05-25 18:21:24.069 [ForkJoinPool.commonPool-worker-3] DEBUG org.example.mutlithread.SenderThread - Sending: utils.wrappers.ResponseWrapper@41b1e1a5
+2025-05-25 18:21:24.070 [ForkJoinPool.commonPool-worker-3] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:49289:
+{"responseType":"SYSTEM","message":"Pong","receiver":"localhost"}
+2025-05-25 18:21:29.430 [pool-3-thread-2] INFO  org.example.mutlithread.ReceiverThread - Received authorization request
+2025-05-25 18:21:29.431 [pool-3-thread-2] INFO  org.example.serverUtils.ConsoleFileManager - Loading from DB
+2025-05-25 18:21:32.220 [pool-3-thread-2] WARN  org.example.serverUtils.ConsoleFileManager - The column name info was not found in this ResultSet.
+2025-05-25 18:21:38.035 [pool-3-thread-2] DEBUG org.example.users.UserManager - User mars was registered
+2025-05-25 18:21:38.037 [ForkJoinPool.commonPool-worker-3] DEBUG org.example.mutlithread.SenderThread - Sending: utils.wrappers.ResponseWrapper@4f7617e3
+2025-05-25 18:21:38.038 [ForkJoinPool.commonPool-worker-3] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:49289:
+{"responseType":"OK","message":"Registered","token":"eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJzZXJ2ZXIiLCJzdWIiOiJtYXJzIiwiZXhwIjoxNzQ4MTg2Nzk4fQ.AqufO8PwMIUn7NGfp6opzMJt1G7rXzQN-jdznJe5_28","receiver":"unknown"}
+2025-05-25 18:21:58.886 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранение в базу данных
+2025-05-25 18:21:58.887 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранено 0 успешно элементов
+2025-05-25 18:21:58.887 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-25 18:22:29.042 [main] INFO  org.example.serverUtils.Console - Initializing console commands
+2025-05-25 18:22:29.048 [main] INFO  org.example.serverUtils.Console - Registering Add Command
+2025-05-25 18:22:29.049 [main] INFO  org.example.serverUtils.Console - Registering AddIfMax Command
+2025-05-25 18:22:29.049 [main] INFO  org.example.serverUtils.Console - Registering AvgOfEnginePower Command
+2025-05-25 18:22:29.049 [main] INFO  org.example.serverUtils.Console - Registering Clear Command
+2025-05-25 18:22:29.050 [main] INFO  org.example.serverUtils.Console - Registering CountGreaterThanEnginePower Command
+2025-05-25 18:22:29.050 [main] INFO  org.example.serverUtils.Console - Registering Info Command
+2025-05-25 18:22:29.051 [main] INFO  org.example.serverUtils.Console - Registering MinByFuelType Command
+2025-05-25 18:22:29.051 [main] INFO  org.example.serverUtils.Console - Registering RemoveAt Command
+2025-05-25 18:22:29.052 [main] INFO  org.example.serverUtils.Console - Registering RemoveById Command
+2025-05-25 18:22:29.052 [main] INFO  org.example.serverUtils.Console - Registering RemoveGreater Command
+2025-05-25 18:22:29.053 [main] INFO  org.example.serverUtils.Console - Registering Show Command
+2025-05-25 18:22:29.053 [main] INFO  org.example.serverUtils.Console - Registering UpdateId Command
+2025-05-25 18:22:29.054 [main] INFO  org.example.serverUtils.ConnectionManager - Server bound to: /127.0.0.1:6789
+2025-05-25 18:22:29.054 [main] INFO  org.example.serverUtils.Console - The server is ready to receive commands
+2025-05-25 18:22:34.465 [pool-3-thread-1] INFO  org.example.mutlithread.ReceiverThread - Received ping request from: localhost
+2025-05-25 18:22:34.465 [ForkJoinPool.commonPool-worker-1] DEBUG org.example.mutlithread.SenderThread - Sending: utils.wrappers.ResponseWrapper@6eb713bd
+2025-05-25 18:22:34.478 [ForkJoinPool.commonPool-worker-1] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:64694:
+{"responseType":"SYSTEM","message":"Pong","receiver":"localhost"}
+2025-05-25 18:22:38.312 [pool-3-thread-1] INFO  org.example.mutlithread.ReceiverThread - Received authorization request
+2025-05-25 18:22:38.312 [pool-3-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Loading from DB
+2025-05-25 18:22:41.976 [pool-3-thread-1] WARN  org.example.serverUtils.ConsoleFileManager - The column name info was not found in this ResultSet.
+2025-05-25 18:22:49.199 [pool-3-thread-1] DEBUG org.example.users.UserManager - User fafas was registered
+2025-05-25 18:22:49.271 [ForkJoinPool.commonPool-worker-1] DEBUG org.example.mutlithread.SenderThread - Sending: utils.wrappers.ResponseWrapper@1f000cee
+2025-05-25 18:22:49.272 [ForkJoinPool.commonPool-worker-1] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:64694:
+{"responseType":"OK","message":"Registered","token":"eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJzZXJ2ZXIiLCJzdWIiOiJmYWZhcyIsImV4cCI6MTc0ODE4Njg2OX0.ybaWxISeUI19BCOHLW5ZVvq5-PrjvqYkaZpiV76FdBI","receiver":"unknown"}
+2025-05-25 18:23:09.070 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранение в базу данных
+2025-05-25 18:23:09.073 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранено 0 успешно элементов
+2025-05-25 18:23:09.073 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-25 18:24:31.529 [main] INFO  org.example.serverUtils.Console - Initializing console commands
+2025-05-25 18:24:31.539 [main] INFO  org.example.serverUtils.Console - Registering Add Command
+2025-05-25 18:24:31.540 [main] INFO  org.example.serverUtils.Console - Registering AddIfMax Command
+2025-05-25 18:24:31.541 [main] INFO  org.example.serverUtils.Console - Registering AvgOfEnginePower Command
+2025-05-25 18:24:31.542 [main] INFO  org.example.serverUtils.Console - Registering Clear Command
+2025-05-25 18:24:31.543 [main] INFO  org.example.serverUtils.Console - Registering CountGreaterThanEnginePower Command
+2025-05-25 18:24:31.544 [main] INFO  org.example.serverUtils.Console - Registering Info Command
+2025-05-25 18:24:31.544 [main] INFO  org.example.serverUtils.Console - Registering MinByFuelType Command
+2025-05-25 18:24:31.545 [main] INFO  org.example.serverUtils.Console - Registering RemoveAt Command
+2025-05-25 18:24:31.546 [main] INFO  org.example.serverUtils.Console - Registering RemoveById Command
+2025-05-25 18:24:31.547 [main] INFO  org.example.serverUtils.Console - Registering RemoveGreater Command
+2025-05-25 18:24:31.548 [main] INFO  org.example.serverUtils.Console - Registering Show Command
+2025-05-25 18:24:31.549 [main] INFO  org.example.serverUtils.Console - Registering UpdateId Command
+2025-05-25 18:24:31.550 [main] INFO  org.example.serverUtils.ConnectionManager - Server bound to: /127.0.0.1:6789
+2025-05-25 18:24:31.550 [main] INFO  org.example.serverUtils.Console - The server is ready to receive commands
+2025-05-25 18:24:33.093 [pool-3-thread-1] INFO  org.example.mutlithread.ReceiverThread - Received ping request from: localhost
+2025-05-25 18:24:33.094 [ForkJoinPool.commonPool-worker-1] DEBUG org.example.mutlithread.SenderThread - Sending: Pong
+2025-05-25 18:24:33.105 [ForkJoinPool.commonPool-worker-1] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:55671:
+{"responseType":"SYSTEM","message":"Pong","receiver":"localhost"}
+2025-05-25 18:24:36.815 [pool-3-thread-1] INFO  org.example.mutlithread.ReceiverThread - Received authorization request
+2025-05-25 18:24:36.816 [pool-3-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Loading from DB
+2025-05-25 18:24:40.325 [pool-3-thread-1] WARN  org.example.serverUtils.ConsoleFileManager - The column name info was not found in this ResultSet.
+2025-05-25 18:24:47.059 [pool-3-thread-1] DEBUG org.example.users.UserManager - User 3242 was registered
+2025-05-25 18:24:47.141 [ForkJoinPool.commonPool-worker-1] DEBUG org.example.mutlithread.SenderThread - Sending: Registered
+2025-05-25 18:24:47.143 [ForkJoinPool.commonPool-worker-1] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:55671:
+{"responseType":"OK","message":"Registered","token":"eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJzZXJ2ZXIiLCJzdWIiOiIzMjQyIiwiZXhwIjoxNzQ4MTg2OTg3fQ.Um6joLt10ElbtputqZEwKmSB7U14p3r46Sl4o30Opgw","receiver":"unknown"}
+2025-05-25 18:25:03.716 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранение в базу данных
+2025-05-25 18:25:03.717 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранено 0 успешно элементов
+2025-05-25 18:25:03.717 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-25 18:26:03.713 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранение в базу данных
+2025-05-25 18:26:03.714 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранено 0 успешно элементов
+2025-05-25 18:26:03.714 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-25 18:27:03.713 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранение в базу данных
+2025-05-25 18:27:03.714 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранено 0 успешно элементов
+2025-05-25 18:27:03.714 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-25 18:27:05.033 [pool-3-thread-2] INFO  org.example.mutlithread.ReceiverThread - Received ping request from: localhost
+2025-05-25 18:27:05.034 [ForkJoinPool.commonPool-worker-3] DEBUG org.example.mutlithread.SenderThread - Sending: Pong
+2025-05-25 18:27:05.034 [ForkJoinPool.commonPool-worker-3] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:53169:
+{"responseType":"SYSTEM","message":"Pong","receiver":"localhost"}
+2025-05-25 18:27:07.694 [pool-3-thread-2] INFO  org.example.mutlithread.ReceiverThread - Received authorization request
+2025-05-25 18:27:07.695 [pool-3-thread-2] INFO  org.example.serverUtils.ConsoleFileManager - Loading from DB
+2025-05-25 18:27:09.736 [pool-3-thread-2] WARN  org.example.serverUtils.ConsoleFileManager - The column name info was not found in this ResultSet.
+2025-05-25 18:27:15.150 [pool-3-thread-2] DEBUG org.example.users.UserManager - User afdadsf was registered
+2025-05-25 18:27:15.153 [ForkJoinPool.commonPool-worker-3] DEBUG org.example.mutlithread.SenderThread - Sending: Registered
+2025-05-25 18:27:15.153 [ForkJoinPool.commonPool-worker-3] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:53169:
+{"responseType":"OK","message":"Registered","token":"eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJzZXJ2ZXIiLCJzdWIiOiJhZmRhZHNmIiwiZXhwIjoxNzQ4MTg3MTM1fQ.7N9uAAZbSqJV-8L8YHouPOakPfs-qPMPdbLPgr-To3E","receiver":"unknown"}
+2025-05-25 18:28:03.712 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранение в базу данных
+2025-05-25 18:28:03.713 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранено 0 успешно элементов
+2025-05-25 18:28:03.714 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-25 18:29:03.712 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранение в базу данных
+2025-05-25 18:29:03.713 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранено 0 успешно элементов
+2025-05-25 18:29:03.713 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-25 18:29:53.117 [pool-3-thread-3] INFO  org.example.mutlithread.ReceiverThread - Received ping request from: localhost
+2025-05-25 18:29:53.117 [ForkJoinPool.commonPool-worker-5] DEBUG org.example.mutlithread.SenderThread - Sending: Pong
+2025-05-25 18:29:53.117 [ForkJoinPool.commonPool-worker-5] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:56372:
+{"responseType":"SYSTEM","message":"Pong","receiver":"localhost"}
+2025-05-25 18:29:55.287 [pool-3-thread-3] INFO  org.example.mutlithread.ReceiverThread - Received authorization request
+2025-05-25 18:29:55.287 [pool-3-thread-3] INFO  org.example.serverUtils.ConsoleFileManager - Loading from DB
+2025-05-25 18:29:57.724 [pool-3-thread-3] WARN  org.example.serverUtils.ConsoleFileManager - The column name info was not found in this ResultSet.
+2025-05-25 18:30:01.396 [pool-3-thread-3] DEBUG org.example.users.UserManager - User fasfasf was registered
+2025-05-25 18:30:01.397 [ForkJoinPool.commonPool-worker-5] DEBUG org.example.mutlithread.SenderThread - Sending: Registered
+2025-05-25 18:30:01.397 [ForkJoinPool.commonPool-worker-5] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:56372:
+{"responseType":"OK","message":"Registered","token":"eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJzZXJ2ZXIiLCJzdWIiOiJmYXNmYXNmIiwiZXhwIjoxNzQ4MTg3MzAxfQ.9cQ-uTlb6-7tw0kUGrBHojps4g4Yw0wVXt_Dl2NaJMQ","receiver":"unknown"}
+2025-05-25 18:30:03.706 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранение в базу данных
+2025-05-25 18:30:03.707 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранено 0 успешно элементов
+2025-05-25 18:30:03.708 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-25 18:30:41.085 [pool-3-thread-3] INFO  org.example.mutlithread.ReceiverThread - Received ping request from: localhost
+2025-05-25 18:30:41.086 [ForkJoinPool.commonPool-worker-5] DEBUG org.example.mutlithread.SenderThread - Sending: Pong
+2025-05-25 18:30:41.086 [ForkJoinPool.commonPool-worker-5] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:57466:
+{"responseType":"SYSTEM","message":"Pong","receiver":"localhost"}
+2025-05-25 18:30:44.132 [pool-3-thread-3] INFO  org.example.mutlithread.ReceiverThread - Received authorization request
+2025-05-25 18:30:44.132 [pool-3-thread-3] INFO  org.example.serverUtils.ConsoleFileManager - Loading from DB
+2025-05-25 18:30:46.426 [pool-3-thread-3] WARN  org.example.serverUtils.ConsoleFileManager - The column name info was not found in this ResultSet.
+2025-05-25 18:30:50.934 [pool-3-thread-3] DEBUG org.example.users.UserManager - User hui was registered
+2025-05-25 18:30:50.937 [ForkJoinPool.commonPool-worker-5] DEBUG org.example.mutlithread.SenderThread - Sending: Registered
+2025-05-25 18:30:50.937 [ForkJoinPool.commonPool-worker-5] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:57466:
+{"responseType":"OK","message":"Registered","token":"eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJzZXJ2ZXIiLCJzdWIiOiJodWkiLCJleHAiOjE3NDgxODczNTB9.GpRjpwIfxdWXpwjgOt9ZnKAOAc-pFiQonoO1Zjw1KB0","receiver":"unknown"}
+2025-05-25 18:31:03.708 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранение в базу данных
+2025-05-25 18:31:03.709 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранено 0 успешно элементов
+2025-05-25 18:31:03.709 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-25 18:31:12.923 [pool-3-thread-3] INFO  org.example.mutlithread.ReceiverThread - Received ping request from: localhost
+2025-05-25 18:31:12.923 [ForkJoinPool.commonPool-worker-5] DEBUG org.example.mutlithread.SenderThread - Sending: Pong
+2025-05-25 18:31:12.923 [ForkJoinPool.commonPool-worker-5] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:50828:
+{"responseType":"SYSTEM","message":"Pong","receiver":"localhost"}
+2025-05-25 18:31:15.950 [pool-3-thread-3] INFO  org.example.mutlithread.ReceiverThread - Received authorization request
+2025-05-25 18:31:15.951 [pool-3-thread-3] INFO  org.example.serverUtils.ConsoleFileManager - Loading from DB
+2025-05-25 18:31:17.749 [pool-3-thread-3] WARN  org.example.serverUtils.ConsoleFileManager - The column name info was not found in this ResultSet.
+2025-05-25 18:31:21.112 [pool-3-thread-3] DEBUG org.example.users.UserManager - User fadsf was registered
+2025-05-25 18:31:21.114 [ForkJoinPool.commonPool-worker-5] DEBUG org.example.mutlithread.SenderThread - Sending: Registered
+2025-05-25 18:31:21.114 [ForkJoinPool.commonPool-worker-5] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:50828:
+{"responseType":"OK","message":"Registered","token":"eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJzZXJ2ZXIiLCJzdWIiOiJmYWRzZiIsImV4cCI6MTc0ODE4NzM4MX0.asbbBg3tU3fe9iBN9uxsnTL-ofpIx87MvofT9mGNO3Q","receiver":"unknown"}
+2025-05-25 18:32:03.707 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранение в базу данных
+2025-05-25 18:32:03.708 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранено 0 успешно элементов
+2025-05-25 18:32:03.708 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-25 18:33:03.709 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранение в базу данных
+2025-05-25 18:33:03.711 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранено 0 успешно элементов
+2025-05-25 18:33:03.712 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-25 18:34:03.705 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранение в базу данных
+2025-05-25 18:34:03.707 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранено 0 успешно элементов
+2025-05-25 18:34:03.708 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-25 18:34:27.866 [pool-3-thread-4] INFO  org.example.mutlithread.ReceiverThread - Received ping request from: localhost
+2025-05-25 18:34:27.867 [ForkJoinPool.commonPool-worker-7] DEBUG org.example.mutlithread.SenderThread - Sending: Pong
+2025-05-25 18:34:27.867 [ForkJoinPool.commonPool-worker-7] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:56196:
+{"responseType":"SYSTEM","message":"Pong","receiver":"localhost"}
+2025-05-25 18:34:31.447 [pool-3-thread-4] INFO  org.example.mutlithread.ReceiverThread - Received authorization request
+2025-05-25 18:34:31.447 [pool-3-thread-4] INFO  org.example.serverUtils.ConsoleFileManager - Loading from DB
+2025-05-25 18:34:33.206 [pool-3-thread-4] WARN  org.example.serverUtils.ConsoleFileManager - The column name info was not found in this ResultSet.
+2025-05-25 18:34:37.768 [pool-3-thread-4] DEBUG org.example.users.UserManager - User фывафыва23 was registered
+2025-05-25 18:34:37.769 [ForkJoinPool.commonPool-worker-7] DEBUG org.example.mutlithread.SenderThread - Sending: Registered
+2025-05-25 18:34:37.769 [ForkJoinPool.commonPool-worker-7] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:56196:
+{"responseType":"OK","message":"Registered","token":"eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJzZXJ2ZXIiLCJzdWIiOiLRhNGL0LLQsNGE0YvQstCwMjMiLCJleHAiOjE3NDgxODc1Nzd9.sn3Y4Pc3XulYe-fkyxTP_2g3C5Np5OFh8jq192BgUb4","receiver":"unknown"}
+2025-05-25 18:35:03.704 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранение в базу данных
+2025-05-25 18:35:03.705 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранено 0 успешно элементов
+2025-05-25 18:35:03.705 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-25 18:36:03.708 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранение в базу данных
+2025-05-25 18:36:03.709 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранено 0 успешно элементов
+2025-05-25 18:36:03.709 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-25 18:37:03.707 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранение в базу данных
+2025-05-25 18:37:03.709 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранено 0 успешно элементов
+2025-05-25 18:37:03.709 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-25 18:38:03.704 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранение в базу данных
+2025-05-25 18:38:03.706 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранено 0 успешно элементов
+2025-05-25 18:38:03.706 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-25 18:39:03.706 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранение в базу данных
+2025-05-25 18:39:03.707 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранено 0 успешно элементов
+2025-05-25 18:39:03.707 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-25 18:40:03.704 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранение в базу данных
+2025-05-25 18:40:03.707 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранено 0 успешно элементов
+2025-05-25 18:40:03.707 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-25 18:41:03.705 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранение в базу данных
+2025-05-25 18:41:03.706 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранено 0 успешно элементов
+2025-05-25 18:41:03.706 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-25 18:42:03.703 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранение в базу данных
+2025-05-25 18:42:03.704 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранено 0 успешно элементов
+2025-05-25 18:42:03.705 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-25 18:47:37.104 [main] INFO  org.example.serverUtils.Console - Initializing console commands
+2025-05-25 18:47:37.111 [main] INFO  org.example.serverUtils.Console - Registering Add Command
+2025-05-25 18:47:37.118 [main] INFO  org.example.serverUtils.Console - Registering AddIfMax Command
+2025-05-25 18:47:37.119 [main] INFO  org.example.serverUtils.Console - Registering AvgOfEnginePower Command
+2025-05-25 18:47:37.119 [main] INFO  org.example.serverUtils.Console - Registering Clear Command
+2025-05-25 18:47:37.120 [main] INFO  org.example.serverUtils.Console - Registering CountGreaterThanEnginePower Command
+2025-05-25 18:47:37.121 [main] INFO  org.example.serverUtils.Console - Registering Info Command
+2025-05-25 18:47:37.121 [main] INFO  org.example.serverUtils.Console - Registering MinByFuelType Command
+2025-05-25 18:47:37.122 [main] INFO  org.example.serverUtils.Console - Registering RemoveAt Command
+2025-05-25 18:47:37.122 [main] INFO  org.example.serverUtils.Console - Registering RemoveById Command
+2025-05-25 18:47:37.123 [main] INFO  org.example.serverUtils.Console - Registering RemoveGreater Command
+2025-05-25 18:47:37.124 [main] INFO  org.example.serverUtils.Console - Registering Show Command
+2025-05-25 18:47:37.124 [main] INFO  org.example.serverUtils.Console - Registering UpdateId Command
+2025-05-25 18:47:37.125 [main] INFO  org.example.serverUtils.ConnectionManager - Server bound to: /127.0.0.1:6789
+2025-05-25 18:47:37.125 [main] INFO  org.example.serverUtils.Console - The server is ready to receive commands
+2025-05-25 18:47:40.166 [pool-3-thread-1] INFO  org.example.mutlithread.ReceiverThread - Received ping request from: localhost
+2025-05-25 18:47:40.166 [ForkJoinPool.commonPool-worker-1] DEBUG org.example.mutlithread.SenderThread - Sending: Pong
+2025-05-25 18:47:40.180 [ForkJoinPool.commonPool-worker-1] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:58712:
+{"responseType":"SYSTEM","message":"Pong","receiver":"localhost"}
+2025-05-25 18:47:43.057 [pool-3-thread-1] INFO  org.example.mutlithread.ReceiverThread - Received authorization request
+2025-05-25 18:47:43.057 [pool-3-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Loading from DB
+2025-05-25 18:47:44.972 [pool-3-thread-1] WARN  org.example.serverUtils.ConsoleFileManager - The column name info was not found in this ResultSet.
+2025-05-25 18:47:48.935 [pool-3-thread-1] DEBUG org.example.users.UserManager - User fdasgasg was registered
+2025-05-25 18:47:49.021 [ForkJoinPool.commonPool-worker-1] DEBUG org.example.mutlithread.SenderThread - Sending: Registered
+2025-05-25 18:47:49.023 [ForkJoinPool.commonPool-worker-1] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:58712:
+{"responseType":"OK","message":"Registered","token":"eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJzZXJ2ZXIiLCJzdWIiOiJmZGFzZ2FzZyIsImV4cCI6MTc0ODE4ODM2OH0.a7VsLKQg5RSaJIvmH0Kq4z0DUw_KLe_et1DMmWak9k0","receiver":"unknown"}
+2025-05-25 19:02:43.085 [main] INFO  org.example.serverUtils.Console - Initializing console commands
+2025-05-25 19:02:43.089 [main] INFO  org.example.serverUtils.Console - Registering Add Command
+2025-05-25 19:02:43.090 [main] INFO  org.example.serverUtils.Console - Registering AddIfMax Command
+2025-05-25 19:02:43.091 [main] INFO  org.example.serverUtils.Console - Registering AvgOfEnginePower Command
+2025-05-25 19:02:43.092 [main] INFO  org.example.serverUtils.Console - Registering Clear Command
+2025-05-25 19:02:43.092 [main] INFO  org.example.serverUtils.Console - Registering CountGreaterThanEnginePower Command
+2025-05-25 19:02:43.093 [main] INFO  org.example.serverUtils.Console - Registering Info Command
+2025-05-25 19:02:43.093 [main] INFO  org.example.serverUtils.Console - Registering MinByFuelType Command
+2025-05-25 19:02:43.094 [main] INFO  org.example.serverUtils.Console - Registering RemoveAt Command
+2025-05-25 19:02:43.094 [main] INFO  org.example.serverUtils.Console - Registering RemoveById Command
+2025-05-25 19:02:43.095 [main] INFO  org.example.serverUtils.Console - Registering RemoveGreater Command
+2025-05-25 19:02:43.095 [main] INFO  org.example.serverUtils.Console - Registering Show Command
+2025-05-25 19:02:43.096 [main] INFO  org.example.serverUtils.Console - Registering UpdateId Command
+2025-05-25 19:02:43.097 [main] INFO  org.example.serverUtils.ConnectionManager - Server bound to: /127.0.0.1:6789
+2025-05-25 19:03:32.921 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранение в базу данных
+2025-05-25 19:03:32.925 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранено 0 успешно элементов
+2025-05-25 19:03:32.926 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-25 19:05:47.915 [main] INFO  org.example.serverUtils.Console - Initializing console commands
+2025-05-25 19:05:47.918 [main] INFO  org.example.serverUtils.Console - Registering Add Command
+2025-05-25 19:05:47.919 [main] INFO  org.example.serverUtils.Console - Registering AddIfMax Command
+2025-05-25 19:05:47.919 [main] INFO  org.example.serverUtils.Console - Registering AvgOfEnginePower Command
+2025-05-25 19:05:47.920 [main] INFO  org.example.serverUtils.Console - Registering Clear Command
+2025-05-25 19:05:47.920 [main] INFO  org.example.serverUtils.Console - Registering CountGreaterThanEnginePower Command
+2025-05-25 19:05:47.920 [main] INFO  org.example.serverUtils.Console - Registering Info Command
+2025-05-25 19:05:47.920 [main] INFO  org.example.serverUtils.Console - Registering MinByFuelType Command
+2025-05-25 19:05:47.921 [main] INFO  org.example.serverUtils.Console - Registering RemoveAt Command
+2025-05-25 19:05:47.921 [main] INFO  org.example.serverUtils.Console - Registering RemoveById Command
+2025-05-25 19:05:47.921 [main] INFO  org.example.serverUtils.Console - Registering RemoveGreater Command
+2025-05-25 19:05:47.922 [main] INFO  org.example.serverUtils.Console - Registering Show Command
+2025-05-25 19:05:47.922 [main] INFO  org.example.serverUtils.Console - Registering UpdateId Command
+2025-05-25 19:05:47.923 [main] INFO  org.example.serverUtils.ConnectionManager - Server bound to: /127.0.0.1:6789
+2025-05-25 19:05:47.943 [main] INFO  org.example.serverUtils.Console - The server is ready to receive commands
+2025-05-25 19:06:45.155 [main] INFO  org.example.serverUtils.Console - Initializing console commands
+2025-05-25 19:06:45.165 [main] INFO  org.example.serverUtils.Console - Registering Add Command
+2025-05-25 19:06:45.166 [main] INFO  org.example.serverUtils.Console - Registering AddIfMax Command
+2025-05-25 19:06:45.166 [main] INFO  org.example.serverUtils.Console - Registering AvgOfEnginePower Command
+2025-05-25 19:06:45.167 [main] INFO  org.example.serverUtils.Console - Registering Clear Command
+2025-05-25 19:06:45.167 [main] INFO  org.example.serverUtils.Console - Registering CountGreaterThanEnginePower Command
+2025-05-25 19:06:45.168 [main] INFO  org.example.serverUtils.Console - Registering Info Command
+2025-05-25 19:06:45.168 [main] INFO  org.example.serverUtils.Console - Registering MinByFuelType Command
+2025-05-25 19:06:45.168 [main] INFO  org.example.serverUtils.Console - Registering RemoveAt Command
+2025-05-25 19:06:45.169 [main] INFO  org.example.serverUtils.Console - Registering RemoveById Command
+2025-05-25 19:06:45.169 [main] INFO  org.example.serverUtils.Console - Registering RemoveGreater Command
+2025-05-25 19:06:45.169 [main] INFO  org.example.serverUtils.Console - Registering Show Command
+2025-05-25 19:06:45.170 [main] INFO  org.example.serverUtils.Console - Registering UpdateId Command
+2025-05-25 19:06:45.171 [main] INFO  org.example.serverUtils.ConnectionManager - Server bound to: /127.0.0.1:8071
+2025-05-25 19:06:45.189 [main] INFO  org.example.serverUtils.Console - The server is ready to receive commands
+2025-05-25 20:03:23.323 [main] INFO  org.example.serverUtils.Console - Initializing console commands
+2025-05-25 20:03:23.330 [main] INFO  org.example.serverUtils.Console - Registering Add Command
+2025-05-25 20:03:23.331 [main] INFO  org.example.serverUtils.Console - Registering AddIfMax Command
+2025-05-25 20:03:23.331 [main] INFO  org.example.serverUtils.Console - Registering AvgOfEnginePower Command
+2025-05-25 20:03:23.332 [main] INFO  org.example.serverUtils.Console - Registering Clear Command
+2025-05-25 20:03:23.333 [main] INFO  org.example.serverUtils.Console - Registering CountGreaterThanEnginePower Command
+2025-05-25 20:03:23.334 [main] INFO  org.example.serverUtils.Console - Registering Info Command
+2025-05-25 20:03:23.334 [main] INFO  org.example.serverUtils.Console - Registering MinByFuelType Command
+2025-05-25 20:03:23.335 [main] INFO  org.example.serverUtils.Console - Registering RemoveAt Command
+2025-05-25 20:03:23.336 [main] INFO  org.example.serverUtils.Console - Registering RemoveById Command
+2025-05-25 20:03:23.336 [main] INFO  org.example.serverUtils.Console - Registering RemoveGreater Command
+2025-05-25 20:03:23.337 [main] INFO  org.example.serverUtils.Console - Registering Show Command
+2025-05-25 20:03:23.338 [main] INFO  org.example.serverUtils.Console - Registering UpdateId Command
+2025-05-25 20:03:23.339 [main] INFO  org.example.serverUtils.ConnectionManager - Server bound to: /127.0.0.1:8071
+2025-05-25 20:03:23.361 [main] INFO  org.example.serverUtils.Console - The server is ready to receive commands
+2025-05-25 20:04:14.686 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранение в базу данных
+2025-05-25 20:04:14.689 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранено 0 успешно элементов
+2025-05-25 20:04:14.689 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-25 20:05:14.688 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранение в базу данных
+2025-05-25 20:05:14.689 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранено 0 успешно элементов
+2025-05-25 20:05:14.689 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-25 20:05:36.042 [main] INFO  org.example.serverUtils.Console - Initializing console commands
+2025-05-25 20:05:36.045 [main] INFO  org.example.serverUtils.Console - Registering Add Command
+2025-05-25 20:05:36.046 [main] INFO  org.example.serverUtils.Console - Registering AddIfMax Command
+2025-05-25 20:05:36.047 [main] INFO  org.example.serverUtils.Console - Registering AvgOfEnginePower Command
+2025-05-25 20:05:36.047 [main] INFO  org.example.serverUtils.Console - Registering Clear Command
+2025-05-25 20:05:36.048 [main] INFO  org.example.serverUtils.Console - Registering CountGreaterThanEnginePower Command
+2025-05-25 20:05:36.048 [main] INFO  org.example.serverUtils.Console - Registering Info Command
+2025-05-25 20:05:36.049 [main] INFO  org.example.serverUtils.Console - Registering MinByFuelType Command
+2025-05-25 20:05:36.050 [main] INFO  org.example.serverUtils.Console - Registering RemoveAt Command
+2025-05-25 20:05:36.050 [main] INFO  org.example.serverUtils.Console - Registering RemoveById Command
+2025-05-25 20:05:36.051 [main] INFO  org.example.serverUtils.Console - Registering RemoveGreater Command
+2025-05-25 20:05:36.051 [main] INFO  org.example.serverUtils.Console - Registering Show Command
+2025-05-25 20:05:36.052 [main] INFO  org.example.serverUtils.Console - Registering UpdateId Command
+2025-05-25 20:05:36.052 [main] INFO  org.example.serverUtils.ConnectionManager - Server bound to: /127.0.0.1:6789
+2025-05-25 20:05:36.053 [main] INFO  org.example.serverUtils.Console - The server is ready to receive commands
+2025-05-25 20:05:40.719 [pool-3-thread-1] INFO  org.example.mutlithread.ReceiverThread - Received ping request from: 127.0.0.1
+2025-05-25 20:05:40.720 [ForkJoinPool.commonPool-worker-1] DEBUG org.example.mutlithread.SenderThread - Sending: Pong
+2025-05-25 20:05:40.733 [ForkJoinPool.commonPool-worker-1] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:59594:
+{"responseType":"SYSTEM","message":"Pong","receiver":"127.0.0.1"}
+2025-05-25 20:05:46.618 [pool-3-thread-1] INFO  org.example.mutlithread.ReceiverThread - Received authorization request
+2025-05-25 20:05:46.619 [pool-3-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Loading from DB
+2025-05-25 20:05:49.591 [pool-3-thread-1] WARN  org.example.serverUtils.ConsoleFileManager - The column name info was not found in this ResultSet.
+2025-05-25 20:06:03.552 [ForkJoinPool.commonPool-worker-1] DEBUG org.example.mutlithread.SenderThread - Sending: Wrong password
+2025-05-25 20:06:03.559 [ForkJoinPool.commonPool-worker-1] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:59594:
+{"responseType":"AUTH_ERROR","message":"Wrong password","receiver":"unknown"}
+2025-05-25 20:12:00.706 [main] INFO  org.example.serverUtils.Console - Initializing console commands
+2025-05-25 20:12:00.711 [main] INFO  org.example.serverUtils.Console - Registering Add Command
+2025-05-25 20:12:00.712 [main] INFO  org.example.serverUtils.Console - Registering AddIfMax Command
+2025-05-25 20:12:00.712 [main] INFO  org.example.serverUtils.Console - Registering AvgOfEnginePower Command
+2025-05-25 20:12:00.713 [main] INFO  org.example.serverUtils.Console - Registering Clear Command
+2025-05-25 20:12:00.714 [main] INFO  org.example.serverUtils.Console - Registering CountGreaterThanEnginePower Command
+2025-05-25 20:12:00.715 [main] INFO  org.example.serverUtils.Console - Registering Info Command
+2025-05-25 20:12:00.715 [main] INFO  org.example.serverUtils.Console - Registering MinByFuelType Command
+2025-05-25 20:12:00.716 [main] INFO  org.example.serverUtils.Console - Registering RemoveAt Command
+2025-05-25 20:12:00.716 [main] INFO  org.example.serverUtils.Console - Registering RemoveById Command
+2025-05-25 20:12:00.717 [main] INFO  org.example.serverUtils.Console - Registering RemoveGreater Command
+2025-05-25 20:12:00.717 [main] INFO  org.example.serverUtils.Console - Registering Show Command
+2025-05-25 20:12:00.718 [main] INFO  org.example.serverUtils.Console - Registering UpdateId Command
+2025-05-25 20:12:00.719 [main] INFO  org.example.serverUtils.ConnectionManager - Server bound to: /127.0.0.1:6789
+2025-05-25 20:12:00.719 [main] INFO  org.example.serverUtils.Console - The server is ready to receive commands
+2025-05-25 20:12:53.434 [main] INFO  org.example.serverUtils.ConsoleFileManager - Loading from DB
+2025-05-25 20:12:57.267 [main] WARN  org.example.serverUtils.ConsoleFileManager - The column name info was not found in this ResultSet.
+2025-05-25 20:12:57.268 [main] INFO  org.example.serverUtils.Console - Initializing console commands
+2025-05-25 20:12:57.272 [main] INFO  org.example.serverUtils.Console - Registering Add Command
+2025-05-25 20:12:57.273 [main] INFO  org.example.serverUtils.Console - Registering AddIfMax Command
+2025-05-25 20:12:57.274 [main] INFO  org.example.serverUtils.Console - Registering AvgOfEnginePower Command
+2025-05-25 20:12:57.274 [main] INFO  org.example.serverUtils.Console - Registering Clear Command
+2025-05-25 20:12:57.275 [main] INFO  org.example.serverUtils.Console - Registering CountGreaterThanEnginePower Command
+2025-05-25 20:12:57.275 [main] INFO  org.example.serverUtils.Console - Registering Info Command
+2025-05-25 20:12:57.275 [main] INFO  org.example.serverUtils.Console - Registering MinByFuelType Command
+2025-05-25 20:12:57.276 [main] INFO  org.example.serverUtils.Console - Registering RemoveAt Command
+2025-05-25 20:12:57.277 [main] INFO  org.example.serverUtils.Console - Registering RemoveById Command
+2025-05-25 20:12:57.277 [main] INFO  org.example.serverUtils.Console - Registering RemoveGreater Command
+2025-05-25 20:12:57.277 [main] INFO  org.example.serverUtils.Console - Registering Show Command
+2025-05-25 20:12:57.278 [main] INFO  org.example.serverUtils.Console - Registering UpdateId Command
+2025-05-25 20:12:57.280 [main] INFO  org.example.serverUtils.ConnectionManager - Server bound to: /127.0.0.1:6789
+2025-05-25 20:12:57.281 [main] INFO  org.example.serverUtils.Console - The server is ready to receive commands
+2025-05-25 20:13:43.977 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранение в базу данных
+2025-05-25 20:13:43.978 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранено 0 успешно элементов
+2025-05-25 20:13:43.978 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-25 20:17:17.172 [main] INFO  org.example.serverUtils.ConsoleFileManager - Loading from DB
+2025-05-25 20:17:22.565 [main] INFO  org.example.serverUtils.ConsoleFileManager - Loaded 0 elements successfully
+2025-05-25 20:17:22.565 [main] INFO  org.example.serverUtils.Console - Initializing console commands
+2025-05-25 20:17:22.571 [main] INFO  org.example.serverUtils.Console - Registering Add Command
+2025-05-25 20:17:22.573 [main] INFO  org.example.serverUtils.Console - Registering AddIfMax Command
+2025-05-25 20:17:22.574 [main] INFO  org.example.serverUtils.Console - Registering AvgOfEnginePower Command
+2025-05-25 20:17:22.575 [main] INFO  org.example.serverUtils.Console - Registering Clear Command
+2025-05-25 20:17:22.576 [main] INFO  org.example.serverUtils.Console - Registering CountGreaterThanEnginePower Command
+2025-05-25 20:17:22.576 [main] INFO  org.example.serverUtils.Console - Registering Info Command
+2025-05-25 20:17:22.577 [main] INFO  org.example.serverUtils.Console - Registering MinByFuelType Command
+2025-05-25 20:17:22.578 [main] INFO  org.example.serverUtils.Console - Registering RemoveAt Command
+2025-05-25 20:17:22.579 [main] INFO  org.example.serverUtils.Console - Registering RemoveById Command
+2025-05-25 20:17:22.579 [main] INFO  org.example.serverUtils.Console - Registering RemoveGreater Command
+2025-05-25 20:17:22.580 [main] INFO  org.example.serverUtils.Console - Registering Show Command
+2025-05-25 20:17:22.581 [main] INFO  org.example.serverUtils.Console - Registering UpdateId Command
+2025-05-25 20:17:22.583 [main] INFO  org.example.serverUtils.ConnectionManager - Server bound to: /127.0.0.1:6789
+2025-05-25 20:17:22.583 [main] INFO  org.example.serverUtils.Console - The server is ready to receive commands
+2025-05-25 20:18:03.664 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранение в базу данных
+2025-05-25 20:18:03.668 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранено 0 успешно элементов
+2025-05-25 20:18:03.669 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-25 20:41:13.254 [main] INFO  org.example.serverUtils.ConsoleFileManager - Loading from DB
+2025-05-25 20:41:17.622 [main] INFO  org.example.serverUtils.ConsoleFileManager - Loaded 0 elements successfully
+2025-05-25 20:41:17.623 [main] INFO  org.example.serverUtils.Console - Initializing console commands
+2025-05-25 20:41:17.626 [main] INFO  org.example.serverUtils.Console - Registering Add Command
+2025-05-25 20:41:17.626 [main] INFO  org.example.serverUtils.Console - Registering AddIfMax Command
+2025-05-25 20:41:17.627 [main] INFO  org.example.serverUtils.Console - Registering AvgOfEnginePower Command
+2025-05-25 20:41:17.627 [main] INFO  org.example.serverUtils.Console - Registering Clear Command
+2025-05-25 20:41:17.627 [main] INFO  org.example.serverUtils.Console - Registering CountGreaterThanEnginePower Command
+2025-05-25 20:41:17.628 [main] INFO  org.example.serverUtils.Console - Registering Info Command
+2025-05-25 20:41:17.628 [main] INFO  org.example.serverUtils.Console - Registering MinByFuelType Command
+2025-05-25 20:41:17.629 [main] INFO  org.example.serverUtils.Console - Registering RemoveAt Command
+2025-05-25 20:41:17.629 [main] INFO  org.example.serverUtils.Console - Registering RemoveById Command
+2025-05-25 20:41:17.629 [main] INFO  org.example.serverUtils.Console - Registering RemoveGreater Command
+2025-05-25 20:41:17.630 [main] INFO  org.example.serverUtils.Console - Registering Show Command
+2025-05-25 20:41:17.630 [main] INFO  org.example.serverUtils.Console - Registering UpdateId Command
+2025-05-25 20:41:17.631 [main] INFO  org.example.serverUtils.ConnectionManager - Server bound to: /127.0.0.1:6789
+2025-05-25 20:41:17.631 [main] INFO  org.example.serverUtils.Console - The server is ready to receive commands
+2025-05-25 20:41:30.004 [pool-3-thread-1] INFO  org.example.mutlithread.ReceiverThread - Received ping request from: 127.0.0.1
+2025-05-25 20:41:30.005 [ForkJoinPool.commonPool-worker-1] DEBUG org.example.mutlithread.SenderThread - Sending: Pong
+2025-05-25 20:41:30.017 [ForkJoinPool.commonPool-worker-1] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:50456:
+{"responseType":"SYSTEM","message":"Pong","receiver":"127.0.0.1"}
+2025-05-25 20:41:34.796 [pool-3-thread-1] INFO  org.example.mutlithread.ReceiverThread - Received authorization request
+2025-05-25 20:41:34.797 [pool-3-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Loading from DB
+2025-05-25 20:41:39.076 [pool-3-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Loaded 0 elements successfully
+2025-05-25 20:41:47.147 [pool-3-thread-1] DEBUG org.example.users.UserManager - User r was registered
+2025-05-25 20:41:47.226 [ForkJoinPool.commonPool-worker-1] DEBUG org.example.mutlithread.SenderThread - Sending: Registered
+2025-05-25 20:41:47.226 [ForkJoinPool.commonPool-worker-1] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:50456:
+{"responseType":"OK","message":"Registered","token":"eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJzZXJ2ZXIiLCJzdWIiOiJyIiwiZXhwIjoxNzQ4MTk1MjA3fQ.2mDzSO67biLtq1JuJolWZE5Gu6CyMw54iXZRz3823nk","receiver":"unknown"}
+2025-05-25 20:42:04.036 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранение в базу данных
+2025-05-25 20:42:04.038 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранено 0 успешно элементов
+2025-05-25 20:42:04.039 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-25 20:43:04.039 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранение в базу данных
+2025-05-25 20:43:04.041 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранено 0 успешно элементов
+2025-05-25 20:43:04.041 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-25 20:44:04.038 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранение в базу данных
+2025-05-25 20:44:04.039 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранено 0 успешно элементов
+2025-05-25 20:44:04.039 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-25 20:45:04.034 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранение в базу данных
+2025-05-25 20:45:04.036 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранено 0 успешно элементов
+2025-05-25 20:45:04.036 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-25 20:46:04.033 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранение в базу данных
+2025-05-25 20:46:04.034 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранено 0 успешно элементов
+2025-05-25 20:46:04.034 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-25 20:46:21.296 [main] INFO  org.example.serverUtils.ConsoleFileManager - Loading from DB
+2025-05-25 20:46:25.287 [main] INFO  org.example.serverUtils.ConsoleFileManager - Loaded 0 elements successfully
+2025-05-25 20:46:25.288 [main] INFO  org.example.serverUtils.Console - Initializing console commands
+2025-05-25 20:46:25.292 [main] INFO  org.example.serverUtils.Console - Registering Add Command
+2025-05-25 20:46:25.293 [main] INFO  org.example.serverUtils.Console - Registering AddIfMax Command
+2025-05-25 20:46:25.294 [main] INFO  org.example.serverUtils.Console - Registering AvgOfEnginePower Command
+2025-05-25 20:46:25.295 [main] INFO  org.example.serverUtils.Console - Registering Clear Command
+2025-05-25 20:46:25.295 [main] INFO  org.example.serverUtils.Console - Registering CountGreaterThanEnginePower Command
+2025-05-25 20:46:25.296 [main] INFO  org.example.serverUtils.Console - Registering Info Command
+2025-05-25 20:46:25.297 [main] INFO  org.example.serverUtils.Console - Registering MinByFuelType Command
+2025-05-25 20:46:25.297 [main] INFO  org.example.serverUtils.Console - Registering RemoveAt Command
+2025-05-25 20:46:25.298 [main] INFO  org.example.serverUtils.Console - Registering RemoveById Command
+2025-05-25 20:46:25.298 [main] INFO  org.example.serverUtils.Console - Registering RemoveGreater Command
+2025-05-25 20:46:25.299 [main] INFO  org.example.serverUtils.Console - Registering Show Command
+2025-05-25 20:46:25.300 [main] INFO  org.example.serverUtils.Console - Registering UpdateId Command
+2025-05-25 20:46:25.301 [main] INFO  org.example.serverUtils.ConnectionManager - Server bound to: /127.0.0.1:6789
+2025-05-25 20:46:25.301 [main] INFO  org.example.serverUtils.Console - The server is ready to receive commands
+2025-05-25 20:46:32.925 [pool-3-thread-1] INFO  org.example.mutlithread.ReceiverThread - Received ping request from: 127.0.0.1
+2025-05-25 20:46:32.925 [ForkJoinPool.commonPool-worker-1] DEBUG org.example.mutlithread.SenderThread - Sending: Pong
+2025-05-25 20:46:32.938 [ForkJoinPool.commonPool-worker-1] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:51518:
+{"responseType":"SYSTEM","message":"Pong","receiver":"127.0.0.1"}
+2025-05-25 20:46:36.529 [pool-3-thread-1] INFO  org.example.mutlithread.ReceiverThread - Received authorization request
+2025-05-25 20:46:45.089 [pool-3-thread-1] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:51518:
+{"responseType":"AUTH_ERROR","message":"Wrong password","receiver":"unknown"}
+2025-05-25 20:46:45.090 [ForkJoinPool.commonPool-worker-1] DEBUG org.example.mutlithread.SenderThread - Sending: Wrong password
+2025-05-25 20:46:45.091 [ForkJoinPool.commonPool-worker-1] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:51518:
+{"responseType":"AUTH_ERROR","message":"Wrong password","receiver":"unknown"}
+2025-05-25 20:47:11.384 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранение в базу данных
+2025-05-25 20:47:11.387 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранено 0 успешно элементов
+2025-05-25 20:47:11.387 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-25 20:48:11.383 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранение в базу данных
+2025-05-25 20:48:11.385 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранено 0 успешно элементов
+2025-05-25 20:48:11.385 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-25 20:49:11.383 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранение в базу данных
+2025-05-25 20:49:11.385 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранено 0 успешно элементов
+2025-05-25 20:49:11.385 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-25 20:50:05.952 [main] INFO  org.example.serverUtils.ConsoleFileManager - Loading from DB
+2025-05-25 20:50:10.094 [main] INFO  org.example.serverUtils.ConsoleFileManager - Loaded 0 elements successfully
+2025-05-25 20:50:10.095 [main] INFO  org.example.serverUtils.Console - Initializing console commands
+2025-05-25 20:50:10.101 [main] INFO  org.example.serverUtils.Console - Registering Add Command
+2025-05-25 20:50:10.103 [main] INFO  org.example.serverUtils.Console - Registering AddIfMax Command
+2025-05-25 20:50:10.104 [main] INFO  org.example.serverUtils.Console - Registering AvgOfEnginePower Command
+2025-05-25 20:50:10.104 [main] INFO  org.example.serverUtils.Console - Registering Clear Command
+2025-05-25 20:50:10.105 [main] INFO  org.example.serverUtils.Console - Registering CountGreaterThanEnginePower Command
+2025-05-25 20:50:10.106 [main] INFO  org.example.serverUtils.Console - Registering Info Command
+2025-05-25 20:50:10.107 [main] INFO  org.example.serverUtils.Console - Registering MinByFuelType Command
+2025-05-25 20:50:10.107 [main] INFO  org.example.serverUtils.Console - Registering RemoveAt Command
+2025-05-25 20:50:10.108 [main] INFO  org.example.serverUtils.Console - Registering RemoveById Command
+2025-05-25 20:50:10.109 [main] INFO  org.example.serverUtils.Console - Registering RemoveGreater Command
+2025-05-25 20:50:10.109 [main] INFO  org.example.serverUtils.Console - Registering Show Command
+2025-05-25 20:50:10.110 [main] INFO  org.example.serverUtils.Console - Registering UpdateId Command
+2025-05-25 20:50:10.116 [main] INFO  org.example.serverUtils.ConnectionManager - Server bound to: /127.0.0.1:6789
+2025-05-25 20:50:10.116 [main] INFO  org.example.serverUtils.Console - The server is ready to receive commands
+2025-05-25 20:50:23.966 [pool-3-thread-1] INFO  org.example.mutlithread.ReceiverThread - Received ping request from: 127.0.0.1
+2025-05-25 20:50:23.967 [ForkJoinPool.commonPool-worker-1] DEBUG org.example.mutlithread.SenderThread - Sending: Pong
+2025-05-25 20:50:23.981 [ForkJoinPool.commonPool-worker-1] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:60953:
+{"responseType":"SYSTEM","message":"Pong","receiver":"127.0.0.1"}
+2025-05-25 20:50:27.928 [pool-3-thread-1] INFO  org.example.mutlithread.ReceiverThread - Received authorization request
+2025-05-25 20:50:34.883 [pool-3-thread-1] DEBUG org.example.users.UserManager - User cfsadfdasfdgasg was registered
+2025-05-25 20:50:34.958 [ForkJoinPool.commonPool-worker-1] DEBUG org.example.mutlithread.SenderThread - Sending: Registered
+2025-05-25 20:50:34.958 [ForkJoinPool.commonPool-worker-1] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:60953:
+{"responseType":"OK","message":"Registered","token":"eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJzZXJ2ZXIiLCJzdWIiOiJjZnNhZGZkYXNmZGdhc2ciLCJleHAiOjE3NDgxOTU3MzR9.sS1SY6JRt9Vs2zrl2TV7xjpSjJrjf9sGbYFsL1LumD0","receiver":"unknown"}
+2025-05-25 20:52:18.829 [main] INFO  org.example.serverUtils.ConsoleFileManager - Loading from DB
+2025-05-25 20:52:23.887 [main] INFO  org.example.serverUtils.ConsoleFileManager - Loaded 0 elements successfully
+2025-05-25 20:52:23.888 [main] INFO  org.example.serverUtils.Console - Initializing console commands
+2025-05-25 20:52:23.894 [main] INFO  org.example.serverUtils.Console - Registering Add Command
+2025-05-25 20:52:23.896 [main] INFO  org.example.serverUtils.Console - Registering AddIfMax Command
+2025-05-25 20:52:23.897 [main] INFO  org.example.serverUtils.Console - Registering AvgOfEnginePower Command
+2025-05-25 20:52:23.898 [main] INFO  org.example.serverUtils.Console - Registering Clear Command
+2025-05-25 20:52:23.899 [main] INFO  org.example.serverUtils.Console - Registering CountGreaterThanEnginePower Command
+2025-05-25 20:52:23.900 [main] INFO  org.example.serverUtils.Console - Registering Info Command
+2025-05-25 20:52:23.901 [main] INFO  org.example.serverUtils.Console - Registering MinByFuelType Command
+2025-05-25 20:52:23.901 [main] INFO  org.example.serverUtils.Console - Registering RemoveAt Command
+2025-05-25 20:52:23.902 [main] INFO  org.example.serverUtils.Console - Registering RemoveById Command
+2025-05-25 20:52:23.903 [main] INFO  org.example.serverUtils.Console - Registering RemoveGreater Command
+2025-05-25 20:52:23.903 [main] INFO  org.example.serverUtils.Console - Registering Show Command
+2025-05-25 20:52:23.904 [main] INFO  org.example.serverUtils.Console - Registering UpdateId Command
+2025-05-25 20:52:23.906 [main] INFO  org.example.serverUtils.ConnectionManager - Server bound to: /127.0.0.1:6789
+2025-05-25 20:52:23.906 [main] INFO  org.example.serverUtils.Console - The server is ready to receive commands
+2025-05-25 20:52:29.243 [pool-3-thread-1] INFO  org.example.mutlithread.ReceiverThread - Received ping request from: 127.0.0.1
+2025-05-25 20:52:29.244 [ForkJoinPool.commonPool-worker-1] DEBUG org.example.mutlithread.SenderThread - Sending: Pong
+2025-05-25 20:52:29.257 [ForkJoinPool.commonPool-worker-1] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:49559:
+{"responseType":"SYSTEM","message":"Pong","receiver":"127.0.0.1"}
+2025-05-25 20:52:31.589 [pool-3-thread-1] INFO  org.example.mutlithread.ReceiverThread - Received authorization request
+2025-05-25 20:52:40.308 [pool-3-thread-1] DEBUG org.example.users.UserManager - User ffdsfsg was registered
+2025-05-25 20:52:40.391 [ForkJoinPool.commonPool-worker-1] DEBUG org.example.mutlithread.SenderThread - Sending: Registered
+2025-05-25 20:52:40.391 [ForkJoinPool.commonPool-worker-1] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:49559:
+{"responseType":"OK","message":"Registered","token":"eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJzZXJ2ZXIiLCJzdWIiOiJmZmRzZnNnIiwiZXhwIjoxNzQ4MTk1ODYwfQ.B9N3_tRNUPfoBB-FqY9oY97q5F3SLo5Moj5lUesklXc","receiver":"unknown"}
+2025-05-25 20:53:06.946 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранение в базу данных
+2025-05-25 20:53:06.949 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранено 0 успешно элементов
+2025-05-25 20:53:06.949 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-25 20:53:54.686 [pool-3-thread-2] INFO  org.example.mutlithread.ReceiverThread - Received ping request from: 127.0.0.1
+2025-05-25 20:53:54.687 [ForkJoinPool.commonPool-worker-3] DEBUG org.example.mutlithread.SenderThread - Sending: Pong
+2025-05-25 20:53:54.687 [ForkJoinPool.commonPool-worker-3] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:58979:
+{"responseType":"SYSTEM","message":"Pong","receiver":"127.0.0.1"}
+2025-05-25 20:53:57.343 [pool-3-thread-2] INFO  org.example.mutlithread.ReceiverThread - Received authorization request
+2025-05-25 20:54:06.453 [pool-3-thread-2] DEBUG org.example.users.UserManager - User fdsgs was registered
+2025-05-25 20:54:06.455 [ForkJoinPool.commonPool-worker-3] DEBUG org.example.mutlithread.SenderThread - Sending: Registered
+2025-05-25 20:54:06.455 [ForkJoinPool.commonPool-worker-3] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:58979:
+{"responseType":"OK","message":"Registered","token":"eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJzZXJ2ZXIiLCJzdWIiOiJmZHNncyIsImV4cCI6MTc0ODE5NTk0Nn0.J_fnVKtXdggth6jIGHApwyeMtQQ6ON9kqcmLn99GdrQ","receiver":"unknown"}
+2025-05-25 20:54:06.946 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранение в базу данных
+2025-05-25 20:54:06.947 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранено 0 успешно элементов
+2025-05-25 20:54:06.947 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-25 20:55:06.944 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранение в базу данных
+2025-05-25 20:55:06.948 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранено 0 успешно элементов
+2025-05-25 20:55:06.948 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-25 20:55:23.865 [pool-3-thread-3] INFO  org.example.mutlithread.ReceiverThread - Received ping request from: 127.0.0.1
+2025-05-25 20:55:23.866 [ForkJoinPool.commonPool-worker-5] DEBUG org.example.mutlithread.SenderThread - Sending: Pong
+2025-05-25 20:55:23.866 [ForkJoinPool.commonPool-worker-5] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:51508:
+{"responseType":"SYSTEM","message":"Pong","receiver":"127.0.0.1"}
+2025-05-25 20:55:27.612 [pool-3-thread-3] INFO  org.example.mutlithread.ReceiverThread - Received authorization request
+2025-05-25 20:55:35.541 [pool-3-thread-3] DEBUG org.example.users.UserManager - User sdfasdf was registered
+2025-05-25 20:55:35.545 [ForkJoinPool.commonPool-worker-5] DEBUG org.example.mutlithread.SenderThread - Sending: Registered
+2025-05-25 20:55:35.546 [ForkJoinPool.commonPool-worker-5] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:51508:
+{"responseType":"OK","message":"Registered","token":"eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJzZXJ2ZXIiLCJzdWIiOiJzZGZhc2RmIiwiZXhwIjoxNzQ4MTk2MDM1fQ.BeS9uk1l9SZZ7MUvlJyCpeH3YhTS9IOK5n7dtMohuPg","receiver":"unknown"}
+2025-05-25 20:55:35.550 [pool-3-thread-3] TRACE org.example.mutlithread.ReceiverThread - Received initialization request
+2025-05-25 20:55:35.573 [ForkJoinPool.commonPool-worker-5] DEBUG org.example.mutlithread.SenderThread - Sending: {"commands":{"add":"Adds a new vehicle to the collection","add_if_max":"Adds a new vehicle to collection if it's max","avg_of_eng_pw":"Returns average engine power of the all collection","clear":"Clears the collection","count_gr_than_eng_pw":"Return a quantity of objects, which have engPw greater than given","info":"Returns info about collection","min_by_fuel":"Returns object that is min by fuel type","remove_at":"Removes an object from collection with given index","remove_by_id":"Removes an object from the collection with given id","remove_greater":"Removes all items from collection that have greater engPW than given","show":"Returns info about all items from the collection","update_id":"Updates a field from item with given id"},"arguments":{"add":"{\"type\":\"org.example.commands.consoleCommands.AddCommand\"}","add_if_max":"{\"type\":\"org.example.commands.consoleCommands.AddIfMaxCommand\"}","avg_of_eng_pw":"{\"type\":\"org.example.commands.consoleCommands.AvgOfEnginePowerCommand\"}","clear":"{\"type\":\"org.example.commands.consoleCommands.ClearCommand\"}","count_gr_than_eng_pw":"{\"type\":\"org.example.commands.consoleCommands.CountGrThanEngPwCommand\"}","info":"{\"type\":\"org.example.commands.consoleCommands.InfoCommand\"}","min_by_fuel":"{\"type\":\"org.example.commands.consoleCommands.MinByFuelTypeCommand\"}","remove_at":"{\"type\":\"org.example.commands.consoleCommands.RemoveAtCommand\"}","remove_by_id":"{\"type\":\"org.example.commands.consoleCommands.RemoveByIdCommand\"}","remove_greater":"{\"type\":\"org.example.commands.consoleCommands.RemoveGreaterCommand\"}","show":"{\"type\":\"org.example.commands.consoleCommands.ShowCommand\"}","update_id":"{\"type\":\"org.example.commands.consoleCommands.UpdateIdCommand\"}"}}
+2025-05-25 20:55:35.573 [ForkJoinPool.commonPool-worker-5] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:51508:
+{"responseType":"SYSTEM","message":"{\"commands\":{\"add\":\"Adds a new vehicle to the collection\",\"add_if_max\":\"Adds a new vehicle to collection if it's max\",\"avg_of_eng_pw\":\"Returns average engine power of the all collection\",\"clear\":\"Clears the collection\",\"count_gr_than_eng_pw\":\"Return a quantity of objects, which have engPw greater than given\",\"info\":\"Returns info about collection\",\"min_by_fuel\":\"Returns object that is min by fuel type\",\"remove_at\":\"Removes an object from collection with given index\",\"remove_by_id\":\"Removes an object from the collection with given id\",\"remove_greater\":\"Removes all items from collection that have greater engPW than given\",\"show\":\"Returns info about all items from the collection\",\"update_id\":\"Updates a field from item with given id\"},\"arguments\":{\"add\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.AddCommand\\\"}\",\"add_if_max\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.AddIfMaxCommand\\\"}\",\"avg_of_eng_pw\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.AvgOfEnginePowerCommand\\\"}\",\"clear\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.ClearCommand\\\"}\",\"count_gr_than_eng_pw\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.CountGrThanEngPwCommand\\\"}\",\"info\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.InfoCommand\\\"}\",\"min_by_fuel\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.MinByFuelTypeCommand\\\"}\",\"remove_at\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.RemoveAtCommand\\\"}\",\"remove_by_id\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.RemoveByIdCommand\\\"}\",\"remove_greater\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.RemoveGreaterCommand\\\"}\",\"show\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.ShowCommand\\\"}\",\"update_id\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.UpdateIdCommand\\\"}\"}}","receiver":"unknown"}
+2025-05-25 20:55:49.493 [pool-3-thread-3] INFO  org.example.mutlithread.ReceiverThread - Received command: show
+2025-05-25 20:55:49.493 [pool-3-thread-3] INFO  org.example.serverUtils.ConsoleFileManager - Loading from DB
+2025-05-25 20:55:52.307 [pool-3-thread-3] INFO  org.example.serverUtils.ConsoleFileManager - Loaded 0 elements successfully
+2025-05-25 20:55:52.327 [pool-3-thread-3] ERROR org.example.mutlithread.ReceiverThread - Error while executing command: JWT String argument cannot be null or empty.
+2025-05-25 20:55:52.336 [ForkJoinPool.commonPool-worker-5] DEBUG org.example.mutlithread.SenderThread - Sending: JWT String argument cannot be null or empty.
+2025-05-25 20:55:52.338 [ForkJoinPool.commonPool-worker-5] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:51508:
+{"responseType":"ERROR","message":"JWT String argument cannot be null or empty.","receiver":"unknown"}
+2025-05-25 20:56:06.945 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранение в базу данных
+2025-05-25 20:56:06.947 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранено 0 успешно элементов
+2025-05-25 20:56:06.947 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-25 20:56:11.538 [pool-3-thread-3] INFO  org.example.mutlithread.ReceiverThread - Received command: info
+2025-05-25 20:56:11.538 [pool-3-thread-3] INFO  org.example.serverUtils.ConsoleFileManager - Loading from DB
+2025-05-25 20:56:13.311 [pool-3-thread-3] INFO  org.example.serverUtils.ConsoleFileManager - Loaded 0 elements successfully
+2025-05-25 20:56:13.316 [pool-3-thread-3] ERROR org.example.mutlithread.ReceiverThread - Error while executing command: JWT String argument cannot be null or empty.
+2025-05-25 20:56:13.316 [ForkJoinPool.commonPool-worker-5] DEBUG org.example.mutlithread.SenderThread - Sending: JWT String argument cannot be null or empty.
+2025-05-25 20:56:13.317 [ForkJoinPool.commonPool-worker-5] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:51508:
+{"responseType":"ERROR","message":"JWT String argument cannot be null or empty.","receiver":"unknown"}
+2025-05-25 20:57:06.939 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранение в базу данных
+2025-05-25 20:57:06.942 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранено 0 успешно элементов
+2025-05-25 20:57:06.942 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-25 20:58:06.943 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранение в базу данных
+2025-05-25 20:58:06.945 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранено 0 успешно элементов
+2025-05-25 20:58:06.945 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-25 20:58:37.648 [pool-3-thread-4] INFO  org.example.mutlithread.ReceiverThread - Received command: add
+2025-05-25 20:58:37.649 [pool-3-thread-4] INFO  org.example.serverUtils.ConsoleFileManager - Loading from DB
+2025-05-25 20:58:40.681 [pool-3-thread-4] INFO  org.example.serverUtils.ConsoleFileManager - Loaded 0 elements successfully
+2025-05-25 20:58:40.686 [pool-3-thread-4] ERROR org.example.mutlithread.ReceiverThread - Error while executing command: JWT String argument cannot be null or empty.
+2025-05-25 20:58:40.687 [ForkJoinPool.commonPool-worker-7] DEBUG org.example.mutlithread.SenderThread - Sending: JWT String argument cannot be null or empty.
+2025-05-25 20:58:40.687 [ForkJoinPool.commonPool-worker-7] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:51508:
+{"responseType":"ERROR","message":"JWT String argument cannot be null or empty.","receiver":"unknown"}
+2025-05-25 20:59:06.943 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранение в базу данных
+2025-05-25 20:59:06.945 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранено 0 успешно элементов
+2025-05-25 20:59:06.945 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-25 21:00:06.942 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранение в базу данных
+2025-05-25 21:00:06.943 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранено 0 успешно элементов
+2025-05-25 21:00:06.943 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-25 21:01:06.941 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранение в базу данных
+2025-05-25 21:01:06.943 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранено 0 успешно элементов
+2025-05-25 21:01:06.943 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-25 21:02:06.940 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранение в базу данных
+2025-05-25 21:02:06.941 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранено 0 успешно элементов
+2025-05-25 21:02:06.942 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-25 21:03:06.941 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранение в базу данных
+2025-05-25 21:03:06.942 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранено 0 успешно элементов
+2025-05-25 21:03:06.942 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-25 21:04:06.936 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранение в базу данных
+2025-05-25 21:04:06.938 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранено 0 успешно элементов
+2025-05-25 21:04:06.938 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-25 21:05:06.938 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранение в базу данных
+2025-05-25 21:05:06.941 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранено 0 успешно элементов
+2025-05-25 21:05:06.941 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-25 21:05:51.212 [pool-3-thread-5] INFO  org.example.mutlithread.ReceiverThread - Received command: info
+2025-05-25 21:05:51.213 [pool-3-thread-5] INFO  org.example.serverUtils.ConsoleFileManager - Loading from DB
+2025-05-25 21:05:55.891 [pool-3-thread-5] INFO  org.example.serverUtils.ConsoleFileManager - Loaded 0 elements successfully
+2025-05-25 21:05:55.897 [pool-3-thread-5] ERROR org.example.mutlithread.ReceiverThread - Error while executing command: JWT String argument cannot be null or empty.
+2025-05-25 21:05:55.898 [ForkJoinPool.commonPool-worker-9] DEBUG org.example.mutlithread.SenderThread - Sending: JWT String argument cannot be null or empty.
+2025-05-25 21:05:55.899 [ForkJoinPool.commonPool-worker-9] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:51508:
+{"responseType":"ERROR","message":"JWT String argument cannot be null or empty.","receiver":"unknown"}
+2025-05-25 21:06:06.935 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранение в базу данных
+2025-05-25 21:06:06.936 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранено 0 успешно элементов
+2025-05-25 21:06:06.936 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-25 21:06:22.625 [main] INFO  org.example.serverUtils.ConsoleFileManager - Loading from DB
+2025-05-25 21:06:25.937 [main] INFO  org.example.serverUtils.ConsoleFileManager - Loaded 0 elements successfully
+2025-05-25 21:06:25.937 [main] INFO  org.example.serverUtils.Console - Initializing console commands
+2025-05-25 21:06:25.944 [main] INFO  org.example.serverUtils.Console - Registering Add Command
+2025-05-25 21:06:25.946 [main] INFO  org.example.serverUtils.Console - Registering AddIfMax Command
+2025-05-25 21:06:25.947 [main] INFO  org.example.serverUtils.Console - Registering AvgOfEnginePower Command
+2025-05-25 21:06:25.948 [main] INFO  org.example.serverUtils.Console - Registering Clear Command
+2025-05-25 21:06:25.949 [main] INFO  org.example.serverUtils.Console - Registering CountGreaterThanEnginePower Command
+2025-05-25 21:06:25.950 [main] INFO  org.example.serverUtils.Console - Registering Info Command
+2025-05-25 21:06:25.951 [main] INFO  org.example.serverUtils.Console - Registering MinByFuelType Command
+2025-05-25 21:06:25.951 [main] INFO  org.example.serverUtils.Console - Registering RemoveAt Command
+2025-05-25 21:06:25.952 [main] INFO  org.example.serverUtils.Console - Registering RemoveById Command
+2025-05-25 21:06:25.953 [main] INFO  org.example.serverUtils.Console - Registering RemoveGreater Command
+2025-05-25 21:06:25.953 [main] INFO  org.example.serverUtils.Console - Registering Show Command
+2025-05-25 21:06:25.954 [main] INFO  org.example.serverUtils.Console - Registering UpdateId Command
+2025-05-25 21:06:25.956 [main] INFO  org.example.serverUtils.ConnectionManager - Server bound to: /127.0.0.1:6789
+2025-05-25 21:06:25.956 [main] INFO  org.example.serverUtils.Console - The server is ready to receive commands
+2025-05-25 21:07:10.868 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранение в базу данных
+2025-05-25 21:07:10.873 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранено 0 успешно элементов
+2025-05-25 21:07:10.873 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-25 21:07:26.497 [pool-3-thread-1] INFO  org.example.mutlithread.ReceiverThread - Received ping request from: 127.0.0.1
+2025-05-25 21:07:26.497 [ForkJoinPool.commonPool-worker-1] DEBUG org.example.mutlithread.SenderThread - Sending: Pong
+2025-05-25 21:07:26.509 [ForkJoinPool.commonPool-worker-1] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:56904:
+{"responseType":"SYSTEM","message":"Pong","receiver":"127.0.0.1"}
+2025-05-25 21:07:35.664 [pool-3-thread-1] INFO  org.example.mutlithread.ReceiverThread - Received authorization request
+2025-05-25 21:07:45.332 [ForkJoinPool.commonPool-worker-1] DEBUG org.example.mutlithread.SenderThread - Sending: Wrong password
+2025-05-25 21:07:45.333 [ForkJoinPool.commonPool-worker-1] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:56904:
+{"responseType":"AUTH_ERROR","message":"Wrong password","receiver":"unknown"}
+2025-05-25 21:08:02.465 [pool-3-thread-1] INFO  org.example.mutlithread.ReceiverThread - Received authorization request
+2025-05-25 21:08:07.300 [pool-3-thread-1] DEBUG org.example.users.UserManager - User pizda was registered
+2025-05-25 21:08:07.383 [ForkJoinPool.commonPool-worker-1] DEBUG org.example.mutlithread.SenderThread - Sending: Registered
+2025-05-25 21:08:07.384 [ForkJoinPool.commonPool-worker-1] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:56904:
+{"responseType":"OK","message":"Registered","token":"eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJzZXJ2ZXIiLCJzdWIiOiJwaXpkYSIsImV4cCI6MTc0ODE5Njc4N30.0XO16It5JZLJshjlh-EvOY3fLb7l-bVGs3VQpcHnc0o","receiver":"unknown"}
+2025-05-25 21:08:07.385 [pool-3-thread-1] TRACE org.example.mutlithread.ReceiverThread - Received initialization request
+2025-05-25 21:08:07.393 [ForkJoinPool.commonPool-worker-1] DEBUG org.example.mutlithread.SenderThread - Sending: {"commands":{"add":"Adds a new vehicle to the collection","add_if_max":"Adds a new vehicle to collection if it's max","avg_of_eng_pw":"Returns average engine power of the all collection","clear":"Clears the collection","count_gr_than_eng_pw":"Return a quantity of objects, which have engPw greater than given","info":"Returns info about collection","min_by_fuel":"Returns object that is min by fuel type","remove_at":"Removes an object from collection with given index","remove_by_id":"Removes an object from the collection with given id","remove_greater":"Removes all items from collection that have greater engPW than given","show":"Returns info about all items from the collection","update_id":"Updates a field from item with given id"},"arguments":{"add":"{\"type\":\"org.example.commands.consoleCommands.AddCommand\"}","add_if_max":"{\"type\":\"org.example.commands.consoleCommands.AddIfMaxCommand\"}","avg_of_eng_pw":"{\"type\":\"org.example.commands.consoleCommands.AvgOfEnginePowerCommand\"}","clear":"{\"type\":\"org.example.commands.consoleCommands.ClearCommand\"}","count_gr_than_eng_pw":"{\"type\":\"org.example.commands.consoleCommands.CountGrThanEngPwCommand\"}","info":"{\"type\":\"org.example.commands.consoleCommands.InfoCommand\"}","min_by_fuel":"{\"type\":\"org.example.commands.consoleCommands.MinByFuelTypeCommand\"}","remove_at":"{\"type\":\"org.example.commands.consoleCommands.RemoveAtCommand\"}","remove_by_id":"{\"type\":\"org.example.commands.consoleCommands.RemoveByIdCommand\"}","remove_greater":"{\"type\":\"org.example.commands.consoleCommands.RemoveGreaterCommand\"}","show":"{\"type\":\"org.example.commands.consoleCommands.ShowCommand\"}","update_id":"{\"type\":\"org.example.commands.consoleCommands.UpdateIdCommand\"}"}}
+2025-05-25 21:08:07.393 [ForkJoinPool.commonPool-worker-1] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:56904:
+{"responseType":"SYSTEM","message":"{\"commands\":{\"add\":\"Adds a new vehicle to the collection\",\"add_if_max\":\"Adds a new vehicle to collection if it's max\",\"avg_of_eng_pw\":\"Returns average engine power of the all collection\",\"clear\":\"Clears the collection\",\"count_gr_than_eng_pw\":\"Return a quantity of objects, which have engPw greater than given\",\"info\":\"Returns info about collection\",\"min_by_fuel\":\"Returns object that is min by fuel type\",\"remove_at\":\"Removes an object from collection with given index\",\"remove_by_id\":\"Removes an object from the collection with given id\",\"remove_greater\":\"Removes all items from collection that have greater engPW than given\",\"show\":\"Returns info about all items from the collection\",\"update_id\":\"Updates a field from item with given id\"},\"arguments\":{\"add\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.AddCommand\\\"}\",\"add_if_max\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.AddIfMaxCommand\\\"}\",\"avg_of_eng_pw\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.AvgOfEnginePowerCommand\\\"}\",\"clear\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.ClearCommand\\\"}\",\"count_gr_than_eng_pw\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.CountGrThanEngPwCommand\\\"}\",\"info\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.InfoCommand\\\"}\",\"min_by_fuel\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.MinByFuelTypeCommand\\\"}\",\"remove_at\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.RemoveAtCommand\\\"}\",\"remove_by_id\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.RemoveByIdCommand\\\"}\",\"remove_greater\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.RemoveGreaterCommand\\\"}\",\"show\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.ShowCommand\\\"}\",\"update_id\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.UpdateIdCommand\\\"}\"}}","receiver":"unknown"}
+2025-05-25 21:08:10.866 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранение в базу данных
+2025-05-25 21:08:10.867 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранено 0 успешно элементов
+2025-05-25 21:08:10.867 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-25 21:08:17.349 [pool-3-thread-1] INFO  org.example.mutlithread.ReceiverThread - Received ping request from: 127.0.0.1
+2025-05-25 21:08:17.349 [ForkJoinPool.commonPool-worker-1] DEBUG org.example.mutlithread.SenderThread - Sending: Pong
+2025-05-25 21:08:17.349 [ForkJoinPool.commonPool-worker-1] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:51257:
+{"responseType":"SYSTEM","message":"Pong","receiver":"127.0.0.1"}
+2025-05-25 21:08:22.653 [pool-3-thread-1] INFO  org.example.mutlithread.ReceiverThread - Received authorization request
+2025-05-25 21:08:32.722 [pool-3-thread-1] DEBUG org.example.users.UserManager - User pizda authorized
+2025-05-25 21:08:32.726 [ForkJoinPool.commonPool-worker-1] DEBUG org.example.mutlithread.SenderThread - Sending: Authorized
+2025-05-25 21:08:32.727 [ForkJoinPool.commonPool-worker-1] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:51257:
+{"responseType":"OK","message":"Authorized","token":"eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJzZXJ2ZXIiLCJzdWIiOiJwaXpkYSIsImV4cCI6MTc0ODE5NjgxMn0.I_9BiHAjnbpy68oaZe4HQkCnhWNGuJFMhfpWoV0mub4","receiver":"unknown"}
+2025-05-25 21:08:32.731 [pool-3-thread-1] TRACE org.example.mutlithread.ReceiverThread - Received initialization request
+2025-05-25 21:08:32.733 [ForkJoinPool.commonPool-worker-1] DEBUG org.example.mutlithread.SenderThread - Sending: {"commands":{"add":"Adds a new vehicle to the collection","add_if_max":"Adds a new vehicle to collection if it's max","avg_of_eng_pw":"Returns average engine power of the all collection","clear":"Clears the collection","count_gr_than_eng_pw":"Return a quantity of objects, which have engPw greater than given","info":"Returns info about collection","min_by_fuel":"Returns object that is min by fuel type","remove_at":"Removes an object from collection with given index","remove_by_id":"Removes an object from the collection with given id","remove_greater":"Removes all items from collection that have greater engPW than given","show":"Returns info about all items from the collection","update_id":"Updates a field from item with given id"},"arguments":{"add":"{\"type\":\"org.example.commands.consoleCommands.AddCommand\"}","add_if_max":"{\"type\":\"org.example.commands.consoleCommands.AddIfMaxCommand\"}","avg_of_eng_pw":"{\"type\":\"org.example.commands.consoleCommands.AvgOfEnginePowerCommand\"}","clear":"{\"type\":\"org.example.commands.consoleCommands.ClearCommand\"}","count_gr_than_eng_pw":"{\"type\":\"org.example.commands.consoleCommands.CountGrThanEngPwCommand\"}","info":"{\"type\":\"org.example.commands.consoleCommands.InfoCommand\"}","min_by_fuel":"{\"type\":\"org.example.commands.consoleCommands.MinByFuelTypeCommand\"}","remove_at":"{\"type\":\"org.example.commands.consoleCommands.RemoveAtCommand\"}","remove_by_id":"{\"type\":\"org.example.commands.consoleCommands.RemoveByIdCommand\"}","remove_greater":"{\"type\":\"org.example.commands.consoleCommands.RemoveGreaterCommand\"}","show":"{\"type\":\"org.example.commands.consoleCommands.ShowCommand\"}","update_id":"{\"type\":\"org.example.commands.consoleCommands.UpdateIdCommand\"}"}}
+2025-05-25 21:08:32.734 [ForkJoinPool.commonPool-worker-1] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:51257:
+{"responseType":"SYSTEM","message":"{\"commands\":{\"add\":\"Adds a new vehicle to the collection\",\"add_if_max\":\"Adds a new vehicle to collection if it's max\",\"avg_of_eng_pw\":\"Returns average engine power of the all collection\",\"clear\":\"Clears the collection\",\"count_gr_than_eng_pw\":\"Return a quantity of objects, which have engPw greater than given\",\"info\":\"Returns info about collection\",\"min_by_fuel\":\"Returns object that is min by fuel type\",\"remove_at\":\"Removes an object from collection with given index\",\"remove_by_id\":\"Removes an object from the collection with given id\",\"remove_greater\":\"Removes all items from collection that have greater engPW than given\",\"show\":\"Returns info about all items from the collection\",\"update_id\":\"Updates a field from item with given id\"},\"arguments\":{\"add\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.AddCommand\\\"}\",\"add_if_max\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.AddIfMaxCommand\\\"}\",\"avg_of_eng_pw\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.AvgOfEnginePowerCommand\\\"}\",\"clear\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.ClearCommand\\\"}\",\"count_gr_than_eng_pw\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.CountGrThanEngPwCommand\\\"}\",\"info\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.InfoCommand\\\"}\",\"min_by_fuel\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.MinByFuelTypeCommand\\\"}\",\"remove_at\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.RemoveAtCommand\\\"}\",\"remove_by_id\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.RemoveByIdCommand\\\"}\",\"remove_greater\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.RemoveGreaterCommand\\\"}\",\"show\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.ShowCommand\\\"}\",\"update_id\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.UpdateIdCommand\\\"}\"}}","receiver":"unknown"}
+2025-05-25 21:09:10.865 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранение в базу данных
+2025-05-25 21:09:10.866 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранено 0 успешно элементов
+2025-05-25 21:09:10.866 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-25 21:10:10.865 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранение в базу данных
+2025-05-25 21:10:10.868 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранено 0 успешно элементов
+2025-05-25 21:10:10.868 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-25 21:11:10.863 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранение в базу данных
+2025-05-25 21:11:10.864 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранено 0 успешно элементов
+2025-05-25 21:11:10.864 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-25 21:11:29.506 [Thread-0] INFO  org.example.serverUtils.ConsoleFileManager - Сохранение в базу данных
+2025-05-25 21:11:29.507 [Thread-0] INFO  org.example.serverUtils.ConsoleFileManager - Сохранено 0 успешно элементов
+2025-05-25 21:11:29.507 [Thread-0] INFO  org.example.serverUtils.Console - Collection was saved.
+2025-05-25 21:11:29.508 [Thread-0] DEBUG org.example.serverUtils.Console - Stop called
+2025-05-25 21:11:29.508 [Thread-0] DEBUG org.example.serverUtils.Console - ExitFlag: `true`
+2025-05-25 21:19:24.831 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранение в базу данных
+2025-05-25 21:19:24.837 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранено 0 успешно элементов
+2025-05-25 21:19:24.837 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-25 21:20:05.478 [main] INFO  org.example.serverUtils.ConsoleFileManager - Loading from DB
+2025-05-25 21:20:08.351 [main] INFO  org.example.serverUtils.ConsoleFileManager - Loaded 0 elements successfully
+2025-05-25 21:20:08.352 [main] INFO  org.example.serverUtils.Console - Initializing console commands
+2025-05-25 21:20:08.358 [main] INFO  org.example.serverUtils.Console - Registering Add Command
+2025-05-25 21:20:08.360 [main] INFO  org.example.serverUtils.Console - Registering AddIfMax Command
+2025-05-25 21:20:08.360 [main] INFO  org.example.serverUtils.Console - Registering AvgOfEnginePower Command
+2025-05-25 21:20:08.361 [main] INFO  org.example.serverUtils.Console - Registering Clear Command
+2025-05-25 21:20:08.362 [main] INFO  org.example.serverUtils.Console - Registering CountGreaterThanEnginePower Command
+2025-05-25 21:20:08.363 [main] INFO  org.example.serverUtils.Console - Registering Info Command
+2025-05-25 21:20:08.364 [main] INFO  org.example.serverUtils.Console - Registering MinByFuelType Command
+2025-05-25 21:20:08.365 [main] INFO  org.example.serverUtils.Console - Registering RemoveAt Command
+2025-05-25 21:20:08.366 [main] INFO  org.example.serverUtils.Console - Registering RemoveById Command
+2025-05-25 21:20:08.366 [main] INFO  org.example.serverUtils.Console - Registering RemoveGreater Command
+2025-05-25 21:20:08.367 [main] INFO  org.example.serverUtils.Console - Registering Show Command
+2025-05-25 21:20:08.368 [main] INFO  org.example.serverUtils.Console - Registering UpdateId Command
+2025-05-25 21:20:08.373 [main] INFO  org.example.serverUtils.ConnectionManager - Server bound to: /127.0.0.1:6789
+2025-05-25 21:20:08.374 [main] INFO  org.example.serverUtils.Console - The server is ready to receive commands
+2025-05-25 21:20:18.784 [pool-3-thread-1] INFO  org.example.mutlithread.ReceiverThread - Received ping request from: 127.0.0.1
+2025-05-25 21:20:18.785 [ForkJoinPool.commonPool-worker-1] DEBUG org.example.mutlithread.SenderThread - Sending: Pong
+2025-05-25 21:20:18.799 [ForkJoinPool.commonPool-worker-1] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:53059:
+{"responseType":"SYSTEM","message":"Pong","receiver":"127.0.0.1"}
+2025-05-25 21:20:25.793 [pool-3-thread-1] INFO  org.example.mutlithread.ReceiverThread - Received authorization request
+2025-05-25 21:20:37.570 [pool-3-thread-1] DEBUG org.example.users.UserManager - User pizda authorized
+2025-05-25 21:20:37.662 [ForkJoinPool.commonPool-worker-1] DEBUG org.example.mutlithread.SenderThread - Sending: Authorized
+2025-05-25 21:20:37.662 [ForkJoinPool.commonPool-worker-1] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:53059:
+{"responseType":"OK","message":"Authorized","token":"eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJzZXJ2ZXIiLCJzdWIiOiJwaXpkYSIsImV4cCI6MTc0ODE5NzUzN30.HtWpiA_jDIF0bO6IQLDVNeWmakkDsEFoodozON79KNw","receiver":"unknown"}
+2025-05-25 21:20:37.663 [pool-3-thread-1] TRACE org.example.mutlithread.ReceiverThread - Received initialization request
+2025-05-25 21:20:37.672 [ForkJoinPool.commonPool-worker-1] DEBUG org.example.mutlithread.SenderThread - Sending: {"commands":{"add":"Adds a new vehicle to the collection","add_if_max":"Adds a new vehicle to collection if it's max","avg_of_eng_pw":"Returns average engine power of the all collection","clear":"Clears the collection","count_gr_than_eng_pw":"Return a quantity of objects, which have engPw greater than given","info":"Returns info about collection","min_by_fuel":"Returns object that is min by fuel type","remove_at":"Removes an object from collection with given index","remove_by_id":"Removes an object from the collection with given id","remove_greater":"Removes all items from collection that have greater engPW than given","show":"Returns info about all items from the collection","update_id":"Updates a field from item with given id"},"arguments":{"add":"{\"type\":\"org.example.commands.consoleCommands.AddCommand\"}","add_if_max":"{\"type\":\"org.example.commands.consoleCommands.AddIfMaxCommand\"}","avg_of_eng_pw":"{\"type\":\"org.example.commands.consoleCommands.AvgOfEnginePowerCommand\"}","clear":"{\"type\":\"org.example.commands.consoleCommands.ClearCommand\"}","count_gr_than_eng_pw":"{\"type\":\"org.example.commands.consoleCommands.CountGrThanEngPwCommand\"}","info":"{\"type\":\"org.example.commands.consoleCommands.InfoCommand\"}","min_by_fuel":"{\"type\":\"org.example.commands.consoleCommands.MinByFuelTypeCommand\"}","remove_at":"{\"type\":\"org.example.commands.consoleCommands.RemoveAtCommand\"}","remove_by_id":"{\"type\":\"org.example.commands.consoleCommands.RemoveByIdCommand\"}","remove_greater":"{\"type\":\"org.example.commands.consoleCommands.RemoveGreaterCommand\"}","show":"{\"type\":\"org.example.commands.consoleCommands.ShowCommand\"}","update_id":"{\"type\":\"org.example.commands.consoleCommands.UpdateIdCommand\"}"}}
+2025-05-25 21:20:37.672 [ForkJoinPool.commonPool-worker-1] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:53059:
+{"responseType":"SYSTEM","message":"{\"commands\":{\"add\":\"Adds a new vehicle to the collection\",\"add_if_max\":\"Adds a new vehicle to collection if it's max\",\"avg_of_eng_pw\":\"Returns average engine power of the all collection\",\"clear\":\"Clears the collection\",\"count_gr_than_eng_pw\":\"Return a quantity of objects, which have engPw greater than given\",\"info\":\"Returns info about collection\",\"min_by_fuel\":\"Returns object that is min by fuel type\",\"remove_at\":\"Removes an object from collection with given index\",\"remove_by_id\":\"Removes an object from the collection with given id\",\"remove_greater\":\"Removes all items from collection that have greater engPW than given\",\"show\":\"Returns info about all items from the collection\",\"update_id\":\"Updates a field from item with given id\"},\"arguments\":{\"add\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.AddCommand\\\"}\",\"add_if_max\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.AddIfMaxCommand\\\"}\",\"avg_of_eng_pw\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.AvgOfEnginePowerCommand\\\"}\",\"clear\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.ClearCommand\\\"}\",\"count_gr_than_eng_pw\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.CountGrThanEngPwCommand\\\"}\",\"info\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.InfoCommand\\\"}\",\"min_by_fuel\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.MinByFuelTypeCommand\\\"}\",\"remove_at\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.RemoveAtCommand\\\"}\",\"remove_by_id\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.RemoveByIdCommand\\\"}\",\"remove_greater\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.RemoveGreaterCommand\\\"}\",\"show\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.ShowCommand\\\"}\",\"update_id\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.UpdateIdCommand\\\"}\"}}","receiver":"unknown"}
+2025-05-25 21:20:47.193 [pool-3-thread-1] INFO  org.example.mutlithread.ReceiverThread - Received command: info
+2025-05-25 21:20:47.193 [pool-3-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Loading from DB
+2025-05-25 21:20:50.145 [pool-3-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Loaded 0 elements successfully
+2025-05-25 21:20:50.184 [pool-3-thread-1] ERROR org.example.mutlithread.ReceiverThread - Error while executing command: null
+2025-05-25 21:20:50.184 [ForkJoinPool.commonPool-worker-1] DEBUG org.example.mutlithread.SenderThread - Sending: null
+2025-05-25 21:20:50.184 [ForkJoinPool.commonPool-worker-1] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:53059:
+{"responseType":"ERROR","message":"null","receiver":"unknown"}
+2025-05-25 21:20:54.562 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранение в базу данных
+2025-05-25 21:20:54.566 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранено 0 успешно элементов
+2025-05-25 21:20:54.566 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-25 21:20:59.357 [pool-3-thread-1] INFO  org.example.mutlithread.ReceiverThread - Received command: show
+2025-05-25 21:20:59.358 [pool-3-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Loading from DB
+2025-05-25 21:21:04.620 [pool-3-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Loaded 0 elements successfully
+2025-05-25 21:21:04.627 [pool-3-thread-1] ERROR org.example.mutlithread.ReceiverThread - Error while executing command: null
+2025-05-25 21:21:04.627 [ForkJoinPool.commonPool-worker-1] DEBUG org.example.mutlithread.SenderThread - Sending: null
+2025-05-25 21:21:04.628 [ForkJoinPool.commonPool-worker-1] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:53059:
+{"responseType":"ERROR","message":"null","receiver":"unknown"}
+2025-05-25 21:21:07.093 [pool-3-thread-1] INFO  org.example.mutlithread.ReceiverThread - Received command: add
+2025-05-25 21:21:07.094 [pool-3-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Loading from DB
+2025-05-25 21:21:09.900 [pool-3-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Loaded 0 elements successfully
+2025-05-25 21:21:09.906 [pool-3-thread-1] ERROR org.example.mutlithread.ReceiverThread - Error while executing command: null
+2025-05-25 21:21:09.907 [ForkJoinPool.commonPool-worker-1] DEBUG org.example.mutlithread.SenderThread - Sending: null
+2025-05-25 21:21:09.907 [ForkJoinPool.commonPool-worker-1] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:53059:
+{"responseType":"ERROR","message":"null","receiver":"unknown"}
+2025-05-25 21:21:54.561 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранение в базу данных
+2025-05-25 21:21:54.564 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранено 0 успешно элементов
+2025-05-25 21:21:54.564 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-25 21:22:19.815 [pool-3-thread-2] INFO  org.example.mutlithread.ReceiverThread - Received command: show
+2025-05-25 21:22:19.816 [pool-3-thread-2] INFO  org.example.serverUtils.ConsoleFileManager - Loading from DB
+2025-05-25 21:22:24.490 [pool-3-thread-2] INFO  org.example.serverUtils.ConsoleFileManager - Loaded 0 elements successfully
+2025-05-25 21:22:24.495 [pool-3-thread-2] ERROR org.example.mutlithread.ReceiverThread - Error while executing command: JWT String argument cannot be null or empty.
+2025-05-25 21:22:24.496 [ForkJoinPool.commonPool-worker-3] DEBUG org.example.mutlithread.SenderThread - Sending: JWT String argument cannot be null or empty.
+2025-05-25 21:22:24.496 [ForkJoinPool.commonPool-worker-3] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:53059:
+{"responseType":"ERROR","message":"JWT String argument cannot be null or empty.","receiver":"unknown"}
+2025-05-25 21:22:32.153 [pool-3-thread-2] INFO  org.example.mutlithread.ReceiverThread - Received command: update_id
+2025-05-25 21:22:32.153 [pool-3-thread-2] INFO  org.example.serverUtils.ConsoleFileManager - Loading from DB
+2025-05-25 21:22:35.411 [pool-3-thread-2] INFO  org.example.serverUtils.ConsoleFileManager - Loaded 0 elements successfully
+2025-05-25 21:22:35.417 [pool-3-thread-2] ERROR org.example.mutlithread.ReceiverThread - Error while executing command: null
+2025-05-25 21:22:35.418 [ForkJoinPool.commonPool-worker-3] DEBUG org.example.mutlithread.SenderThread - Sending: null
+2025-05-25 21:22:35.418 [ForkJoinPool.commonPool-worker-3] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:53059:
+{"responseType":"ERROR","message":"null","receiver":"unknown"}
+2025-05-25 21:22:54.560 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранение в базу данных
+2025-05-25 21:22:54.562 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранено 0 успешно элементов
+2025-05-25 21:22:54.562 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-25 21:23:35.923 [pool-3-thread-3] INFO  org.example.mutlithread.ReceiverThread - Received command: show
+2025-05-25 21:23:35.925 [pool-3-thread-3] INFO  org.example.serverUtils.ConsoleFileManager - Loading from DB
+2025-05-25 21:23:40.794 [pool-3-thread-3] INFO  org.example.serverUtils.ConsoleFileManager - Loaded 0 elements successfully
+2025-05-25 21:23:40.802 [pool-3-thread-3] ERROR org.example.mutlithread.ReceiverThread - Error while executing command: null
+2025-05-25 21:23:40.803 [ForkJoinPool.commonPool-worker-5] DEBUG org.example.mutlithread.SenderThread - Sending: null
+2025-05-25 21:23:40.804 [ForkJoinPool.commonPool-worker-5] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:53059:
+{"responseType":"ERROR","message":"null","receiver":"unknown"}
+2025-05-25 21:23:51.097 [pool-3-thread-3] INFO  org.example.mutlithread.ReceiverThread - Received command: remove_at
+2025-05-25 21:23:51.097 [pool-3-thread-3] INFO  org.example.serverUtils.ConsoleFileManager - Loading from DB
+2025-05-25 21:23:54.137 [pool-3-thread-3] INFO  org.example.serverUtils.ConsoleFileManager - Loaded 0 elements successfully
+2025-05-25 21:23:54.144 [pool-3-thread-3] ERROR org.example.mutlithread.ReceiverThread - Error while executing command: null
+2025-05-25 21:23:54.144 [ForkJoinPool.commonPool-worker-5] DEBUG org.example.mutlithread.SenderThread - Sending: null
+2025-05-25 21:23:54.145 [ForkJoinPool.commonPool-worker-5] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:53059:
+{"responseType":"ERROR","message":"null","receiver":"unknown"}
+2025-05-25 21:23:54.561 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранение в базу данных
+2025-05-25 21:23:54.562 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранено 0 успешно элементов
+2025-05-25 21:23:54.562 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-25 21:24:00.439 [pool-3-thread-3] INFO  org.example.mutlithread.ReceiverThread - Received command: remove_by_id
+2025-05-25 21:24:00.440 [pool-3-thread-3] INFO  org.example.serverUtils.ConsoleFileManager - Loading from DB
+2025-05-25 21:24:07.782 [pool-3-thread-3] INFO  org.example.serverUtils.ConsoleFileManager - Loaded 0 elements successfully
+2025-05-25 21:24:07.788 [pool-3-thread-3] ERROR org.example.mutlithread.ReceiverThread - Error while executing command: null
+2025-05-25 21:24:07.789 [ForkJoinPool.commonPool-worker-5] DEBUG org.example.mutlithread.SenderThread - Sending: null
+2025-05-25 21:24:07.789 [ForkJoinPool.commonPool-worker-5] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:53059:
+{"responseType":"ERROR","message":"null","receiver":"unknown"}
+2025-05-25 21:24:12.286 [pool-3-thread-3] INFO  org.example.mutlithread.ReceiverThread - Received command: show
+2025-05-25 21:24:12.287 [pool-3-thread-3] INFO  org.example.serverUtils.ConsoleFileManager - Loading from DB
+2025-05-25 21:24:18.801 [pool-3-thread-3] INFO  org.example.serverUtils.ConsoleFileManager - Loaded 0 elements successfully
+2025-05-25 21:24:18.804 [pool-3-thread-3] ERROR org.example.mutlithread.ReceiverThread - Error while executing command: JWT String argument cannot be null or empty.
+2025-05-25 21:24:18.805 [ForkJoinPool.commonPool-worker-5] DEBUG org.example.mutlithread.SenderThread - Sending: JWT String argument cannot be null or empty.
+2025-05-25 21:24:18.805 [ForkJoinPool.commonPool-worker-5] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:53059:
+{"responseType":"ERROR","message":"JWT String argument cannot be null or empty.","receiver":"unknown"}
+2025-05-25 21:24:46.404 [pool-3-thread-3] INFO  org.example.mutlithread.ReceiverThread - Received command: update_id
+2025-05-25 21:24:46.404 [pool-3-thread-3] INFO  org.example.serverUtils.ConsoleFileManager - Loading from DB
+2025-05-25 21:24:52.310 [pool-3-thread-3] INFO  org.example.serverUtils.ConsoleFileManager - Loaded 0 elements successfully
+2025-05-25 21:24:52.316 [pool-3-thread-3] ERROR org.example.mutlithread.ReceiverThread - Error while executing command: null
+2025-05-25 21:24:52.317 [ForkJoinPool.commonPool-worker-5] DEBUG org.example.mutlithread.SenderThread - Sending: null
+2025-05-25 21:24:52.317 [ForkJoinPool.commonPool-worker-5] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:53059:
+{"responseType":"ERROR","message":"null","receiver":"unknown"}
+2025-05-25 21:24:54.560 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранение в базу данных
+2025-05-25 21:24:54.561 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранено 0 успешно элементов
+2025-05-25 21:24:54.561 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-25 21:25:54.559 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранение в базу данных
+2025-05-25 21:25:54.561 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранено 0 успешно элементов
+2025-05-25 21:25:54.561 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-25 21:25:55.931 [pool-3-thread-4] INFO  org.example.mutlithread.ReceiverThread - Received command: info
+2025-05-25 21:25:55.932 [pool-3-thread-4] INFO  org.example.serverUtils.ConsoleFileManager - Loading from DB
+2025-05-25 21:26:01.472 [pool-3-thread-4] INFO  org.example.serverUtils.ConsoleFileManager - Loaded 0 elements successfully
+2025-05-25 21:26:01.487 [ForkJoinPool.commonPool-worker-7] DEBUG org.example.mutlithread.SenderThread - Sending: Unknown token. Authorize again.
+2025-05-25 21:26:01.488 [ForkJoinPool.commonPool-worker-7] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:53059:
+{"responseType":"AUTH_ERROR","message":"Unknown token. Authorize again.","receiver":"unknown"}
+2025-05-25 21:26:54.559 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранение в базу данных
+2025-05-25 21:26:54.560 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранено 0 успешно элементов
+2025-05-25 21:26:54.561 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-25 21:27:54.558 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранение в базу данных
+2025-05-25 21:27:54.562 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранено 0 успешно элементов
+2025-05-25 21:27:54.562 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-25 21:28:54.557 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранение в базу данных
+2025-05-25 21:28:54.559 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранено 0 успешно элементов
+2025-05-25 21:28:54.559 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-25 21:29:54.557 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранение в базу данных
+2025-05-25 21:29:54.560 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранено 0 успешно элементов
+2025-05-25 21:29:54.560 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-25 21:30:54.553 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранение в базу данных
+2025-05-25 21:30:54.557 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранено 0 успешно элементов
+2025-05-25 21:30:54.557 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-25 21:31:54.554 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранение в базу данных
+2025-05-25 21:31:54.557 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранено 0 успешно элементов
+2025-05-25 21:31:54.558 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-25 21:32:54.556 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранение в базу данных
+2025-05-25 21:32:54.559 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранено 0 успешно элементов
+2025-05-25 21:32:54.559 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-25 21:33:44.279 [pool-3-thread-5] INFO  org.example.mutlithread.ReceiverThread - Received ping request from: 127.0.0.1
+2025-05-25 21:33:44.280 [ForkJoinPool.commonPool-worker-9] DEBUG org.example.mutlithread.SenderThread - Sending: Pong
+2025-05-25 21:33:44.280 [ForkJoinPool.commonPool-worker-9] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:58096:
+{"responseType":"SYSTEM","message":"Pong","receiver":"127.0.0.1"}
+2025-05-25 21:33:50.550 [pool-3-thread-5] INFO  org.example.mutlithread.ReceiverThread - Received authorization request
+2025-05-25 21:33:50.564 [pool-3-thread-5] ERROR org.example.mutlithread.ReceiverThread - Error while executing command: Connection to localhost:15432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+2025-05-25 21:33:50.564 [ForkJoinPool.commonPool-worker-9] DEBUG org.example.mutlithread.SenderThread - Sending: Connection to localhost:15432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+2025-05-25 21:33:50.564 [ForkJoinPool.commonPool-worker-9] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:58096:
+{"responseType":"ERROR","message":"Connection to localhost:15432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.","receiver":"unknown"}
+2025-05-25 21:33:54.553 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранение в базу данных
+2025-05-25 21:33:54.554 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранено 0 успешно элементов
+2025-05-25 21:33:54.554 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-25 21:34:38.970 [pool-3-thread-5] INFO  org.example.mutlithread.ReceiverThread - Received ping request from: 127.0.0.1
+2025-05-25 21:34:38.971 [ForkJoinPool.commonPool-worker-9] DEBUG org.example.mutlithread.SenderThread - Sending: Pong
+2025-05-25 21:34:38.971 [ForkJoinPool.commonPool-worker-9] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:65429:
+{"responseType":"SYSTEM","message":"Pong","receiver":"127.0.0.1"}
+2025-05-25 21:34:43.393 [pool-3-thread-5] INFO  org.example.mutlithread.ReceiverThread - Received authorization request
+2025-05-25 21:34:51.791 [pool-3-thread-5] DEBUG org.example.users.UserManager - User pizda authorized
+2025-05-25 21:34:51.795 [ForkJoinPool.commonPool-worker-9] DEBUG org.example.mutlithread.SenderThread - Sending: Authorized
+2025-05-25 21:34:51.795 [ForkJoinPool.commonPool-worker-9] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:65429:
+{"responseType":"OK","message":"Authorized","token":"eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJzZXJ2ZXIiLCJzdWIiOiJwaXpkYSIsImV4cCI6MTc0ODE5ODM5MX0.SzB5u0KhMb_KdOtbeeuvCi6PwSCTZEvQW5cQ4gil25Y","receiver":"unknown"}
+2025-05-25 21:34:51.800 [pool-3-thread-5] TRACE org.example.mutlithread.ReceiverThread - Received initialization request
+2025-05-25 21:34:51.803 [ForkJoinPool.commonPool-worker-9] DEBUG org.example.mutlithread.SenderThread - Sending: {"commands":{"add":"Adds a new vehicle to the collection","add_if_max":"Adds a new vehicle to collection if it's max","avg_of_eng_pw":"Returns average engine power of the all collection","clear":"Clears the collection","count_gr_than_eng_pw":"Return a quantity of objects, which have engPw greater than given","info":"Returns info about collection","min_by_fuel":"Returns object that is min by fuel type","remove_at":"Removes an object from collection with given index","remove_by_id":"Removes an object from the collection with given id","remove_greater":"Removes all items from collection that have greater engPW than given","show":"Returns info about all items from the collection","update_id":"Updates a field from item with given id"},"arguments":{"add":"{\"type\":\"org.example.commands.consoleCommands.AddCommand\"}","add_if_max":"{\"type\":\"org.example.commands.consoleCommands.AddIfMaxCommand\"}","avg_of_eng_pw":"{\"type\":\"org.example.commands.consoleCommands.AvgOfEnginePowerCommand\"}","clear":"{\"type\":\"org.example.commands.consoleCommands.ClearCommand\"}","count_gr_than_eng_pw":"{\"type\":\"org.example.commands.consoleCommands.CountGrThanEngPwCommand\"}","info":"{\"type\":\"org.example.commands.consoleCommands.InfoCommand\"}","min_by_fuel":"{\"type\":\"org.example.commands.consoleCommands.MinByFuelTypeCommand\"}","remove_at":"{\"type\":\"org.example.commands.consoleCommands.RemoveAtCommand\"}","remove_by_id":"{\"type\":\"org.example.commands.consoleCommands.RemoveByIdCommand\"}","remove_greater":"{\"type\":\"org.example.commands.consoleCommands.RemoveGreaterCommand\"}","show":"{\"type\":\"org.example.commands.consoleCommands.ShowCommand\"}","update_id":"{\"type\":\"org.example.commands.consoleCommands.UpdateIdCommand\"}"}}
+2025-05-25 21:34:51.803 [ForkJoinPool.commonPool-worker-9] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:65429:
+{"responseType":"SYSTEM","message":"{\"commands\":{\"add\":\"Adds a new vehicle to the collection\",\"add_if_max\":\"Adds a new vehicle to collection if it's max\",\"avg_of_eng_pw\":\"Returns average engine power of the all collection\",\"clear\":\"Clears the collection\",\"count_gr_than_eng_pw\":\"Return a quantity of objects, which have engPw greater than given\",\"info\":\"Returns info about collection\",\"min_by_fuel\":\"Returns object that is min by fuel type\",\"remove_at\":\"Removes an object from collection with given index\",\"remove_by_id\":\"Removes an object from the collection with given id\",\"remove_greater\":\"Removes all items from collection that have greater engPW than given\",\"show\":\"Returns info about all items from the collection\",\"update_id\":\"Updates a field from item with given id\"},\"arguments\":{\"add\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.AddCommand\\\"}\",\"add_if_max\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.AddIfMaxCommand\\\"}\",\"avg_of_eng_pw\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.AvgOfEnginePowerCommand\\\"}\",\"clear\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.ClearCommand\\\"}\",\"count_gr_than_eng_pw\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.CountGrThanEngPwCommand\\\"}\",\"info\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.InfoCommand\\\"}\",\"min_by_fuel\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.MinByFuelTypeCommand\\\"}\",\"remove_at\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.RemoveAtCommand\\\"}\",\"remove_by_id\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.RemoveByIdCommand\\\"}\",\"remove_greater\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.RemoveGreaterCommand\\\"}\",\"show\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.ShowCommand\\\"}\",\"update_id\":\"{\\\"type\\\":\\\"org.example.commands.consoleCommands.UpdateIdCommand\\\"}\"}}","receiver":"unknown"}
+2025-05-25 21:34:54.555 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранение в базу данных
+2025-05-25 21:34:54.555 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранено 0 успешно элементов
+2025-05-25 21:34:54.556 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-25 21:34:58.355 [pool-3-thread-5] INFO  org.example.mutlithread.ReceiverThread - Received command: info
+2025-05-25 21:34:58.355 [pool-3-thread-5] INFO  org.example.serverUtils.ConsoleFileManager - Loading from DB
+2025-05-25 21:35:02.271 [pool-3-thread-5] INFO  org.example.serverUtils.ConsoleFileManager - Loaded 0 elements successfully
+2025-05-25 21:35:02.277 [pool-3-thread-5] ERROR org.example.mutlithread.ReceiverThread - Error while executing command: null
+2025-05-25 21:35:02.278 [ForkJoinPool.commonPool-worker-9] DEBUG org.example.mutlithread.SenderThread - Sending: null
+2025-05-25 21:35:02.278 [ForkJoinPool.commonPool-worker-9] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:65429:
+{"responseType":"ERROR","message":"null","receiver":"unknown"}
+2025-05-25 21:35:54.554 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранение в базу данных
+2025-05-25 21:35:54.555 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранено 0 успешно элементов
+2025-05-25 21:35:54.555 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-25 21:36:54.553 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранение в базу данных
+2025-05-25 21:36:54.554 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранено 0 успешно элементов
+2025-05-25 21:36:54.555 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-25 21:37:54.552 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранение в базу данных
+2025-05-25 21:37:54.554 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранено 0 успешно элементов
+2025-05-25 21:37:54.555 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-25 21:38:54.552 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранение в базу данных
+2025-05-25 21:38:54.553 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранено 0 успешно элементов
+2025-05-25 21:38:54.553 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-25 21:39:54.552 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранение в базу данных
+2025-05-25 21:39:54.552 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Сохранено 0 успешно элементов
+2025-05-25 21:39:54.553 [pool-2-thread-1] INFO  org.example.serverUtils.ConsoleFileManager - Collection saved automatically
+2025-05-25 21:40:06.410 [pool-3-thread-6] INFO  org.example.mutlithread.ReceiverThread - Received command: info
+2025-05-25 21:40:06.411 [pool-3-thread-6] INFO  org.example.serverUtils.ConsoleFileManager - Loading from DB
+2025-05-25 21:40:08.978 [pool-3-thread-6] INFO  org.example.serverUtils.ConsoleFileManager - Loaded 0 elements successfully
+2025-05-25 21:40:08.984 [ForkJoinPool.commonPool-worker-11] DEBUG org.example.mutlithread.SenderThread - Sending: Unknown token. Authorize again.
+2025-05-25 21:40:08.984 [ForkJoinPool.commonPool-worker-11] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:65429:
+{"responseType":"AUTH_ERROR","message":"Unknown token. Authorize again.","receiver":"unknown"}
+2025-05-25 21:40:18.605 [pool-3-thread-6] INFO  org.example.mutlithread.ReceiverThread - Received authorization request
+2025-05-25 21:40:28.932 [pool-3-thread-6] DEBUG org.example.users.UserManager - User pizda authorized
+2025-05-25 21:40:28.933 [ForkJoinPool.commonPool-worker-11] DEBUG org.example.mutlithread.SenderThread - Sending: Authorized
+2025-05-25 21:40:28.933 [ForkJoinPool.commonPool-worker-11] INFO  org.example.serverUtils.ConnectionManager - Sending to /127.0.0.1:65429:
+{"responseType":"OK","message":"Authorized","token":"eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJzZXJ2ZXIiLCJzdWIiOiJwaXpkYSIsImV4cCI6MTc0ODE5ODcyOH0.bgpypzpD5CEddQRuM2hvfURS9XVdre-WawSlj-qlMsc","receiver":"unknown"}

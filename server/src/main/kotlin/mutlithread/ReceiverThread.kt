@@ -4,6 +4,7 @@ import collection.CollectionManager
 import org.apache.logging.log4j.LogManager
 import org.apache.logging.log4j.Logger
 import org.example.commands.CommandInvoker
+import org.example.serverUtils.ConnectionManager
 import org.example.serverUtils.ConsoleFileManager
 import org.example.token.JWTManager
 import org.example.users.UserManager
@@ -19,6 +20,7 @@ class ReceiverThread(
     private val taskQueue: LinkedBlockingQueue<Sending>,
     private val fileManager: ConsoleFileManager,
     private val jwtManager: JWTManager,
+    private val connectionManager: ConnectionManager,
     private val commandInvoker: CommandInvoker,
     private val userManager: UserManager,
     private val jsonCreator: JsonCreator,
@@ -70,7 +72,6 @@ class ReceiverThread(
                 RequestType.AUTHORIZATION -> {
                     logger.info("Received authorization request")
                     if (query.message != "logout") {
-                        fileManager.loadCollection()
                         answer = if (userManager.userExists(query.args["username"]!!)) {
                             val token = userManager.login(query.args["username"]!!, query.args["password"]!!)
                             if (token.isNotEmpty()) {
@@ -79,8 +80,7 @@ class ReceiverThread(
                                 ResponseWrapper(ResponseType.AUTH_ERROR, "Wrong password", receiver = receiver)
                             }
                         } else {
-                            val token =
-                                userManager.register(query.args["username"]!!, query.args["password"]!!)
+                            val token = userManager.register(query.args["username"]!!, query.args["password"]!!)
                             if (token.isNotEmpty()) {
                                 ResponseWrapper(ResponseType.OK, "Registered", token, receiver = receiver)
                             } else {

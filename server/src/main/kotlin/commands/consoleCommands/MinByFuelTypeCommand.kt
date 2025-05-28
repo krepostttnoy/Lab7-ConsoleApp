@@ -6,6 +6,7 @@ import kotlinx.serialization.Serializable
 import kotlinx.serialization.Transient
 import org.example.serverUtils.ConnectionManager
 import utils.inputOutput.OutputManager
+import utils.wrappers.RequestWrapper
 import utils.wrappers.ResponseType
 import utils.wrappers.ResponseWrapper
 
@@ -44,21 +45,19 @@ class MinByFuelTypeCommand(
      * 3. Если элемент найден, выводит его имя и тип топлива.
      * 4. Если элемент не найден, выводит сообщение об ошибке.
      */
-    override fun execute(args: Map<String, String>, username: String) {
+    override fun execute(request: RequestWrapper, username: String): ResponseWrapper {
         if (!(cm.getCollection().isEmpty())) {
             val minVehicle = cm.getCollection().minByOrNull { vehicle ->
                 vehicle.fuelType ?: FuelType.entries.toTypedArray().min()
             }
             if (minVehicle == null) {
-                outputManager.println("Не удалось найти элемент с минимальным fuelType.")
-                return
+                return ResponseWrapper(ResponseType.ERROR, "Не удалось найти элемент с минимальным fuelType.", receiver = username)
             }
-            val response = ResponseWrapper(ResponseType.OK, "${minVehicle.name} -> ${minVehicle.fuelType}", receiver = args["sender"]!!)
-            connectionManager.send(response)
+            val response = ResponseWrapper(ResponseType.OK, "${minVehicle.name} -> ${minVehicle.fuelType}", receiver = username)
+            return response
         }else{
-            val response = ResponseWrapper(ResponseType.OK, "Collection is empty", receiver = args["sender"]!!)
-            connectionManager.send(response)
-            return
+            val response = ResponseWrapper(ResponseType.OK, "Collection is empty", receiver = username)
+            return response
         }
     }
 }

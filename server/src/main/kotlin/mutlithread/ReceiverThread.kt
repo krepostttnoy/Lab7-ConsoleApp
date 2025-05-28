@@ -36,13 +36,19 @@ class ReceiverThread(
             when (query.requestType) {
                 RequestType.COMMAND_EXEC -> {
                     logger.info("Received command: ${query.message}")
-                    fileManager.loadCollection()
+                    //fileManager.loadCollection()
 
                     if (jwtManager.validateJWS(query.token)) {
+                        logger.info("sexxxxxxxx")
                         val username = jwtManager.retrieveUsername(query.token)
+                        logger.info("11111")
                         answer = commandInvoker.executeCommand(query, username)
+                        logger.info("2222")
                         answer.token = jwtManager.createJWS("server", username)
+                        logger.info("3333")
+
                     } else {
+                        logger.info("huetaaaaaa")
                         answer = ResponseWrapper(ResponseType.AUTH_ERROR, "Unknown token. Authorize again.", receiver = receiver)
                     }
                 }
@@ -58,7 +64,7 @@ class ReceiverThread(
 
                     for (command in commands.keys) {
                         sendingInfo["commands"]!! += (command to commands[command]!!.getInfo())
-                        sendingInfo["arguments"]!! += (command to jsonCreator.objectToString(commands[command]!!))
+                        sendingInfo["arguments"]!! += (command to jsonCreator.objectToString(commands[command]!!.getArgsType()))
                     }
 
                     answer = ResponseWrapper(ResponseType.SYSTEM, jsonCreator.objectToString(sendingInfo), receiver = receiver)
@@ -94,7 +100,7 @@ class ReceiverThread(
                 }
             }
         } catch (e: Exception) {
-            logger.error("Error while executing command: ${e.message}")
+            logger.error("Error while executing command: ${e.toString()}")
             answer = ResponseWrapper(ResponseType.ERROR, e.message.toString(), receiver = receiver)
         } finally {
             answerQueue.put(answer)

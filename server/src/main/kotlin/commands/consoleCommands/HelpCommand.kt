@@ -1,6 +1,8 @@
 package org.example.commands.consoleCommands
 
 import org.example.commands.consoleCommands.ICommandExecutor
+import utils.wrappers.RequestWrapper
+import utils.wrappers.ResponseWrapper
 
 /**
  * Команда для вывода списка доступных команд.
@@ -28,7 +30,7 @@ class HelpCommand(private val ce: ICommandExecutor) : Command {
      * Выполняет команду вывода списка доступных команд.
      * Вызывает метод [ICommandExecutor.getHelp] для отображения списка.
      */
-    override fun execute(args: Map<String, String>, username: String) {
+    override fun execute(request: RequestWrapper, username: String): ResponseWrapper {
         TODO("Not yet implemented")
     }
 }

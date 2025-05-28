@@ -62,7 +62,7 @@ class UserManager(private val dbManager: DbManager) {
             val token = jwtManager.createJWS("server", username)
             token
         } else {
-            logger.debug("Registration is nit finished, $username")
+            logger.debug("Registration isn't finished, $username")
             ""
         }
     }

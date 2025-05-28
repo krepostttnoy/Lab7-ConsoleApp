@@ -39,7 +39,7 @@ class Validator(
      * @return Обработанная строка или пустая строка, если ввод равен null.
      */
     override fun readLineTrimmed(): String {
-        return inputManager.read().trim()
+       return inputManager.read().trim()
     }
 
     /**
@@ -180,11 +180,11 @@ class Validator(
         return (if (inputManager.isScriptMode()) {
             val fuelType = readLineTrimmed().lowercase()
             when (fuelType) {
-                "электричество", "электро" -> FuelType.ELECTRICITY
-                "анти", "антиматерия" -> FuelType.ANTIMATTER
-                "дизель", "диз" -> FuelType.DIESEL
+                "electricity"-> FuelType.ELECTRICITY
+                "antimatter" -> FuelType.ANTIMATTER
+                "diesel" -> FuelType.DIESEL
                 else -> throw IllegalArgumentException(
-                    "Некорректный тип топлива: $fuelType. Возможные типы: ${FuelType.entries.joinToString(", ") { it.description }}"
+                    "Incorrect type of fuel: $fuelType. Possible types: ${FuelType.entries.joinToString(", ") { it.description }}"
                 )
             }
         } else {
@@ -193,11 +193,11 @@ class Validator(
                     outputManager.print("Введите тип топлива: ")
                     val fuelType = readLineTrimmed().lowercase()
                     return when (fuelType) {
-                        "электричество", "электро" -> FuelType.ELECTRICITY
-                        "анти", "антиматерия" -> FuelType.ANTIMATTER
-                        "дизель", "диз" -> FuelType.DIESEL
+                        "electricity" -> FuelType.ELECTRICITY
+                        "antimatter" -> FuelType.ANTIMATTER
+                        "diesel" -> FuelType.DIESEL
                         else -> throw IllegalArgumentException(
-                            "Некорректный тип топлива! Возможные типы: ${FuelType.entries.joinToString(", ") { it.description }}"
+                            "Incorrect type of fuel. Possible types: ${FuelType.entries.joinToString(", ")}"
                         )
                     }
                 } catch (e: IllegalArgumentException) {

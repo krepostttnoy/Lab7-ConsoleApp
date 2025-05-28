@@ -3,7 +3,11 @@ package org.example.commands.consoleCommands
 import collection.CollectionManager
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.Transient
+import org.apache.logging.log4j.LogManager
+import org.apache.logging.log4j.Logger
+import org.example.commands.CommandInvoker
 import org.example.serverUtils.ConnectionManager
+import utils.wrappers.RequestWrapper
 import utils.wrappers.ResponseType
 import utils.wrappers.ResponseWrapper
 
@@ -21,7 +25,8 @@ class InfoCommand(
 ) : Command {
     override val interactive = false
     private val argsType = emptyMap<String, String>()
-     private val info = "Returns info about collection"
+    private val info = "Returns info about collection"
+    private val logger: Logger = LogManager.getLogger(Command::class.java)
 
     override fun getArgsType(): Map<String, String> {
         return argsType
@@ -34,8 +39,11 @@ class InfoCommand(
      * Выполняет команду вывода информации о коллекции.
      * Вызывает метод [CollectionManager.printCollectionInfo] для отображения информации.
      */
-    override fun execute(args: Map<String, String>, username: String) {
-        val response = ResponseWrapper(ResponseType.OK, cm.printCollectionInfo(), receiver = args["sender"]!!)
-        connectionManager.send(response)
+    override fun execute(request: RequestWrapper, username: String): ResponseWrapper {
+        logger.info("execute info")
+        logger.info("${request.token}: ${request.token}")
+        val response = ResponseWrapper(ResponseType.OK, cm.printCollectionInfo(), receiver = username)
+        logger.info("sexy shmara")
+        return response
     }
 }

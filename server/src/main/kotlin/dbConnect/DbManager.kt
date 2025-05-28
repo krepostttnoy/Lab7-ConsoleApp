@@ -1,4 +1,6 @@
 package org.example.dbConnect
+import baseClasses.Coordinates
+import baseClasses.FuelType
 import baseClasses.Vehicle
 import org.apache.logging.log4j.LogManager
 import org.apache.logging.log4j.Logger
@@ -10,9 +12,12 @@ import utils.wrappers.ResponseType
 import utils.wrappers.ResponseWrapper
 import java.lang.Exception
 import java.sql.Connection
+import java.sql.Date
 import java.sql.DriverManager
 import java.sql.ResultSet
+import java.sql.SQLException
 import javax.swing.plaf.basic.BasicPasswordFieldUI
+import kotlin.math.log
 
 class DbManager(
     private val url: String,
@@ -99,27 +104,27 @@ class DbManager(
     }
 
 
-    fun changePassword(login: String, oldPw: String, newPw: String){
-        getConnection().use{connection ->
-            val statement = connection.createStatement()
-            statement.executeQuery("select * from users where login = '$login' and password = '$oldPw'").use{resultSet ->
-                if (resultSet.next()){
-                    statement.executeUpdate("update users set password = '$newPw' where login = '$login'")
-                }
-            }
-        }
-    }
+//    fun changePassword(login: String, oldPw: String, newPw: String){
+//        getConnection().use{connection ->
+//            val statement = connection.createStatement()
+//            statement.executeQuery("select * from users where login = '$login' and password = '$oldPw'").use{resultSet ->
+//                if (resultSet.next()){
+//                    statement.executeUpdate("update users set password = '$newPw' where login = '$login'")
+//                }
+//            }
+//        }
+//    }
 
-    fun changeUsername(oldLog: String, newLog: String, password: String){
-        getConnection().use{connection ->
-            val statement = connection.createStatement()
-            statement.executeQuery("select * from users where login = '$oldLog' and password = '$password'").use{resultSet ->
-                if (resultSet.next()){
-                    statement.executeUpdate("update users set login = '$newLog' where login = '$oldLog'")
-                }
-            }
-        }
-    }
+//    fun changeUsername(oldLog: String, newLog: String, password: String){
+//        getConnection().use{connection ->
+//            val statement = connection.createStatement()
+//            statement.executeQuery("select * from users where login = '$oldLog' and password = '$password'").use{resultSet ->
+//                if (resultSet.next()){
+//                    statement.executeUpdate("update users set login = '$newLog' where login = '$oldLog'")
+//                }
+//            }
+//        }
+//    }
 
     fun getUsers(){
         getConnection().use{connection ->
@@ -134,16 +139,101 @@ class DbManager(
         }
     }
 
-    fun deleteUser(login: String, password: String) {
-        getConnection().use{connection ->
-            val statement = connection.createStatement()
-            statement.executeQuery("select * from users where login = '$login' and password = '$password'").use{resultSet ->
-                if (resultSet.next()){
-                    statement.executeUpdate("delete from users where login = '$login'")
+    fun userOwned(vehicleId: Int, username: String): Boolean {
+        getConnection().use { connection ->
+            connection.prepareStatement(
+                "SELECT 1 FROM collection WHERE id = ? AND user_login = ?"
+            ).use { stmt ->
+                stmt.setInt(1, vehicleId)
+                stmt.setString(2, username)
+
+                stmt.executeQuery().use { rs ->
+                    return rs.next()
                 }
             }
         }
     }
+
+    fun deleteVehicles(ids: List<Int>) {
+        if (ids.isEmpty()) return
+
+        getConnection().use { connection ->
+            connection.autoCommit = false
+            try {
+                val params = ids.joinToString(",") { "?" }
+
+                connection.prepareStatement(
+                    "DELETE FROM collection WHERE id IN ($params)"
+                ).use { stmt ->
+                    ids.forEachIndexed { index, id ->
+                        stmt.setInt(index + 1, id)
+                    }
+                    stmt.executeUpdate()
+                }
+                connection.commit()
+            } catch (e: Exception) {
+                connection.rollback()
+                throw e
+            }
+        }
+    }
+
+    fun updateVehicle(id: Int, newVehicle: Vehicle, username: String) {
+        getConnection().use { connection ->
+            connection.autoCommit = false
+            try {
+                // 1. Проверяем существование и принадлежность
+                val existsAndOwned = connection.prepareStatement(
+                    "SELECT 1 FROM collection WHERE id = ? AND user_login = ?"
+                ).use { stmt ->
+                    stmt.setInt(1, id)
+                    stmt.setString(2, username)
+                    stmt.executeQuery().use { rs -> rs.next() }
+                }
+
+                if (!existsAndOwned) {
+                    throw SQLException("Vehicle not found or access denied")
+                }
+
+                // 2. Выполняем обновление
+                connection.prepareStatement("""
+                UPDATE collection 
+                SET name = ?, coordinate_x = ?, coordinate_y = ?,
+                    engine_power = ?, capacity = ?, distance_travelled = ?,
+                    fuel_type = ?::fuelType
+                WHERE id = ?
+            """).use { stmt ->
+                    stmt.setString(1, newVehicle.name)
+                    stmt.setInt(2, newVehicle.coordinates.x.toInt())
+                    stmt.setInt(3, newVehicle.coordinates.y.toInt())
+                    stmt.setFloat(4, newVehicle.enginePower ?: throw SQLException("Engine power required"))
+                    stmt.setFloat(5, newVehicle.capacity)
+                    stmt.setInt(6, newVehicle.distanceTravelled)
+                    stmt.setString(7, newVehicle.fuelType?.name ?: throw SQLException("Fuel type required"))
+                    stmt.setInt(8, id)
+
+                    val updated = stmt.executeUpdate()
+                    if (updated != 1) {
+                        throw SQLException("Update failed - vehicle not found")
+                    }
+                }
+                connection.commit()
+            } catch (e: Exception) {
+                connection.rollback()
+                throw e
+            }
+        }
+    }
+//    fun deleteUser(login: String, password: String) {
+//        getConnection().use{connection ->
+//            val statement = connection.createStatement()
+//            statement.executeQuery("select * from users where login = '$login' and password = '$password'").use{resultSet ->
+//                if (resultSet.next()){
+//                    statement.executeUpdate("delete from users where login = '$login'")
+//                }
+//            }
+//        }
+//    }
 
     fun deleteVehicle(id: Int?){
         getConnection().use{connection ->
@@ -155,79 +245,142 @@ class DbManager(
         }
     }
 
-    fun loadCollection(): Map<String, String>{
-        getConnection().use{connection ->
+    fun loadCollection(): List<Pair<Vehicle, String>> {
+        getConnection().use { connection ->
             val statement = connection.createStatement()
-            statement.executeQuery("select * from collection").use{resultSet ->
-                val result = mutableMapOf<String, String>()
-                while (resultSet.next()){
-                    result[resultSet.getString("info")] = resultSet.getString("user_login")
-                }
-                return result
-            }
-        }
-    }
+            val resultSet = statement.executeQuery("""
+            SELECT id, creation_date, name, coordinate_x, coordinate_y, 
+                   engine_power, capacity, distance_travelled, fuel_type, user_login 
+            FROM collection
+        """)
 
-    fun loadPasswordByUsername(login: String): String{
-        getConnection().use{connection ->
-            val statement = connection.createStatement()
-            statement.executeQuery("select * from users where login = '$login'").use{resultSet ->
-                resultSet.next()
-                return resultSet.getString("password")
-            }
-        }
-    }
+            val result = mutableListOf<Pair<Vehicle, String>>()
 
-    private fun initCollection(){
-        getConnection().use{connection ->
-            val statement = connection.createStatement()
-            statement.executeUpdate("CREATE TABLE IF NOT EXISTS collection (\n" +
-                    "    id SERIAL PRIMARY KEY,\n" +
-                    "    name VARCHAR(100) NOT NULL,\n" +
-                    "    coordinate_x INTEGER NOT NULL,\n" +
-                    "    coordinate_y DOUBLE PRECISION NOT NULL,\n" +
-                    "    creation_date DATE NOT NULL,\n" +
-                    "    price INTEGER CHECK (price > 0),\n" +
-                    "    unit_of_measure VARCHAR(20),\n" +
-                    "    manufacturer_name VARCHAR(100),\n" +
-                    "    manufacturer_employees_count INTEGER,\n" +
-                    "    manufacturer_type VARCHAR(30),\n" +
-                    "    user_login VARCHAR(50) REFERENCES users(login) ON DELETE SET NULL ON UPDATE CASCADE\n" +
-                    ");")
-        }
-    }
+            while (resultSet.next()) {
+                try {
+                    val vehicle = Vehicle(
+                        name = resultSet.getString("name"),
+                        coordinates = Coordinates(
+                            resultSet.getInt("coordinate_x").toLong(),
+                            resultSet.getInt("coordinate_y").toLong()
+                        ),
+                        enginePower = resultSet.getFloat("engine_power").takeIf { !resultSet.wasNull() },
+                        capacity = resultSet.getFloat("capacity"),
+                        distanceTravelled = resultSet.getInt("distance_travelled"),
+                        fuelType = resultSet.getString("fuel_type")?.let { FuelType.valueOf(it) },
+                        creationDate = Date(resultSet.getTimestamp("creation_date").time)
+                    ).apply {
+                        // Устанавливаем ID из базы данных и добавляем в existingIds
+                        setId(resultSet.getInt("id"))
+                    }
 
-    fun getIdByVehicle(vehicle: Vehicle): Int{
-        getConnection().use{connection ->
-            val statement = connection.createStatement()
-            statement.executeQuery("select * from collection where info = '${jsonCreator.objectToString(vehicle)}'").use{resultSet ->
-                resultSet.next()
-                return resultSet.getInt("id")
-            }
-        }
-    }
-
-    fun saveVehicle(vehicle: Vehicle, username: String){
-        getConnection().use{connection ->
-            var statement = connection.prepareStatement("select * from collection where id = ?")
-            val id = vehicle.getId()
-            statement.setInt(1, id)
-            statement.executeQuery().use{resultSet ->
-                val result = resultSet.next()
-
-                if(result){
-                    statement = connection.prepareStatement("update collection set info = ? where id = ?")
-                    statement.setString(1, jsonCreator.objectToString(vehicle))
-                    statement.setInt(2, vehicle.getId())
-                    statement.executeUpdate()
-                }else{
-                    statement = connection.prepareStatement("insert into collection (info, user_login) values (?, ?)")
-                    statement.setString(1, jsonCreator.objectToString(vehicle))
-                    statement.setString(2, username)
-                    statement.executeUpdate()
+                    result.add(vehicle to resultSet.getString("user_login"))
+                } catch (e: Exception) {
+                    // Логируем ошибку, но продолжаем загрузку остальных элементов
+                    System.err.println("Error loading vehicle: ${e.message}")
                 }
             }
+
+            resultSet.close()
+            statement.close()
+            return result
         }
     }
 
+//    fun loadPasswordByUsername(login: String): String {
+//        getConnection().use { connection ->
+//            val statement = connection.createStatement()
+//            statement.executeQuery("select * from users where login = '$login'").use { resultSet ->
+//                resultSet.next()
+//                return resultSet.getString("password")
+//            }
+//        }
+//    }
+
+    private fun initCollection() {
+        getConnection().use { connection ->
+            val statement = connection.createStatement()
+
+            statement.execute("""
+            DO $$ 
+            BEGIN
+                CREATE TYPE fueltype AS ENUM (
+                    'antimatter', 
+                    'electricity', 
+                    'diesel'
+                );
+            EXCEPTION WHEN duplicate_object THEN 
+                NULL;
+            END $$;
+        """.trimIndent())
+
+            statement.executeUpdate(
+                "CREATE TABLE IF NOT EXISTS collection (\n" +
+                        "    id SERIAL PRIMARY KEY,\n" +
+                        "    creation_date TIMESTAMP NOT NULL,\n" +
+                        "    name VARCHAR(100) NOT NULL,\n" +
+                        "    coordinate_x int not null CHECK ( coordinate_x > -818 ),\n" +
+                        "    coordinate_y int not null CHECK ( coordinate_y < 730 ),\n" +
+                        "    engine_power float,\n" +
+                        "    capacity float not null,\n" +
+                        "    distance_travelled int not null,\n" +
+                        "    fuel_type fueltype,\n" +
+                        "    user_login VARCHAR(50) REFERENCES users(login) ON DELETE SET NULL ON UPDATE CASCADE\n" +
+                        ");"
+            )
+        }
+    }
+
+
+
+    fun saveVehicle(vehicle: Vehicle, username: String) {
+        getConnection().use { connection ->
+            if (vehicle.getId() < 0) {
+                // Вставка новой записи — id будет сгенерирован БД
+                connection.prepareStatement("""
+                INSERT INTO collection 
+                (creation_date, name, coordinate_x, coordinate_y,
+                 engine_power, capacity, distance_travelled, fuel_type, user_login)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?::fuelType, ?)
+                RETURNING id
+            """).use { stmt ->
+                    stmt.setTimestamp(1, vehicle.getSqlCreationDate())
+                    stmt.setString(2, vehicle.name)
+                    stmt.setInt(3, vehicle.coordinates.x.toInt())
+                    stmt.setInt(4, vehicle.coordinates.y.toInt())
+                    stmt.setFloat(5, vehicle.enginePower!!)
+                    stmt.setFloat(6, vehicle.capacity)
+                    stmt.setInt(7, vehicle.distanceTravelled)
+                    stmt.setString(8, vehicle.fuelType?.name)
+                    stmt.setString(9, username)
+
+                    val rs = stmt.executeQuery()
+                    if (rs.next()) {
+                        vehicle.setId(rs.getInt("id")) // Установить id, сгенерированный БД
+                    }
+                }
+            } else {
+                // Обновление существующей записи
+                connection.prepareStatement("""
+                UPDATE collection 
+                SET creation_date = ?, name = ?, coordinate_x = ?, coordinate_y = ?,
+                    engine_power = ?, capacity = ?, distance_travelled = ?,
+                    fuel_type = ?::fuelType, user_login = ?
+                WHERE id = ?
+            """).use { stmt ->
+                    stmt.setTimestamp(1, vehicle.getSqlCreationDate())
+                    stmt.setString(2, vehicle.name)
+                    stmt.setInt(3, vehicle.coordinates.x.toInt())
+                    stmt.setInt(4, vehicle.coordinates.y.toInt())
+                    stmt.setFloat(5, vehicle.enginePower!!)
+                    stmt.setFloat(6, vehicle.capacity)
+                    stmt.setInt(7, vehicle.distanceTravelled)
+                    stmt.setString(8, vehicle.fuelType?.name)
+                    stmt.setString(9, username)
+                    stmt.setInt(10, vehicle.getId())
+                    stmt.executeUpdate()
+                }
+            }
+        }
+    }
 }

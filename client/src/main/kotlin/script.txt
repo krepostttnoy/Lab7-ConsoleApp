@@ -6,7 +6,5 @@ name
 4.0
 4.0
 4
-Антиматерия
-remove_by_id 2
-remove_at 0
-show
+antimatter
+execute_script /Users/mark/Programming/languages/Kotlin/Lab7-ConsoleApp/client/src/main/kotlin/script1.txt

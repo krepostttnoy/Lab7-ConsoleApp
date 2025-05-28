@@ -30,13 +30,7 @@ class CommandInvoker(
             return
         }
 
-        if(command.interactive && inputManager.isScriptMode()) {
-            inputManager.switchToInteractive()
-            command.execute(args)
-            inputManager.returnToScript()
-        }else{
-            command.execute(args)
-        }
+        command.execute(args)
     }
 
     fun getCommand(): Map<String, Command>{

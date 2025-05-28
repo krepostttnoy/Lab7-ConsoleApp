@@ -29,31 +29,29 @@ data class Vehicle(
     var enginePower: Float?,
     var capacity: Float,
     var distanceTravelled: Int,
-    var fuelType: FuelType?
+    var fuelType: FuelType?,
+    @Serializable(with = DateSerializer::class)
+    val creationDate: Date = Date(),
+    private var _id: Int = -1
 ) : Comparable<Vehicle> {
     /**
      * Уникальный идентификатор транспортного средства.
      * Генерируется автоматически с помощью метода [generateId].
      */
 
-    private var id: Int = generateId()
-
-    fun getId(): Int{
-        return this.id
-    }
-
+    fun getId(): Int = _id
     fun setId(id: Int) {
-        this.id = id
+        _id = id
     }
 
+
+    fun getSqlCreationDate(): java.sql.Timestamp {
+        return java.sql.Timestamp(this.creationDate.time)
+    }
     /**
      * Дата создания транспортного средства.
      * Устанавливается автоматически при создании объекта.
      */
-    @Serializable(with = DateSerializer::class)
-    val creationDate: Date = Date()
-
-
 
 
     /**
@@ -76,7 +74,7 @@ data class Vehicle(
      */
     override fun toString(): String {
         return "Vehicle -> {\n" + "name - $name, \n" +
-                "id - $id, \n" +
+                "id - ${getId()}, \n" +
                 "creationDate - $creationDate, \n" +
                 "coordinates - ($coordinates), \n" +
                 "enginePower - $enginePower, \n" +
@@ -104,50 +102,48 @@ data class Vehicle(
             else -> this.enginePower!!.compareTo(other.enginePower!!)
         }
     }
+}
 
     /**
      * Статический объект для управления идентификаторами транспортных средств.
      * Хранит множество уже использованных идентификаторов и предоставляет методы для их генерации и удаления.
      */
-    companion object {
-        /**
-         * Множество уже использованных идентификаторов.
-         */
-        val existingIds = mutableSetOf<Int>()
-
-        /**
-         * Генерирует новый уникальный идентификатор для транспортного средства.
-         * Идентификатор начинается с 1 и увеличивается, пока не будет найден свободный.
-         *
-         * @return Новый уникальный идентификатор.
-         */
-        fun generateId(): Int {
-            var newId = 1
-            while (existingIds.contains(newId)) {
-                newId += 1
-            }
-            existingIds.add(newId)
-            return newId
-        }
-
-
-
-        /**
-         * Удаляет идентификатор из множества использованных идентификаторов.
-         *
-         * @param id Идентификатор, который нужно удалить.
-         */
-        fun removeId(id: Int) {
-            existingIds.remove(id)
-        }
-    }
-}
-
-fun Vehicle.withNewId(): Vehicle = Vehicle(
-    name = this.name,
-    coordinates = this.coordinates,
-    enginePower = this.enginePower,
-    capacity = this.capacity,
-    distanceTravelled = this.distanceTravelled,
-    fuelType = this.fuelType
-)
+//    companion object {
+//        /**
+//         * Множество уже использованных идентификаторов.
+//         */
+//        val existingIds = mutableSetOf<Int>()
+//
+//        /**
+//         * Генерирует новый уникальный идентификатор для транспортного средства.
+//         * Идентификатор начинается с 1 и увеличивается, пока не будет найден свободный.
+//         *
+//         * @return Новый уникальный идентификатор.
+//         */
+//        fun generateId(): Int {
+//            var newId = 1
+//            while (existingIds.contains(newId)) {
+//                newId += 1
+//            }
+//            existingIds.add(newId)
+//            return newId
+//        }
+//
+//
+//
+//        /**
+//         * Удаляет идентификатор из множества использованных идентификаторов.
+//         *
+//         * @param id Идентификатор, который нужно удалить.
+//         */
+//        fun removeId(id: Int) {
+//            existingIds.remove(id)
+//        }
+//    }
+//}
+//
+//fun Vehicle.withNewId(): Vehicle {
+//    val newVehicle = this.copy()
+//    newVehicle.setId(0)
+//    return newVehicle
+//}

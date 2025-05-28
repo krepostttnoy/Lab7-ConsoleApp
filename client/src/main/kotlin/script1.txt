@@ -1,0 +1,13 @@
+info
+show
+add
+name1
+3
+4
+4.0
+4.0
+4
+diesel
+min_by_fuel
+aga
+execute_script /Users/mark/Programming/languages/Kotlin/Lab7-ConsoleApp/client/src/main/kotlin/script.txt

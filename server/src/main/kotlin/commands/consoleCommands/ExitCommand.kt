@@ -2,6 +2,8 @@ package org.example.commands.consoleCommands
 
 import baseClasses.ExitFlag
 import utils.inputOutput.OutputManager
+import utils.wrappers.RequestWrapper
+import utils.wrappers.ResponseWrapper
 
 /**
  * Команда для завершения работы программы.
@@ -31,7 +33,7 @@ class ExitCommand(
      * Выполняет команду завершения программы.
      * Выводит сообщение "Программа завершена." и завершает процесс с кодом 0.
      */
-    override fun execute(args: Map<String, String>, username: String) {
+    override fun execute(request: RequestWrapper, username: String): ResponseWrapper {
         TODO("Not yet implemented")
     }
 }

@@ -11,6 +11,7 @@ class UnknownCommand(
     override val interactive = false
 
     override fun execute(args: String?) {
+        println(argTypes.keys + ":" + argTypes.values)
         commandReceiver.unknownCommand(name, argTypes, args)
     }
 }

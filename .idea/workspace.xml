@@ -5,6 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="157965ef-9953-4521-9f87-67c7da75408d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/client/src/main/kotlin/script1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/CommandTest.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../DataBases/Lab1/README.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../DataBases/Lab1/Screenshot 2025-02-18 at 10.18.49.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../DataBases/Lab1/Screenshot 2025-02-19 at 11.03.17.png" beforeDir="false" />
@@ -80,7 +82,39 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/main/kotlin/clientUtils/CircuitBreaker.kt" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/kotlin/clientUtils/CircuitBreaker.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/main/kotlin/clientUtils/ConnectonManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/kotlin/clientUtils/ConnectonManager.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/kotlin/clientUtils/Console.kt" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/kotlin/clientUtils/Console.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/kotlin/clientUtils/readers/Validator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/kotlin/clientUtils/readers/Validator.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/kotlin/commands/CommandInvoker.kt" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/kotlin/commands/CommandInvoker.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/kotlin/commands/CommandReciever.kt" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/kotlin/commands/CommandReciever.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/kotlin/commands/consoleCommands/UnknownCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/kotlin/commands/consoleCommands/UnknownCommand.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/kotlin/script.txt" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/kotlin/script.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/kotlin/baseClasses/Vehicle.kt" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/kotlin/baseClasses/Vehicle.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbConnect/db.sql" beforeDir="false" afterPath="$PROJECT_DIR$/dbConnect/db.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/client.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/client.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/server.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/server.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/collection/CollectionManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/collection/CollectionManager.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/commands/CommandInvoker.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/commands/CommandInvoker.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/AddCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/AddCommand.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/AddIfMaxCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/AddIfMaxCommand.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/AvgOfEnginePowerCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/AvgOfEnginePowerCommand.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/ClearCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/ClearCommand.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/Command.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/Command.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/CountGrThanEngPwCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/CountGrThanEngPwCommand.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/ExitCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/ExitCommand.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/HelpCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/HelpCommand.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/InfoCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/InfoCommand.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/MinByFuelTypeCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/MinByFuelTypeCommand.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/RemoveAtCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/RemoveAtCommand.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/RemoveByIdCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/RemoveByIdCommand.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/RemoveGreaterCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/RemoveGreaterCommand.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/SaveCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/SaveCommand.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/ShowCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/ShowCommand.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/UpdateIdCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/UpdateIdCommand.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/dbConnect/DbManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/dbConnect/DbManager.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/mutlithread/ReceiverThread.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/mutlithread/ReceiverThread.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/serverUtils/Console.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/serverUtils/Console.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/serverUtils/ConsoleFileManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/serverUtils/ConsoleFileManager.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/users/UserManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/users/UserManager.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,6 +148,7 @@
       <list>
         <option value="Kotlin Enum" />
         <option value="Kotlin Class" />
+        <option value="Kotlin Interface" />
       </list>
     </option>
   </component>
@@ -147,39 +182,39 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.Build Lab6-ConsoleApp.executor": "Run",
-    "Gradle.Build Lab6.executor": "Run",
-    "Gradle.Build Lab7-ConsoleApp(1).executor": "Run",
-    "Gradle.Build Lab7-ConsoleApp.executor": "Run",
-    "Gradle.Lab6 [runServer].executor": "Run",
-    "Kotlin.ClientKt.executor": "Run",
-    "Kotlin.GatewayKt.executor": "Run",
-    "Kotlin.ServerKt.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/mark/Programming/languages/Kotlin/Lab7-ConsoleApp",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "/Users/mark/Programming/languages/Kotlin/Lab7-ConsoleApp/Gateway/src/main/kotlin/Main.kt",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Java",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.Build Lab6-ConsoleApp.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Build Lab6.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Build Lab7-ConsoleApp(1).executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Build Lab7-ConsoleApp.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Lab6 [runServer].executor&quot;: &quot;Run&quot;,
+    &quot;Kotlin.ClientKt.executor&quot;: &quot;Run&quot;,
+    &quot;Kotlin.GatewayKt.executor&quot;: &quot;Run&quot;,
+    &quot;Kotlin.ServerKt.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/mark/Programming/languages/Kotlin/Lab7-ConsoleApp&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;/Users/mark/Programming/languages/Kotlin/Lab7-ConsoleApp/Gateway/src/main/kotlin/Main.kt&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.general&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/server/src/main/kotlin/serverUtils" />
@@ -197,8 +232,8 @@
       <recent name="utils.wrappers" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.ServerKt">
-    <configuration name="ClientKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Kotlin.ClientKt">
+    <configuration name="ClientKt" type="JetRunConfigurationType" singleton="false" temporary="true" nameIsGenerated="true">
       <envs>
         <env name="CSV_FILE_PATH" value="$PROJECT_DIR$/server/src/main/kotlin/CollectionInput.csv" />
       </envs>
@@ -219,85 +254,6 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="Kotlin Scripts.KotlinBuildScript.common:build.gradle.kts" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="Kotlin Scripts.KotlinBuildScript.common:build.gradle.kts" />
-      <option name="filePath" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
-      <module name="Kotlin Scripts.KotlinBuildScript.common:build.gradle.kts" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="Tox" factoryName="Tox">
-      <module name="Kotlin Scripts.KotlinBuildScript.common:build.gradle.kts" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Autodetect">
-      <module name="Kotlin Scripts.KotlinBuildScript.common:build.gradle.kts" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Doctests">
-      <module name="Kotlin Scripts.KotlinBuildScript.common:build.gradle.kts" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <method v="2" />
     </configuration>
     <list>
       <item itemvalue="Kotlin.ClientKt" />
@@ -396,6 +352,17 @@
       <workItem from="1748100199247" duration="9466000" />
       <workItem from="1748172966271" duration="4732000" />
       <workItem from="1748185102468" duration="13176000" />
+      <workItem from="1748205880282" duration="1624000" />
+      <workItem from="1748241888602" duration="7656000" />
+      <workItem from="1748287671904" duration="3107000" />
+      <workItem from="1748336379602" duration="1566000" />
+      <workItem from="1748341782113" duration="7817000" />
+      <workItem from="1748359096367" duration="11678000" />
+      <workItem from="1748372028307" duration="116000" />
+      <workItem from="1748372167633" duration="7917000" />
+      <workItem from="1748383425210" duration="1213000" />
+      <workItem from="1748384720513" duration="1215000" />
+      <workItem from="1748386506397" duration="8658000" />
     </task>
     <servers />
   </component>

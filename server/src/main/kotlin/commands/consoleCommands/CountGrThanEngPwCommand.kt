@@ -8,6 +8,7 @@ import kotlinx.serialization.Transient
 import org.example.serverUtils.ConnectionManager
 import org.example.serverUtils.Read
 import utils.inputOutput.OutputManager
+import utils.wrappers.RequestWrapper
 import utils.wrappers.ResponseType
 import utils.wrappers.ResponseWrapper
 import javax.lang.model.element.NestingKind
@@ -55,13 +56,12 @@ class CountGrThanEngPwCommand(
         return info
     }
 
-    override fun execute(args: Map<String, String>, username: String) {
+    override fun execute(request: RequestWrapper, username: String): ResponseWrapper {
         if (cm.getCollection().isEmpty()) {
-            val response = ResponseWrapper(ResponseType.OK, "hueta", receiver = args["sender"]!!)
-            connectionManager.send(response)
-            return
+            val response = ResponseWrapper(ResponseType.OK, "hueta", receiver = username)
+            return response
         }
-        val engPower = args["engPw"]?.toFloatOrNull()
+        val engPower = request.args["engPw"]?.toFloatOrNull()
 
         val element = Vehicle(
             name = "ComparingModel",
@@ -73,7 +73,7 @@ class CountGrThanEngPwCommand(
         )
 
         val count = cm.getCollection().filter { it > element }.size
-        val response = ResponseWrapper(ResponseType.OK, "Кол-во объектов enginePower которых больше $engPower -> $count", receiver = args["sender"]!!)
-        connectionManager.send(response)
+        val response = ResponseWrapper(ResponseType.OK, "Кол-во объектов enginePower которых больше $engPower -> $count", receiver = username)
+        return response
     }
 }

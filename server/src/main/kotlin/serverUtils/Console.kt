@@ -82,10 +82,7 @@ class Console {
         logger.info("Registering AvgOfEnginePower Command")
         commandInvoker.register("clear", ClearCommand(collectionManager, outputManager, connectionManager))
         logger.info("Registering Clear Command")
-        commandInvoker.register(
-            "count_gr_than_eng_pw",
-            CountGrThanEngPwCommand(collectionManager, validator, outputManager, connectionManager)
-        )
+        commandInvoker.register("count_gr_than_eng_pw", CountGrThanEngPwCommand(collectionManager, validator, outputManager, connectionManager))
         logger.info("Registering CountGreaterThanEnginePower Command")
         commandInvoker.register("info", InfoCommand(collectionManager, connectionManager))
         logger.info("Registering Info Command")

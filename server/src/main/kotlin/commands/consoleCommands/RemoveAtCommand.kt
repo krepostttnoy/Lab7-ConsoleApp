@@ -8,6 +8,7 @@ import kotlinx.serialization.Transient
 import org.example.serverUtils.ConnectionManager
 import org.example.serverUtils.Read
 import utils.inputOutput.OutputManager
+import utils.wrappers.RequestWrapper
 import utils.wrappers.ResponseType
 import utils.wrappers.ResponseWrapper
 
@@ -45,26 +46,28 @@ class RemoveAtCommand(
      *
      * @param indexStr Строковое представление индекса элемента для удаления (может быть null).
      */
-    override fun execute(args: Map<String, String>, username: String) {
+    override fun execute(request: RequestWrapper, username: String): ResponseWrapper {
         if (!(cm.getCollection().isEmpty())) {
-            val index = args["index"]?.toInt()
+            val index = request.args["index"]?.toInt()
+            println(index)
 
             if (index == null || index < 0 || index >= cm.getCollection().size) {
-                val response = ResponseWrapper(ResponseType.OK, "Incorrect index", receiver = args["sender"]!!)
-                connectionManager.send(response)
-                return
+                val response = ResponseWrapper(ResponseType.OK, "Incorrect index", receiver = username)
+                return response
             }
 
+            println("hueta")
             val vehicleToRemove = cm.getCollection()[index]
-            cm.removeVehicle("removeAt", index, null, username)
-            Vehicle.Companion.existingIds.remove(vehicleToRemove.getId())
+            println("hueta1")
+            cm.removeVehicleAt(index, username)
+            println("hueta2")
+            //Vehicle.Companion.existingIds.remove(vehicleToRemove.getId())
 
-            val response = ResponseWrapper(ResponseType.OK, "", receiver = args["sender"]!!)
-            connectionManager.send(response)
+            val response = ResponseWrapper(ResponseType.OK, "", receiver = username)
+            return response
         }else{
-            val response = ResponseWrapper(ResponseType.OK, "Collection is empty", receiver = args["sender"]!!)
-            connectionManager.send(response)
-            return
+            val response = ResponseWrapper(ResponseType.OK, "Collection is empty", receiver = username)
+            return response
         }
     }
 }

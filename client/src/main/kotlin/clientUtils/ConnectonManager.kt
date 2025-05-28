@@ -16,7 +16,7 @@ import utils.exceptions.CircuitBreakerOpenException
 import utils.inputOutput.InputManager
 import java.io.IOException
 
-class ConnectionManager(private var host: String, private var port: Int) {
+class ConnectionManager(private var host: String, private var port: Int, private val circuitBreaker: CircuitBreaker) {
     private val timeout = 10000
     private var datagramSocket = DatagramSocket()
     val outputManager = IOThread.outputManager
@@ -25,7 +25,6 @@ class ConnectionManager(private var host: String, private var port: Int) {
     private var hostInetAddress = InetAddress.getByName(host)
     private var datagramPacket = DatagramPacket(ByteArray(4096), 4096, hostInetAddress, port)
     private val logger: Logger = LogManager.getLogger(ConnectionManager::class.java)
-    private val circuitBreaker = CircuitBreaker()
 
     fun connect(): Boolean{
         datagramSocket.soTimeout = timeout
@@ -42,7 +41,7 @@ class ConnectionManager(private var host: String, private var port: Int) {
 
             receive()
             var ping = (System.nanoTime() - start) / 1_000_000.0
-            logger.info(ping)
+            logger.info("Ping: $ping")
             return ping
         } catch (e: Exception) {
             logger.error("Ping failed - `{}`: ${e.message}", timeout.toDouble())
@@ -57,9 +56,8 @@ class ConnectionManager(private var host: String, private var port: Int) {
                 val buf = json.toByteArray()
                 val packet = DatagramPacket(buf, buf.size, InetAddress.getByName(host), port)
 
-                logger.info("Sending to $host:$port: $json")
+                logger.info("Sending to $host:$port: ${json}")
                 datagramSocket.send(packet)
-                circuitBreaker.recordSuccess()
             }catch (e: Exception){
                 circuitBreaker.recordFailure()
                 logger.error("Failed to send request: ${e.message}")
@@ -75,13 +73,15 @@ class ConnectionManager(private var host: String, private var port: Int) {
             val buf = ByteArray(4096)
             val packet = DatagramPacket(buf, buf.size)
             datagramSocket.receive(packet)
+
             val json = String(packet.data, 0, packet.length).trim()
             if (json.isEmpty()) {
                 circuitBreaker.recordFailure()
                 throw IOException("Empty response from server")
             }
             logger.info("Received from ${packet.address}:${packet.port}: $json")
-            circuitBreaker.recordSuccess()
+
+
             return Json.decodeFromString(json)
         } catch (e: Exception) {
             circuitBreaker.recordFailure()

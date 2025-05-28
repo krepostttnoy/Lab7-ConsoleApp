@@ -13,6 +13,7 @@ import org.example.serverUtils.Validator
 import utils.JsonCreator
 import utils.inputOutput.InputManager
 import utils.inputOutput.OutputManager
+import utils.wrappers.RequestWrapper
 import utils.wrappers.ResponseType
 import utils.wrappers.ResponseWrapper
 
@@ -65,46 +66,40 @@ class UpdateIdCommand(
      * 6. Обновляет указанное поле с помощью [org.example.serverUtils.Reader], создавая копию объекта [baseClasses.Vehicle] с новым значением.
      * 7. Заменяет старый элемент в коллекции на обновлённый.
      */
-    override fun execute(args: Map<String, String>, username: String) {
+    override fun execute(request: RequestWrapper, username: String): ResponseWrapper {
         if (cm.getCollection().isEmpty()) {
-            val response = ResponseWrapper(ResponseType.OK, "Collection is empty", receiver = args["sender"]!!)
-            connectionManager.send(response)
-            return
+            val response = ResponseWrapper(ResponseType.OK, "Collection is empty", receiver =username)
+            return response
         }
 
-        val idStr = args["id"] ?: run {
-            val response = ResponseWrapper(ResponseType.ERROR, "Missing id argument", receiver = args["sender"]!!)
-            connectionManager.send(response)
-            return
+        val idStr = request.args["id"] ?: run {
+            val response = ResponseWrapper(ResponseType.ERROR, "Missing id argument", receiver = username)
+            return response
         }
 
         val id = idStr.toIntOrNull() ?: run {
-            val response = ResponseWrapper(ResponseType.ERROR, "Invalid id: $idStr", receiver = args["sender"]!!)
-            connectionManager.send(response)
-            return
+            val response = ResponseWrapper(ResponseType.ERROR, "Invalid id: $idStr", receiver = username)
+            return response
         }
 
-        val field = args["field"] ?: run {
-            val response = ResponseWrapper(ResponseType.ERROR, "Missing field argument", receiver = args["sender"]!!)
-            connectionManager.send(response)
-            return
+        val field = request.args["field"] ?: run {
+            val response = ResponseWrapper(ResponseType.ERROR, "Missing field argument", receiver = username)
+            return response
         }
 
-        val value = args["value"] ?: run {
-            val response = ResponseWrapper(ResponseType.ERROR, "Missing value argument", receiver = args["sender"]!!)
-            connectionManager.send(response)
-            return
+        val value = request.args["value"] ?: run {
+            val response = ResponseWrapper(ResponseType.ERROR, "Missing value argument", receiver = username)
+            return response
         }
 
         val index = cm.getCollection().indexOfFirst { it.getId() == id }
         if (index == -1) {
-            val response = ResponseWrapper(ResponseType.ERROR, "Element with ID = $id does not exist", receiver = args["sender"]!!)
-            connectionManager.send(response)
-            return
+            val response = ResponseWrapper(ResponseType.ERROR, "Element with ID = $id does not exist", receiver = username)
+            return response
         }
 
         val oldVehicle = cm.getCollection()[index]
-        Vehicle.Companion.removeId(oldVehicle.getId())
+        //Vehicle.Companion.removeId(oldVehicle.getId())
         val jsonCreator = JsonCreator()
 
         val newVehicle = when (field.lowercase()) {
@@ -115,25 +110,22 @@ class UpdateIdCommand(
             }
             "enginepower", "ep" -> {
                 val enginePower = value.toFloatOrNull() ?: run {
-                    val response = ResponseWrapper(ResponseType.ERROR, "Invalid enginePower: $value", receiver = args["sender"]!!)
-                    connectionManager.send(response)
-                    return
+                    val response = ResponseWrapper(ResponseType.ERROR, "Invalid enginePower: $value", receiver = username)
+                    return response
                 }
                 oldVehicle.copy(enginePower = enginePower)
             }
             "capacity", "cap" -> {
                 val capacity = value.toFloatOrNull() ?: run {
-                    val response = ResponseWrapper(ResponseType.ERROR, "Invalid capacity: $value", receiver = args["sender"]!!)
-                    connectionManager.send(response)
-                    return
+                    val response = ResponseWrapper(ResponseType.ERROR, "Invalid capacity: $value", receiver = username)
+                    return response
                 }
                 oldVehicle.copy(capacity = capacity)
             }
             "distancetravelled", "dt" -> {
                 val distanceTravelled = value.toIntOrNull() ?: run {
-                    val response = ResponseWrapper(ResponseType.ERROR, "Invalid distanceTravelled: $value", receiver = args["sender"]!!)
-                    connectionManager.send(response)
-                    return
+                    val response = ResponseWrapper(ResponseType.ERROR, "Invalid distanceTravelled: $value", receiver = username)
+                    return response
                 }
                 oldVehicle.copy(distanceTravelled = distanceTravelled)
             }
@@ -142,14 +134,13 @@ class UpdateIdCommand(
                 oldVehicle.copy(fuelType = fuelType)
             }
             else -> {
-                val response = ResponseWrapper(ResponseType.ERROR, "Invalid field: $field. Available fields: name, coordinates, enginePower, capacity, distanceTravelled, fuelType", receiver = args["sender"]!!)
-                connectionManager.send(response)
-                return
+                val response = ResponseWrapper(ResponseType.ERROR, "Invalid field: $field. Available fields: name, coordinates, enginePower, capacity, distanceTravelled, fuelType", receiver = username)
+                return response
             }
         }
 
-        cm.updateVehicleAt(index, newVehicle)
-        val response = ResponseWrapper(ResponseType.OK, "Element with ID = $id updated successfully", receiver = args["sender"]!!)
-        connectionManager.send(response)
+        cm.updateVehicleAt(id, newVehicle, username)
+        val response = ResponseWrapper(ResponseType.OK, "Element with ID = $id updated successfully", receiver = username)
+        return response
     }
 }

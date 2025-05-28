@@ -2,12 +2,14 @@ package org.example.commands.consoleCommands
 
 import baseClasses.Vehicle
 import collection.CollectionManager
+import com.fasterxml.jackson.databind.JsonSerializable
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.Transient
 import org.example.serverUtils.ConnectionManager
 import org.example.serverUtils.Validator
 import utils.inputOutput.InputManager
 import utils.inputOutput.OutputManager
+import utils.wrappers.RequestWrapper
 import utils.wrappers.ResponseType
 import utils.wrappers.ResponseWrapper
 
@@ -38,7 +40,6 @@ class RemoveByIdCommand(
     override fun getInfo(): String {
         return info
     }
-
     /**
      * Выполняет команду удаления транспортного средства по указанному идентификатору.
      *
@@ -52,27 +53,27 @@ class RemoveByIdCommand(
      *
      * @param idStr Строковое представление идентификатора элемента для удаления (может быть null).
      */
-    override fun execute(args: Map<String, String>, username: String) {
+    override fun execute(request: RequestWrapper, username: String): ResponseWrapper {
         if (!(cm.getCollection().isEmpty())) {
-            val id = args["index"]?.toInt()
+
+            val id = request.args["index"]?.toIntOrNull()
+                ?: return ResponseWrapper(ResponseType.ERROR, "ID must be a number", receiver = username)
 
             val index = cm.getCollection().indexOfFirst { it.getId() == id }
             if (index == -1) {
-                val response = ResponseWrapper(ResponseType.OK, "Элемента с ID = $id не существует.", receiver = args["sender"]!!)
-                connectionManager.send(response)
-                return
+                val response = ResponseWrapper(ResponseType.OK, "Элемента с ID = $id не существует.", receiver = username)
+                return response
             }
 
             val vehicleToRemove = cm.getCollection()[index]
-            cm.removeVehicle("removeAt", index, null, username)
-            Vehicle.Companion.existingIds.remove(vehicleToRemove.getId())
+            cm.removeVehicleById(id, username, vehicleToRemove)
+            //Vehicle.Companion.existingIds.remove(vehicleToRemove.getId())
 
-            val response = ResponseWrapper(ResponseType.OK, "", receiver = args["sender"]!!)
-            connectionManager.send(response)
+            val response = ResponseWrapper(ResponseType.OK, "", receiver = username)
+            return response
         }else{
-            val response = ResponseWrapper(ResponseType.OK, "Collection is empty", receiver = args["sender"]!!)
-            connectionManager.send(response)
-            return
+            val response = ResponseWrapper(ResponseType.OK, "Collection is empty", receiver = username)
+            return response
         }
     }
 }

@@ -1,6 +1,8 @@
 package org.example.commands.consoleCommands
 
 import kotlinx.serialization.Serializable
+import utils.wrappers.RequestWrapper
+import utils.wrappers.ResponseWrapper
 
 /**
  * Интерфейс для реализации команд.
@@ -14,7 +16,7 @@ sealed interface Command {
      * Реализация метода зависит от конкретной команды.
      */
     val interactive: Boolean
-    fun execute(args: Map<String, String>, username: String)
+    fun execute(request: RequestWrapper, username: String): ResponseWrapper
     fun getInfo(): String
     fun getArgsType(): Map<String, String>
 

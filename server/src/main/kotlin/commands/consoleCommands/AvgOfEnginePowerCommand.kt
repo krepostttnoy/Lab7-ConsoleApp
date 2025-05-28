@@ -7,6 +7,7 @@ import org.example.commands.consoleCommands.Command
 import org.example.serverUtils.ConnectionManager
 import utils.JsonCreator
 import utils.inputOutput.OutputManager
+import utils.wrappers.RequestWrapper
 import utils.wrappers.ResponseType
 import utils.wrappers.ResponseWrapper
 
@@ -45,18 +46,17 @@ class AvgOfEnginePowerCommand(
         return info
     }
 
-    override fun execute(args: Map<String, String>, username: String) {
+    override fun execute(request: RequestWrapper, username: String): ResponseWrapper {
         if (cm.getCollection().isEmpty()) {
-            val response = ResponseWrapper(ResponseType.OK, "Коллекция пуста.", receiver = args["sender"]!!)
-            connectionManager.send(response)
-            return
+            val response = ResponseWrapper(ResponseType.OK, "Коллекция пуста.", receiver = username)
+            return response
         }
 
         val size = cm.getCollection().size
         val sum = cm.getCollection().sumOf { vehicle ->
             (vehicle.enginePower ?: 0.0f).toDouble()
         }
-        val response = ResponseWrapper(ResponseType.OK, "Avg: ${sum/size}. Sum -> $sum, size -> $size", receiver = args["sender"]!!)
-        connectionManager.send(response)
+        val response = ResponseWrapper(ResponseType.OK, "Avg: ${sum/size}. Sum -> $sum, size -> $size", receiver = username)
+        return response
     }
 }

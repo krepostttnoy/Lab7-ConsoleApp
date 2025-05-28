@@ -1,7 +1,7 @@
 package org.example.commands.consoleCommands
 
 import baseClasses.Vehicle
-import baseClasses.withNewId
+//import baseClasses.withNewId
 import collection.CollectionManager
 import org.example.commands.consoleCommands.Command
 import console.IVehicleManager
@@ -10,6 +10,7 @@ import kotlinx.serialization.Transient
 import org.example.serverUtils.ConnectionManager
 import utils.JsonCreator
 import utils.inputOutput.OutputManager
+import utils.wrappers.RequestWrapper
 import utils.wrappers.ResponseType
 import utils.wrappers.ResponseWrapper
 
@@ -53,45 +54,48 @@ class AddIfMaxCommand(
         return info
     }
 
-    override fun execute(args: Map<String, String>, username: String) {
+
+    override fun execute(request: RequestWrapper, username: String): ResponseWrapper {
         try{
             val jsonCreator = JsonCreator()
             if (cm.getCollection().isEmpty()) {
                 outputManager.println("Коллекция пуста.")
-                val vehicleJson = args["vehicle"] ?: throw IllegalArgumentException("Vehicle data is missing")
-                val vehicle = jsonCreator.stringToObject<Vehicle>(vehicleJson).withNewId()
-                if (cm.getCollection().any { it.getId() == vehicle.getId()}) {
-                    throw IllegalArgumentException("Vehicle with ID ${vehicle.getId()} already exists!, ${Vehicle.existingIds.toList()}")
-                }
-                cm.addVehicle(vehicle, "")
-                val response = ResponseWrapper(ResponseType.OK, "Vehicle added: ${vehicle.name}", receiver = args["sender"]!!)
-                connectionManager.send(response)
-                return
+                val vehicleJson = request.args["vehicle"] ?: throw IllegalArgumentException("Vehicle data is missing")
+                val vehicle = jsonCreator.stringToObject<Vehicle>(vehicleJson)
+//                if (cm.getCollection().any { it.getId() == vehicle.getId()}) {
+//                    throw IllegalArgumentException("Vehicle with ID ${vehicle.getId()} already exists!")
+//                }
+                cm.addVehicle(vehicle, username)
+                val response = ResponseWrapper(ResponseType.OK, "Vehicle added: ${vehicle.name}", receiver = username)
+                return response
             }
 
             val maxVehicle = cm.getCollection().maxWithOrNull(compareBy { it.enginePower })
             if (maxVehicle == null) {
-                outputManager.println("Ошибка: не удалось определить максимальный элемент.")
-                return
+                return ResponseWrapper(
+                    ResponseType.ERROR,
+                    "Cannot compare vehicles: no valid enginePower values found in the collection.",
+                    receiver = username
+                )
             }
-            val vehicleJson = args["vehicle"] ?: throw IllegalArgumentException("Vehicle data is missing")
-            val newVehicle = jsonCreator.stringToObject<Vehicle>(vehicleJson).withNewId()
-            if (cm.getCollection().any { it.getId() == newVehicle.getId() }) {
-                throw IllegalArgumentException("Vehicle with ID ${newVehicle.getId()} already exists!, ${Vehicle.existingIds.toList()}")
-            }
+            val vehicleJson = request.args["vehicle"] ?: throw IllegalArgumentException("Vehicle data is missing")
+            val newVehicle = jsonCreator.stringToObject<Vehicle>(vehicleJson)
+//            if (cm.getCollection().any { it.getId() == newVehicle.getId() }) {
+//                throw IllegalArgumentException("Vehicle with ID ${newVehicle.getId()} already exists!")
+//            }
 
             if (newVehicle.compareTo(maxVehicle) > 0) {
-                cm.addVehicle(newVehicle, "")
-                val response = ResponseWrapper(ResponseType.OK, "Vehicle added: ${newVehicle.name}", receiver = args["sender"]!!)
-                connectionManager.send(response)
+                cm.addVehicle(newVehicle, username)
+                val response = ResponseWrapper(ResponseType.OK, "Vehicle added: ${newVehicle.name}", receiver = username)
+                return response
             } else {
-                val response = ResponseWrapper(ResponseType.OK, "Vehicle can't be added: ${newVehicle.name}", receiver = args["sender"]!!)
-                connectionManager.send(response)
+                val response = ResponseWrapper(ResponseType.OK, "Vehicle can't be added: ${newVehicle.name}", receiver = username)
+                return response
             }
 
         }catch (e: Exception){
-            val response = ResponseWrapper(ResponseType.ERROR, "Error: ${e.message}", receiver = args["sender"]!!)
-            connectionManager.send(response)
+            val response = ResponseWrapper(ResponseType.ERROR, "Error: ${e.message}", receiver = username)
+            return response
         }
     }
 }

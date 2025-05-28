@@ -7,6 +7,7 @@ import kotlinx.serialization.Transient
 import org.example.commands.consoleCommands.Command
 import org.example.serverUtils.ConnectionManager
 import utils.inputOutput.OutputManager
+import utils.wrappers.RequestWrapper
 import utils.wrappers.ResponseType
 import utils.wrappers.ResponseWrapper
 
@@ -36,17 +37,16 @@ class ClearCommand(
      * 3. Очищает список использованных идентификаторов в [baseClasses.Vehicle.Companion.existingIds].
      * 4. Выводит сообщение об успешной очистке и текущий размер коллекции.
      */
-    override fun execute(args: Map<String, String>, username: String) {
+    override fun execute(request: RequestWrapper, username: String): ResponseWrapper {
         if (cm.getCollection().isEmpty()) {
-            val response = ResponseWrapper(ResponseType.OK, "Collection is empty", receiver = args["sender"]!!)
-            connectionManager.send(response)
-            return
+            val response = ResponseWrapper(ResponseType.OK, "Collection is empty", receiver = username)
+            return response
         }
 
         cm.clear(username)
-        Vehicle.Companion.existingIds.clear()
-        val response = ResponseWrapper(ResponseType.OK, "Collection is cleared. Size: ${cm.getCollection().size}", receiver = args["sender"]!!)
-        connectionManager.send(response)
+        //Vehicle.Companion.existingIds.clear()
+        val response = ResponseWrapper(ResponseType.OK, "Collection is cleared. Size: ${cm.getCollection().size}", receiver = username)
+        return response
     }
 
     override fun getArgsType(): Map<String, String> {

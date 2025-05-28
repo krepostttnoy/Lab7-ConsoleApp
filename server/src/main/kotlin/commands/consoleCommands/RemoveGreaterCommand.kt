@@ -8,6 +8,7 @@ import kotlinx.serialization.Transient
 import org.example.serverUtils.ConnectionManager
 import org.example.serverUtils.Read
 import utils.inputOutput.OutputManager
+import utils.wrappers.RequestWrapper
 import utils.wrappers.ResponseType
 import utils.wrappers.ResponseWrapper
 
@@ -55,10 +56,10 @@ class RemoveGreaterCommand(
      *
      * @param enginePowerStr Строковое представление мощности двигателя для сравнения (может быть null).
      */
-    override fun execute(args: Map<String, String>, username: String) {
+    override fun execute(request: RequestWrapper, username: String): ResponseWrapper {
         var response: ResponseWrapper
         if(!(cm.getCollection().isEmpty())){
-            val enginePower = args["engPw"]?.toFloatOrNull()
+            val enginePower = request.args["engPw"]?.toFloatOrNull()?: return ResponseWrapper(ResponseType.ERROR, "Engine power must be a number", receiver = username)
             var i = 0
             val element = Vehicle(
                 name = "ComparingModel",
@@ -68,28 +69,28 @@ class RemoveGreaterCommand(
                 distanceTravelled = 0,
                 fuelType = null
             )
-            val toRemove = cm.getCollection().filter { it > element }
+            val vehiclesToRemove = cm.getCollection()
+                .filter { vehicle ->
+                    vehicle.enginePower ?: Float.MIN_VALUE > enginePower &&
+                            cm.getRelationship()[vehicle.getId()] == username
+                }
 
-            if (toRemove.isEmpty()) {
-                response = ResponseWrapper(ResponseType.OK, "goida can't delete anything", receiver = args["sender"]!!)
-                connectionManager.send(response)
-                return
+            if (vehiclesToRemove.isEmpty()) {
+                response = ResponseWrapper(ResponseType.OK, "goida can't delete anything", receiver = username)
+                return response
             }
 
-            toRemove.forEach { vehicle ->
-                cm.removeVehicle("remove", null, vehicle, username)
-                Vehicle.Companion.existingIds.remove(vehicle.getId())
+            vehiclesToRemove.forEach { vehicle ->
+                cm.removeVehicleById(vehicle.getId(), username, vehicle)
                 i++
             }
 
-
-            val result = ResponseWrapper(ResponseType.OK, "Deleted $i govno/(a)", receiver = args["sender"]!!)
-            connectionManager.send(result)
-
+            val result = ResponseWrapper(ResponseType.OK, "Deleted $i govno/(a)", receiver = username)
+            return result
 
         }else{
-            response = ResponseWrapper(ResponseType.OK, "goida", receiver = args["sender"]!!)
-            connectionManager.send(response)
+            response = ResponseWrapper(ResponseType.OK, "goida", receiver = username)
+            return response
         }
     }
 }

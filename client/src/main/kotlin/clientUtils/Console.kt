@@ -14,15 +14,17 @@ import utils.wrappers.RequestWrapper
 import utils.wrappers.ResponseType
 import org.apache.logging.log4j.LogManager
 import org.apache.logging.log4j.Logger
+import org.example.clientUtils.CircuitBreaker
 import org.example.clientUtils.readers.Validator
 import java.io.StringReader
 
 class Console{
-    private val connectionManager = ConnectionManager("127.0.0.1", 6789)
+    private val circuitBreaker = CircuitBreaker()
+    private val connectionManager = ConnectionManager("127.0.0.1", 6789, circuitBreaker)
     private val outputManager = IOThread.outputManager
     private val inputManager = IOThread.inputManager
     private val commandInvoker = CommandInvoker(outputManager, inputManager)
-    private val commandReceiver = CommandReceiver(outputManager, inputManager, commandInvoker, connectionManager, this)
+    private val commandReceiver = CommandReceiver(outputManager, inputManager, commandInvoker, connectionManager, this, circuitBreaker)
     private val jsonCreator = JsonCreator()
     private val logger: Logger = LogManager.getLogger(Console::class.java)
     private val validator: Validator by lazy {Validator(outputManager, inputManager)}
@@ -69,10 +71,8 @@ class Console{
 
     fun authorize(){
         outputManager.surePrint("Sign up/log in for using the collection.")
-        outputManager.print("Username: ")
-        val username = validator.readLineTrimmed()
-        outputManager.print("Password: ")
-        val password = validator.readLineTrimmed()
+        val username = getValidUsername()
+        val password = getValidPassword()
 
         val req = RequestWrapper(RequestType.AUTHORIZATION, "", mutableMapOf("username" to username, "password" to password))
 
@@ -87,6 +87,40 @@ class Console{
             token = response.token
             outputManager.surePrint("Goida bratan, "+ username)
             authorized = true
+        }
+    }
+
+    private fun getValidUsername(): String {
+        while (true) {
+            outputManager.print("Username: ")
+            val username = validator.readLineTrimmed()
+
+            when {
+                username.isEmpty() -> {
+                    outputManager.println("Username cannot be empty")
+                }
+                username.length == 1 -> {
+                    outputManager.println("Username must be at least 2 characters long")
+                }
+                else -> return username
+            }
+        }
+    }
+
+    private fun getValidPassword(): String {
+        while (true) {
+            outputManager.print("Password: ")
+            val password = validator.readLineTrimmed()
+
+            when {
+                password.isEmpty() -> {
+                    outputManager.println("Password cannot be empty")
+                }
+                password.length == 1 -> {
+                    outputManager.println("Password must be at least 2 characters long")
+                }
+                else -> return password
+            }
         }
     }
 

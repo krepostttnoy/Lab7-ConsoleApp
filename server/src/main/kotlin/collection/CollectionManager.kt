@@ -1,10 +1,16 @@
 package collection
 
+import baseClasses.Coordinates
+import baseClasses.FuelType
 import baseClasses.Vehicle
+import org.apache.logging.log4j.LogManager
+import org.apache.logging.log4j.Logger
 import org.example.dbConnect.DbManager
 import utils.exceptions.UserIsNotAuthorizedException
+import java.sql.SQLException
 import java.time.LocalDate
 import java.util.Collections
+
 
 
 /**
@@ -26,28 +32,39 @@ class CollectionManager {
     private val relationship = Collections.synchronizedMap(mutableMapOf<Int, String>())
     private val initializationDate: LocalDate = LocalDate.now()
     private val dbManager = DbManager("jdbc:postgresql://localhost:15432/studs", "s474305", "yWizzR0CBOadnGlk")
+    private val logger: Logger = LogManager.getLogger(CollectionManager::class.java)
 
-    fun clear(username: String){
+
+    fun clear(username: String) {
         synchronized(baseCollection) {
-            val toBeCleared = mutableListOf<Vehicle>()
-            for (product in baseCollection) {
-                if ((relationship[product.getId()] == username) or (username == "admin")) {
-                    toBeCleared.add(product)
+            try {
+                val idsToRemove = baseCollection
+                    .filter { dbManager.userOwned(it.getId(), username) }
+                    .map { it.getId() }
+
+                dbManager.deleteVehicles(idsToRemove)
+
+
+                idsToRemove.forEach { id ->
+                    baseCollection.removeIf { it.getId() == id }
+                    relationship.remove(id)
                 }
+            } catch (e: Exception) {
             }
-            for (vehicle in toBeCleared) {
-                try {
-                    removeVehicle("remove", null, vehicle, username)
-                } catch (_:Exception) {}
-
-            }
-
         }
     }
 
-    fun updateVehicleAt(index: Int, newVehicle: Vehicle){
+    fun updateVehicleAt(id: Int, newVehicle: Vehicle, username: String) {
         synchronized(baseCollection) {
-            baseCollection[index] = newVehicle
+            val vehicle = baseCollection.firstOrNull { it.getId() == id }
+                ?: throw NoSuchElementException("Vehicle with ID $id not found")
+
+            if (relationship[vehicle.getId()] != username) {
+                throw SecurityException("User $username doesn't own vehicle ${vehicle.getId()}")
+            }
+
+            dbManager.updateVehicle(vehicle.getId(), newVehicle, username)
+            baseCollection.replaceAll { if (it.getId() == id) newVehicle else it }
         }
     }
 
@@ -86,36 +103,73 @@ class CollectionManager {
     fun addVehicle(vehicle: Vehicle, username: String) {
         synchronized(baseCollection) {
             dbManager.saveVehicle(vehicle, username)
-            val id = dbManager.getIdByVehicle(vehicle)
-            vehicle.setId(id)
-            baseCollection[vehicle.getId()] = vehicle
+            baseCollection.add(vehicle)
             relationship[vehicle.getId()] = username
-            dbManager.saveVehicle(vehicle, username)
+            println(relationship)
         }
     }
 
-    fun removeVehicle(argsName: String, argsRaw: Int?, vehicle: Vehicle?, username: String){
+    fun removeVehicle(argsName: String, argsRaw: Int?, vehicle: Vehicle?, username: String) {
         synchronized(baseCollection) {
-            if ((relationship[vehicle?.getId()] != username) and (username != "admin")) throw UserIsNotAuthorizedException()
-            when(argsName){
+            val vehicleId = vehicle?.getId() ?: throw IllegalArgumentException("Vehicle cannot be null")
+
+            if (relationship[vehicleId] != username && username != "admin") {
+                throw SecurityException("User $username is not authorized to modify vehicle $vehicleId")
+            }
+
+            when (argsName) {
                 "removeAt" -> {
-                    if (argsRaw != null){
-                        baseCollection.removeAt(argsRaw)
-                        dbManager.deleteVehicle(vehicle?.getId())
-                        relationship.remove(vehicle?.getId())
-                    }else{
-                        throw NullPointerException("Null argument for parameter argsRaw is not available.")
-                    }
+                    println("2454255")
+                    val index = argsRaw ?: throw IllegalArgumentException("Index cannot be null")
+                    if (index !in baseCollection.indices) throw IndexOutOfBoundsException("Invalid index: $index")
+
+                    val removedVehicle = baseCollection.removeAt(index)
+                    dbManager.deleteVehicle(removedVehicle.getId())
+                    relationship.remove(removedVehicle.getId())
+                    baseCollection.remove(removedVehicle)
                 }
                 "remove" -> {
-                    baseCollection.remove(vehicle)
-                    dbManager.deleteVehicle(vehicle?.getId())
+                    if (!baseCollection.remove(vehicle)) {
+                        throw NoSuchElementException("Vehicle not found in collection")
+                    }
+                    dbManager.deleteVehicle(vehicleId)
+                    relationship.remove(vehicleId) // Удаляем связь
                 }
-                else -> ""
+                else -> throw IllegalArgumentException("Unknown operation: $argsName")
             }
         }
     }
 
+    fun removeVehicleAt(index: Int, username: String) {
+        synchronized(baseCollection) {
+            if (index < 0 || index >= baseCollection.size) {
+                throw IndexOutOfBoundsException("Index $index out of bounds")
+            }
+
+            val vehicle = baseCollection[index]
+
+            if(relationship[vehicle.getId()] == username){
+                baseCollection.removeAt(index)
+                dbManager.deleteVehicle(vehicle.getId())
+                relationship.remove(vehicle.getId())
+            }else{
+                throw IllegalArgumentException("Not allowed")
+            }
+        }
+    }
+
+
+    fun removeVehicleById(id: Int, username: String, vehicle: Vehicle){
+        synchronized(baseCollection) {
+            if(relationship[id] == username){
+                dbManager.deleteVehicle(id)
+                baseCollection.remove(vehicle)
+                relationship.remove(id, username)
+            }else{
+                throw IllegalArgumentException("Not allowed")
+            }
+        }
+    }
     /**
      * Выводит информацию о коллекции в консоль.
      * Включает тип коллекции, дату инициализации и количество элементов.

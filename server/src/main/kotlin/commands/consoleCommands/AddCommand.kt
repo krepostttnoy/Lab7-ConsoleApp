@@ -2,7 +2,7 @@ package org.example.commands.consoleCommands
 
 import baseClasses.Coordinates
 import baseClasses.Vehicle
-import baseClasses.withNewId
+//import baseClasses.withNewId
 import collection.CollectionManager
 import console.IVehicleManager
 import kotlinx.serialization.Serializable
@@ -10,6 +10,7 @@ import kotlinx.serialization.Transient
 import org.example.serverUtils.ConnectionManager
 import utils.JsonCreator
 import utils.inputOutput.OutputManager
+import utils.wrappers.RequestWrapper
 import utils.wrappers.ResponseType
 import utils.wrappers.ResponseWrapper
 
@@ -30,21 +31,21 @@ class AddCommand(
 ) : Command {
     override val interactive = true
 
-    override fun execute(args: Map<String, String>, username: String) {
+    override fun execute(request: RequestWrapper, username: String): ResponseWrapper {
         try{
             val jsonCreator = JsonCreator()
-            val vehicleJson = args["vehicle"] ?: throw IllegalArgumentException("Vehicle data is missing")
-            val vehicle = jsonCreator.stringToObject<Vehicle>(vehicleJson).withNewId()
+            val vehicleJson = request.args["vehicle"] ?: throw IllegalArgumentException("Vehicle data is missing")
+            val vehicle = jsonCreator.stringToObject<Vehicle>(vehicleJson)
 
-            if (cm.getCollection().any { it.getId() == vehicle.getId() }) {
-                throw IllegalArgumentException("Vehicle with ID ${vehicle.getId()} already exists!, ${Vehicle.existingIds.toList()}")
-            }
+//            if (cm.getCollection().any { it.getId() == vehicle.getId() }) {
+//                throw IllegalArgumentException("Vehicle with ID ${vehicle.getId()} already exists!")
+//            }
             cm.addVehicle(vehicle, username)
-            val response = ResponseWrapper(ResponseType.OK, "Vehicle added: ${vehicle.name}", receiver = args["sender"]!!)
-            connectionManager.send(response)
+            val response = ResponseWrapper(ResponseType.OK, "Vehicle added: ${vehicle.name}", receiver = username)
+            return response
         }catch (e: Exception){
-            val response = ResponseWrapper(ResponseType.ERROR, "Error: ${e.message}", receiver = args["sender"]!!)
-            connectionManager.send(response)
+            val response = ResponseWrapper(ResponseType.ERROR, "Error: ${e.message}", receiver = username)
+            return response
         }
     }
 

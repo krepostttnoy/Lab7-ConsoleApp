@@ -1,6 +1,8 @@
 package org.example.commands.consoleCommands
 
 import org.example.serverUtils.IFileManager
+import utils.wrappers.RequestWrapper
+import utils.wrappers.ResponseWrapper
 
 /**
  * Команда для сохранения коллекции в файл.
@@ -24,6 +26,7 @@ class SaveCommand(private val fm: IFileManager) : Command {
         return info
     }
 
+
     /**
      * Выполняет команду сохранения коллекции в файл.
      * Если путь к файлу не указан, использует путь по умолчанию, предоставленный [IFileManager].
@@ -36,7 +39,7 @@ class SaveCommand(private val fm: IFileManager) : Command {
      * Вызывает [execute] с параметром [filePath] равным null,
      * что приводит к использованию пути по умолчанию.
      */
-    override fun execute(args: Map<String, String>, username: String) {
+    override fun execute(request: RequestWrapper, username: String): ResponseWrapper {
         TODO("Not yet implemented")
     }
 }

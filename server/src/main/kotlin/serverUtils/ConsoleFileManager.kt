@@ -41,24 +41,20 @@ class ConsoleFileManager(
 
     override fun loadCollection() {
         try {
-            logger.info("Loading from DB")
+            logger.info("Загрузка из базы данных")
             val collection = dbManager.loadCollection()
 
-            for (element in collection) {
-                val vehicle = jsonCreator.stringToObject<Vehicle>(element.key)
-                val parent = element.value
+            for ((product, owner) in collection) {
                 try {
-                    collectionManager.addVehicle(vehicle, parent)
-                    logger.info("Loaded ${vehicle.name}")
-                } catch (e:Exception) {
-                    logger.info(e.message.toString())
+                    collectionManager.addVehicle(product, owner)
+                    logger.info("Загружен $product")
+                } catch (e: Exception) {
+                    logger.warn("Ошибка при добавлении продукта: ${e.message}")
                 }
-
             }
-            logger.info("Loaded ${collectionManager.getCollection().size} elements successfully")
-
+            logger.info("Загружено ${collectionManager.getCollection().size} элементов успешно")
         } catch (e: Exception) {
-            logger.warn(e.message.toString())
+            logger.warn("Ошибка при загрузке коллекции: ${e.message}")
         }
     }
 
